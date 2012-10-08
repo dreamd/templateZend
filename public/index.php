@@ -1,4 +1,9 @@
 <?php
+function exception_handler($exception) {
+  echo "Uncaught exception: " , $exception->getMessage(), "\n";
+}
+
+set_exception_handler('exception_handler');
 	define("ViewFolder", __DIR__.DIRECTORY_SEPARATOR."Views".DIRECTORY_SEPARATOR);
 	require_once("Common.php");
 	chdir(dirname(__DIR__));

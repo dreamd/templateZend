@@ -50,7 +50,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		} else if ($actionResponse instanceof ModelInterface) {
 			$actionResponse->setTerminal(true);
 		}
-		var_dump($actionResponse);
 		$actionResponse->twig = $this->assign;
 		$e->setResult($actionResponse);
 		return $actionResponse;
