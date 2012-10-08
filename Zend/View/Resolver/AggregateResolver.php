@@ -96,7 +96,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
      */
     public function resolve($name, Renderer $renderer = null)
     {
-		var_dump($name);
         $this->lastLookupFailure      = false;
         $this->lastSuccessfulResolver = null;
 

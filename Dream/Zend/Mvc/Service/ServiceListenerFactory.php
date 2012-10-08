@@ -28,7 +28,7 @@ class ServiceListenerFactory extends ZendServiceListenerFactory {
             'ViewJsonRenderer'        => 'Zend\Mvc\Service\ViewJsonRendererFactory',
             'ViewJsonStrategy'        => 'Zend\Mvc\Service\ViewJsonStrategyFactory',
             'ViewManager'             => 'Dream\Zend\Mvc\Service\ViewManagerFactory',
-            'ViewResolver'            => 'Zend\Mvc\Service\ViewResolverFactory',
+            'ViewResolver'            => 'Dream\Zend\Mvc\Service\ViewResolverFactory',
             'ViewTemplateMapResolver' => 'Zend\Mvc\Service\ViewTemplateMapResolverFactory',
             'ViewTemplatePathStack'   => 'Zend\Mvc\Service\ViewTemplatePathStackFactory',
         ),
