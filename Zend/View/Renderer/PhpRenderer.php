@@ -154,11 +154,8 @@ class PhpRenderer implements Renderer, TreeRendererInterface
     public function resolver($name = null)
     {
         if (null === $this->__templateResolver) {
-			print 'now create';
             $this->setResolver(new TemplatePathStack());
-        } else {
-			print 'already create';	
-		}
+        }
 
         if (null !== $name) {
             return $this->__templateResolver->resolve($name, $this);
