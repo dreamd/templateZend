@@ -33,3 +33,4 @@ class AggregateResolver extends ZendAggregateResolver {
         $this->lastLookupFailure = static::FAILURE_NOT_FOUND;
         return false;
     }
+}
