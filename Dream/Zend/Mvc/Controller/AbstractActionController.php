@@ -3,10 +3,12 @@
 namespace Dream\Zend\Mvc\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
-use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel, Zend\Stdlib\ParametersInterface;
+use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
+/*
+use Zend\Stdlib\ParametersInterface;
 use Dream\Zend\View\Renderer\PhpRenderer, Zend\Mvc\Service\ViewHelperManagerFactory;
-use Zend\View\Helper\BasePath;
+*/
 abstract class AbstractActionController extends ZendAbstractActionController {
     protected $eventIdentifier = __CLASS__, $assign;
     public function indexAction() {
@@ -54,10 +56,14 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		$e->setResult($actionResponse);
 		return $actionResponse;
     }
-	public function getModulerName() {
-		$controllerFullName = (string)$this->getEvent()->getRouteMatch()->getParam('controller', NULL);
-		return substr($controllerFullName, 0, strpos($controllerFullName, '\\'));
-	}
+    public function __call($method, $params) {
+        $plugin = $this->plugin(strtolower($method));
+        if (is_callable($plugin)) {
+            return call_user_func_array($plugin, $params);
+        }
+        return $plugin;
+    }
+	/*
 	public function getControllerName() {
 		$controllerFullName = (string)$this->getEvent()->getRouteMatch()->getParam('controller', NULL);
 		return substr($controllerFullName, (strlen($controllerFullName) - strrpos($controllerFullName, '\\')) * -1 + 1);
@@ -158,14 +164,17 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		$this->redirect()->toRoute($route, $params, $options, $reuseMatchedParams);
 		return $this;
 	}
-	public function redirect($link) {
+	public function redirectUrl($link) {
 		if (is_string($link) === true && empty($link) === false) {
 			$this->redirect()->toUrl($link);
 		}
 		return $this;
 	}
-	public function routeLink($route = NULL, array $params = array()) {
-		
+	public function getLink($route = NULL, array $params = array()) {
+		if ($route !== NULL) {
+			return $this->url()->fromRoute($route, $params);
+		}
+		return NULL;
 	}
 	public function __call($method, $argv) {
 		$helper = $this->serviceLocator->get('ViewHelperManager')->get($method);
@@ -174,4 +183,5 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         }
         return $helper;
 	}
+	*/
 }

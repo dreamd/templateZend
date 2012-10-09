@@ -35,7 +35,15 @@ $this->setStatusCode
 
 class MainController extends AbstractActionController {
 	public function indexAction() {
-		var_dump($this->translate('Home', 'tr_TR'));
+		print $this->url()->fromRoute('home', array()).'_<br />';
+		print $this->moduleName().'_<br />';
+		print $this->controllerName().'_<br />';
+		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
+		print 11;
+		//print($this->url());
+		//$url = $this->url()->fromRoute('route-name', array('aa' => 'aa'));
+		//var_dump($url);
+		//var_dump($this->translate('Home', 'tr_TR'));
 		//print '444';
 		/*
 		var_dump($this->response->getContent());

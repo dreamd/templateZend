@@ -14,7 +14,7 @@ class ServiceListenerFactory extends ZendServiceListenerFactory {
             'Application'             => 'Zend\Mvc\Service\ApplicationFactory',
             'Config'                  => 'Zend\Mvc\Service\ConfigFactory',
             'ControllerLoader'        => 'Zend\Mvc\Service\ControllerLoaderFactory',
-            'ControllerPluginManager' => 'Zend\Mvc\Service\ControllerPluginManagerFactory',
+            'ControllerPluginManager' => 'Dream\Zend\Mvc\Service\ControllerPluginManagerFactory',
             'ConsoleAdapter'          => 'Zend\Mvc\Service\ConsoleAdapterFactory',
             'ConsoleRouter'           => 'Zend\Mvc\Service\RouterFactory',
             'DependencyInjector'      => 'Zend\Mvc\Service\DiFactory',
