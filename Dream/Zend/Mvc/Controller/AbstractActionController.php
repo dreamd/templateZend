@@ -64,13 +64,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         return $plugin;
     }
 	/*
-	public function getActionName() {
-		return $this->getEvent()->getRouteMatch()->getParam('action', NULL);
-	}
-	public function getRouteName() {
-		return $this->getEvent()->getRouteMatch()->getMatchedRouteName();
-	}
-	
 	public function isPost() {
         return $this->getRequest()->isPost();
 	}

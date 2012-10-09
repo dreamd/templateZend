@@ -17,6 +17,8 @@ class PluginManager extends ZendPluginManager {
 		'controllername'			=> 'Dream\Zend\Mvc\Controller\Plugin\controllerName',
 		'controllerfullname'	=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerFullName',
 		'actionname'				=> 'Dream\Zend\Mvc\Controller\Plugin\ActionName',
+		'routename'					=> 'Dream\Zend\Mvc\Controller\Plugin\RouteName',
+		'ispost'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsPost',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
