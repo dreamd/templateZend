@@ -21,6 +21,9 @@ class PluginManager extends ZendPluginManager {
 		'ispost'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsPost',
 		'getpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetPost',
 		'setpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetPost',
+		'isget'							=> 'Dream\Zend\Mvc\Controller\Plugin\IsGet',
+		'getquery'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetQuery',
+		'setquery'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetQuery',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

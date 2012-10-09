@@ -44,6 +44,9 @@ class MainController extends AbstractActionController {
 		var_dump($this->isPost());print '_<br />';
 		$this->setPost('name', 'bbb');
 		var_dump($this->getPost('name', 'aaa'));
+		var_dump($this->isGet());print '_<br />';
+		$this->setQuery('name', 'ccc');
+		var_dump($this->getQuery('name', '111'));
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print 11;
 		//print($this->url());

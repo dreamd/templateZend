@@ -64,9 +64,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         return $plugin;
     }
 	/*
-	public function setPost(ParametersInterface $query) {
-		return 	$this->getRequest()->setPost($query);
-	}
 	
 	public function isGet() {
         return $this->getRequest()->isGet();
