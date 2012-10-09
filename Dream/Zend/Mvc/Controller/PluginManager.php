@@ -14,7 +14,7 @@ class PluginManager extends ZendPluginManager {
         'redirect'        			=> 'Zend\Mvc\Controller\Plugin\Redirect',
         'url'            					=> 'Zend\Mvc\Controller\Plugin\Url',
 		'modulename'      		=> 'Dream\Zend\Mvc\Controller\Plugin\ModuleName',
-		'controllername'			=> 'Dream\Zend\Mvc\Controller\Plugin\controllerName',
+		'controllername'			=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerName',
 		'controllerfullname'	=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerFullName',
 		'actionname'				=> 'Dream\Zend\Mvc\Controller\Plugin\ActionName',
 		'routename'					=> 'Dream\Zend\Mvc\Controller\Plugin\RouteName',
