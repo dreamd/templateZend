@@ -6,7 +6,6 @@ use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController
 use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
 /*
-use Zend\Stdlib\ParametersInterface;
 use Dream\Zend\View\Renderer\PhpRenderer, Zend\Mvc\Service\ViewHelperManagerFactory;
 */
 abstract class AbstractActionController extends ZendAbstractActionController {
@@ -64,24 +63,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         return $plugin;
     }
 	/*
-	
-	public function isGet() {
-        return $this->getRequest()->isGet();
-	}
-	public function getQuery($name = NULL, $default = NULL) {
-		return $this->getRequest()->getQuery($name, $default);
-	}
-	public function setQuery(ParametersInterface $query) {
-		return 	$this->getRequest()->setQuery($query);
-	}
-	
-	public function getFiles($name = NULL, $default = NULL) {
-		return $this->getRequest()->getFiles($name, $default);
-	}
-    public function setFiles(ParametersInterface $files) {
-		return $this->getRequest()->setFiles($files);
-	}
-	
     public function getCookie() {
         return $this->getRequest()->getHeaders()->get('Cookie');
     }
