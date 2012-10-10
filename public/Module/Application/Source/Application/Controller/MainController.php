@@ -50,6 +50,10 @@ class MainController extends AbstractActionController {
 		
 		$this->setFiles('name', '333');
 		var_dump($this->getFiles('name'));
+		
+		var_dump($this->getCookie());
+		$this->setHeader('aaa', 'test');
+		var_dump($this->getHeader('aaa', 'none'));
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print 11;
 		//print($this->url());

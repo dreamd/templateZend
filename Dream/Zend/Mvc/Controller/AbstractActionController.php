@@ -62,19 +62,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         }
         return $plugin;
     }
-	/*
-    public function getCookie() {
-        return $this->getRequest()->getHeaders()->get('Cookie');
-    }
-    public function getHeader($name = NULL, $default = false) {
-		return $this->getRequest()->getHeaders($name, $default);
-	}
-	public function setHeader($name = NULL, $value = NULL) {
-		if (is_string($name) === true) {
-			$this->response->getHeaders()->addHeaderLine($name, $value);
-		}
-		return $this;
-	}
 	
 	public function isOptions() {
         return $this->getRequest()->isOptions();

@@ -26,6 +26,10 @@ class PluginManager extends ZendPluginManager {
 		'setquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetQuery',
 		'getfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetFiles',
 		'setfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetFiles',
+		'getcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetCookie',
+		'getheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetHeader',
+		'setheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetHeader',
+		
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
