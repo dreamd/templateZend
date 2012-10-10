@@ -56,11 +56,27 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		return $actionResponse;
     }
     public function __call($method, $params) {
+		if (method_exists($this, $method) === true) {
+			return $this->$method($params);	
+		}
         $plugin = $this->plugin(strtolower($method));
-        if (is_callable($plugin)) {
-            return call_user_func_array($plugin, $params);
+		if ($plugin !== NULL) {
+	        if (is_callable($plugin)) {
+    	        return call_user_func_array($plugin, $params);
+       		}
+			return $plugin;
+		}
+		$helper = $this->serviceLocator->get('ViewHelperManager')->get($method);
+		if (is_callable($helper)) {
+            return call_user_func_array($helper, $params);
         }
-        return $plugin;
+        return $helper;
+    }
+    public function plugin($name, array $options = NULL) {
+		if ($this->getPluginManager()->has($name) === true) {
+        	return $this->getPluginManager()->get($name, $options);
+		}
+		return NULL;
     }
 	/*
 	public function __call($method, $argv) {

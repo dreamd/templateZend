@@ -49,4 +49,12 @@ class PluginManager extends ZendPluginManager {
     protected $aliases = array(
         'prg'             => 'postredirectget',
     );
+	public function has($name = NULL) {
+		if ($name !== NULL && is_string($name) === true) {
+			if (array_key_exists($name, $this->invokableClasses)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

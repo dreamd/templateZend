@@ -73,6 +73,8 @@ class MainController extends AbstractActionController {
 		//var_dump($this->getUrl('album'));
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print 11;
+		print $this->escapeHtml('sxsss');
+		print $this->translate('Home', 'tr_TR');
 		//print($this->url());
 		//$url = $this->url()->fromRoute('route-name', array('aa' => 'aa'));
 		//var_dump($url);

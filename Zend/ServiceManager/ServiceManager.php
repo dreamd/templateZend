@@ -385,6 +385,7 @@ class ServiceManager implements ServiceLocatorInterface
      */
     public function get($name, $usePeeringServiceManagers = true)
     {
+
         $cName = $this->canonicalizeName($name);
         $rName = $name;
 
