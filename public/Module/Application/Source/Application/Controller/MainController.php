@@ -2,8 +2,7 @@
 
 namespace Application\Controller;
 
-use Dream\Zend\Mvc\Controller\AbstractActionController;
-use Zend\I18n\Translator\Translator;
+use Application\Controller\BaseController;
 /*
 $this->getModulerName
 $this->getControllerName
@@ -33,7 +32,10 @@ $this->isFlashRequest
 $this->setStatusCode
 */
 
-class MainController extends AbstractActionController {
+class MainController extends BaseController {
+	private function showSubMenu() {
+		return array('id3' => '9x9x0');	
+	}
 	public function indexAction() {
 		print $this->url()->fromRoute('home', array()).'_<br />';
 		print $this->moduleName().'_<br />';
@@ -72,7 +74,6 @@ class MainController extends AbstractActionController {
 		//$this->redirectUrl('http://www.google.com');
 		//var_dump($this->getUrl('album'));
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
-		print 11;
 		print $this->escapeHtml('sxsss');
 		print $this->translate('Home', 'tr_TR');
 		//print($this->url());
@@ -90,7 +91,8 @@ class MainController extends AbstractActionController {
 		var_dump($this->getModulerName());
 		print $this->getParam('id', 0);
 		*/
-		$this->assign->name = 'Hello';
-		return array('id'=> 11);
+		return array_merge(array(
+			'id' => 'sfgfdgfdgfdg'
+		), (array)$this->showSubMenu());
     }
 }

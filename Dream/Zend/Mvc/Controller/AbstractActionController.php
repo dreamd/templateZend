@@ -5,9 +5,7 @@ namespace Dream\Zend\Mvc\Controller;
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
 use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
-/*
-use Dream\Zend\View\Renderer\PhpRenderer, Zend\Mvc\Service\ViewHelperManagerFactory;
-*/
+
 abstract class AbstractActionController extends ZendAbstractActionController {
     protected $eventIdentifier = __CLASS__, $assign;
     public function indexAction() {
@@ -21,6 +19,9 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         $response->setStatusCode(404);
         $routeMatch->setParam('action', 'not-found');
     }
+	public function dispatchLayout() {
+		return NULL;
+	}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
@@ -33,7 +34,15 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         if (!method_exists($this, $method)) {
             $method = 'notFoundAction';
         }
+		$dispatchResponse = $this->dispatchLayout();
         $actionResponse = $this->$method();
+		
+		if (is_array($dispatchResponse) === true && is_array($actionResponse) === true) {
+			$actionResponse = array_merge($dispatchResponse, $actionResponse);
+		} else if (is_array($dispatchResponse) === true && is_array($actionResponse) === false) {
+			$actionResponse = $dispatchResponse;
+		}
+
 		if (is_array($actionResponse) === true) {
 			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
 				$actionResponse = new ViewModel($actionResponse);
@@ -51,6 +60,7 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		} else if ($actionResponse instanceof ModelInterface) {
 			$actionResponse->setTerminal(true);
 		}
+		
 		$actionResponse->twig = $this->assign;
 		$e->setResult($actionResponse);
 		return $actionResponse;
@@ -79,12 +89,8 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		return NULL;
     }
 	/*
-	public function __call($method, $argv) {
-		$helper = $this->serviceLocator->get('ViewHelperManager')->get($method);
-		if (is_callable($helper)) {
-            return call_user_func_array($helper, $argv);
-        }
-        return $helper;
+	public function goToRoute() {
+		
 	}
 	*/
 }
