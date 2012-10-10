@@ -7,7 +7,7 @@ use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
-    protected $eventIdentifier = __CLASS__, $assign;
+    protected $eventIdentifier = __CLASS__, $assign, $result = array();
     public function indexAction() {
 
     }
@@ -22,6 +22,9 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 	public function dispatchLayout() {
 		return NULL;
 	}
+	protected function mix(array $return = array()) {
+		$this->result = array_merge($return, (array)$this->result);
+	}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
@@ -33,16 +36,12 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 
         if (!method_exists($this, $method)) {
             $method = 'notFoundAction';
-        }
-		$dispatchResponse = $this->dispatchLayout();
-        $actionResponse = $this->$method();
+        };
 		
-		if (is_array($dispatchResponse) === true && is_array($actionResponse) === true) {
-			$actionResponse = array_merge($dispatchResponse, $actionResponse);
-		} else if (is_array($dispatchResponse) === true && is_array($actionResponse) === false) {
-			$actionResponse = $dispatchResponse;
-		}
-
+		$this->$method();
+		$this->mix($this->dispatchLayout());
+		$actionResponse = $this->result;
+		
 		if (is_array($actionResponse) === true) {
 			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
 				$actionResponse = new ViewModel($actionResponse);

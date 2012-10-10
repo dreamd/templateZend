@@ -33,9 +33,6 @@ $this->setStatusCode
 */
 
 class MainController extends BaseController {
-	private function showSubMenu() {
-		return array('id3' => '9x9x0');	
-	}
 	public function indexAction() {
 		print $this->url()->fromRoute('home', array()).'_<br />';
 		print $this->moduleName().'_<br />';
@@ -91,8 +88,9 @@ class MainController extends BaseController {
 		var_dump($this->getModulerName());
 		print $this->getParam('id', 0);
 		*/
-		return array_merge(array(
+		$this->result = array(
 			'id' => 'sfgfdgfdgfdg'
-		), (array)$this->showSubMenu());
+		);
+		$this->mix($this->showSubMenu());
     }
 }

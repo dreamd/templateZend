@@ -9,4 +9,7 @@ class BaseController extends AbstractActionController {
 		$this->assign->name = 'Hello';
 		return array('id2'=> 'dfsdfdsfsd');
 	}
+	protected function showSubMenu() {
+		return array('id3' => '9x9x0');	
+	}
 }
