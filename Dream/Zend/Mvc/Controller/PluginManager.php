@@ -42,11 +42,9 @@ class PluginManager extends ZendPluginManager {
 		'setstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\SetStatusCode',
 		'getparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParam',
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
-		/*
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
 		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
-		'getlink'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetLink',
-		*/
+		'geturl'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetUrl',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

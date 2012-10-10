@@ -63,22 +63,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         return $plugin;
     }
 	/*
-	public function redirectRoute($route = null, array $params = array(), $options = array(), $reuseMatchedParams = false) {
-		$this->redirect()->toRoute($route, $params, $options, $reuseMatchedParams);
-		return $this;
-	}
-	public function redirectUrl($link) {
-		if (is_string($link) === true && empty($link) === false) {
-			$this->redirect()->toUrl($link);
-		}
-		return $this;
-	}
-	public function getLink($route = NULL, array $params = array()) {
-		if ($route !== NULL) {
-			return $this->url()->fromRoute($route, $params);
-		}
-		return NULL;
-	}
 	public function __call($method, $argv) {
 		$helper = $this->serviceLocator->get('ViewHelperManager')->get($method);
 		if (is_callable($helper)) {
