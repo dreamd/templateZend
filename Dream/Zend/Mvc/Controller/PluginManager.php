@@ -38,7 +38,15 @@ class PluginManager extends ZendPluginManager {
 		'ispatch'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsPatch',
 		'isxmlhttprequest'		=> 'Dream\Zend\Mvc\Controller\Plugin\IsXmlHttpRequest',
 		'isflashrequest'			=> 'Dream\Zend\Mvc\Controller\Plugin\IsFlashRequest',
-
+		'getstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\GetStatusCode',
+		'setstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\SetStatusCode',
+		'getparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParam',
+		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
+		/*
+		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
+		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
+		'getlink'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetLink',
+		*/
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

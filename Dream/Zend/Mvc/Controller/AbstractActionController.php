@@ -63,49 +63,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         return $plugin;
     }
 	/*
-	
-	public function isOptions() {
-        return $this->getRequest()->isOptions();
-	}
-	public function isHead() {
-        return $this->getRequest()->isHead();
-	}
-    public function isPut() {
-		return $this->getRequest()->isPut();
-    }
-    public function isDelete() {
-		return $this->getRequest()->isDelete();
-    }
-    public function isTrace() {
-		return $this->getRequest()->isTrace();
-    }
-    public function isConnect() {
-		return $this->getRequest()->isConnect();
-    }
-    public function isPatch() {
-		return $this->getRequest()->isPatch();
-    }
-    public function isXmlHttpRequest() {
-		return $this->getRequest()->isXmlHttpRequest();
-    }
-    public function isFlashRequest() {
-		return $this->getRequest()->isFlashRequest();
-    }
-	public function setStatusCode($statusCode = NULL) {
-		if (is_null($statusCode) === false && is_int($statusCode) === true) { 
-			$this->response->setStatusCode($statusCode);
-		}
-		return $this;
-	}
-	public function setParam($param = NULL, $default = NULL) {
-		if (is_string($param) === true && empty($param) === false) {
-			$this->getEvent()->getRouteMatch()->setParam($param, $default);
-		}
-		return $this;
-	}
-	public function getParam($param = NULL, $default = NULL) {
-		return $this->getEvent()->getRouteMatch()->getParam($param, $default);
-	}
 	public function redirectRoute($route = null, array $params = array(), $options = array(), $reuseMatchedParams = false) {
 		$this->redirect()->toRoute($route, $params, $options, $reuseMatchedParams);
 		return $this;

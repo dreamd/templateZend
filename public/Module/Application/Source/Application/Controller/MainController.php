@@ -64,7 +64,10 @@ class MainController extends AbstractActionController {
 		var_dump($this->isPatch());print '_<br />';
 		var_dump($this->isXmlHttpRequest());print '_<br />';
 		var_dump($this->isFlashRequest());print '_<br />';
-		
+		$this->setStatusCode(400);
+		var_dump($this->getStatusCode());print '_<br />';
+		$this->setParam('abc', 999);
+		var_dump($this->getParam('abc', '888'));print '_<br />';
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print 11;
 		//print($this->url());
