@@ -54,6 +54,17 @@ class MainController extends AbstractActionController {
 		var_dump($this->getCookie());
 		$this->setHeader('aaa', 'test');
 		var_dump($this->getHeader('aaa', 'none'));
+		
+		var_dump($this->isOptions());print '_<br />';
+		var_dump($this->isHead());print '_<br />';
+		var_dump($this->isPut());print '_<br />';
+		var_dump($this->isDelete());print '_<br />';
+		var_dump($this->isTrace());print '_<br />';
+		var_dump($this->isConnect());print '_<br />';
+		var_dump($this->isPatch());print '_<br />';
+		var_dump($this->isXmlHttpRequest());print '_<br />';
+		var_dump($this->isFlashRequest());print '_<br />';
+		
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print 11;
 		//print($this->url());

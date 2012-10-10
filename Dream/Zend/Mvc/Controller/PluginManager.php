@@ -29,7 +29,16 @@ class PluginManager extends ZendPluginManager {
 		'getcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetCookie',
 		'getheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetHeader',
 		'setheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetHeader',
-		
+		'isoptions'					=> 'Dream\Zend\Mvc\Controller\Plugin\IsOptions',
+		'ishead'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsHead',
+		'isput'							=> 'Dream\Zend\Mvc\Controller\Plugin\IsPut',
+		'isdelete'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsDelete',
+		'istrace'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsTrace',
+		'isconnect'					=> 'Dream\Zend\Mvc\Controller\Plugin\IsConnect',
+		'ispatch'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsPatch',
+		'isxmlhttprequest'		=> 'Dream\Zend\Mvc\Controller\Plugin\IsXmlHttpRequest',
+		'isflashrequest'			=> 'Dream\Zend\Mvc\Controller\Plugin\IsFlashRequest',
+
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

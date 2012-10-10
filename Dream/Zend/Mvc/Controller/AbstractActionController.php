@@ -62,6 +62,7 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         }
         return $plugin;
     }
+	/*
 	
 	public function isOptions() {
         return $this->getRequest()->isOptions();
