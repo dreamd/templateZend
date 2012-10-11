@@ -34,6 +34,7 @@ $this->setStatusCode
 
 class MainController extends BaseController {
 	public function indexAction() {
+		print $this->getRequest()->getUriString();
 		print $this->url()->fromRoute('home', array()).'_<br />';
 		print $this->moduleName().'_<br />';
 		print $this->controllerName().'_<br />';
@@ -73,24 +74,7 @@ class MainController extends BaseController {
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print $this->escapeHtml('sxsss');
 		print $this->translate('Home', 'tr_TR');
-		//print($this->url());
-		//$url = $this->url()->fromRoute('route-name', array('aa' => 'aa'));
-		//var_dump($url);
-		//var_dump($this->translate('Home', 'tr_TR'));
-		//print '444';
-		/*
-		var_dump($this->response->getContent());
-		print 'xxx';
-		var_dump($this->getControllerName());
-		var_dump($this->getActionName());
-		var_dump($this->getRouteName());
-		var_dump($this->getControllerFullName());
-		var_dump($this->getModulerName());
-		print $this->getParam('id', 0);
-		*/
-		$this->result = array(
-			'id' => 'sfgfdgfdgfdg'
-		);
-		$this->mix($this->showSubMenu());
+		$this->result(array('id' => 'sfgfdgfdgfdg'));
+		$this->showSubMenu();
     }
 }

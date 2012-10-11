@@ -7,7 +7,8 @@ use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
-    protected $eventIdentifier = __CLASS__, $assign, $result = array();
+    protected $eventIdentifier = __CLASS__;
+	private $param = array();
     public function indexAction() {
 
     }
@@ -19,11 +20,32 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         $response->setStatusCode(404);
         $routeMatch->setParam('action', 'not-found');
     }
+	public function __set($name = NULL, $value = NULL) {
+		if ($name !== NULL && is_string($name) === true) {
+			$this->param[$name] = $value;	
+		}
+		return $this;
+	}
+	public function __get($name = NULL) {
+		if ($name !== NULL && is_string($name) === true) {
+			if (isset($this->param[$name]) === true) {
+				return $this->param[$name];
+			}
+		}
+		return NULL;
+	}
+	public function __isset($name = NULL) {
+		return isset($this->param[$name]);	
+	}
+	public function __unset($name = NULL) {
+		unset($this->param[$name]);
+		return $this;
+	}
 	public function dispatchLayout() {
 		return NULL;
 	}
-	protected function mix(array $return = array()) {
-		$this->result = array_merge($return, (array)$this->result);
+	protected function result(array $return = array()) {
+		$this->result = array_merge((array)$this->result, $return);
 	}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
@@ -37,9 +59,9 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         if (!method_exists($this, $method)) {
             $method = 'notFoundAction';
         };
-		
+		$this->dispatchLayout();
 		$this->$method();
-		$this->mix($this->dispatchLayout());
+		
 		$actionResponse = $this->result;
 		
 		if (is_array($actionResponse) === true) {
