@@ -44,7 +44,12 @@ class PluginManager extends ZendPluginManager {
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
 		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
-		'baseurl'						=> 'Dream\Zend\Mvc\Controller\Plugin\BaseUrl',
+		'baseurl'					=> 'Dream\Zend\Mvc\Controller\Plugin\BaseUrl',
+		'geturi'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetUri',
+		'geturistring'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetUriString',
+		'seturi'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetUri',
+		'getmethod'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetMethod',
+		'setmethod'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetMethod',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

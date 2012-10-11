@@ -34,7 +34,12 @@ $this->setStatusCode
 
 class MainController extends BaseController {
 	public function indexAction() {
-		print $this->getRequest()->getUriString();
+		var_dump($this->getUri());
+		$bb = $this->getUri();
+		$this->setUri($bb);
+		print $this->getMethod();
+		$this->setMethod($this->getMethod());
+		var_dump($this->getUriString());
 		print $this->url()->fromRoute('home', array()).'_<br />';
 		print $this->moduleName().'_<br />';
 		print $this->controllerName().'_<br />';
