@@ -70,7 +70,7 @@ class MainController extends BaseController {
 		var_dump($this->getParam('abc', '888'));print '_<br />';
 		//$this->redirectRoute('album');
 		//$this->redirectUrl('http://www.google.com');
-		//var_dump($this->getUrl('album'));
+		var_dump($this->baseUrl('home'));
 		//$foo = $this->forward()->dispatch('foo', array('action' => 'process'));
 		print $this->escapeHtml('sxsss');
 		print $this->translate('Home', 'tr_TR');

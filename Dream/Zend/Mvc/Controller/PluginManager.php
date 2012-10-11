@@ -44,7 +44,7 @@ class PluginManager extends ZendPluginManager {
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
 		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
-		'geturl'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetUrl',
+		'baseurl'						=> 'Dream\Zend\Mvc\Controller\Plugin\BaseUrl',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
