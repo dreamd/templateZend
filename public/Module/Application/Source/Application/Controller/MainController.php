@@ -51,7 +51,7 @@ class MainController extends BaseController {
 		$this->setFiles('name', '333');
 		var_dump($this->getFiles('name'));
 		
-		var_dump($this->getCookie());
+		var_dump($this->getCookies());
 		$this->setHeader('aaa', 'test');
 		var_dump($this->getHeader('aaa', 'none'));
 		

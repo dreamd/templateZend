@@ -26,7 +26,7 @@ class PluginManager extends ZendPluginManager {
 		'setquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetQuery',
 		'getfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetFiles',
 		'setfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetFiles',
-		'getcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetCookie',
+		'getcookies'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetCookies',
 		'getheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetHeader',
 		'setheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetHeader',
 		'isoptions'					=> 'Dream\Zend\Mvc\Controller\Plugin\IsOptions',
