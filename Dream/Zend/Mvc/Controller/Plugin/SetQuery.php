@@ -21,9 +21,7 @@ class SetQuery extends AbstractPlugin {
 					$tempQuerys = &$tempQuerys[$names[$i]];
 				}
 			}
-			
-			$querys = new Parameters($querys);
-			$this->getController()->getRequest()->setQuery($querys);
+			$this->getController()->getRequest()->setQuery(new Parameters($querys));
 		}
 		return $this->getController();
     }

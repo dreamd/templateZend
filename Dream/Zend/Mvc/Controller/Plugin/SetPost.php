@@ -21,9 +21,7 @@ class SetPost extends AbstractPlugin {
 					$tempPosts = &$tempPosts[$names[$i]];
 				}
 			}
-			
-			$posts = new Parameters($posts);
-			$this->getController()->getRequest()->setPost($posts);
+			$this->getController()->getRequest()->setPost(new Parameters($posts));
 		}
 		return $this->getController();
     }
