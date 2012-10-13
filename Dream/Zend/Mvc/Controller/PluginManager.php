@@ -20,17 +20,18 @@ class PluginManager extends ZendPluginManager {
 		'controllerfullname'	=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerFullName',
 		'actionname'				=> 'Dream\Zend\Mvc\Controller\Plugin\ActionName',
 		'routename'					=> 'Dream\Zend\Mvc\Controller\Plugin\RouteName',
-		//
+		//fast plugin to use response function
 		'setheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetHeader',
 		'getstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\GetStatusCode',
 		'setstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\SetStatusCode',
+		//fast plugin to use route function
 		'getparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParam',
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
 		//fast plugin to use controller plugin
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
 		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
 		'baseurl'						=> 'Dream\Zend\Mvc\Controller\Plugin\BaseUrl',
-		//some plugin dont use request function
+		//fast plugin to use request function, some modify
 		'getpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetPost',
 		'setpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetPost',
 		'getquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetQuery',

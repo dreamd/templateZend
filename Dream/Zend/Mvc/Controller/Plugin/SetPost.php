@@ -7,8 +7,9 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 class SetPost extends AbstractPlugin {
     public function __invoke($name = NULL, $value = NULL) {
 		if ($name !== NULL && $value !== NULL && is_string($name) === true) {
-			$param = new Parameters(array($name => $value));
-			$this->getController()->getRequest()->setPost($param);
+			$posts = $this->getController()->getRequest()->getPost();
+			$posts->set($name, $value);
+			$this->getController()->getRequest()->setPost($posts);
 		}
 		return $this->getController();
     }
