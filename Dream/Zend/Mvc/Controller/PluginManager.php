@@ -42,6 +42,7 @@ class PluginManager extends ZendPluginManager {
 		'getini'							=> 'Dream\Zend\Mvc\Controller\Plugin\GetIni',
 		'setini'							=> 'Dream\Zend\Mvc\Controller\Plugin\SetIni',
 		'getserver'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetServer',
+		'getenv'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetEnv',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
