@@ -16,7 +16,7 @@ class SetQuery extends AbstractPlugin {
 					$tempQuerys[$names[$i]]	 = $value;
 				} else {
 					if (isset($tempQuerys[$names[$i]]) === false) {
-						$tempQuerys[$names[$i]]	 = array();
+						$tempQuerys[$names[$i]] = array();
 					}
 					$tempQuerys = &$tempQuerys[$names[$i]];
 				}

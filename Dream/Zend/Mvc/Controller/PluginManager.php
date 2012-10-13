@@ -39,6 +39,8 @@ class PluginManager extends ZendPluginManager {
 		'getfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetFiles',
 		'setfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetFiles',
 		'setmethod'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetMethod',
+		'getini'							=> 'Dream\Zend\Mvc\Controller\Plugin\GetIni',
+		'setini'							=> 'Dream\Zend\Mvc\Controller\Plugin\SetIni',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',

@@ -16,7 +16,7 @@ class SetPost extends AbstractPlugin {
 					$tempPosts[$names[$i]]	 = $value;
 				} else {
 					if (isset($tempPosts[$names[$i]]) === false) {
-						$tempPosts[$names[$i]]	 = array();
+						$tempPosts[$names[$i]] = array();
 					}
 					$tempPosts = &$tempPosts[$names[$i]];
 				}
