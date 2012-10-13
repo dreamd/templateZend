@@ -8,6 +8,27 @@ use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
     protected $eventIdentifier = __CLASS__;
+	private $requestMethod = array(
+		'getmethod' => 'getMethod',
+		'geturi' => 'getUri',
+		'seturi' => 'setUri',
+		'geturl' => 'getUriString',
+		'getquery' => 'getQuery',
+		'getpost' => 'getPost',
+		'getfiles' => 'getFiles',
+		'getheader' => 'getHeader',
+		'isoptions' => 'isOptions',
+		'isget' => 'isGet',
+		'ishead' => 'isHead',
+		'ispost' => 'isPost',
+		'isput' => 'isPut',
+		'isdelete' => 'isDelete',
+		'istrace' => 'isTrace',
+		'isconnect' => 'isConnect',
+		'ispatch' => 'isPatch',
+		'isxmlhttprequest' => 'isXmlHttpRequest',
+		'isflashrequest' => 'isFlashRequest',
+	);
 	private $param = array();
     public function indexAction() {
 
@@ -90,22 +111,38 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		if (method_exists($this, $method) === true) {
 			return $this->$method($params);	
 		}
-        $plugin = $this->plugin(strtolower($method));
+		$plugin = $this->requestMethod(strtolower($method));
+		if ($plugin !== NULL) {
+    	    return call_user_func_array(array($this->getRequest(), $plugin), $params);
+		}
+        $plugin = $this->controllerPlugin(strtolower($method));
 		if ($plugin !== NULL) {
 	        if (is_callable($plugin)) {
     	        return call_user_func_array($plugin, $params);
        		}
 			return $plugin;
 		}
-		$helper = $this->serviceLocator->get('ViewHelperManager')->get($method);
-		if (is_callable($helper)) {
-            return call_user_func_array($helper, $params);
+		$plugin = $this->viewHelperPlugin($method);
+		if (is_callable($plugin)) {
+            return call_user_func_array($plugin, $params);
         }
-        return $helper;
+        return $plugin;
     }
-    public function plugin($name, array $options = NULL) {
-		if ($this->getPluginManager()->has($name) === true) {
-        	return $this->getPluginManager()->get($name, $options);
+	public function requestMethod($method) {
+		if (array_key_exists($method, $this->requestMethod)) {
+			return $this->requestMethod[$method];
+		}
+		return NULL;
+	}
+	public function viewHelperPlugin($method = NULL) {
+		if ($method !== NULL) {
+			return $this->serviceLocator->get('ViewHelperManager')->get($method);
+		}
+		return NULL;
+	}
+    public function controllerPlugin($name = NULL) {
+		if ($name !== NULL && $this->getPluginManager()->has($name) === true) {
+        	return $this->getPluginManager()->get($name);
 		}
 		return NULL;
     }

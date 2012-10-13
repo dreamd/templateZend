@@ -34,19 +34,21 @@ $this->setStatusCode
 
 class MainController extends BaseController {
 	public function indexAction() {
+		var_dump($this->getFiles('file'));
+  		print '<br /><br /><br /><br /><br /><br />';
 		var_dump($this->getUri());
 		$bb = $this->getUri();
 		$this->setUri($bb);
 		print $this->getMethod();
-		$this->setMethod($this->getMethod());
-		var_dump($this->getUriString());
+		$this->setMethod('POST');
+		var_dump($this->getUrl());
 		print $this->url()->fromRoute('home', array()).'_<br />';
 		print $this->moduleName().'_<br />';
 		print $this->controllerName().'_<br />';
 		print $this->controllerFullName().'_<br />';
 		print $this->actionName().'_<br />';
 		print $this->routeName().'_<br />';
-		var_dump($this->isPost());print '_<br />';
+		var_dump($this->isPost());print '55_<br />';
 		$this->setPost('name', 'bbb');
 		var_dump($this->getPost('name', 'aaa'));
 		var_dump($this->isGet());print '_<br />';
@@ -54,9 +56,10 @@ class MainController extends BaseController {
 		var_dump($this->getQuery('name', '111'));
 		
 		$this->setFiles('name', '333');
-		var_dump($this->getFiles('name'));
+		var_dump($this->getFiles('name'));print 'zzzzz<br />';
+		var_dump($this->getFiles('file'));print 'zzzzz<br />';
 		
-		var_dump($this->getCookies());
+		//var_dump($this->getCookies());
 		$this->setHeader('aaa', 'test');
 		var_dump($this->getHeader('aaa', 'none'));
 		

@@ -7,8 +7,9 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 class SetFiles extends AbstractPlugin {
     public function __invoke($name = NULL, $value = NULL) {
 		if ($name !== NULL && $value !== NULL && is_string($name) === true) {
-			$param = new Parameters(array($name => $value));
-			$this->getController()->getRequest()->setFiles($param);
+			$files = $this->getController()->getRequest()->getFiles();
+			$files->set($name, $value);
+			$this->getController()->getRequest()->setFiles($files);
 		}
 		return $this->getController();
     }
