@@ -33,6 +33,7 @@ class PluginManager extends ZendPluginManager {
 		//some plugin dont use request function
 		'getpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetPost',
 		'setpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetPost',
+		'getquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetQuery',
 		'setquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetQuery',
 		'getfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetFiles',
 		'setfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetFiles',

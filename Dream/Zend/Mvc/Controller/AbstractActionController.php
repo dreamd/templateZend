@@ -13,7 +13,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		'geturi' => 'getUri',
 		'seturi' => 'setUri',
 		'geturl' => 'getUriString',
-		'getquery' => 'getQuery',
 		'getheader' => 'getHeader',
 		'isoptions' => 'isOptions',
 		'isget' => 'isGet',
