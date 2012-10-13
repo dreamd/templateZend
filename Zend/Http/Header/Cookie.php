@@ -87,7 +87,7 @@ class Cookie extends ArrayObject implements HeaderInterface
     {
         return 'Cookie';
     }
-
+	
     public function getFieldValue()
     {
         $nvPairs = array();

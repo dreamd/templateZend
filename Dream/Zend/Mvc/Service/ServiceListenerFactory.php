@@ -19,7 +19,7 @@ class ServiceListenerFactory extends ZendServiceListenerFactory {
             'ConsoleRouter'           => 'Zend\Mvc\Service\RouterFactory',
             'DependencyInjector'      => 'Zend\Mvc\Service\DiFactory',
             'HttpRouter'              => 'Zend\Mvc\Service\RouterFactory',
-            'Request'                 => 'Zend\Mvc\Service\RequestFactory',
+            'Request'                 => 'Dream\Zend\Mvc\Service\RequestFactory',
             'Response'                => 'Zend\Mvc\Service\ResponseFactory',
             'Router'                  => 'Zend\Mvc\Service\RouterFactory',
             'ViewHelperManager'       => 'Dream\Zend\Mvc\Service\ViewHelperManagerFactory',
