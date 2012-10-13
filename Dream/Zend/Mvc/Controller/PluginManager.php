@@ -13,21 +13,26 @@ class PluginManager extends ZendPluginManager {
         'postredirectget' 		=> 'Zend\Mvc\Controller\Plugin\PostRedirectGet',
         'redirect'        			=> 'Zend\Mvc\Controller\Plugin\Redirect',
         'url'            					=> 'Zend\Mvc\Controller\Plugin\Url',
+		
 		'modulename'      		=> 'Dream\Zend\Mvc\Controller\Plugin\ModuleName',
 		'controllername'			=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerName',
 		'controllerfullname'	=> 'Dream\Zend\Mvc\Controller\Plugin\ControllerFullName',
 		'actionname'				=> 'Dream\Zend\Mvc\Controller\Plugin\ActionName',
 		'routename'					=> 'Dream\Zend\Mvc\Controller\Plugin\RouteName',
+		
 		'setheader'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetHeader',
 		'getstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\GetStatusCode',
 		'setstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\SetStatusCode',
 		'getparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParam',
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
+		
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
 		'redirecturl'				=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectUrl',
 		'baseurl'						=> 'Dream\Zend\Mvc\Controller\Plugin\BaseUrl',
+		
 		'setpost'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetPost',
 		'setquery'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetQuery',
+		'getfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetFiles',
 		'setfiles'						=> 'Dream\Zend\Mvc\Controller\Plugin\SetFiles',
 		'setmethod'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetMethod',
     );
