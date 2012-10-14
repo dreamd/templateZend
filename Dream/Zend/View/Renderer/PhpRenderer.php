@@ -3,11 +3,11 @@
 namespace Dream\Zend\View\Renderer;
 
 use Zend\View\Renderer\PhpRenderer as ZendPhpRenderer;
-use Dream\Twig\Loader\CustomFileSystem,Twig_Environment;
+use Dream\Twig\Loader\ZendRendererLoader,Twig_Environment;
 
 class PhpRenderer extends ZendPhpRenderer {
     public function render($nameOrModel = NULL, $values = NULL) {
-		$loader = new CustomFileSystem($this);
+		$loader = new ZendRendererLoader($this);
 		if (is_string($nameOrModel) === true) {
 			$loader->setTemplatePath($nameOrModel);
 		} else {

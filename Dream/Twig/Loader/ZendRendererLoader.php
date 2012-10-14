@@ -4,7 +4,7 @@ namespace Dream\Twig\Loader;
 
 use Twig_LoaderInterface, Dream\Zend\View\Renderer\PhpRenderer ;
 
-class CustomFileSystem implements Twig_LoaderInterface {
+class ZendRendererLoader implements Twig_LoaderInterface {
 	private $files = array(), $renderer = NULL, $templatePath = false;
 	public function __construct(PhpRenderer $renderer) {
 		$this->renderer = $renderer;
