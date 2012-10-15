@@ -6,6 +6,7 @@ use Application\Controller\BaseController;
 
 class MainController extends BaseController {
 	public function indexAction() {
+		//print_r(get_browser(null, true));
 		var_dump($this->getCookie());
 		print '<br /><br /><br /><br /><br /><br />';
 		$this->result(array('id' => 'sfgfdgfdgfdg'));

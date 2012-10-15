@@ -5,7 +5,8 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Http\Header\SetCookie as ZendSetCookie;
 
 class SetCookie extends AbstractPlugin {
-    public function __invoke(array $names = array(), $value = NULL, $expires = NULL, $domain = NULL, $path = NULL) {
+    public function __invoke($names = NULL, $value = NULL, $expires = NULL, $domain = NULL, $path = NULL) {
+		$names = is_string($names) === true ? array($names) : $names;
 		if (empty($names) !== true && $value !== NULL) {
 			$header = new ZendSetCookie();
 			$header->setName($this->toArrayCookieName($names));
@@ -14,9 +15,18 @@ class SetCookie extends AbstractPlugin {
 				$header->setExpires($expires);
 			}
 			if ($domain !== NULL) {
+				if ($domain === true) {
+					$domain = $this->getController()->getServer('HTTP_HOST');
+					if ($this->getServer('SERVER_PORT') !== '80') {
+						$domain .= ':80';
+					}
+				}
 				$header->setDomain($domain);
 			}
 			if ($path !== NULL) {
+				if ($path === true) {
+					$path = dirname($this->url()->fromRoute($this->routeName(), $this->getEvent()->getRouteMatch()->getParams())).DIRECTORY_SEPARATOR;
+				}
 				$header->setPath($path);
 			}
 			$this->getController()->getResponse()->getHeaders()->addHeader($header);

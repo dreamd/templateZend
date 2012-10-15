@@ -7,7 +7,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 class SetPost extends AbstractPlugin {
     public function __invoke($names = NULL, $value = NULL) {
 		$names = is_string($names) === true ? array($names) : $names;
-		
 		if (empty($names) !== true && is_array($names) === true) {
 			$posts = $this->getController()->getRequest()->getPost()->toArray();
 			$tempPosts = &$posts;

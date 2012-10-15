@@ -9,7 +9,7 @@ class GetCookie extends AbstractPlugin {
 		$names = is_string($names) === true ? array($names) : $names;
 		$cookie = $this->getController()->getRequest()->getCookie();
 		if ($cookie !== false) {
-			$cookies = $this->getController()->getRequest()->getCookie()->getArrayCopy();
+			$cookies = $cookie->getArrayCopy();
 		
 			if (empty($names) !== true && is_array($names) === true) {
 				for ($i = 0; $i < count($names); $i++) {
