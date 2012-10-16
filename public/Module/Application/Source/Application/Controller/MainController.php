@@ -13,6 +13,7 @@ class MainController extends BaseController {
 		//var_dump($this->setIni('browscap', $b));
 		//print_r(get_browser(null));
 		var_dump($this->getBrowser('browser', 'UNKNOWN'));
+		var_dump($this->getBrowser());
 		var_dump($this->getCookie());
 		print '<br /><br /><br /><br /><br /><br />';
 		$this->result(array('id' => 'sfgfdgfdgfdg'));
