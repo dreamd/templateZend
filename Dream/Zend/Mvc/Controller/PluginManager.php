@@ -45,6 +45,8 @@ class PluginManager extends ZendPluginManager {
 		'getenv'						=> 'Dream\Zend\Mvc\Controller\Plugin\GetEnv',
 		'getcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetCookie',
 		'setcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetCookie',
+		//browscap
+		'getbrowser'				=> 'Dream\Zend\Mvc\Controller\Plugin\GetBrowser',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
