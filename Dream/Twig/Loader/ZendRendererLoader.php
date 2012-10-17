@@ -33,10 +33,27 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 		if (strpos($name, '.') === false) {
 			$path = $name;
 		} else {
-			$path = substr($name, 0, strpos($name, '.'));
+			$path = substr($name, 0, strrpos($name, '.'));
 		}
-		return $this->renderer->extend($this->templatePath.$path);
+		return $this->renderer->extend($this->fixPath($this->templatePath.$path));
     }
+	private function fixPath($path) {
+		$paths = array_filter(explode('/', $path));
+		for ($i = 0; $i < max(array_keys($paths)); $i++) {
+			if (isset($paths[$i]) === true && $paths[$i] === '..') {
+				print 'unset'.$i;
+				unset($paths[$i]);
+				for ($j = $i - 1; $j >= 0; $j--) {
+					if (isset($paths[$j]) === true) {
+						print 'unset'.$j;
+						unset($paths[$j]);
+						break;	
+					}
+				}
+			}
+		}
+		return implode('/', $paths);
+	}
     public function getCacheKey($name = NULL) {
 		if ($name !== NULL && array_key_exists($name, $this->files) === true) {
 			return $name;	
