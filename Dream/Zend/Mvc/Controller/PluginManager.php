@@ -47,6 +47,22 @@ class PluginManager extends ZendPluginManager {
 		'setcookie'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetCookie',
 		//browscap
 		'getbrowser'				=> 'Dream\Zend\Mvc\Controller\Plugin\GetBrowser',
+		'cssversion'					=> 'Dream\Zend\Mvc\Controller\Plugin\CssVersion',
+		'ismobile'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsMobile',
+		'isandroid'					=> 'Dream\Zend\Mvc\Controller\Plugin\IsAndroid',
+		'isios'							=> 'Dream\Zend\Mvc\Controller\Plugin\IsIos',
+		'iswin7'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsWin7',
+		'iswin16'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsWin16',
+		'iswin32'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsWin32',
+		'iswin64'						=> 'Dream\Zend\Mvc\Controller\Plugin\IsWin64',
+		'supportcookies'			=> 'Dream\Zend\Mvc\Controller\Plugin\SupportCookies',
+		'supportjavascript'		=> 'Dream\Zend\Mvc\Controller\Plugin\SupportJavaScript',
+		'supportjavaapplets'	=> 'Dream\Zend\Mvc\Controller\Plugin\SupportJavaApplets',
+		'supportvbscript'		=> 'Dream\Zend\Mvc\Controller\Plugin\SupportVbScript',
+		'supportbgsounds'		=> 'Dream\Zend\Mvc\Controller\Plugin\SupportBgSounds',
+		'supportiframes'			=> 'Dream\Zend\Mvc\Controller\Plugin\SupportIframes',
+		'supportframes'			=> 'Dream\Zend\Mvc\Controller\Plugin\SupportFrames',
+		'supporttables'			=> 'Dream\Zend\Mvc\Controller\Plugin\SupportTables',
     );
     protected $aliases = array(
         'prg'             => 'postredirectget',
