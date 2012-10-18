@@ -4,8 +4,8 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
-class SupportTables extends AbstractPlugin {
+class CanCookies extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('tables', false);
+		return (bool)$this->getController()->getBrowser('cookies', false);
     }
 }

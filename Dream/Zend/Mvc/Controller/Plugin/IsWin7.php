@@ -6,6 +6,16 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsWin7 extends AbstractPlugin {
     public function __invoke() {
+		$isWin16 = (bool)$this->getController()->getBrowser('win16', false);
+		$isWin32 = (bool)$this->getController()->getBrowser('win32', false);
+		$isWin64 = (bool)$this->getController()->getBrowser('win64', false);
+		$platformVersion = $this->getController()->getBrowser('platform_version', false);
+		if ($isWin16 === true || $isWin32 === true || $isWin64 === true) {
+			if ($platformVersion === '6.1') {
+				return true;	
+			}
+		}
+		
 		$checks = array(
 			array(
 				'platform'
@@ -25,9 +35,9 @@ class IsWin7 extends AbstractPlugin {
 		);
 		for ($i = 0; $i < count($checks); $i++) {
 			for ($j = 0; $j < count($checks[$i]); $j++) {
-				$check = $this->getController()->getBrowser($checks[$i][$j], 'UNKNOWN');
+				$check = $this->getController()->getBrowser($checks[$i][$j], NULL);
 				for ($k = 0; $k < count($match[$i]); $k++) {
-					if ((bool)preg_match($match[$i][$k], $check) === true) {
+					if ($check !== NULL && (bool)preg_match($match[$i][$k], $check) === true) {
 						return true;
 					}
 				}

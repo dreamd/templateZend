@@ -4,25 +4,21 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
-class IsIos extends AbstractPlugin {
+class IsSafari extends AbstractPlugin {
     public function __invoke() {
+		$platform = (bool)$this->getController()->getBrowser('browser', false);
+		if ((bool)preg_match($platform, '/safari/i') === true) {
+			return true;
+		}
 		$checks = array(
 			array(
-				'platform'
-			),
-			array(
-				'browser_name_regex',
-				'browser_name_pattern',
+				'parent',
+				'comment',
 			)
 		);
 		$match = array(
 			array(
-				'/ios/i'
-			),
-			array(
-				'/ipad/i',
-				'/iphone/i',
-				'/ipod/i'
+				'/safari/i'
 			)
 		);
 		for ($i = 0; $i < count($checks); $i++) {

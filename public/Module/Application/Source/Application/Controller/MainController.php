@@ -11,7 +11,7 @@ class MainController extends BaseController {
 		//$b =  __DIR__.DIRECTORY_SEPARATOR.'php_browscap.ini';
 		//var_dump($b);
 		//var_dump($this->setIni('browscap', $b));
-		//print_r(get_browser(null));
+		print_r(get_browser(null));
 		var_dump($this->isWin7());
 		/*
 		var_dump($this->isMobile());

@@ -4,7 +4,7 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
-class IsIos extends AbstractPlugin {
+class IsLinux extends AbstractPlugin {
     public function __invoke() {
 		$checks = array(
 			array(
@@ -17,12 +17,10 @@ class IsIos extends AbstractPlugin {
 		);
 		$match = array(
 			array(
-				'/ios/i'
+				'/linux/i'
 			),
 			array(
-				'/ipad/i',
-				'/iphone/i',
-				'/ipod/i'
+				'/linux/i',
 			)
 		);
 		for ($i = 0; $i < count($checks); $i++) {

@@ -4,8 +4,8 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
-class SupportJavaScript extends AbstractPlugin {
+class CanBgSounds extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('javascript', false);
+		return (bool)$this->getController()->getBrowser('backgroundsounds', false);
     }
 }

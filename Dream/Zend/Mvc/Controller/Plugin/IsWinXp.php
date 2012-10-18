@@ -4,8 +4,18 @@ namespace Dream\Zend\Mvc\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
-class IsIos extends AbstractPlugin {
+class IsWinXp extends AbstractPlugin {
     public function __invoke() {
+		$isWin16 = (bool)$this->getController()->getBrowser('win16', false);
+		$isWin32 = (bool)$this->getController()->getBrowser('win32', false);
+		$isWin64 = (bool)$this->getController()->getBrowser('win64', false);
+		$platformVersion = $this->getController()->getBrowser('platform_version', false);
+		if ($isWin16 === true || $isWin32 === true || $isWin64 === true) {
+			if ($platformVersion === '6.0') {
+				return true;	
+			}
+		}
+		
 		$checks = array(
 			array(
 				'platform'
@@ -17,12 +27,10 @@ class IsIos extends AbstractPlugin {
 		);
 		$match = array(
 			array(
-				'/ios/i'
+				'/winxp/i'
 			),
 			array(
-				'/ipad/i',
-				'/iphone/i',
-				'/ipod/i'
+				'/windows(\s)?nt(\s)?5\\\.1/i',
 			)
 		);
 		for ($i = 0; $i < count($checks); $i++) {

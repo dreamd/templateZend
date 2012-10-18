@@ -10,7 +10,6 @@ class ControllerName extends AbstractPlugin {
 		if (is_string($controllerFullName) === true && empty($controllerFullName) === false) {
 			return substr($controllerFullName, (strlen($controllerFullName) - strrpos($controllerFullName, '\\')) * -1 + 1);
 		}
-		var_dump('5555');
 		return NULL;
     }
 }
