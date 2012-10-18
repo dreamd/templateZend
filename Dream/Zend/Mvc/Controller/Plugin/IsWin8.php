@@ -30,7 +30,7 @@ class IsWin8 extends AbstractPlugin {
 				'/win8/i'
 			),
 			array(
-				'/windows(\s)?nt(\s)?6\\\.1/i',
+				'/windows(\s)?nt(\s)?6\\\.2/i',
 			)
 		);
 		for ($i = 0; $i < count($checks); $i++) {
