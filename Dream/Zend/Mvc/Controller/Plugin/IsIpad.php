@@ -7,7 +7,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 class IsIpad extends AbstractPlugin {
     public function __invoke() {
 		$platform = (bool)$this->getController()->getBrowser('platform', false);
-		if ((bool)preg_match($platform, '/ios/i') === true) {
+		if ((bool)preg_match('/ios/i', $platform) === true) {
 			$checks = array(
 				array(
 					'browser_name_regex',

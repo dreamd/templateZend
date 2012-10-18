@@ -7,7 +7,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 class IsFirefox extends AbstractPlugin {
     public function __invoke() {
 		$platform = (bool)$this->getController()->getBrowser('browser', false);
-		if ((bool)preg_match($platform, '/firefox/i') === true) {
+		if ((bool)preg_match('/firefox/i', $platform) === true) {
 			return true;
 		}
 		$checks = array(
