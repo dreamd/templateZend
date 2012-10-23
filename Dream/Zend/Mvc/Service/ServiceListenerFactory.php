@@ -30,7 +30,7 @@ class ServiceListenerFactory extends ZendServiceListenerFactory {
             'ViewManager'             => 'Dream\Zend\Mvc\Service\ViewManagerFactory',
             'ViewResolver'            => 'Dream\Zend\Mvc\Service\ViewResolverFactory',
             'ViewTemplateMapResolver' => 'Zend\Mvc\Service\ViewTemplateMapResolverFactory',
-            'ViewTemplatePathStack'   => 'Zend\Mvc\Service\ViewTemplatePathStackFactory',
+            'ViewTemplatePathStack'   => 'Dream\Zend\Mvc\Service\ViewTemplatePathStackFactory',
         ),
         'aliases' => array(
             'Configuration'                          => 'Config',

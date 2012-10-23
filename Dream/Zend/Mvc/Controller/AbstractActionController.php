@@ -31,14 +31,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
     public function indexAction() {
 
     }
-    public function notFoundAction() {
-        $response   = $this->response;
-        $event      = $this->getEvent();
-        $routeMatch = $event->getRouteMatch();
-
-        $response->setStatusCode(404);
-        $routeMatch->setParam('action', 'not-found');
-    }
 	public function __set($name = NULL, $value = NULL) {
 		if ($name !== NULL && is_string($name) === true) {
 			$this->param[$name] = $value;	
@@ -63,25 +55,25 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 	public function dispatchLayout() {
 		return NULL;
 	}
-	protected function result(array $return = array()) {
-		$this->result = array_merge((array)$this->result, $return);
+	protected function assign(array $return = array()) {
+		$this->assign = array_merge($this->assign, $return);
 	}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
             throw new Exception\DomainException('Missing route matches; unsure how to retrieve action');
         }
-		$this->assign = new Assign();
+		$this->assign = array();
         $action = $routeMatch->getParam('action', 'not-found');
         $method = static::getMethodFromAction($action);
 
-        if (!method_exists($this, $method)) {
-            $method = 'notFoundAction';
+        if (method_exists($this, $method) === true) {
+            $this->$method();
         };
 		$this->dispatchLayout();
-		$this->$method();
 		
-		$actionResponse = $this->result;
+		
+		$actionResponse = $this->assign;
 		
 		if (is_array($actionResponse) === true) {
 			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
@@ -100,8 +92,6 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		} else if ($actionResponse instanceof ModelInterface) {
 			$actionResponse->setTerminal(true);
 		}
-		
-		$actionResponse->twig = $this->assign;
 		$e->setResult($actionResponse);
 		return $actionResponse;
     }
@@ -144,9 +134,4 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		}
 		return NULL;
     }
-	/*
-	public function goToRoute() {
-		
-	}
-	*/
 }
