@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsWin64 extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('win64', false);
+		return $this->getController()->getBrowser('Win64', false);
     }
 }

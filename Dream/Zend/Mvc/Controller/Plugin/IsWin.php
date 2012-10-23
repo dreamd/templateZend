@@ -6,16 +6,16 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsWin extends AbstractPlugin {
     public function __invoke() {
-		$isWin16 = (bool)$this->getController()->getBrowser('win16', false);
-		$isWin32 = (bool)$this->getController()->getBrowser('win32', false);
-		$isWin64 = (bool)$this->getController()->getBrowser('win64', false);
+		$isWin16 = $this->getController()->getBrowser('Win16', false);
+		$isWin32 = $this->getController()->getBrowser('Win32', false);
+		$isWin64 = $this->getController()->getBrowser('Win64', false);
 		if ($isWin16 === true || $isWin32 === true || $isWin64 === true) {
 			return true;
 		}
 		
 		$checks = array(
 			array(
-				'platform'
+				'Platform'
 			),
 			array(
 				'browser_name_regex',

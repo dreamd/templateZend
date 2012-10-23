@@ -6,7 +6,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsMobile extends AbstractPlugin {
     public function __invoke() {
-		$isMobile = (bool)$this->getController()->getBrowser('ismobiledevice', false);
+		$isMobile = $this->getController()->getBrowser('isMobileDevice', false);
 		if ($isMobile === true) {
 			return $isMobile;
 		}
@@ -15,7 +15,7 @@ class IsMobile extends AbstractPlugin {
 			array(
 				'browser_name_regex',
 				'browser_name_pattern',
-				'parent'
+				'Parent'
 			)
 		);
 		$match = array(

@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanJavaApplets extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('javaapplets', false);
+		return $this->getController()->getBrowser('JavaApplets', false);
     }
 }

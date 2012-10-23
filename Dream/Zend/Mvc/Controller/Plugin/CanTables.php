@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanTables extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('tables', false);
+		return $this->getController()->getBrowser('Tables', false);
     }
 }

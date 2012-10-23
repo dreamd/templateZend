@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanCookies extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('cookies', false);
+		return $this->getController()->getBrowser('Cookies', false);
     }
 }

@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanIframes extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('iframes', false);
+		return $this->getController()->getBrowser('IFrames', false);
     }
 }

@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanFrames extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('frames', false);
+		return $this->getController()->getBrowser('Frames', false);
     }
 }

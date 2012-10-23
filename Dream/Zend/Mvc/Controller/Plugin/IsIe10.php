@@ -6,9 +6,9 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsIe10 extends AbstractPlugin {
     public function __invoke() {
-		$isIe = (bool)$this->getController()->isIe();
+		$isIe = $this->getController()->isIe();
 		if ($isIe === true) {
-			$version = $this->getController()->getBrowser('version', NULL);
+			$version = $this->getController()->getBrowser('Version', NULL);
 			if ($version !== NULL && is_string($version) === true && substr($version, 0, 2) === '10') {
 				return true;	
 			}

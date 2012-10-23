@@ -6,10 +6,10 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsWinXp extends AbstractPlugin {
     public function __invoke() {
-		$isWin16 = (bool)$this->getController()->getBrowser('win16', false);
-		$isWin32 = (bool)$this->getController()->getBrowser('win32', false);
-		$isWin64 = (bool)$this->getController()->getBrowser('win64', false);
-		$platformVersion = $this->getController()->getBrowser('platform_version', false);
+		$isWin16 = $this->getController()->getBrowser('Win16', false);
+		$isWin32 = $this->getController()->getBrowser('Win32', false);
+		$isWin64 = $this->getController()->getBrowser('Win64', false);
+		$platformVersion = $this->getController()->getBrowser('Platform_Version', false);
 		if ($isWin16 === true || $isWin32 === true || $isWin64 === true) {
 			if ($platformVersion === '6.0') {
 				return true;	
@@ -18,7 +18,7 @@ class IsWinXp extends AbstractPlugin {
 		
 		$checks = array(
 			array(
-				'platform'
+				'Platform'
 			),
 			array(
 				'browser_name_regex',

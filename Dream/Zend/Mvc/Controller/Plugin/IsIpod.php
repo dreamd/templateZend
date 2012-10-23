@@ -6,7 +6,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class IsIpod extends AbstractPlugin {
     public function __invoke() {
-		$platform = $this->getController()->getBrowser('platform', false);
+		$platform = $this->getController()->getBrowser('Platform', false);
 		if ((bool)preg_match('/ios/i', $platform) === true) {
 			$checks = array(
 				array(

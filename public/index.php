@@ -16,7 +16,8 @@ set_exception_handler('exception_handler');
 			'autoregister_zf' => true,
 			"namespaces" => array(
 				"Dream" => "Dream",
-				"Twig" => "Twig"					  
+				"Twig" => "Twig",
+				"phpbrowscap" => "PhpBrowscap"			  
 			),
 		),
 	));

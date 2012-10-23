@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanVbScript extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('vbscript', false);
+		return $this->getController()->getBrowser('VBScript', false);
     }
 }

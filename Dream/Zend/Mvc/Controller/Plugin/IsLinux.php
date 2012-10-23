@@ -8,7 +8,7 @@ class IsLinux extends AbstractPlugin {
     public function __invoke() {
 		$checks = array(
 			array(
-				'platform'
+				'Platform'
 			),
 			array(
 				'browser_name_regex',

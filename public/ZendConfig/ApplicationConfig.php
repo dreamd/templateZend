@@ -8,8 +8,7 @@ return array(
             'ZendConfig/AutoLoad/{,*.}{global,local}.php',
         ),
         'module_paths' => array(
-            './Module',
-			'./Dream'
+            './Module'
         ),
 		"config_static_paths" => array(),
 		"extra_config" => array(),

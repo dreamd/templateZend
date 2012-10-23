@@ -6,7 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CssVersion extends AbstractPlugin {
     public function __invoke() {
-		$cssVersion = (int)$this->getController()->getBrowser('cssversion', 'UNKNOWN');
-		return is_int($cssVersion) === true ? $cssVersion : false;
+		return $this->getController()->getBrowser('CssVersion', false);
     }
 }

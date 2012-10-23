@@ -6,6 +6,6 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin, Zend\Stdlib\Parameters;
 
 class CanBgSounds extends AbstractPlugin {
     public function __invoke() {
-		return (bool)$this->getController()->getBrowser('backgroundsounds', false);
+		return $this->getController()->getBrowser('BackgroundSounds', false);
     }
 }

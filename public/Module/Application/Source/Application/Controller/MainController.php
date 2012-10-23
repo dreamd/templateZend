@@ -42,7 +42,7 @@ class MainController extends BaseController {
 		print 'caniframes'.'->';var_dump($this->caniframes());print '<br />';
 		print 'canframes'.'->';var_dump($this->canframes());print '<br />';
 		print 'cantables'.'->';var_dump($this->cantables());print '<br />';
-		var_dump($this->getBrowser());
+
 		print '<br /><br /><br /><br /><br /><br />';
 		$this->result(array('id' => 'sfgfdgfdgfdg'));
 		$this->showSubMenu();
