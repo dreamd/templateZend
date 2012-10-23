@@ -1,6 +1,6 @@
 <?php
 
-namespace Application;
+namespace Combination;
 
 use Zend\Mvc\ModuleRouteListener;
 

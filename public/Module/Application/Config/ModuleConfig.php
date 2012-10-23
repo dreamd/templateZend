@@ -11,7 +11,7 @@ return array(
     'router' => array(
         'routes' => array(
 		
-            'home' => array(
+            'Home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/',
@@ -22,7 +22,7 @@ return array(
                 ),
             ),
 
-            'Main' => array(
+            'Application' => array(
                 'type' => 'segment',
                 'options' => array(
 					'route' => '/Main[/:action][/:id]',
@@ -37,6 +37,10 @@ return array(
                     ),
                 ),
             ),
+
+
+
+
         ),
     ),
     'service_manager' => array(
@@ -56,8 +60,6 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController',
-			'Application\Controller\Test' => 'Application\Controller\TestController',
 			'Application\Controller\Main' => 'Application\Controller\MainController',
         ),
     ),
