@@ -41,11 +41,9 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 		$paths = array_filter(explode('/', $path));
 		for ($i = 0; $i < max(array_keys($paths)); $i++) {
 			if (isset($paths[$i]) === true && $paths[$i] === '..') {
-				print 'unset'.$i;
 				unset($paths[$i]);
 				for ($j = $i - 1; $j >= 0; $j--) {
 					if (isset($paths[$j]) === true) {
-						print 'unset'.$j;
 						unset($paths[$j]);
 						break;	
 					}
