@@ -449,6 +449,7 @@ class PhpRenderer implements Renderer, TreeRendererInterface
 
         while ($this->__template = array_pop($this->__templates)) {
             $this->__file = $this->resolver($this->__template);
+
             if (!$this->__file) {
                 throw new Exception\RuntimeException(sprintf(
                     '%s: Unable to render template "%s"; resolver could not resolve to a file',

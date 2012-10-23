@@ -7,7 +7,7 @@ use Zend\View\Renderer\RendererInterface as Renderer;
 use SplFileInfo;
 
 class TemplatePathStack extends ZendTemplatePathStack {
-	protected $defaultSuffix = array('phtml', 'css', 'js');
+	protected $defaultSuffix = array('phtml', 'css', 'js', 'less');
     public function setDefaultSuffix($defaultSuffix) {
         $this->defaultSuffix[] = (string)ltrim($defaultSuffix, '.');
         return $this;
@@ -29,6 +29,7 @@ class TemplatePathStack extends ZendTemplatePathStack {
         // Ensure we have the expected file extension
         $defaultSuffixs = $this->getDefaultSuffix();
         foreach ($this->paths as $path) {
+			$name = str_replace(' ', DIRECTORY_SEPARATOR, ucwords(str_replace('/', ' ', $name)));
 			for ($i = 0; $i < count($defaultSuffixs); $i++) {
 				if (realpath($path . $name.'.'.$defaultSuffixs[$i]) !== false) {
 					$name = $name.'.'.$defaultSuffixs[$i];
@@ -38,7 +39,6 @@ class TemplatePathStack extends ZendTemplatePathStack {
 			if (pathinfo($name, PATHINFO_EXTENSION) === '') {;
 				$name .= '.' . $defaultSuffixs[0];
 			}
-
             $file = new SplFileInfo($path . $name);
             if ($file->isReadable()) {
                 // Found! Return it.

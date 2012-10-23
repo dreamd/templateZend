@@ -4,7 +4,6 @@ namespace Dream\Zend\View\Renderer;
 
 use Zend\View\Renderer\PhpRenderer as ZendPhpRenderer;
 use Dream\Twig\Loader\ZendRendererLoader, Dream\Twig\Environment;
-use Zend\View\Resolver\ResolverInterface as Resolver;
 
 class PhpRenderer extends ZendPhpRenderer {
 	private $__templateResolver;
