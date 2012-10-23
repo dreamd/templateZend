@@ -1,6 +1,5 @@
 <?php
 
-print __FILE__;
 function exception_handler($exception) {
   echo "Uncaught exception: " , $exception->getMessage(), "\n";
 }
