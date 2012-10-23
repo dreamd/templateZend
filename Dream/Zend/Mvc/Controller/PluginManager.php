@@ -26,6 +26,7 @@ class PluginManager extends ZendPluginManager {
 		'setstatuscode'			=> 'Dream\Zend\Mvc\Controller\Plugin\SetStatusCode',
 		//fast plugin to use route function
 		'getparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParam',
+		'getparams'					=> 'Dream\Zend\Mvc\Controller\Plugin\GetParams',
 		'setparam'					=> 'Dream\Zend\Mvc\Controller\Plugin\SetParam',
 		//fast plugin to use controller plugin
 		'redirectroute'			=> 'Dream\Zend\Mvc\Controller\Plugin\RedirectRoute',
