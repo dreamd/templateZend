@@ -1,1 +1,0 @@
-if(!(window.console && console.log)){(function(){var a=function(){};var b=['assert','clear','count','debug','dir','dirxml','error','exception','group','groupCollapsed','groupEnd','info','log','markTimeline','profile','profileEnd','markTimeline','table','time','timeEnd','timeStamp','trace','warn'];var c=b.length;var d=window.console={};while(c--){d[b[c]] = a;}}());}
