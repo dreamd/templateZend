@@ -27,8 +27,8 @@ if (getenv('ZF2_PATH')) {           // Support for ZF2_PATH environment variable
     $zf2Path = getenv('ZF2_PATH');
 } elseif (get_cfg_var('zf2_path')) { // Support for zf2_path directive value
     $zf2Path = get_cfg_var('zf2_path');
-} elseif (is_dir('vendor/ZF2/library')) {
-    $zf2Path = 'vendor/ZF2/library';
+} elseif (is_dir('library')) {
+    $zf2Path = 'library';
 }
 
 if ($zf2Path) {
