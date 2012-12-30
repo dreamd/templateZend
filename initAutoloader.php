@@ -1,5 +1,8 @@
 <?php
-include 'library/Zend/Loader/AutoloaderFactory.php';
+$zendLoaderFactory = 'library/Zend/Loader/AutoloaderFactory.php';
+if (file_exists($zendLoaderFactory) === true) {
+	include $zendLoaderFactory;
+}
 if (!class_exists('Zend\Loader\AutoloaderFactory') || defined('PROJECT_PATH') === false) {
     throw new RuntimeException('System Error');
 } else {
