@@ -11,4 +11,9 @@ return array(
             'module',
         ),
     ),
+	"service_manager" => array(
+		"factories" => array(
+			'ServiceListener' => 'Dream\Zend\Mvc\Service\ServiceListenerFactory'
+		),
+	)
 );
