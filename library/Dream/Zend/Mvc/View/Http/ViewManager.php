@@ -10,10 +10,9 @@ use Zend\Mvc\View\Http\InjectViewModelListener, Zend\Mvc\View\SendResponseListen
 
 class ViewManager extends ZendViewManager {
     public function getRenderer() {
-        if ($this->renderer) {
+        if ($this->renderer !== NULL) {
             return $this->renderer;
         }
-
         $this->renderer = new ViewPhpRenderer;
         $this->renderer->setHelperPluginManager($this->getHelpermanager());
         $this->renderer->setResolver($this->getResolver());
