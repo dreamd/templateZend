@@ -7,6 +7,66 @@ use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
+    public function indexAction() {
+        return new ViewModel();
+    }
+	public function dispatchLayout() {
+		
+	}
+    public function onDispatch(MvcEvent $e) {
+		/*
+        $routeMatch = $e->getRouteMatch();
+        if (!$routeMatch) {
+            throw new Exception\DomainException('Missing route matches; unsure how to retrieve action');
+        }
+		$this->assign = array();
+        $action = $routeMatch->getParam('action', 'not-found');
+        $method = static::getMethodFromAction($action);
+
+        if (method_exists($this, $method) === true) {
+            $this->$method();
+        };
+		$this->dispatchLayout();
+		
+		
+		$actionResponse = $this->assign;
+		
+		if (is_array($actionResponse) === true) {
+			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
+				$actionResponse = new ViewModel($actionResponse);
+				$actionResponse->setTerminal(true);
+			} else {
+				$actionResponse = new ViewModel();
+				$actionResponse->setTerminal(true);
+			}
+        } else if (is_string($actionResponse) === true) {
+            $actionResponse = new ViewModel(array($actionResponse => $actionResponse));
+			$actionResponse->setTerminal(true);
+		} else if ($actionResponse === NULL) {
+            $actionResponse = new ViewModel();
+			$actionResponse->setTerminal(true);
+		} else if ($actionResponse instanceof ModelInterface) {
+			$actionResponse->setTerminal(true);
+		}
+		$e->setResult($actionResponse);
+		return $actionResponse;
+		*/
+        $routeMatch = $e->getRouteMatch();
+        if (!$routeMatch) {
+            throw new Exception\DomainException('Missing route matches; unsure how to retrieve action');
+        }
+        $method = static::getMethodFromAction($routeMatch->getParam('action', 'not-found'));
+		$this->dispatchLayout();
+        if (method_exists($this, $method) === true) {
+           $actionResponse = $this->$method();
+        }
+
+
+        $e->setResult($actionResponse);
+        return $actionResponse;
+    }
+
+	/*
     protected $eventIdentifier = __CLASS__;
 	private $requestMethod = array(
 		'getmethod' => 'getMethod',
@@ -134,4 +194,5 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		}
 		return NULL;
     }
+	*/
 }
