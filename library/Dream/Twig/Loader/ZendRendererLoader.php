@@ -40,7 +40,22 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 	private function fixPath($path) {
 		$paths = array_filter(explode('/', $path));
 		for ($i = 0; $i < max(array_keys($paths)); $i++) {
-			if (isset($paths[$i]) === true && $paths[$i] === '..') {
+			if (isset($paths[$i]) === true && $paths[$i] === 'SHARE') {
+				$paths[$i] = 'ShareFolder';
+				for ($j = $i - 1; $j >= 0; $j--) {
+					if (isset($paths[$j]) === true) {
+						unset($paths[$j]);
+					}
+				}
+			} else if (isset($paths[$i]) === true && $paths[$i] === '~') {
+				for ($j = $i; $j >= 0; $j--) {
+					if (isset($paths[$j]) === true) {
+						unset($paths[$j]);
+					}
+				}
+			} else if (isset($paths[$i]) === true && $paths[$i] === '.') {
+				unset($paths[$i]);
+			} else if (isset($paths[$i]) === true && $paths[$i] === '..') {
 				unset($paths[$i]);
 				for ($j = $i - 1; $j >= 0; $j--) {
 					if (isset($paths[$j]) === true) {
@@ -50,7 +65,7 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 				}
 			}
 		}
-		return implode('/', $paths);
+		return implode('/', array_map('ucfirst', $paths));
 	}
     public function getCacheKey($name = NULL) {
 		if ($name !== NULL && array_key_exists($name, $this->files) === true) {
