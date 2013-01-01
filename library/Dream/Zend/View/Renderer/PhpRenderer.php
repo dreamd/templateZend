@@ -15,7 +15,10 @@ class PhpRenderer extends ZendPhpRenderer {
 		}
 		$loader->addFile($loader->templatePath(), parent::render($nameOrModel, $values));
 		$twig = new Environment($loader, array('cache' => false));
-		return $twig->render($loader->templatePath(), get_object_vars($nameOrModel));
+		if (is_string($nameOrModel) === true) {
+			return $twig->render($loader->templatePath(), $nameOrModel);
+		}
+		return $twig->render($loader->templatePath(), (array)$nameOrModel->getVariables());
 	}
 	public function extend($nameOrModel = NULL, $values = NULL) {
 		return parent::render($nameOrModel, $values);
