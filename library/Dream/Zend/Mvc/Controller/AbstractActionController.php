@@ -4,9 +4,14 @@ namespace Dream\Zend\Mvc\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
 use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
-use Zend\Stdlib\ArrayUtils, Zend\View\Model\ModelInterface, Dream\Twig\Assign;
+use Zend\Stdlib\ArrayUtils, Dream\Zend\Mvc\View\ViewStorage;
+use Zend\Mvc\Exception\DomainException;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
+	protected $view = NULL;
+	public function __construct() {
+		$this->view = new ViewStorage();
+	}
     public function indexAction() {
         return new ViewModel();
     }
@@ -14,54 +19,28 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		
 	}
     public function onDispatch(MvcEvent $e) {
-		/*
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
-            throw new Exception\DomainException('Missing route matches; unsure how to retrieve action');
-        }
-		$this->assign = array();
-        $action = $routeMatch->getParam('action', 'not-found');
-        $method = static::getMethodFromAction($action);
-
-        if (method_exists($this, $method) === true) {
-            $this->$method();
-        };
-		$this->dispatchLayout();
-		
-		
-		$actionResponse = $this->assign;
-		
-		if (is_array($actionResponse) === true) {
-			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
-				$actionResponse = new ViewModel($actionResponse);
-				$actionResponse->setTerminal(true);
-			} else {
-				$actionResponse = new ViewModel();
-				$actionResponse->setTerminal(true);
-			}
-        } else if (is_string($actionResponse) === true) {
-            $actionResponse = new ViewModel(array($actionResponse => $actionResponse));
-			$actionResponse->setTerminal(true);
-		} else if ($actionResponse === NULL) {
-            $actionResponse = new ViewModel();
-			$actionResponse->setTerminal(true);
-		} else if ($actionResponse instanceof ModelInterface) {
-			$actionResponse->setTerminal(true);
-		}
-		$e->setResult($actionResponse);
-		return $actionResponse;
-		*/
-        $routeMatch = $e->getRouteMatch();
-        if (!$routeMatch) {
-            throw new Exception\DomainException('Missing route matches; unsure how to retrieve action');
+            throw new DomainException('Missing route matches; unsure how to retrieve action');
         }
         $method = static::getMethodFromAction($routeMatch->getParam('action', 'not-found'));
 		$this->dispatchLayout();
         if (method_exists($this, $method) === true) {
            $actionResponse = $this->$method();
         }
-
-
+		$actionResponse = $this->view->values();
+		if (is_array($actionResponse) === true) {
+			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
+				$actionResponse = new ViewModel($actionResponse);
+			} else {
+				$actionResponse = new ViewModel();
+			}
+        } else if (is_string($actionResponse) === true) {
+            $actionResponse = new ViewModel(array($actionResponse => $actionResponse));
+		} else if ($actionResponse === NULL) {
+            $actionResponse = new ViewModel();
+		}
+		$actionResponse->setTerminal(true);
         $e->setResult($actionResponse);
         return $actionResponse;
     }
