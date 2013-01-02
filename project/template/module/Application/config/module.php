@@ -76,17 +76,18 @@ return array(
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
-        'not_found_template'       => 'Error/404',
-        'exception_template'       => 'Error/Index',
+        'not_found_template'       => 'error/404',
+        'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../../../view/Layout/Layout.phtml',
-            'application/index/index' => __DIR__ . '/../../../view/Application/Index/Index.phtml',
-			'application/index/test' => __DIR__ . '/../../../view/Application/Index/Test.phtml',
-            'error/404'               => __DIR__ . '/../../../view/Error/404.phtml',
-            'error/index'             => __DIR__ . '/../../../view/Error/Index.phtml',
+            'layout/layout'           => getcwd().'/views/'.__PROJECT__.'/Layout/Layout.phtml',
+            'application/index/index' => getcwd().'/views/'.__PROJECT__.'/Application/Index/Index.phtml',
+			'application/index/test' => getcwd().'/views/'.__PROJECT__.'/Application/Index/Test.phtml',
+            'error/404'               => getcwd().'/views/'.__PROJECT__.'/Error/404.phtml',
+            'error/index'             => getcwd().'/views/'.__PROJECT__.'/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-            __DIR__ . '/../../../view',
+            getcwd().'/views',
+			getcwd().'/views/'.__PROJECT__
         ),
     ),
 );

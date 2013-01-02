@@ -54,7 +54,8 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 					}
 				}
 			} else if (isset($paths[$i]) === true && $paths[$i] === self::rootPath) {
-				for ($j = $i; $j >= 0; $j--) {
+				$paths[$i] = __PROJECT__;
+				for ($j = $i - 1; $j >= 0; $j--) {
 					if (isset($paths[$j]) === true) {
 						unset($paths[$j]);
 					}

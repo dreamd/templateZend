@@ -20,8 +20,8 @@ class Module {
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    __NAMESPACE__ => realpath(__DIR__.'/../../resources/'.__NAMESPACE__),
-					'ShareResources' => realpath(__DIR__.'/../../resources/ShareResources'),
+                    __NAMESPACE__ => realpath(getcwd().'/resources/'.__PROJECT__.'/'.__NAMESPACE__),
+					'ShareResources' => realpath(getcwd().'/resources/ShareResources'),
                 ),
             ),
         );
