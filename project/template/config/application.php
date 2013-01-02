@@ -2,13 +2,15 @@
 return array(
     'modules' => array(
         'Application',
+		'Share'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
             'config/autoload/{,*.}{global,local}.php',
         ),
         'module_paths' => array(
-            'module',
+            getcwd().'/module/'.__PROJECT__,
+			getcwd().'/module/ShareResources',
         ),
     ),
 	"service_manager" => array(
