@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Twig_Token</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___toString" title="__toString :: Returns a string representation of the token."><span class="description">Returns a string representation of the token.</span><pre>__toString()</pre></a></li>
+<li class="method public "><a href="#method_getLine" title="getLine :: Gets the line."><span class="description">Gets the line.</span><pre>getLine()</pre></a></li>
+<li class="method public "><a href="#method_getType" title="getType :: Gets the token type."><span class="description">Gets the token type.</span><pre>getType()</pre></a></li>
+<li class="method public "><a href="#method_getValue" title="getValue :: Gets the token value."><span class="description">Gets the token value.</span><pre>getValue()</pre></a></li>
+<li class="method public "><a href="#method_test" title="test :: Tests the current token for a type and/or a value."><span class="description">Tests the current token for a type and/or a value.</span><pre>test()</pre></a></li>
+<li class="method public "><a href="#method_typeToEnglish" title="typeToEnglish :: Returns the english representation of a given type."><span class="description">Returns the english representation of a given type.</span><pre>typeToEnglish()</pre></a></li>
+<li class="method public "><a href="#method_typeToString" title="typeToString :: Returns the constant representation (internal) of a given type."><span class="description">Returns the constant representation (internal) of a given type.</span><pre>typeToString()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_lineno" title="$lineno :: "><span class="description"></span><pre>$lineno</pre></a></li>
+<li class="property protected "><a href="#property_type" title="$type :: "><span class="description"></span><pre>$type</pre></a></li>
+<li class="property protected "><a href="#property_value" title="$value :: "><span class="description"></span><pre>$value</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_BLOCK_END_TYPE" title="BLOCK_END_TYPE :: "><span class="description">BLOCK_END_TYPE</span><pre>BLOCK_END_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_BLOCK_START_TYPE" title="BLOCK_START_TYPE :: "><span class="description">BLOCK_START_TYPE</span><pre>BLOCK_START_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_EOF_TYPE" title="EOF_TYPE :: "><span class="description">EOF_TYPE</span><pre>EOF_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_INTERPOLATION_END_TYPE" title="INTERPOLATION_END_TYPE :: "><span class="description">INTERPOLATION_END_TYPE</span><pre>INTERPOLATION_END_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_INTERPOLATION_START_TYPE" title="INTERPOLATION_START_TYPE :: "><span class="description">INTERPOLATION_START_TYPE</span><pre>INTERPOLATION_START_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_NAME_TYPE" title="NAME_TYPE :: "><span class="description">NAME_TYPE</span><pre>NAME_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_NUMBER_TYPE" title="NUMBER_TYPE :: "><span class="description">NUMBER_TYPE</span><pre>NUMBER_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_OPERATOR_TYPE" title="OPERATOR_TYPE :: "><span class="description">OPERATOR_TYPE</span><pre>OPERATOR_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_PUNCTUATION_TYPE" title="PUNCTUATION_TYPE :: "><span class="description">PUNCTUATION_TYPE</span><pre>PUNCTUATION_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_STRING_TYPE" title="STRING_TYPE :: "><span class="description">STRING_TYPE</span><pre>STRING_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_TEXT_TYPE" title="TEXT_TYPE :: "><span class="description">TEXT_TYPE</span><pre>TEXT_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_VAR_END_TYPE" title="VAR_END_TYPE :: "><span class="description">VAR_END_TYPE</span><pre>VAR_END_TYPE</pre></a></li>
+<li class="constant  "><a href="#constant_VAR_START_TYPE" title="VAR_START_TYPE :: "><span class="description">VAR_START_TYPE</span><pre>VAR_START_TYPE</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Twig_Token"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Twig_Token.html">Twig_Token</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Represents a Token.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/twig.html">twig</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:fabien@symfony.com">Fabien Potencier</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct(integer $type, string $value, integer $lineno) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>integer</code><p>The type of the token</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>The token value</p></div>
+<div class="subelement argument">
+<h4>$lineno</h4>
+<code>integer</code><p>The line position in the source</p></div>
+</div></div>
+</div>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>Returns a string representation of the token.</h2>
+<pre>__toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A string representation of the token</div>
+</div></div>
+</div>
+<a id="method_getLine"></a><div class="element clickable method public method_getLine" data-toggle="collapse" data-target=".method_getLine .collapse">
+<h2>Gets the line.</h2>
+<pre>getLine() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The source line</div>
+</div></div>
+</div>
+<a id="method_getType"></a><div class="element clickable method public method_getType" data-toggle="collapse" data-target=".method_getType .collapse">
+<h2>Gets the token type.</h2>
+<pre>getType() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The token type</div>
+</div></div>
+</div>
+<a id="method_getValue"></a><div class="element clickable method public method_getValue" data-toggle="collapse" data-target=".method_getValue .collapse">
+<h2>Gets the token value.</h2>
+<pre>getValue() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The token value</div>
+</div></div>
+</div>
+<a id="method_test"></a><div class="element clickable method public method_test" data-toggle="collapse" data-target=".method_test .collapse">
+<h2>Tests the current token for a type and/or a value.</h2>
+<pre>test(array | integer $type, array | string | null $values) : Boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Parameters may be:
+* just type
+* type and value (or array of possible values)
+* just value (or array of possible values) (NAME_TYPE is used as type)</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>array</code><code>integer</code><p>The type to test</p></div>
+<div class="subelement argument">
+<h4>$values</h4>
+<code>array</code><code>string</code><code>null</code><p>The token value</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>Boolean</code></div>
+</div></div>
+</div>
+<a id="method_typeToEnglish"></a><div class="element clickable method public method_typeToEnglish" data-toggle="collapse" data-target=".method_typeToEnglish .collapse">
+<h2>Returns the english representation of a given type.</h2>
+<pre>typeToEnglish(integer $type, integer $line) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>integer</code><p>The type as an integer</p></div>
+<div class="subelement argument">
+<h4>$line</h4>
+<code>integer</code><p>The code line</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The string representation</div>
+</div></div>
+</div>
+<a id="method_typeToString"></a><div class="element clickable method public method_typeToString" data-toggle="collapse" data-target=".method_typeToString .collapse">
+<h2>Returns the constant representation (internal) of a given type.</h2>
+<pre>typeToString(integer $type, Boolean $short, integer $line) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>integer</code><p>The type as an integer</p></div>
+<div class="subelement argument">
+<h4>$short</h4>
+<code>Boolean</code><p>Whether to return a short representation or not</p></div>
+<div class="subelement argument">
+<h4>$line</h4>
+<code>integer</code><p>The code line</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The string representation</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_lineno"> </a><div class="element clickable property protected property_lineno" data-toggle="collapse" data-target=".property_lineno .collapse">
+<h2></h2>
+<pre>$lineno </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_type"> </a><div class="element clickable property protected property_type" data-toggle="collapse" data-target=".property_type .collapse">
+<h2></h2>
+<pre>$type </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_value"> </a><div class="element clickable property protected property_value" data-toggle="collapse" data-target=".property_value .collapse">
+<h2></h2>
+<pre>$value </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_BLOCK_END_TYPE"> </a><div class="element clickable constant  constant_BLOCK_END_TYPE" data-toggle="collapse" data-target=".constant_BLOCK_END_TYPE .collapse">
+<h2>BLOCK_END_TYPE</h2>
+<pre>BLOCK_END_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_BLOCK_START_TYPE"> </a><div class="element clickable constant  constant_BLOCK_START_TYPE" data-toggle="collapse" data-target=".constant_BLOCK_START_TYPE .collapse">
+<h2>BLOCK_START_TYPE</h2>
+<pre>BLOCK_START_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_EOF_TYPE"> </a><div class="element clickable constant  constant_EOF_TYPE" data-toggle="collapse" data-target=".constant_EOF_TYPE .collapse">
+<h2>EOF_TYPE</h2>
+<pre>EOF_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_INTERPOLATION_END_TYPE"> </a><div class="element clickable constant  constant_INTERPOLATION_END_TYPE" data-toggle="collapse" data-target=".constant_INTERPOLATION_END_TYPE .collapse">
+<h2>INTERPOLATION_END_TYPE</h2>
+<pre>INTERPOLATION_END_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_INTERPOLATION_START_TYPE"> </a><div class="element clickable constant  constant_INTERPOLATION_START_TYPE" data-toggle="collapse" data-target=".constant_INTERPOLATION_START_TYPE .collapse">
+<h2>INTERPOLATION_START_TYPE</h2>
+<pre>INTERPOLATION_START_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NAME_TYPE"> </a><div class="element clickable constant  constant_NAME_TYPE" data-toggle="collapse" data-target=".constant_NAME_TYPE .collapse">
+<h2>NAME_TYPE</h2>
+<pre>NAME_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NUMBER_TYPE"> </a><div class="element clickable constant  constant_NUMBER_TYPE" data-toggle="collapse" data-target=".constant_NUMBER_TYPE .collapse">
+<h2>NUMBER_TYPE</h2>
+<pre>NUMBER_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_OPERATOR_TYPE"> </a><div class="element clickable constant  constant_OPERATOR_TYPE" data-toggle="collapse" data-target=".constant_OPERATOR_TYPE .collapse">
+<h2>OPERATOR_TYPE</h2>
+<pre>OPERATOR_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_PUNCTUATION_TYPE"> </a><div class="element clickable constant  constant_PUNCTUATION_TYPE" data-toggle="collapse" data-target=".constant_PUNCTUATION_TYPE .collapse">
+<h2>PUNCTUATION_TYPE</h2>
+<pre>PUNCTUATION_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STRING_TYPE"> </a><div class="element clickable constant  constant_STRING_TYPE" data-toggle="collapse" data-target=".constant_STRING_TYPE .collapse">
+<h2>STRING_TYPE</h2>
+<pre>STRING_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_TEXT_TYPE"> </a><div class="element clickable constant  constant_TEXT_TYPE" data-toggle="collapse" data-target=".constant_TEXT_TYPE .collapse">
+<h2>TEXT_TYPE</h2>
+<pre>TEXT_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_VAR_END_TYPE"> </a><div class="element clickable constant  constant_VAR_END_TYPE" data-toggle="collapse" data-target=".constant_VAR_END_TYPE .collapse">
+<h2>VAR_END_TYPE</h2>
+<pre>VAR_END_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_VAR_START_TYPE"> </a><div class="element clickable constant  constant_VAR_START_TYPE" data-toggle="collapse" data-target=".constant_VAR_START_TYPE .collapse">
+<h2>VAR_START_TYPE</h2>
+<pre>VAR_START_TYPE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:07:36+08:00.<br></footer></div>
+</div>
+</body>
+</html>

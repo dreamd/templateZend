@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Db\ResultSet\ResultSet</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_buffer" title="buffer :: "><span class="description">buffer()
+        </span><pre>buffer()</pre></a></li>
+<li class="method public inherited"><a href="#method_count" title="count :: Countable: return count of rows"><span class="description">Countable: return count of rows</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_current" title="current :: Iterator: get current item"><span class="description">Iterator: get current item</span><pre>current()</pre></a></li>
+<li class="method public "><a href="#method_getArrayObjectPrototype" title="getArrayObjectPrototype :: Get the row object prototype"><span class="description">Get the row object prototype</span><pre>getArrayObjectPrototype()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataSource" title="getDataSource :: Get the data source used to create the result set"><span class="description">Get the data source used to create the result set</span><pre>getDataSource()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFieldCount" title="getFieldCount :: Retrieve count of fields in individual rows of the result set"><span class="description">Retrieve count of fields in individual rows of the result set</span><pre>getFieldCount()</pre></a></li>
+<li class="method public "><a href="#method_getReturnType" title="getReturnType :: Get the return type to use when returning objects from the set"><span class="description">Get the return type to use when returning objects from the set</span><pre>getReturnType()</pre></a></li>
+<li class="method public inherited"><a href="#method_initialize" title="initialize :: Set the data source for the result set"><span class="description">Set the data source for the result set</span><pre>initialize()</pre></a></li>
+<li class="method public inherited"><a href="#method_isBuffered" title="isBuffered :: "><span class="description">isBuffered()
+        </span><pre>isBuffered()</pre></a></li>
+<li class="method public inherited"><a href="#method_key" title="key :: Iterator: retrieve current key"><span class="description">Iterator: retrieve current key</span><pre>key()</pre></a></li>
+<li class="method public inherited"><a href="#method_next" title="next :: Iterator: move pointer to next item"><span class="description">Iterator: move pointer to next item</span><pre>next()</pre></a></li>
+<li class="method public inherited"><a href="#method_rewind" title="rewind :: Iterator: rewind"><span class="description">Iterator: rewind</span><pre>rewind()</pre></a></li>
+<li class="method public "><a href="#method_setArrayObjectPrototype" title="setArrayObjectPrototype :: Set the row object prototype"><span class="description">Set the row object prototype</span><pre>setArrayObjectPrototype()</pre></a></li>
+<li class="method public inherited"><a href="#method_toArray" title="toArray :: Cast result set to array of arrays"><span class="description">Cast result set to array of arrays</span><pre>toArray()</pre></a></li>
+<li class="method public inherited"><a href="#method_valid" title="valid :: Iterator: is pointer valid?"><span class="description">Iterator: is pointer valid?</span><pre>valid()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_allowedReturnTypes" title="$allowedReturnTypes :: Allowed return types"><span class="description"></span><pre>$allowedReturnTypes</pre></a></li>
+<li class="property protected "><a href="#property_arrayObjectPrototype" title="$arrayObjectPrototype :: "><span class="description"></span><pre>$arrayObjectPrototype</pre></a></li>
+<li class="property protected inherited"><a href="#property_buffer" title="$buffer :: if -1, datasource is already buffered
+if -2, implicitly disabling buffering in ResultSet
+if false, explicitly disabled
+if null, default state - nothing, but can buffer until iteration started
+if array, already buffering"><span class="description"></span><pre>$buffer</pre></a></li>
+<li class="property protected inherited"><a href="#property_count" title="$count :: "><span class="description"></span><pre>$count</pre></a></li>
+<li class="property protected inherited"><a href="#property_dataSource" title="$dataSource :: "><span class="description"></span><pre>$dataSource</pre></a></li>
+<li class="property protected inherited"><a href="#property_fieldCount" title="$fieldCount :: "><span class="description"></span><pre>$fieldCount</pre></a></li>
+<li class="property protected inherited"><a href="#property_position" title="$position :: "><span class="description"></span><pre>$position</pre></a></li>
+<li class="property protected "><a href="#property_returnType" title="$returnType :: Return type to use when returning an object from the set"><span class="description"></span><pre>$returnType</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_TYPE_ARRAY" title="TYPE_ARRAY :: "><span class="description">TYPE_ARRAY</span><pre>TYPE_ARRAY</pre></a></li>
+<li class="constant  "><a href="#constant_TYPE_ARRAYOBJECT" title="TYPE_ARRAYOBJECT :: "><span class="description">TYPE_ARRAYOBJECT</span><pre>TYPE_ARRAYOBJECT</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Db\ResultSet\ResultSet"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Db.html">Db</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Db.ResultSet.html">ResultSet</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Db.ResultSet.ResultSet.html">ResultSet</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Db.ResultSet.html">Zend_Db</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>ResultSet</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string $returnType, null | <a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a> $arrayObjectPrototype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$returnType</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$arrayObjectPrototype</h4>
+<code>null</code><code><a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></code>
+</div>
+</div></div>
+</div>
+<a id="method_buffer"></a><div class="element clickable method public method_buffer" data-toggle="collapse" data-target=".method_buffer .collapse">
+<h2>buffer()
+        </h2>
+<pre>buffer() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::buffer()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_count"></a><div class="element clickable method public method_count" data-toggle="collapse" data-target=".method_count .collapse">
+<h2>Countable: return count of rows</h2>
+<pre>count() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::count()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_current"></a><div class="element clickable method public method_current" data-toggle="collapse" data-target=".method_current .collapse">
+<h2>Iterator: get current item</h2>
+<pre>current() : array | <a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a> | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code><a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_getArrayObjectPrototype"></a><div class="element clickable method public method_getArrayObjectPrototype" data-toggle="collapse" data-target=".method_getArrayObjectPrototype .collapse">
+<h2>Get the row object prototype</h2>
+<pre>getArrayObjectPrototype() : <a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></code></div>
+</div></div>
+</div>
+<a id="method_getDataSource"></a><div class="element clickable method public method_getDataSource" data-toggle="collapse" data-target=".method_getDataSource .collapse">
+<h2>Get the data source used to create the result set</h2>
+<pre>getDataSource() : null | \Iterator</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::getDataSource()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>\Iterator</code>
+</div>
+</div></div>
+</div>
+<a id="method_getFieldCount"></a><div class="element clickable method public method_getFieldCount" data-toggle="collapse" data-target=".method_getFieldCount .collapse">
+<h2>Retrieve count of fields in individual rows of the result set</h2>
+<pre>getFieldCount() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::getFieldCount()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getReturnType"></a><div class="element clickable method public method_getReturnType" data-toggle="collapse" data-target=".method_getReturnType .collapse">
+<h2>Get the return type to use when returning objects from the set</h2>
+<pre>getReturnType() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_initialize"></a><div class="element clickable method public method_initialize" data-toggle="collapse" data-target=".method_initialize .collapse">
+<h2>Set the data source for the result set</h2>
+<pre>initialize(\Iterator | \IteratorAggregate | <a href="../classes/Zend.Db.Adapter.Driver.ResultInterface.html">\Zend\Db\Adapter\Driver\ResultInterface</a> $dataSource) : <a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::initialize()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dataSource</h4>
+<code>\Iterator</code><code>\IteratorAggregate</code><code><a href="../classes/Zend.Db.Adapter.Driver.ResultInterface.html">\Zend\Db\Adapter\Driver\ResultInterface</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.ResultSet.Exception.InvalidArgumentException.html">\Zend\Db\ResultSet\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></code></div>
+</div></div>
+</div>
+<a id="method_isBuffered"></a><div class="element clickable method public method_isBuffered" data-toggle="collapse" data-target=".method_isBuffered .collapse">
+<h2>isBuffered()
+        </h2>
+<pre>isBuffered() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::isBuffered()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_key"></a><div class="element clickable method public method_key" data-toggle="collapse" data-target=".method_key .collapse">
+<h2>Iterator: retrieve current key</h2>
+<pre>key() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::key()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_next"></a><div class="element clickable method public method_next" data-toggle="collapse" data-target=".method_next .collapse">
+<h2>Iterator: move pointer to next item</h2>
+<pre>next() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::next()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_rewind"></a><div class="element clickable method public method_rewind" data-toggle="collapse" data-target=".method_rewind .collapse">
+<h2>Iterator: rewind</h2>
+<pre>rewind() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::rewind()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_setArrayObjectPrototype"></a><div class="element clickable method public method_setArrayObjectPrototype" data-toggle="collapse" data-target=".method_setArrayObjectPrototype .collapse">
+<h2>Set the row object prototype</h2>
+<pre>setArrayObjectPrototype(<a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a> $arrayObjectPrototype) : <a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$arrayObjectPrototype</h4>
+<code><a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.ResultSet.Exception.InvalidArgumentException.html">\Zend\Db\ResultSet\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></code></div>
+</div></div>
+</div>
+<a id="method_toArray"></a><div class="element clickable method public method_toArray" data-toggle="collapse" data-target=".method_toArray .collapse">
+<h2>Cast result set to array of arrays</h2>
+<pre>toArray() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::toArray()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.ResultSet.Exception.RuntimeException.html">\Zend\Db\ResultSet\Exception\RuntimeException</a></code></th>
+<td>if any row is not castable to an array</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_valid"></a><div class="element clickable method public method_valid" data-toggle="collapse" data-target=".method_valid .collapse">
+<h2>Iterator: is pointer valid?</h2>
+<pre>valid() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::valid()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowedReturnTypes"> </a><div class="element clickable property protected property_allowedReturnTypes" data-toggle="collapse" data-target=".property_allowedReturnTypes .collapse">
+<h2></h2>
+<pre>$allowedReturnTypes : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_arrayObjectPrototype"> </a><div class="element clickable property protected property_arrayObjectPrototype" data-toggle="collapse" data-target=".property_arrayObjectPrototype .collapse">
+<h2></h2>
+<pre>$arrayObjectPrototype : <a href="http://php.net/manual/en/class.arrayobject.php">\ArrayObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_buffer"> </a><div class="element clickable property protected property_buffer" data-toggle="collapse" data-target=".property_buffer .collapse">
+<h2></h2>
+<pre>$buffer : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::$$buffer</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_count"> </a><div class="element clickable property protected property_count" data-toggle="collapse" data-target=".property_count .collapse">
+<h2></h2>
+<pre>$count : null | int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::$$count</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_dataSource"> </a><div class="element clickable property protected property_dataSource" data-toggle="collapse" data-target=".property_dataSource .collapse">
+<h2></h2>
+<pre>$dataSource : \Iterator | \IteratorAggregate | <a href="../classes/Zend.Db.Adapter.Driver.ResultInterface.html">\Zend\Db\Adapter\Driver\ResultInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::$$dataSource</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_fieldCount"> </a><div class="element clickable property protected property_fieldCount" data-toggle="collapse" data-target=".property_fieldCount .collapse">
+<h2></h2>
+<pre>$fieldCount : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::$$fieldCount</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_position"> </a><div class="element clickable property protected property_position" data-toggle="collapse" data-target=".property_position .collapse">
+<h2></h2>
+<pre>$position </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\ResultSet\AbstractResultSet::$$position</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_returnType"> </a><div class="element clickable property protected property_returnType" data-toggle="collapse" data-target=".property_returnType .collapse">
+<h2></h2>
+<pre>$returnType : \Zend\Db\ResultSet\ResultSet::TYPE_ARRAYOBJECT | \Zend\Db\ResultSet\ResultSet::TYPE_ARRAY</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_TYPE_ARRAY"> </a><div class="element clickable constant  constant_TYPE_ARRAY" data-toggle="collapse" data-target=".constant_TYPE_ARRAY .collapse">
+<h2>TYPE_ARRAY</h2>
+<pre>TYPE_ARRAY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_TYPE_ARRAYOBJECT"> </a><div class="element clickable constant  constant_TYPE_ARRAYOBJECT" data-toggle="collapse" data-target=".constant_TYPE_ARRAYOBJECT .collapse">
+<h2>TYPE_ARRAYOBJECT</h2>
+<pre>TYPE_ARRAYOBJECT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:09:14+08:00.<br></footer></div>
+</div>
+</body>
+</html>

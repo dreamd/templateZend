@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Stdlib\CallbackHandler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___invoke" title="__invoke :: Invoke as functor"><span class="description">Invoke as functor</span><pre>__invoke()</pre></a></li>
+<li class="method public "><a href="#method_call" title="call :: Invoke handler"><span class="description">Invoke handler</span><pre>call()</pre></a></li>
+<li class="method public "><a href="#method_getCallback" title="getCallback :: Retrieve registered callback"><span class="description">Retrieve registered callback</span><pre>getCallback()</pre></a></li>
+<li class="method public "><a href="#method_getMetadata" title="getMetadata :: Get all callback metadata"><span class="description">Get all callback metadata</span><pre>getMetadata()</pre></a></li>
+<li class="method public "><a href="#method_getMetadatum" title="getMetadatum :: Retrieve a single metadatum"><span class="description">Retrieve a single metadatum</span><pre>getMetadatum()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_registerCallback" title="registerCallback :: Registers the callback provided in the constructor"><span class="description">Registers the callback provided in the constructor</span><pre>registerCallback()</pre></a></li>
+<li class="method protected "><a href="#method_validateStringCallbackFor54" title="validateStringCallbackFor54 :: Validate a static method call"><span class="description">Validate a static method call</span><pre>validateStringCallbackFor54()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_callback" title="$callback :: "><span class="description">PHP callback to invoke</span><pre>$callback</pre></a></li>
+<li class="property protected "><a href="#property_hasWeakRefExtension" title="$hasWeakRefExtension :: Is pecl/weakref extension installed?"><span class="description"></span><pre>$hasWeakRefExtension</pre></a></li>
+<li class="property protected "><a href="#property_isPhp54" title="$isPhp54 :: PHP version is greater as 5.4rc1?"><span class="description"></span><pre>$isPhp54</pre></a></li>
+<li class="property protected "><a href="#property_metadata" title="$metadata :: Callback metadata, if any"><span class="description"></span><pre>$metadata</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Stdlib\CallbackHandler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Stdlib.html">Stdlib</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Stdlib.CallbackHandler.html">CallbackHandler</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">CallbackHandler</p>
+<div class="details">
+<div class="long_description"><p>A handler for a event, event, filterchain, etc. Abstracts PHP callbacks,
+primarily to allow for lazy-loading and ensuring availability of default
+arguments (currying).</p></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Stdlib.html">Zend_Stdlib</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string | array | object | callable $callback, array $metadata) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>string</code><code>array</code><code>object</code><code>callable</code><p>PHP callback</p></div>
+<div class="subelement argument">
+<h4>$metadata</h4>
+<code>array</code><p>Callback metadata</p></div>
+</div></div>
+</div>
+<a id="method___invoke"></a><div class="element clickable method public method___invoke" data-toggle="collapse" data-target=".method___invoke .collapse">
+<h2>Invoke as functor</h2>
+<pre>__invoke() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_call"></a><div class="element clickable method public method_call" data-toggle="collapse" data-target=".method_call .collapse">
+<h2>Invoke handler</h2>
+<pre>call(array $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Arguments to pass to callback</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getCallback"></a><div class="element clickable method public method_getCallback" data-toggle="collapse" data-target=".method_getCallback .collapse">
+<h2>Retrieve registered callback</h2>
+<pre>getCallback() : callable</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>callable</code></div>
+</div></div>
+</div>
+<a id="method_getMetadata"></a><div class="element clickable method public method_getMetadata" data-toggle="collapse" data-target=".method_getMetadata .collapse">
+<h2>Get all callback metadata</h2>
+<pre>getMetadata() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getMetadatum"></a><div class="element clickable method public method_getMetadatum" data-toggle="collapse" data-target=".method_getMetadatum .collapse">
+<h2>Retrieve a single metadatum</h2>
+<pre>getMetadatum(string $name) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_registerCallback"></a><div class="element clickable method protected method_registerCallback" data-toggle="collapse" data-target=".method_registerCallback .collapse">
+<h2>Registers the callback provided in the constructor</h2>
+<pre>registerCallback(callable $callback) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If you have pecl/weakref {@see http://pecl.php.net/weakref} installed,
+this method provides additional behavior.</p>
+
+<p>If a callback is a functor, or an array callback composing an object
+instance, this method will pass the object to a WeakRef instance prior
+to registering the callback.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>callable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Stdlib.Exception.InvalidCallbackException.html">\Zend\Stdlib\Exception\InvalidCallbackException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_validateStringCallbackFor54"></a><div class="element clickable method protected method_validateStringCallbackFor54" data-toggle="collapse" data-target=".method_validateStringCallbackFor54 .collapse">
+<h2>Validate a static method call</h2>
+<pre>validateStringCallbackFor54(string $callback) : true | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Validates that a static method call in PHP 5.4 will actually work</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Stdlib.Exception.InvalidCallbackException.html">\Zend\Stdlib\Exception\InvalidCallbackException</a></code></th>
+<td>if invalid</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>true</code><code>array</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_callback"> </a><div class="element clickable property protected property_callback" data-toggle="collapse" data-target=".property_callback .collapse">
+<h2>PHP callback to invoke</h2>
+<pre>$callback : string | array | callable</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_hasWeakRefExtension"> </a><div class="element clickable property protected property_hasWeakRefExtension" data-toggle="collapse" data-target=".property_hasWeakRefExtension .collapse">
+<h2></h2>
+<pre>$hasWeakRefExtension : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_isPhp54"> </a><div class="element clickable property protected property_isPhp54" data-toggle="collapse" data-target=".property_isPhp54 .collapse">
+<h2></h2>
+<pre>$isPhp54 : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_metadata"> </a><div class="element clickable property protected property_metadata" data-toggle="collapse" data-target=".property_metadata .collapse">
+<h2></h2>
+<pre>$metadata : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:13:42+08:00.<br></footer></div>
+</div>
+</body>
+</html>

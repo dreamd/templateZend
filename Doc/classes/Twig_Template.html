@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Twig_Template</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_clearCache" title="clearCache :: This method is only useful when testing Twig."><span class="description">This method is only useful when testing Twig.</span><pre>clearCache()</pre></a></li>
+<li class="method public "><a href="#method_display" title="display :: Displays the template with the given context."><span class="description">Displays the template with the given context.</span><pre>display()</pre></a></li>
+<li class="method public "><a href="#method_displayBlock" title="displayBlock :: Displays a block."><span class="description">Displays a block.</span><pre>displayBlock()</pre></a></li>
+<li class="method public "><a href="#method_displayParentBlock" title="displayParentBlock :: Displays a parent block."><span class="description">Displays a parent block.</span><pre>displayParentBlock()</pre></a></li>
+<li class="method public "><a href="#method_getBlockNames" title="getBlockNames :: Returns all block names."><span class="description">Returns all block names.</span><pre>getBlockNames()</pre></a></li>
+<li class="method public "><a href="#method_getBlocks" title="getBlocks :: Returns all blocks."><span class="description">Returns all blocks.</span><pre>getBlocks()</pre></a></li>
+<li class="method public "><a href="#method_getEnvironment" title="getEnvironment :: Returns the bound environment for this template."><span class="description">Returns the bound environment for this template.</span><pre>getEnvironment()</pre></a></li>
+<li class="method public "><a href="#method_getParent" title="getParent :: Returns the parent template."><span class="description">Returns the parent template.</span><pre>getParent()</pre></a></li>
+<li class="method public "><a href="#method_getTemplateName" title="getTemplateName :: Returns the template name."><span class="description">Returns the template name.</span><pre>getTemplateName()</pre></a></li>
+<li class="method public "><a href="#method_hasBlock" title="hasBlock :: Returns whether a block exists or not."><span class="description">Returns whether a block exists or not.</span><pre>hasBlock()</pre></a></li>
+<li class="method public "><a href="#method_isTraitable" title="isTraitable :: "><span class="description">isTraitable()
+        </span><pre>isTraitable()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: Renders the template with the given context and returns it as string."><span class="description">Renders the template with the given context and returns it as string.</span><pre>render()</pre></a></li>
+<li class="method public "><a href="#method_renderBlock" title="renderBlock :: Renders a block."><span class="description">Renders a block.</span><pre>renderBlock()</pre></a></li>
+<li class="method public "><a href="#method_renderParentBlock" title="renderParentBlock :: Renders a parent block."><span class="description">Renders a parent block.</span><pre>renderParentBlock()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_displayWithErrorHandling" title="displayWithErrorHandling :: "><span class="description">displayWithErrorHandling()
+        </span><pre>displayWithErrorHandling()</pre></a></li>
+<li class="method protected "><a href="#method_doDisplay" title="doDisplay :: Auto-generated method to display the template with the given context."><span class="description">Auto-generated method to display the template with the given context.</span><pre>doDisplay()</pre></a></li>
+<li class="method protected "><a href="#method_doGetParent" title="doGetParent :: "><span class="description">doGetParent()
+        </span><pre>doGetParent()</pre></a></li>
+<li class="method protected "><a href="#method_getAttribute" title="getAttribute :: Returns the attribute value for a given array/object."><span class="description">Returns the attribute value for a given array/object.</span><pre>getAttribute()</pre></a></li>
+<li class="method protected "><a href="#method_getContext" title="getContext :: Returns a variable from the context."><span class="description">Returns a variable from the context.</span><pre>getContext()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_blocks" title="$blocks :: "><span class="description"></span><pre>$blocks</pre></a></li>
+<li class="property protected "><a href="#property_cache" title="$cache :: "><span class="description"></span><pre>$cache</pre></a></li>
+<li class="property protected "><a href="#property_env" title="$env :: "><span class="description"></span><pre>$env</pre></a></li>
+<li class="property protected "><a href="#property_parent" title="$parent :: "><span class="description"></span><pre>$parent</pre></a></li>
+<li class="property protected "><a href="#property_parents" title="$parents :: "><span class="description"></span><pre>$parents</pre></a></li>
+<li class="property protected "><a href="#property_traits" title="$traits :: "><span class="description"></span><pre>$traits</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  inherited"><a href="#constant_ANY_CALL" title="ANY_CALL :: "><span class="description">ANY_CALL</span><pre>ANY_CALL</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ARRAY_CALL" title="ARRAY_CALL :: "><span class="description">ARRAY_CALL</span><pre>ARRAY_CALL</pre></a></li>
+<li class="constant  inherited"><a href="#constant_METHOD_CALL" title="METHOD_CALL :: "><span class="description">METHOD_CALL</span><pre>METHOD_CALL</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Twig_Template"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Twig_Template.html">Twig_Template</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Default base class for compiled templates.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/twig.html">twig</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:fabien@symfony.com">Fabien Potencier</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct(\Twig_Environment $env) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$env</h4>
+<code><a href="../classes/Twig_Environment.html">\Twig_Environment</a></code><p>A Twig_Environment instance</p></div>
+</div></div>
+</div>
+<a id="method_clearCache"></a><div class="element clickable method public method_clearCache" data-toggle="collapse" data-target=".method_clearCache .collapse">
+<h2>This method is only useful when testing Twig.</h2>
+<pre>clearCache() </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Do not use it.</p></div></div></div>
+</div>
+<a id="method_display"></a><div class="element clickable method public method_display" data-toggle="collapse" data-target=".method_display .collapse">
+<h2>Displays the template with the given context.</h2>
+<pre>display(array $context, array $blocks) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array of parameters to pass to the template</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>An array of blocks to pass to the template</p></div>
+</div></div>
+</div>
+<a id="method_displayBlock"></a><div class="element clickable method public method_displayBlock" data-toggle="collapse" data-target=".method_displayBlock .collapse">
+<h2>Displays a block.</h2>
+<pre>displayBlock(string $name, array $context, array $blocks) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The block name to display</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>The context</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>The current set of blocks</p></div>
+</div></div>
+</div>
+<a id="method_displayParentBlock"></a><div class="element clickable method public method_displayParentBlock" data-toggle="collapse" data-target=".method_displayParentBlock .collapse">
+<h2>Displays a parent block.</h2>
+<pre>displayParentBlock(string $name, array $context, array $blocks) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The block name to display from the parent</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>The context</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>The current set of blocks</p></div>
+</div></div>
+</div>
+<a id="method_getBlockNames"></a><div class="element clickable method public method_getBlockNames" data-toggle="collapse" data-target=".method_getBlockNames .collapse">
+<h2>Returns all block names.</h2>
+<pre>getBlockNames() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="">\hasBlock</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of block names</div>
+</div></div>
+</div>
+<a id="method_getBlocks"></a><div class="element clickable method public method_getBlocks" data-toggle="collapse" data-target=".method_getBlocks .collapse">
+<h2>Returns all blocks.</h2>
+<pre>getBlocks() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="">\hasBlock</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of blocks</div>
+</div></div>
+</div>
+<a id="method_getEnvironment"></a><div class="element clickable method public method_getEnvironment" data-toggle="collapse" data-target=".method_getEnvironment .collapse">
+<h2>Returns the bound environment for this template.</h2>
+<pre>getEnvironment() : <a href="../classes/Twig_Environment.html">\Twig_Environment</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Environment.html">\Twig_Environment</a></code>The current environment</div>
+</div></div>
+</div>
+<a id="method_getParent"></a><div class="element clickable method public method_getParent" data-toggle="collapse" data-target=".method_getParent .collapse">
+<h2>Returns the parent template.</h2>
+<pre>getParent(array $context) : <a href="../classes/Twig_TemplateInterface.html">\Twig_TemplateInterface</a> | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$context</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_TemplateInterface.html">\Twig_TemplateInterface</a></code><code>false</code>The parent template or false if there is no parent</div>
+</div></div>
+</div>
+<a id="method_getTemplateName"></a><div class="element clickable method public method_getTemplateName" data-toggle="collapse" data-target=".method_getTemplateName .collapse">
+<h2>Returns the template name.</h2>
+<pre>getTemplateName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The template name</div>
+</div></div>
+</div>
+<a id="method_hasBlock"></a><div class="element clickable method public method_hasBlock" data-toggle="collapse" data-target=".method_hasBlock .collapse">
+<h2>Returns whether a block exists or not.</h2>
+<pre>hasBlock(string $name) : Boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p>
+
+<p>This method does only return blocks defined in the current template
+or defined in "used" traits.</p>
+
+<p>It does not return blocks from parent templates as the parent
+template name can be dynamic, which is only known based on the
+current context.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The block name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true if the block exists, false otherwise</div>
+</div></div>
+</div>
+<a id="method_isTraitable"></a><div class="element clickable method public method_isTraitable" data-toggle="collapse" data-target=".method_isTraitable .collapse">
+<h2>isTraitable()
+        </h2>
+<pre>isTraitable() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Renders the template with the given context and returns it as string.</h2>
+<pre>render(array $context) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array of parameters to pass to the template</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The rendered template</div>
+</div></div>
+</div>
+<a id="method_renderBlock"></a><div class="element clickable method public method_renderBlock" data-toggle="collapse" data-target=".method_renderBlock .collapse">
+<h2>Renders a block.</h2>
+<pre>renderBlock(string $name, array $context, array $blocks) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The block name to render</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>The context</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>The current set of blocks</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The rendered block</div>
+</div></div>
+</div>
+<a id="method_renderParentBlock"></a><div class="element clickable method public method_renderParentBlock" data-toggle="collapse" data-target=".method_renderParentBlock .collapse">
+<h2>Renders a parent block.</h2>
+<pre>renderParentBlock(string $name, array $context, array $blocks) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The block name to render from the parent</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>The context</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>The current set of blocks</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The rendered block</div>
+</div></div>
+</div>
+<a id="method_displayWithErrorHandling"></a><div class="element clickable method protected method_displayWithErrorHandling" data-toggle="collapse" data-target=".method_displayWithErrorHandling .collapse">
+<h2>displayWithErrorHandling()
+        </h2>
+<pre>displayWithErrorHandling(array $context, array $blocks) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$blocks</h4></div>
+</div></div>
+</div>
+<a id="method_doDisplay"></a><div class="element clickable method protected method_doDisplay" data-toggle="collapse" data-target=".method_doDisplay .collapse">
+<h2>Auto-generated method to display the template with the given context.</h2>
+<pre>doDisplay(array $context, array $blocks) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array of parameters to pass to the template</p></div>
+<div class="subelement argument">
+<h4>$blocks</h4>
+<code>array</code><p>An array of blocks to pass to the template</p></div>
+</div></div>
+</div>
+<a id="method_doGetParent"></a><div class="element clickable method protected method_doGetParent" data-toggle="collapse" data-target=".method_doGetParent .collapse">
+<h2>doGetParent()
+        </h2>
+<pre>doGetParent(array $context) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$context</h4></div>
+</div></div>
+</div>
+<a id="method_getAttribute"></a><div class="element clickable method protected method_getAttribute" data-toggle="collapse" data-target=".method_getAttribute .collapse">
+<h2>Returns the attribute value for a given array/object.</h2>
+<pre>getAttribute(mixed $object, mixed $item, array $arguments, string $type, Boolean $isDefinedTest, Boolean $ignoreStrictCheck) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object</h4>
+<code>mixed</code><p>The object or array from where to get the item</p></div>
+<div class="subelement argument">
+<h4>$item</h4>
+<code>mixed</code><p>The item to get from the array or object</p></div>
+<div class="subelement argument">
+<h4>$arguments</h4>
+<code>array</code><p>An array of arguments to pass if the item is an object method</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>The type of attribute (@see Twig_TemplateInterface)</p>
+</div>
+<div class="subelement argument">
+<h4>$isDefinedTest</h4>
+<code>Boolean</code><p>Whether this is only a defined check</p></div>
+<div class="subelement argument">
+<h4>$ignoreStrictCheck</h4>
+<code>Boolean</code><p>Whether to ignore the strict attribute check or not</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Twig_Error_Runtime.html">\Twig_Error_Runtime</a></code></th>
+<td>if the attribute does not exist and Twig is running in strict mode and $isDefinedTest is false</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The attribute value, or a Boolean when $isDefinedTest is true, or null when the attribute is not set and $ignoreStrictCheck is true</div>
+</div></div>
+</div>
+<a id="method_getContext"></a><div class="element clickable method protected method_getContext" data-toggle="collapse" data-target=".method_getContext .collapse">
+<h2>Returns a variable from the context.</h2>
+<pre>getContext(array $context, string $item, Boolean $ignoreStrictCheck) : \The</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is for internal use only and should never be called
+directly.</p>
+
+<p>This method should not be overridden in a sub-class as this is an
+implementation detail that has been introduced to optimize variable
+access for versions of PHP before 5.4. This is not a way to override
+the way to get a variable value.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>The context</p></div>
+<div class="subelement argument">
+<h4>$item</h4>
+<code>string</code><p>The variable to return from the context</p></div>
+<div class="subelement argument">
+<h4>$ignoreStrictCheck</h4>
+<code>Boolean</code><p>Whether to ignore the strict variable check or not</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Twig_Error_Runtime.html">\Twig_Error_Runtime</a></code></th>
+<td>if the variable does not exist and Twig is running in strict mode</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\The</code>content of the context variable</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_blocks"> </a><div class="element clickable property protected property_blocks" data-toggle="collapse" data-target=".property_blocks .collapse">
+<h2></h2>
+<pre>$blocks </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_cache"> </a><div class="element clickable property protected property_cache" data-toggle="collapse" data-target=".property_cache .collapse">
+<h2></h2>
+<pre>$cache </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_env"> </a><div class="element clickable property protected property_env" data-toggle="collapse" data-target=".property_env .collapse">
+<h2></h2>
+<pre>$env </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_parent"> </a><div class="element clickable property protected property_parent" data-toggle="collapse" data-target=".property_parent .collapse">
+<h2></h2>
+<pre>$parent </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_parents"> </a><div class="element clickable property protected property_parents" data-toggle="collapse" data-target=".property_parents .collapse">
+<h2></h2>
+<pre>$parents </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_traits"> </a><div class="element clickable property protected property_traits" data-toggle="collapse" data-target=".property_traits .collapse">
+<h2></h2>
+<pre>$traits </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_ANY_CALL"> </a><div class="element clickable constant  constant_ANY_CALL" data-toggle="collapse" data-target=".constant_ANY_CALL .collapse">
+<h2>ANY_CALL</h2>
+<pre>ANY_CALL </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_TemplateInterface::ANY_CALL</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_ARRAY_CALL"> </a><div class="element clickable constant  constant_ARRAY_CALL" data-toggle="collapse" data-target=".constant_ARRAY_CALL .collapse">
+<h2>ARRAY_CALL</h2>
+<pre>ARRAY_CALL </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_TemplateInterface::ARRAY_CALL</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_METHOD_CALL"> </a><div class="element clickable constant  constant_METHOD_CALL" data-toggle="collapse" data-target=".constant_METHOD_CALL .collapse">
+<h2>METHOD_CALL</h2>
+<pre>METHOD_CALL </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_TemplateInterface::METHOD_CALL</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:07:35+08:00.<br></footer></div>
+</div>
+</body>
+</html>

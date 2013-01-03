@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Twig_Parser</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addHandler" title="addHandler :: "><span class="description">addHandler()
+        </span><pre>addHandler()</pre></a></li>
+<li class="method public "><a href="#method_addImportedSymbol" title="addImportedSymbol :: "><span class="description">addImportedSymbol()
+        </span><pre>addImportedSymbol()</pre></a></li>
+<li class="method public "><a href="#method_addNodeVisitor" title="addNodeVisitor :: "><span class="description">addNodeVisitor()
+        </span><pre>addNodeVisitor()</pre></a></li>
+<li class="method public "><a href="#method_addTrait" title="addTrait :: "><span class="description">addTrait()
+        </span><pre>addTrait()</pre></a></li>
+<li class="method public "><a href="#method_embedTemplate" title="embedTemplate :: "><span class="description">embedTemplate()
+        </span><pre>embedTemplate()</pre></a></li>
+<li class="method public "><a href="#method_getBlock" title="getBlock :: "><span class="description">getBlock()
+        </span><pre>getBlock()</pre></a></li>
+<li class="method public "><a href="#method_getBlockStack" title="getBlockStack :: "><span class="description">getBlockStack()
+        </span><pre>getBlockStack()</pre></a></li>
+<li class="method public "><a href="#method_getCurrentToken" title="getCurrentToken :: Gets the current token."><span class="description">Gets the current token.</span><pre>getCurrentToken()</pre></a></li>
+<li class="method public "><a href="#method_getEnvironment" title="getEnvironment :: "><span class="description">getEnvironment()
+        </span><pre>getEnvironment()</pre></a></li>
+<li class="method public "><a href="#method_getExpressionParser" title="getExpressionParser :: Gets the expression parser."><span class="description">Gets the expression parser.</span><pre>getExpressionParser()</pre></a></li>
+<li class="method public "><a href="#method_getFilename" title="getFilename :: "><span class="description">getFilename()
+        </span><pre>getFilename()</pre></a></li>
+<li class="method public "><a href="#method_getImportedSymbol" title="getImportedSymbol :: "><span class="description">getImportedSymbol()
+        </span><pre>getImportedSymbol()</pre></a></li>
+<li class="method public "><a href="#method_getParent" title="getParent :: "><span class="description">getParent()
+        </span><pre>getParent()</pre></a></li>
+<li class="method public "><a href="#method_getStream" title="getStream :: Gets the token stream."><span class="description">Gets the token stream.</span><pre>getStream()</pre></a></li>
+<li class="method public "><a href="#method_getVarName" title="getVarName :: "><span class="description">getVarName()
+        </span><pre>getVarName()</pre></a></li>
+<li class="method public "><a href="#method_hasBlock" title="hasBlock :: "><span class="description">hasBlock()
+        </span><pre>hasBlock()</pre></a></li>
+<li class="method public "><a href="#method_hasMacro" title="hasMacro :: "><span class="description">hasMacro()
+        </span><pre>hasMacro()</pre></a></li>
+<li class="method public "><a href="#method_hasTraits" title="hasTraits :: "><span class="description">hasTraits()
+        </span><pre>hasTraits()</pre></a></li>
+<li class="method public "><a href="#method_isMainScope" title="isMainScope :: "><span class="description">isMainScope()
+        </span><pre>isMainScope()</pre></a></li>
+<li class="method public "><a href="#method_parse" title="parse :: Converts a token stream to a node tree."><span class="description">Converts a token stream to a node tree.</span><pre>parse()</pre></a></li>
+<li class="method public "><a href="#method_peekBlockStack" title="peekBlockStack :: "><span class="description">peekBlockStack()
+        </span><pre>peekBlockStack()</pre></a></li>
+<li class="method public "><a href="#method_popBlockStack" title="popBlockStack :: "><span class="description">popBlockStack()
+        </span><pre>popBlockStack()</pre></a></li>
+<li class="method public "><a href="#method_popLocalScope" title="popLocalScope :: "><span class="description">popLocalScope()
+        </span><pre>popLocalScope()</pre></a></li>
+<li class="method public "><a href="#method_pushBlockStack" title="pushBlockStack :: "><span class="description">pushBlockStack()
+        </span><pre>pushBlockStack()</pre></a></li>
+<li class="method public "><a href="#method_pushLocalScope" title="pushLocalScope :: "><span class="description">pushLocalScope()
+        </span><pre>pushLocalScope()</pre></a></li>
+<li class="method public "><a href="#method_setBlock" title="setBlock :: "><span class="description">setBlock()
+        </span><pre>setBlock()</pre></a></li>
+<li class="method public "><a href="#method_setMacro" title="setMacro :: "><span class="description">setMacro()
+        </span><pre>setMacro()</pre></a></li>
+<li class="method public "><a href="#method_setParent" title="setParent :: "><span class="description">setParent()
+        </span><pre>setParent()</pre></a></li>
+<li class="method public "><a href="#method_subparse" title="subparse :: "><span class="description">subparse()
+        </span><pre>subparse()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_filterBodyNodes" title="filterBodyNodes :: "><span class="description">filterBodyNodes()
+        </span><pre>filterBodyNodes()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_blockStack" title="$blockStack :: "><span class="description"></span><pre>$blockStack</pre></a></li>
+<li class="property protected "><a href="#property_blocks" title="$blocks :: "><span class="description"></span><pre>$blocks</pre></a></li>
+<li class="property protected "><a href="#property_embeddedTemplates" title="$embeddedTemplates :: "><span class="description"></span><pre>$embeddedTemplates</pre></a></li>
+<li class="property protected "><a href="#property_env" title="$env :: "><span class="description"></span><pre>$env</pre></a></li>
+<li class="property protected "><a href="#property_expressionParser" title="$expressionParser :: "><span class="description"></span><pre>$expressionParser</pre></a></li>
+<li class="property protected "><a href="#property_handlers" title="$handlers :: "><span class="description"></span><pre>$handlers</pre></a></li>
+<li class="property protected "><a href="#property_importedSymbols" title="$importedSymbols :: "><span class="description"></span><pre>$importedSymbols</pre></a></li>
+<li class="property protected "><a href="#property_macros" title="$macros :: "><span class="description"></span><pre>$macros</pre></a></li>
+<li class="property protected "><a href="#property_parent" title="$parent :: "><span class="description"></span><pre>$parent</pre></a></li>
+<li class="property protected "><a href="#property_reservedMacroNames" title="$reservedMacroNames :: "><span class="description"></span><pre>$reservedMacroNames</pre></a></li>
+<li class="property protected "><a href="#property_stack" title="$stack :: "><span class="description"></span><pre>$stack</pre></a></li>
+<li class="property protected "><a href="#property_stream" title="$stream :: "><span class="description"></span><pre>$stream</pre></a></li>
+<li class="property protected "><a href="#property_traits" title="$traits :: "><span class="description"></span><pre>$traits</pre></a></li>
+<li class="property protected "><a href="#property_visitors" title="$visitors :: "><span class="description"></span><pre>$visitors</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Twig_Parser"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Twig_Parser.html">Twig_Parser</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Default parser implementation.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/twig.html">twig</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:fabien@symfony.com">Fabien Potencier</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct(\Twig_Environment $env) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$env</h4>
+<code><a href="../classes/Twig_Environment.html">\Twig_Environment</a></code><p>A Twig_Environment instance</p></div>
+</div></div>
+</div>
+<a id="method_addHandler"></a><div class="element clickable method public method_addHandler" data-toggle="collapse" data-target=".method_addHandler .collapse">
+<h2>addHandler()
+        </h2>
+<pre>addHandler($name, $class) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$class</h4></div>
+</div></div>
+</div>
+<a id="method_addImportedSymbol"></a><div class="element clickable method public method_addImportedSymbol" data-toggle="collapse" data-target=".method_addImportedSymbol .collapse">
+<h2>addImportedSymbol()
+        </h2>
+<pre>addImportedSymbol($type, $alias, $name, \Twig_Node_Expression $node) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$alias</h4></div>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$node</h4></div>
+</div></div>
+</div>
+<a id="method_addNodeVisitor"></a><div class="element clickable method public method_addNodeVisitor" data-toggle="collapse" data-target=".method_addNodeVisitor .collapse">
+<h2>addNodeVisitor()
+        </h2>
+<pre>addNodeVisitor(\Twig_NodeVisitorInterface $visitor) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$visitor</h4></div>
+</div></div>
+</div>
+<a id="method_addTrait"></a><div class="element clickable method public method_addTrait" data-toggle="collapse" data-target=".method_addTrait .collapse">
+<h2>addTrait()
+        </h2>
+<pre>addTrait($trait) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$trait</h4></div>
+</div></div>
+</div>
+<a id="method_embedTemplate"></a><div class="element clickable method public method_embedTemplate" data-toggle="collapse" data-target=".method_embedTemplate .collapse">
+<h2>embedTemplate()
+        </h2>
+<pre>embedTemplate(\Twig_Node_Module $template) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$template</h4></div>
+</div></div>
+</div>
+<a id="method_getBlock"></a><div class="element clickable method public method_getBlock" data-toggle="collapse" data-target=".method_getBlock .collapse">
+<h2>getBlock()
+        </h2>
+<pre>getBlock($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="method_getBlockStack"></a><div class="element clickable method public method_getBlockStack" data-toggle="collapse" data-target=".method_getBlockStack .collapse">
+<h2>getBlockStack()
+        </h2>
+<pre>getBlockStack() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getCurrentToken"></a><div class="element clickable method public method_getCurrentToken" data-toggle="collapse" data-target=".method_getCurrentToken .collapse">
+<h2>Gets the current token.</h2>
+<pre>getCurrentToken() : <a href="../classes/Twig_Token.html">\Twig_Token</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Token.html">\Twig_Token</a></code>The current token</div>
+</div></div>
+</div>
+<a id="method_getEnvironment"></a><div class="element clickable method public method_getEnvironment" data-toggle="collapse" data-target=".method_getEnvironment .collapse">
+<h2>getEnvironment()
+        </h2>
+<pre>getEnvironment() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getExpressionParser"></a><div class="element clickable method public method_getExpressionParser" data-toggle="collapse" data-target=".method_getExpressionParser .collapse">
+<h2>Gets the expression parser.</h2>
+<pre>getExpressionParser() : <a href="../classes/Twig_ExpressionParser.html">\Twig_ExpressionParser</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_ExpressionParser.html">\Twig_ExpressionParser</a></code>The expression parser</div>
+</div></div>
+</div>
+<a id="method_getFilename"></a><div class="element clickable method public method_getFilename" data-toggle="collapse" data-target=".method_getFilename .collapse">
+<h2>getFilename()
+        </h2>
+<pre>getFilename() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getImportedSymbol"></a><div class="element clickable method public method_getImportedSymbol" data-toggle="collapse" data-target=".method_getImportedSymbol .collapse">
+<h2>getImportedSymbol()
+        </h2>
+<pre>getImportedSymbol($type, $alias) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$alias</h4></div>
+</div></div>
+</div>
+<a id="method_getParent"></a><div class="element clickable method public method_getParent" data-toggle="collapse" data-target=".method_getParent .collapse">
+<h2>getParent()
+        </h2>
+<pre>getParent() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getStream"></a><div class="element clickable method public method_getStream" data-toggle="collapse" data-target=".method_getStream .collapse">
+<h2>Gets the token stream.</h2>
+<pre>getStream() : <a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></code>The token stream</div>
+</div></div>
+</div>
+<a id="method_getVarName"></a><div class="element clickable method public method_getVarName" data-toggle="collapse" data-target=".method_getVarName .collapse">
+<h2>getVarName()
+        </h2>
+<pre>getVarName() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_hasBlock"></a><div class="element clickable method public method_hasBlock" data-toggle="collapse" data-target=".method_hasBlock .collapse">
+<h2>hasBlock()
+        </h2>
+<pre>hasBlock($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="method_hasMacro"></a><div class="element clickable method public method_hasMacro" data-toggle="collapse" data-target=".method_hasMacro .collapse">
+<h2>hasMacro()
+        </h2>
+<pre>hasMacro($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="method_hasTraits"></a><div class="element clickable method public method_hasTraits" data-toggle="collapse" data-target=".method_hasTraits .collapse">
+<h2>hasTraits()
+        </h2>
+<pre>hasTraits() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_isMainScope"></a><div class="element clickable method public method_isMainScope" data-toggle="collapse" data-target=".method_isMainScope .collapse">
+<h2>isMainScope()
+        </h2>
+<pre>isMainScope() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_parse"></a><div class="element clickable method public method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
+<h2>Converts a token stream to a node tree.</h2>
+<pre>parse(\Twig_TokenStream $stream, $test, $dropNeedle) : <a href="../classes/Twig_Node_Module.html">\Twig_Node_Module</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stream</h4>
+<code><a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></code><p>A token stream instance</p></div>
+<div class="subelement argument"><h4>$test</h4></div>
+<div class="subelement argument"><h4>$dropNeedle</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Node_Module.html">\Twig_Node_Module</a></code>A node tree</div>
+</div></div>
+</div>
+<a id="method_peekBlockStack"></a><div class="element clickable method public method_peekBlockStack" data-toggle="collapse" data-target=".method_peekBlockStack .collapse">
+<h2>peekBlockStack()
+        </h2>
+<pre>peekBlockStack() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_popBlockStack"></a><div class="element clickable method public method_popBlockStack" data-toggle="collapse" data-target=".method_popBlockStack .collapse">
+<h2>popBlockStack()
+        </h2>
+<pre>popBlockStack() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_popLocalScope"></a><div class="element clickable method public method_popLocalScope" data-toggle="collapse" data-target=".method_popLocalScope .collapse">
+<h2>popLocalScope()
+        </h2>
+<pre>popLocalScope() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_pushBlockStack"></a><div class="element clickable method public method_pushBlockStack" data-toggle="collapse" data-target=".method_pushBlockStack .collapse">
+<h2>pushBlockStack()
+        </h2>
+<pre>pushBlockStack($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="method_pushLocalScope"></a><div class="element clickable method public method_pushLocalScope" data-toggle="collapse" data-target=".method_pushLocalScope .collapse">
+<h2>pushLocalScope()
+        </h2>
+<pre>pushLocalScope() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setBlock"></a><div class="element clickable method public method_setBlock" data-toggle="collapse" data-target=".method_setBlock .collapse">
+<h2>setBlock()
+        </h2>
+<pre>setBlock($name, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="method_setMacro"></a><div class="element clickable method public method_setMacro" data-toggle="collapse" data-target=".method_setMacro .collapse">
+<h2>setMacro()
+        </h2>
+<pre>setMacro($name, \Twig_Node_Macro $node) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$node</h4></div>
+</div></div>
+</div>
+<a id="method_setParent"></a><div class="element clickable method public method_setParent" data-toggle="collapse" data-target=".method_setParent .collapse">
+<h2>setParent()
+        </h2>
+<pre>setParent($parent) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$parent</h4></div>
+</div></div>
+</div>
+<a id="method_subparse"></a><div class="element clickable method public method_subparse" data-toggle="collapse" data-target=".method_subparse .collapse">
+<h2>subparse()
+        </h2>
+<pre>subparse($test, $dropNeedle) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$test</h4></div>
+<div class="subelement argument"><h4>$dropNeedle</h4></div>
+</div></div>
+</div>
+<a id="method_filterBodyNodes"></a><div class="element clickable method protected method_filterBodyNodes" data-toggle="collapse" data-target=".method_filterBodyNodes .collapse">
+<h2>filterBodyNodes()
+        </h2>
+<pre>filterBodyNodes(\Twig_NodeInterface $node) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$node</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_blockStack"> </a><div class="element clickable property protected property_blockStack" data-toggle="collapse" data-target=".property_blockStack .collapse">
+<h2></h2>
+<pre>$blockStack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_blocks"> </a><div class="element clickable property protected property_blocks" data-toggle="collapse" data-target=".property_blocks .collapse">
+<h2></h2>
+<pre>$blocks </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_embeddedTemplates"> </a><div class="element clickable property protected property_embeddedTemplates" data-toggle="collapse" data-target=".property_embeddedTemplates .collapse">
+<h2></h2>
+<pre>$embeddedTemplates </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_env"> </a><div class="element clickable property protected property_env" data-toggle="collapse" data-target=".property_env .collapse">
+<h2></h2>
+<pre>$env </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_expressionParser"> </a><div class="element clickable property protected property_expressionParser" data-toggle="collapse" data-target=".property_expressionParser .collapse">
+<h2></h2>
+<pre>$expressionParser </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_handlers"> </a><div class="element clickable property protected property_handlers" data-toggle="collapse" data-target=".property_handlers .collapse">
+<h2></h2>
+<pre>$handlers </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_importedSymbols"> </a><div class="element clickable property protected property_importedSymbols" data-toggle="collapse" data-target=".property_importedSymbols .collapse">
+<h2></h2>
+<pre>$importedSymbols </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_macros"> </a><div class="element clickable property protected property_macros" data-toggle="collapse" data-target=".property_macros .collapse">
+<h2></h2>
+<pre>$macros </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_parent"> </a><div class="element clickable property protected property_parent" data-toggle="collapse" data-target=".property_parent .collapse">
+<h2></h2>
+<pre>$parent </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_reservedMacroNames"> </a><div class="element clickable property protected property_reservedMacroNames" data-toggle="collapse" data-target=".property_reservedMacroNames .collapse">
+<h2></h2>
+<pre>$reservedMacroNames </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_stack"> </a><div class="element clickable property protected property_stack" data-toggle="collapse" data-target=".property_stack .collapse">
+<h2></h2>
+<pre>$stack </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_stream"> </a><div class="element clickable property protected property_stream" data-toggle="collapse" data-target=".property_stream .collapse">
+<h2></h2>
+<pre>$stream </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_traits"> </a><div class="element clickable property protected property_traits" data-toggle="collapse" data-target=".property_traits .collapse">
+<h2></h2>
+<pre>$traits </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_visitors"> </a><div class="element clickable property protected property_visitors" data-toggle="collapse" data-target=".property_visitors .collapse">
+<h2></h2>
+<pre>$visitors </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:07:34+08:00.<br></footer></div>
+</div>
+</body>
+</html>

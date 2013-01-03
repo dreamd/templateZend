@@ -1,0 +1,1431 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Ldap\Ldap</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___destruct" title="__destruct :: Destructor."><span class="description">Destructor.</span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#method_add" title="add :: Add new information to the LDAP repository"><span class="description">Add new information to the LDAP repository</span><pre>add()</pre></a></li>
+<li class="method public "><a href="#method_bind" title="bind :: "><span class="description">bind()
+        </span><pre>bind()</pre></a></li>
+<li class="method public "><a href="#method_connect" title="connect :: To connect using SSL it seems the client tries to verify the server
+certificate by default."><span class="description">To connect using SSL it seems the client tries to verify the server
+certificate by default.</span><pre>connect()</pre></a></li>
+<li class="method public "><a href="#method_copy" title="copy :: Copies a LDAP entry from one DN to another DN."><span class="description">Copies a LDAP entry from one DN to another DN.</span><pre>copy()</pre></a></li>
+<li class="method public "><a href="#method_copyToSubtree" title="copyToSubtree :: Copies a LDAP entry from one DN to another subtree."><span class="description">Copies a LDAP entry from one DN to another subtree.</span><pre>copyToSubtree()</pre></a></li>
+<li class="method public "><a href="#method_count" title="count :: Count items found by given filter."><span class="description">Count items found by given filter.</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_countChildren" title="countChildren :: Count children for a given DN."><span class="description">Count children for a given DN.</span><pre>countChildren()</pre></a></li>
+<li class="method public "><a href="#method_delete" title="delete :: Delete an LDAP entry"><span class="description">Delete an LDAP entry</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#method_disconnect" title="disconnect :: "><span class="description">disconnect()
+        </span><pre>disconnect()</pre></a></li>
+<li class="method public "><a href="#method_exists" title="exists :: Check if a given DN exists."><span class="description">Check if a given DN exists.</span><pre>exists()</pre></a></li>
+<li class="method public "><a href="#method_getBaseDn" title="getBaseDn :: Gets the base DN under which objects of interest are located"><span class="description">Gets the base DN under which objects of interest are located</span><pre>getBaseDn()</pre></a></li>
+<li class="method public "><a href="#method_getBaseNode" title="getBaseNode :: Returns the base node as a Zend\Ldap\Node"><span class="description">Returns the base node as a Zend\Ldap\Node</span><pre>getBaseNode()</pre></a></li>
+<li class="method public "><a href="#method_getBoundUser" title="getBoundUser :: Get the currently bound user"><span class="description">Get the currently bound user</span><pre>getBoundUser()</pre></a></li>
+<li class="method public "><a href="#method_getCanonicalAccountName" title="getCanonicalAccountName :: "><span class="description">getCanonicalAccountName()
+        </span><pre>getCanonicalAccountName()</pre></a></li>
+<li class="method public "><a href="#method_getEntry" title="getEntry :: Get LDAP entry by DN"><span class="description">Get LDAP entry by DN</span><pre>getEntry()</pre></a></li>
+<li class="method public "><a href="#method_getLastError" title="getLastError :: Return the LDAP error message of the last LDAP command"><span class="description">Return the LDAP error message of the last LDAP command</span><pre>getLastError()</pre></a></li>
+<li class="method public "><a href="#method_getLastErrorCode" title="getLastErrorCode :: Return the LDAP error number of the last LDAP command"><span class="description">Return the LDAP error number of the last LDAP command</span><pre>getLastErrorCode()</pre></a></li>
+<li class="method public "><a href="#method_getNode" title="getNode :: Returns the specified DN as a Zend\Ldap\Node"><span class="description">Returns the specified DN as a Zend\Ldap\Node</span><pre>getNode()</pre></a></li>
+<li class="method public "><a href="#method_getOptions" title="getOptions :: "><span class="description">getOptions()
+        </span><pre>getOptions()</pre></a></li>
+<li class="method public "><a href="#method_getResource" title="getResource :: "><span class="description">getResource()
+        </span><pre>getResource()</pre></a></li>
+<li class="method public "><a href="#method_getRootDse" title="getRootDse :: Returns the RootDse"><span class="description">Returns the RootDse</span><pre>getRootDse()</pre></a></li>
+<li class="method public "><a href="#method_getSchema" title="getSchema :: Returns the schema"><span class="description">Returns the schema</span><pre>getSchema()</pre></a></li>
+<li class="method public "><a href="#method_move" title="move :: Moves a LDAP entry from one DN to another DN."><span class="description">Moves a LDAP entry from one DN to another DN.</span><pre>move()</pre></a></li>
+<li class="method public "><a href="#method_moveToSubtree" title="moveToSubtree :: Moves a LDAP entry from one DN to another subtree."><span class="description">Moves a LDAP entry from one DN to another subtree.</span><pre>moveToSubtree()</pre></a></li>
+<li class="method public "><a href="#method_prepareLdapEntryArray" title="prepareLdapEntryArray :: Prepares an ldap data entry array for insert/update operation"><span class="description">Prepares an ldap data entry array for insert/update operation</span><pre>prepareLdapEntryArray()</pre></a></li>
+<li class="method public "><a href="#method_rename" title="rename :: Renames a LDAP entry from one DN to another DN."><span class="description">Renames a LDAP entry from one DN to another DN.</span><pre>rename()</pre></a></li>
+<li class="method public "><a href="#method_save" title="save :: Save entry to LDAP registry."><span class="description">Save entry to LDAP registry.</span><pre>save()</pre></a></li>
+<li class="method public "><a href="#method_search" title="search :: A global LDAP search routine for finding information."><span class="description">A global LDAP search routine for finding information.</span><pre>search()</pre></a></li>
+<li class="method public "><a href="#method_searchEntries" title="searchEntries :: Search LDAP registry for entries matching filter and optional attributes"><span class="description">Search LDAP registry for entries matching filter and optional attributes</span><pre>searchEntries()</pre></a></li>
+<li class="method public "><a href="#method_setOptions" title="setOptions :: Sets the options used in connecting, binding, etc."><span class="description">Sets the options used in connecting, binding, etc.</span><pre>setOptions()</pre></a></li>
+<li class="method public "><a href="#method_update" title="update :: Update LDAP registry"><span class="description">Update LDAP registry</span><pre>update()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_createCollection" title="createCollection :: Extension point for collection creation"><span class="description">Extension point for collection creation</span><pre>createCollection()</pre></a></li>
+<li class="method protected "><a href="#method_getAccount" title="getAccount :: "><span class="description">getAccount()
+        </span><pre>getAccount()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountCanonicalForm" title="getAccountCanonicalForm :: "><span class="description">getAccountCanonicalForm()
+        </span><pre>getAccountCanonicalForm()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountDn" title="getAccountDn :: "><span class="description">getAccountDn()
+        </span><pre>getAccountDn()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountDomainName" title="getAccountDomainName :: "><span class="description">getAccountDomainName()
+        </span><pre>getAccountDomainName()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountDomainNameShort" title="getAccountDomainNameShort :: "><span class="description">getAccountDomainNameShort()
+        </span><pre>getAccountDomainNameShort()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountFilter" title="getAccountFilter :: "><span class="description">getAccountFilter()
+        </span><pre>getAccountFilter()</pre></a></li>
+<li class="method protected "><a href="#method_getAccountFilterFormat" title="getAccountFilterFormat :: "><span class="description">getAccountFilterFormat()
+        </span><pre>getAccountFilterFormat()</pre></a></li>
+<li class="method protected "><a href="#method_getAllowEmptyPassword" title="getAllowEmptyPassword :: "><span class="description">getAllowEmptyPassword()
+        </span><pre>getAllowEmptyPassword()</pre></a></li>
+<li class="method protected "><a href="#method_getBindRequiresDn" title="getBindRequiresDn :: "><span class="description">getBindRequiresDn()
+        </span><pre>getBindRequiresDn()</pre></a></li>
+<li class="method protected "><a href="#method_getChildrenDns" title="getChildrenDns :: Retrieve the immediate children DNs of the given $parentDn"><span class="description">Retrieve the immediate children DNs of the given $parentDn</span><pre>getChildrenDns()</pre></a></li>
+<li class="method protected "><a href="#method_getHost" title="getHost :: "><span class="description">getHost()
+        </span><pre>getHost()</pre></a></li>
+<li class="method protected "><a href="#method_getNetworkTimeout" title="getNetworkTimeout :: "><span class="description">getNetworkTimeout()
+        </span><pre>getNetworkTimeout()</pre></a></li>
+<li class="method protected "><a href="#method_getOptReferrals" title="getOptReferrals :: "><span class="description">getOptReferrals()
+        </span><pre>getOptReferrals()</pre></a></li>
+<li class="method protected "><a href="#method_getPassword" title="getPassword :: "><span class="description">getPassword()
+        </span><pre>getPassword()</pre></a></li>
+<li class="method protected "><a href="#method_getPort" title="getPort :: "><span class="description">getPort()
+        </span><pre>getPort()</pre></a></li>
+<li class="method protected "><a href="#method_getTryUsernameSplit" title="getTryUsernameSplit :: "><span class="description">getTryUsernameSplit()
+        </span><pre>getTryUsernameSplit()</pre></a></li>
+<li class="method protected "><a href="#method_getUseSsl" title="getUseSsl :: "><span class="description">getUseSsl()
+        </span><pre>getUseSsl()</pre></a></li>
+<li class="method protected "><a href="#method_getUseStartTls" title="getUseStartTls :: "><span class="description">getUseStartTls()
+        </span><pre>getUseStartTls()</pre></a></li>
+<li class="method protected "><a href="#method_getUsername" title="getUsername :: "><span class="description">getUsername()
+        </span><pre>getUsername()</pre></a></li>
+<li class="method protected "><a href="#method_isPossibleAuthority" title="isPossibleAuthority :: "><span class="description">isPossibleAuthority()
+        </span><pre>isPossibleAuthority()</pre></a></li>
+<li class="method protected "><a href="#method_splitName" title="splitName :: "><span class="description">splitName()
+        </span><pre>splitName()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_boundUser" title="$boundUser :: FALSE if no user is bound to the LDAP resource
+NULL if there has been an anonymous bind
+username of the currently bound user"><span class="description"></span><pre>$boundUser</pre></a></li>
+<li class="property protected "><a href="#property_options" title="$options :: The options used in connecting, binding, etc."><span class="description"></span><pre>$options</pre></a></li>
+<li class="property protected "><a href="#property_resource" title="$resource :: The raw LDAP extension resource."><span class="description"></span><pre>$resource</pre></a></li>
+<li class="property protected "><a href="#property_rootDse" title="$rootDse :: Caches the RootDse"><span class="description"></span><pre>$rootDse</pre></a></li>
+<li class="property protected "><a href="#property_schema" title="$schema :: Caches the schema"><span class="description"></span><pre>$schema</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_connectString" title="$connectString :: String used with ldap_connect for error handling purposes."><span class="description"></span><pre>$connectString</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_ACCTNAME_FORM_BACKSLASH" title="ACCTNAME_FORM_BACKSLASH :: "><span class="description">ACCTNAME_FORM_BACKSLASH</span><pre>ACCTNAME_FORM_BACKSLASH</pre></a></li>
+<li class="constant  "><a href="#constant_ACCTNAME_FORM_DN" title="ACCTNAME_FORM_DN :: "><span class="description">ACCTNAME_FORM_DN</span><pre>ACCTNAME_FORM_DN</pre></a></li>
+<li class="constant  "><a href="#constant_ACCTNAME_FORM_PRINCIPAL" title="ACCTNAME_FORM_PRINCIPAL :: "><span class="description">ACCTNAME_FORM_PRINCIPAL</span><pre>ACCTNAME_FORM_PRINCIPAL</pre></a></li>
+<li class="constant  "><a href="#constant_ACCTNAME_FORM_USERNAME" title="ACCTNAME_FORM_USERNAME :: "><span class="description">ACCTNAME_FORM_USERNAME</span><pre>ACCTNAME_FORM_USERNAME</pre></a></li>
+<li class="constant  "><a href="#constant_SEARCH_SCOPE_BASE" title="SEARCH_SCOPE_BASE :: "><span class="description">SEARCH_SCOPE_BASE</span><pre>SEARCH_SCOPE_BASE</pre></a></li>
+<li class="constant  "><a href="#constant_SEARCH_SCOPE_ONE" title="SEARCH_SCOPE_ONE :: "><span class="description">SEARCH_SCOPE_ONE</span><pre>SEARCH_SCOPE_ONE</pre></a></li>
+<li class="constant  "><a href="#constant_SEARCH_SCOPE_SUB" title="SEARCH_SCOPE_SUB :: "><span class="description">SEARCH_SCOPE_SUB</span><pre>SEARCH_SCOPE_SUB</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Ldap\Ldap"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Ldap.html">Ldap</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Ldap.Ldap.html">Ldap</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Ldap.html">Zend_Ldap</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct(array | \Traversable $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code><p>Options used in connecting, binding, etc.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>Destructor.</h2>
+<pre>__destruct() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_add"></a><div class="element clickable method public method_add" data-toggle="collapse" data-target=".method_add .collapse">
+<h2>Add new information to the LDAP repository</h2>
+<pre>add(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn, array $entry) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$entry</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_bind"></a><div class="element clickable method public method_bind" data-toggle="collapse" data-target=".method_bind .collapse">
+<h2>bind()
+        </h2>
+<pre>bind(string $username, string $password) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code><p>The username for authenticating the bind</p></div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code><p>The password for authenticating the bind</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluent interface</div>
+</div></div>
+</div>
+<a id="method_connect"></a><div class="element clickable method public method_connect" data-toggle="collapse" data-target=".method_connect .collapse">
+<h2>To connect using SSL it seems the client tries to verify the server
+certificate by default.</h2>
+<pre>connect(string $host, int $port, boolean $useSsl, boolean $useStartTls, int $networkTimeout) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>One way to disable this behavior is to set
+'TLS_REQCERT never' in OpenLDAP's ldap.conf and restarting Apache. Or,
+if you really care about the server's cert you can put a cert on the
+web server.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$host</h4>
+<code>string</code><p>The hostname of the LDAP server to connect to</p></div>
+<div class="subelement argument">
+<h4>$port</h4>
+<code>int</code><p>The port number of the LDAP server to connect to</p></div>
+<div class="subelement argument">
+<h4>$useSsl</h4>
+<code>boolean</code><p>Use SSL</p></div>
+<div class="subelement argument">
+<h4>$useStartTls</h4>
+<code>boolean</code><p>Use STARTTLS</p></div>
+<div class="subelement argument">
+<h4>$networkTimeout</h4>
+<code>int</code><p>The value for network timeout when connect to the LDAP server.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluent interface</div>
+</div></div>
+</div>
+<a id="method_copy"></a><div class="element clickable method public method_copy" data-toggle="collapse" data-target=".method_copy .collapse">
+<h2>Copies a LDAP entry from one DN to another DN.</h2>
+<pre>copy(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $from, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $to, boolean $recursively) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$to</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_copyToSubtree"></a><div class="element clickable method public method_copyToSubtree" data-toggle="collapse" data-target=".method_copyToSubtree .collapse">
+<h2>Copies a LDAP entry from one DN to another subtree.</h2>
+<pre>copyToSubtree(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $from, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $to, boolean $recursively) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$to</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_count"></a><div class="element clickable method public method_count" data-toggle="collapse" data-target=".method_count .collapse">
+<h2>Count items found by given filter.</h2>
+<pre>count(string | <a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a> $filter, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> | null $basedn, integer $scope) : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a></code>
+</div>
+<div class="subelement argument">
+<h4>$basedn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$scope</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_countChildren"></a><div class="element clickable method public method_countChildren" data-toggle="collapse" data-target=".method_countChildren .collapse">
+<h2>Count children for a given DN.</h2>
+<pre>countChildren(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn) : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
+<h2>Delete an LDAP entry</h2>
+<pre>delete(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn, boolean $recursively) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_disconnect"></a><div class="element clickable method public method_disconnect" data-toggle="collapse" data-target=".method_disconnect .collapse">
+<h2>disconnect()
+        </h2>
+<pre>disconnect() : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluent interface</div>
+</div></div>
+</div>
+<a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
+<h2>Check if a given DN exists.</h2>
+<pre>exists(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getBaseDn"></a><div class="element clickable method public method_getBaseDn" data-toggle="collapse" data-target=".method_getBaseDn .collapse">
+<h2>Gets the base DN under which objects of interest are located</h2>
+<pre>getBaseDn() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getBaseNode"></a><div class="element clickable method public method_getBaseNode" data-toggle="collapse" data-target=".method_getBaseNode .collapse">
+<h2>Returns the base node as a Zend\Ldap\Node</h2>
+<pre>getBaseNode() : <a href="../classes/Zend.Ldap.Node.html">\Zend\Ldap\Node</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Ldap.Node.html">\Zend\Ldap\Node</a></code></div>
+</div></div>
+</div>
+<a id="method_getBoundUser"></a><div class="element clickable method public method_getBoundUser" data-toggle="collapse" data-target=".method_getBoundUser .collapse">
+<h2>Get the currently bound user</h2>
+<pre>getBoundUser() : bool | null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>FALSE if no user is bound to the LDAP resource
+NULL if there has been an anonymous bind
+username of the currently bound user</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getCanonicalAccountName"></a><div class="element clickable method public method_getCanonicalAccountName" data-toggle="collapse" data-target=".method_getCanonicalAccountName .collapse">
+<h2>getCanonicalAccountName()
+        </h2>
+<pre>getCanonicalAccountName(string $acctname, int $form) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acctname</h4>
+<code>string</code><p>The name to canonicalize</p></div>
+<div class="subelement argument">
+<h4>$form</h4>
+<code>int</code><p>The desired form of canonicalization</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The canonicalized name in the desired form</div>
+</div></div>
+</div>
+<a id="method_getEntry"></a><div class="element clickable method public method_getEntry" data-toggle="collapse" data-target=".method_getEntry .collapse">
+<h2>Get LDAP entry by DN</h2>
+<pre>getEntry(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn, array $attributes, boolean $throwOnNotFound) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$attributes</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$throwOnNotFound</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th>
+<code>null</code><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code>
+</th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getLastError"></a><div class="element clickable method public method_getLastError" data-toggle="collapse" data-target=".method_getLastError .collapse">
+<h2>Return the LDAP error message of the last LDAP command</h2>
+<pre>getLastError(int $errorCode, array $errorMessages) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$errorCode</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$errorMessages</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getLastErrorCode"></a><div class="element clickable method public method_getLastErrorCode" data-toggle="collapse" data-target=".method_getLastErrorCode .collapse">
+<h2>Return the LDAP error number of the last LDAP command</h2>
+<pre>getLastErrorCode() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getNode"></a><div class="element clickable method public method_getNode" data-toggle="collapse" data-target=".method_getNode .collapse">
+<h2>Returns the specified DN as a Zend\Ldap\Node</h2>
+<pre>getNode(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn) : <a href="../classes/Zend.Ldap.Node.html">\Zend\Ldap\Node</a> | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Node.html">\Zend\Ldap\Node</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_getOptions"></a><div class="element clickable method public method_getOptions" data-toggle="collapse" data-target=".method_getOptions .collapse">
+<h2>getOptions()
+        </h2>
+<pre>getOptions() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The current options.</div>
+</div></div>
+</div>
+<a id="method_getResource"></a><div class="element clickable method public method_getResource" data-toggle="collapse" data-target=".method_getResource .collapse">
+<h2>getResource()
+        </h2>
+<pre>getResource() : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>resource</code>The raw LDAP extension resource.</div>
+</div></div>
+</div>
+<a id="method_getRootDse"></a><div class="element clickable method public method_getRootDse" data-toggle="collapse" data-target=".method_getRootDse .collapse">
+<h2>Returns the RootDse</h2>
+<pre>getRootDse() : <a href="../classes/Zend.Ldap.Node.RootDse.html">\Zend\Ldap\Node\RootDse</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Ldap.Node.RootDse.html">\Zend\Ldap\Node\RootDse</a></code></div>
+</div></div>
+</div>
+<a id="method_getSchema"></a><div class="element clickable method public method_getSchema" data-toggle="collapse" data-target=".method_getSchema .collapse">
+<h2>Returns the schema</h2>
+<pre>getSchema() : <a href="../classes/Zend.Ldap.Node.Schema.html">\Zend\Ldap\Node\Schema</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Ldap.Node.Schema.html">\Zend\Ldap\Node\Schema</a></code></div>
+</div></div>
+</div>
+<a id="method_move"></a><div class="element clickable method public method_move" data-toggle="collapse" data-target=".method_move .collapse">
+<h2>Moves a LDAP entry from one DN to another DN.</h2>
+<pre>move(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $from, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $to, boolean $recursively, boolean $alwaysEmulate) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is an alias for <a href="rename()">rename()</a></p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$to</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$alwaysEmulate</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_moveToSubtree"></a><div class="element clickable method public method_moveToSubtree" data-toggle="collapse" data-target=".method_moveToSubtree .collapse">
+<h2>Moves a LDAP entry from one DN to another subtree.</h2>
+<pre>moveToSubtree(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $from, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $to, boolean $recursively, boolean $alwaysEmulate) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$to</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$alwaysEmulate</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_prepareLdapEntryArray"></a><div class="element clickable method public method_prepareLdapEntryArray" data-toggle="collapse" data-target=".method_prepareLdapEntryArray .collapse">
+<h2>Prepares an ldap data entry array for insert/update operation</h2>
+<pre>prepareLdapEntryArray(array $entry) : void</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$entry</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.InvalidArgumentException.html">\Zend\Ldap\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_rename"></a><div class="element clickable method public method_rename" data-toggle="collapse" data-target=".method_rename .collapse">
+<h2>Renames a LDAP entry from one DN to another DN.</h2>
+<pre>rename(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $from, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $to, boolean $recursively, boolean $alwaysEmulate) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method implicitly moves the entry to another location within the tree.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$to</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$recursively</h4>
+<code>boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$alwaysEmulate</h4>
+<code>boolean</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_save"></a><div class="element clickable method public method_save" data-toggle="collapse" data-target=".method_save .collapse">
+<h2>Save entry to LDAP registry.</h2>
+<pre>save(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn, array $entry) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Internally decides if entry will be updated to added by calling
+<a href="exists()">exists()</a>.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$entry</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_search"></a><div class="element clickable method public method_search" data-toggle="collapse" data-target=".method_search .collapse">
+<h2>A global LDAP search routine for finding information.</h2>
+<pre>search(string | <a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a> | array $filter, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> | null $basedn, integer $scope, array $attributes, string | null $sort, string | null $collectionClass, integer $sizelimit, integer $timelimit) : <a href="../classes/Zend.Ldap.Collection.html">\Zend\Ldap\Collection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Options can be either passed as single parameters according to the
+method signature or as an array with one or more of the following keys
+- filter
+- baseDn
+- scope
+- attributes
+- sort
+- collectionClass
+- sizelimit
+- timelimit</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a></code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$basedn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$scope</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$attributes</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$sort</h4>
+<code>string</code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$collectionClass</h4>
+<code>string</code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$sizelimit</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$timelimit</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Ldap.Collection.html">\Zend\Ldap\Collection</a></code></div>
+</div></div>
+</div>
+<a id="method_searchEntries"></a><div class="element clickable method public method_searchEntries" data-toggle="collapse" data-target=".method_searchEntries .collapse">
+<h2>Search LDAP registry for entries matching filter and optional attributes</h2>
+<pre>searchEntries(string | <a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a> | array $filter, string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> | null $basedn, integer $scope, array $attributes, string | null $sort, boolean $reverseSort, integer $sizelimit, integer $timelimit) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Options can be either passed as single parameters according to the
+method signature or as an array with one or more of the following keys
+- filter
+- baseDn
+- scope
+- attributes
+- sort
+- reverseSort
+- sizelimit
+- timelimit</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Filter.AbstractFilter.html">\Zend\Ldap\Filter\AbstractFilter</a></code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$basedn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$scope</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$attributes</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$sort</h4>
+<code>string</code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$reverseSort</h4>
+<code>boolean</code>
+</div>
+<div class="subelement argument">
+<h4>$sizelimit</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$timelimit</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+<h2>Sets the options used in connecting, binding, etc.</h2>
+<pre>setOptions(array | \Traversable $options) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Valid option keys:
+ host
+ port
+ useSsl
+ username
+ password
+ bindRequiresDn
+ baseDn
+ accountCanonicalForm
+ accountDomainName
+ accountDomainNameShort
+ accountFilterFormat
+ allowEmptyPassword
+ useStartTls
+ optReferrals
+ tryUsernameSplit
+ networkTimeout</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code><p>Options used in connecting, binding, etc.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluent interface</div>
+</div></div>
+</div>
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
+<h2>Update LDAP registry</h2>
+<pre>update(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $dn, array $entry) : <a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<div class="subelement argument">
+<h4>$entry</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Ldap.Ldap.html">\Zend\Ldap\Ldap</a></code>Provides a fluid interface</div>
+</div></div>
+</div>
+<a id="method_createCollection"></a><div class="element clickable method protected method_createCollection" data-toggle="collapse" data-target=".method_createCollection .collapse">
+<h2>Extension point for collection creation</h2>
+<pre>createCollection(\Zend\Ldap\Collection\DefaultIterator $iterator, string | null $collectionClass) : <a href="../classes/Zend.Ldap.Collection.html">\Zend\Ldap\Collection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$iterator</h4>
+<code><a href="../classes/Zend.Ldap.Collection.DefaultIterator.html">\Zend\Ldap\Collection\DefaultIterator</a></code>
+</div>
+<div class="subelement argument">
+<h4>$collectionClass</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Ldap.Collection.html">\Zend\Ldap\Collection</a></code></div>
+</div></div>
+</div>
+<a id="method_getAccount"></a><div class="element clickable method protected method_getAccount" data-toggle="collapse" data-target=".method_getAccount .collapse">
+<h2>getAccount()
+        </h2>
+<pre>getAccount(string $acctname, array $attrs) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acctname</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$attrs</h4>
+<code>array</code><p>An array of names of desired attributes</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of the attributes representing the account</div>
+</div></div>
+</div>
+<a id="method_getAccountCanonicalForm"></a><div class="element clickable method protected method_getAccountCanonicalForm" data-toggle="collapse" data-target=".method_getAccountCanonicalForm .collapse">
+<h2>getAccountCanonicalForm()
+        </h2>
+<pre>getAccountCanonicalForm() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>Either ACCTNAME_FORM_BACKSLASH, ACCTNAME_FORM_PRINCIPAL or
+ACCTNAME_FORM_USERNAME indicating the form usernames should be canonicalized to.</div>
+</div></div>
+</div>
+<a id="method_getAccountDn"></a><div class="element clickable method protected method_getAccountDn" data-toggle="collapse" data-target=".method_getAccountDn .collapse">
+<h2>getAccountDn()
+        </h2>
+<pre>getAccountDn(string $acctname) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acctname</h4>
+<code>string</code><p>The name of the account</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The DN of the specified account</div>
+</div></div>
+</div>
+<a id="method_getAccountDomainName"></a><div class="element clickable method protected method_getAccountDomainName" data-toggle="collapse" data-target=".method_getAccountDomainName .collapse">
+<h2>getAccountDomainName()
+        </h2>
+<pre>getAccountDomainName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The account domain name</div>
+</div></div>
+</div>
+<a id="method_getAccountDomainNameShort"></a><div class="element clickable method protected method_getAccountDomainNameShort" data-toggle="collapse" data-target=".method_getAccountDomainNameShort .collapse">
+<h2>getAccountDomainNameShort()
+        </h2>
+<pre>getAccountDomainNameShort() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The short account domain name</div>
+</div></div>
+</div>
+<a id="method_getAccountFilter"></a><div class="element clickable method protected method_getAccountFilter" data-toggle="collapse" data-target=".method_getAccountFilter .collapse">
+<h2>getAccountFilter()
+        </h2>
+<pre>getAccountFilter(string $acctname) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acctname</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The LDAP search filter for matching directory accounts</div>
+</div></div>
+</div>
+<a id="method_getAccountFilterFormat"></a><div class="element clickable method protected method_getAccountFilterFormat" data-toggle="collapse" data-target=".method_getAccountFilterFormat .collapse">
+<h2>getAccountFilterFormat()
+        </h2>
+<pre>getAccountFilterFormat() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A format string for building an LDAP search filter to match
+an account</div>
+</div></div>
+</div>
+<a id="method_getAllowEmptyPassword"></a><div class="element clickable method protected method_getAllowEmptyPassword" data-toggle="collapse" data-target=".method_getAllowEmptyPassword .collapse">
+<h2>getAllowEmptyPassword()
+        </h2>
+<pre>getAllowEmptyPassword() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Allow empty passwords</div>
+</div></div>
+</div>
+<a id="method_getBindRequiresDn"></a><div class="element clickable method protected method_getBindRequiresDn" data-toggle="collapse" data-target=".method_getBindRequiresDn .collapse">
+<h2>getBindRequiresDn()
+        </h2>
+<pre>getBindRequiresDn() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Bind requires DN</div>
+</div></div>
+</div>
+<a id="method_getChildrenDns"></a><div class="element clickable method protected method_getChildrenDns" data-toggle="collapse" data-target=".method_getChildrenDns .collapse">
+<h2>Retrieve the immediate children DNs of the given $parentDn</h2>
+<pre>getChildrenDns(string | <a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a> $parentDn) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is used in recursive methods like {@see delete()}
+or {@see copy()}</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parentDn</h4>
+<code>string</code><code><a href="../classes/Zend.Ldap.Dn.html">\Zend\Ldap\Dn</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Ldap.Exception.LdapException.html">\Zend\Ldap\Exception\LdapException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of DNs</div>
+</div></div>
+</div>
+<a id="method_getHost"></a><div class="element clickable method protected method_getHost" data-toggle="collapse" data-target=".method_getHost .collapse">
+<h2>getHost()
+        </h2>
+<pre>getHost() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The hostname of the LDAP server being used to
+ authenticate accounts</div>
+</div></div>
+</div>
+<a id="method_getNetworkTimeout"></a><div class="element clickable method protected method_getNetworkTimeout" data-toggle="collapse" data-target=".method_getNetworkTimeout .collapse">
+<h2>getNetworkTimeout()
+        </h2>
+<pre>getNetworkTimeout() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The value for network timeout when connect to the LDAP server.</div>
+</div></div>
+</div>
+<a id="method_getOptReferrals"></a><div class="element clickable method protected method_getOptReferrals" data-toggle="collapse" data-target=".method_getOptReferrals .collapse">
+<h2>getOptReferrals()
+        </h2>
+<pre>getOptReferrals() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Opt. Referrals</div>
+</div></div>
+</div>
+<a id="method_getPassword"></a><div class="element clickable method protected method_getPassword" data-toggle="collapse" data-target=".method_getPassword .collapse">
+<h2>getPassword()
+        </h2>
+<pre>getPassword() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The default password for binding</div>
+</div></div>
+</div>
+<a id="method_getPort"></a><div class="element clickable method protected method_getPort" data-toggle="collapse" data-target=".method_getPort .collapse">
+<h2>getPort()
+        </h2>
+<pre>getPort() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The port of the LDAP server or 0 to indicate that no port
+ value is set</div>
+</div></div>
+</div>
+<a id="method_getTryUsernameSplit"></a><div class="element clickable method protected method_getTryUsernameSplit" data-toggle="collapse" data-target=".method_getTryUsernameSplit .collapse">
+<h2>getTryUsernameSplit()
+        </h2>
+<pre>getTryUsernameSplit() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Try splitting the username into username and domain</div>
+</div></div>
+</div>
+<a id="method_getUseSsl"></a><div class="element clickable method protected method_getUseSsl" data-toggle="collapse" data-target=".method_getUseSsl .collapse">
+<h2>getUseSsl()
+        </h2>
+<pre>getUseSsl() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>The default SSL / TLS encrypted transport control</div>
+</div></div>
+</div>
+<a id="method_getUseStartTls"></a><div class="element clickable method protected method_getUseStartTls" data-toggle="collapse" data-target=".method_getUseStartTls .collapse">
+<h2>getUseStartTls()
+        </h2>
+<pre>getUseStartTls() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>The default SSL / TLS encrypted transport control</div>
+</div></div>
+</div>
+<a id="method_getUsername"></a><div class="element clickable method protected method_getUsername" data-toggle="collapse" data-target=".method_getUsername .collapse">
+<h2>getUsername()
+        </h2>
+<pre>getUsername() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The default acctname for binding</div>
+</div></div>
+</div>
+<a id="method_isPossibleAuthority"></a><div class="element clickable method protected method_isPossibleAuthority" data-toggle="collapse" data-target=".method_isPossibleAuthority .collapse">
+<h2>isPossibleAuthority()
+        </h2>
+<pre>isPossibleAuthority(string $dname) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dname</h4>
+<code>string</code><p>The domain name to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_splitName"></a><div class="element clickable method protected method_splitName" data-toggle="collapse" data-target=".method_splitName .collapse">
+<h2>splitName()
+        </h2>
+<pre>splitName(string $name, string $dname, string $aname) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The name to split</p></div>
+<div class="subelement argument">
+<h4>$dname</h4>
+<code>string</code><p>The resulting domain name (this is an out parameter)</p>
+</div>
+<div class="subelement argument">
+<h4>$aname</h4>
+<code>string</code><p>The resulting account name (this is an out parameter)</p>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_boundUser"> </a><div class="element clickable property protected property_boundUser" data-toggle="collapse" data-target=".property_boundUser .collapse">
+<h2></h2>
+<pre>$boundUser : boolean | null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_options"> </a><div class="element clickable property protected property_options" data-toggle="collapse" data-target=".property_options .collapse">
+<h2></h2>
+<pre>$options : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_resource"> </a><div class="element clickable property protected property_resource" data-toggle="collapse" data-target=".property_resource .collapse">
+<h2></h2>
+<pre>$resource : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rootDse"> </a><div class="element clickable property protected property_rootDse" data-toggle="collapse" data-target=".property_rootDse .collapse">
+<h2></h2>
+<pre>$rootDse : <a href="../classes/Zend.Ldap.Node.RootDse.html">\Zend\Ldap\Node\RootDse</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_schema"> </a><div class="element clickable property protected property_schema" data-toggle="collapse" data-target=".property_schema .collapse">
+<h2></h2>
+<pre>$schema : <a href="../classes/Zend.Ldap.Node.Schema.html">\Zend\Ldap\Node\Schema</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_connectString"> </a><div class="element clickable property private property_connectString" data-toggle="collapse" data-target=".property_connectString .collapse">
+<h2></h2>
+<pre>$connectString : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_ACCTNAME_FORM_BACKSLASH"> </a><div class="element clickable constant  constant_ACCTNAME_FORM_BACKSLASH" data-toggle="collapse" data-target=".constant_ACCTNAME_FORM_BACKSLASH .collapse">
+<h2>ACCTNAME_FORM_BACKSLASH</h2>
+<pre>ACCTNAME_FORM_BACKSLASH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ACCTNAME_FORM_DN"> </a><div class="element clickable constant  constant_ACCTNAME_FORM_DN" data-toggle="collapse" data-target=".constant_ACCTNAME_FORM_DN .collapse">
+<h2>ACCTNAME_FORM_DN</h2>
+<pre>ACCTNAME_FORM_DN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ACCTNAME_FORM_PRINCIPAL"> </a><div class="element clickable constant  constant_ACCTNAME_FORM_PRINCIPAL" data-toggle="collapse" data-target=".constant_ACCTNAME_FORM_PRINCIPAL .collapse">
+<h2>ACCTNAME_FORM_PRINCIPAL</h2>
+<pre>ACCTNAME_FORM_PRINCIPAL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ACCTNAME_FORM_USERNAME"> </a><div class="element clickable constant  constant_ACCTNAME_FORM_USERNAME" data-toggle="collapse" data-target=".constant_ACCTNAME_FORM_USERNAME .collapse">
+<h2>ACCTNAME_FORM_USERNAME</h2>
+<pre>ACCTNAME_FORM_USERNAME </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SEARCH_SCOPE_BASE"> </a><div class="element clickable constant  constant_SEARCH_SCOPE_BASE" data-toggle="collapse" data-target=".constant_SEARCH_SCOPE_BASE .collapse">
+<h2>SEARCH_SCOPE_BASE</h2>
+<pre>SEARCH_SCOPE_BASE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SEARCH_SCOPE_ONE"> </a><div class="element clickable constant  constant_SEARCH_SCOPE_ONE" data-toggle="collapse" data-target=".constant_SEARCH_SCOPE_ONE .collapse">
+<h2>SEARCH_SCOPE_ONE</h2>
+<pre>SEARCH_SCOPE_ONE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SEARCH_SCOPE_SUB"> </a><div class="element clickable constant  constant_SEARCH_SCOPE_SUB" data-toggle="collapse" data-target=".constant_SEARCH_SCOPE_SUB .collapse">
+<h2>SEARCH_SCOPE_SUB</h2>
+<pre>SEARCH_SCOPE_SUB </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:11:52+08:00.<br></footer></div>
+</div>
+</body>
+</html>

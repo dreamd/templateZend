@@ -1,0 +1,452 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Console\Prompt\Char</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Ask the user for a single key stroke"><span class="description">Ask the user for a single key stroke</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getAllowEmpty" title="getAllowEmpty :: "><span class="description">getAllowEmpty()
+        </span><pre>getAllowEmpty()</pre></a></li>
+<li class="method public "><a href="#method_getAllowedChars" title="getAllowedChars :: "><span class="description">getAllowedChars()
+        </span><pre>getAllowedChars()</pre></a></li>
+<li class="method public inherited"><a href="#method_getConsole" title="getConsole :: Return console adapter to use when showing prompt."><span class="description">Return console adapter to use when showing prompt.</span><pre>getConsole()</pre></a></li>
+<li class="method public "><a href="#method_getEcho" title="getEcho :: "><span class="description">getEcho()
+        </span><pre>getEcho()</pre></a></li>
+<li class="method public "><a href="#method_getIgnoreCase" title="getIgnoreCase :: "><span class="description">getIgnoreCase()
+        </span><pre>getIgnoreCase()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLastResponse" title="getLastResponse :: Return last answer to this prompt."><span class="description">Return last answer to this prompt.</span><pre>getLastResponse()</pre></a></li>
+<li class="method public "><a href="#method_getPromptText" title="getPromptText :: "><span class="description">getPromptText()
+        </span><pre>getPromptText()</pre></a></li>
+<li class="method public inherited"><a href="#method_prompt" title="prompt :: Create an instance of this prompt, show it and return response."><span class="description">Create an instance of this prompt, show it and return response.</span><pre>prompt()</pre></a></li>
+<li class="method public "><a href="#method_setAllowEmpty" title="setAllowEmpty :: "><span class="description">setAllowEmpty()
+        </span><pre>setAllowEmpty()</pre></a></li>
+<li class="method public "><a href="#method_setAllowedChars" title="setAllowedChars :: "><span class="description">setAllowedChars()
+        </span><pre>setAllowedChars()</pre></a></li>
+<li class="method public inherited"><a href="#method_setConsole" title="setConsole :: Set console adapter to use when showing prompt."><span class="description">Set console adapter to use when showing prompt.</span><pre>setConsole()</pre></a></li>
+<li class="method public "><a href="#method_setEcho" title="setEcho :: "><span class="description">setEcho()
+        </span><pre>setEcho()</pre></a></li>
+<li class="method public "><a href="#method_setIgnoreCase" title="setIgnoreCase :: "><span class="description">setIgnoreCase()
+        </span><pre>setIgnoreCase()</pre></a></li>
+<li class="method public "><a href="#method_setPromptText" title="setPromptText :: "><span class="description">setPromptText()
+        </span><pre>setPromptText()</pre></a></li>
+<li class="method public "><a href="#method_show" title="show :: Show the prompt to user and return a single char."><span class="description">Show the prompt to user and return a single char.</span><pre>show()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_allowEmpty" title="$allowEmpty :: "><span class="description"></span><pre>$allowEmpty</pre></a></li>
+<li class="property protected "><a href="#property_allowedChars" title="$allowedChars :: "><span class="description"></span><pre>$allowedChars</pre></a></li>
+<li class="property protected inherited"><a href="#property_console" title="$console :: "><span class="description"></span><pre>$console</pre></a></li>
+<li class="property protected "><a href="#property_echo" title="$echo :: "><span class="description"></span><pre>$echo</pre></a></li>
+<li class="property protected "><a href="#property_ignoreCase" title="$ignoreCase :: "><span class="description"></span><pre>$ignoreCase</pre></a></li>
+<li class="property protected inherited"><a href="#property_lastResponse" title="$lastResponse :: "><span class="description"></span><pre>$lastResponse</pre></a></li>
+<li class="property protected "><a href="#property_promptText" title="$promptText :: "><span class="description"></span><pre>$promptText</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Console\Prompt\Char"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Console.html">Console</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Console.Prompt.html">Prompt</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Console.Prompt.Char.html">Char</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Console.Prompt.html">Zend_Console</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Prompt</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Ask the user for a single key stroke</h2>
+<pre>__construct(string $promptText, string $allowedChars, bool $ignoreCase, bool $allowEmpty, bool $echo) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$promptText</h4>
+<code>string</code><p>The prompt text to display in console</p></div>
+<div class="subelement argument">
+<h4>$allowedChars</h4>
+<code>string</code><p>A list of allowed chars (i.e. "abc12345")</p>
+</div>
+<div class="subelement argument">
+<h4>$ignoreCase</h4>
+<code>bool</code><p>If true, case will be ignored and prompt will always return lower-cased response</p>
+</div>
+<div class="subelement argument">
+<h4>$allowEmpty</h4>
+<code>bool</code><p>Is empty response allowed?</p>
+</div>
+<div class="subelement argument">
+<h4>$echo</h4>
+<code>bool</code><p>Display the selection after user presses key</p></div>
+</div></div>
+</div>
+<a id="method_getAllowEmpty"></a><div class="element clickable method public method_getAllowEmpty" data-toggle="collapse" data-target=".method_getAllowEmpty .collapse">
+<h2>getAllowEmpty()
+        </h2>
+<pre>getAllowEmpty() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getAllowedChars"></a><div class="element clickable method public method_getAllowedChars" data-toggle="collapse" data-target=".method_getAllowedChars .collapse">
+<h2>getAllowedChars()
+        </h2>
+<pre>getAllowedChars() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getConsole"></a><div class="element clickable method public method_getConsole" data-toggle="collapse" data-target=".method_getConsole .collapse">
+<h2>Return console adapter to use when showing prompt.</h2>
+<pre>getConsole() : <a href="../classes/Zend.Console.Adapter.AdapterInterface.html">\Zend\Console\Adapter\AdapterInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::getConsole()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Console.Adapter.AdapterInterface.html">\Zend\Console\Adapter\AdapterInterface</a></code></div>
+</div></div>
+</div>
+<a id="method_getEcho"></a><div class="element clickable method public method_getEcho" data-toggle="collapse" data-target=".method_getEcho .collapse">
+<h2>getEcho()
+        </h2>
+<pre>getEcho() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getIgnoreCase"></a><div class="element clickable method public method_getIgnoreCase" data-toggle="collapse" data-target=".method_getIgnoreCase .collapse">
+<h2>getIgnoreCase()
+        </h2>
+<pre>getIgnoreCase() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getLastResponse"></a><div class="element clickable method public method_getLastResponse" data-toggle="collapse" data-target=".method_getLastResponse .collapse">
+<h2>Return last answer to this prompt.</h2>
+<pre>getLastResponse() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::getLastResponse()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getPromptText"></a><div class="element clickable method public method_getPromptText" data-toggle="collapse" data-target=".method_getPromptText .collapse">
+<h2>getPromptText()
+        </h2>
+<pre>getPromptText() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_prompt"></a><div class="element clickable method public method_prompt" data-toggle="collapse" data-target=".method_prompt .collapse">
+<h2>Create an instance of this prompt, show it and return response.</h2>
+<pre>prompt() : mixed</pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is a convenience method for creating statically creating prompts, i.e.:</p>
+
+<pre><code> $name = Zend\Console\Prompt\Line::prompt("Enter your name: ");
+</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::prompt()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Console.Exception.BadMethodCallException.html">\Zend\Console\Exception\BadMethodCallException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_setAllowEmpty"></a><div class="element clickable method public method_setAllowEmpty" data-toggle="collapse" data-target=".method_setAllowEmpty .collapse">
+<h2>setAllowEmpty()
+        </h2>
+<pre>setAllowEmpty(boolean $allowEmpty) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$allowEmpty</h4>
+<code>boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setAllowedChars"></a><div class="element clickable method public method_setAllowedChars" data-toggle="collapse" data-target=".method_setAllowedChars .collapse">
+<h2>setAllowedChars()
+        </h2>
+<pre>setAllowedChars(string $allowedChars) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$allowedChars</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setConsole"></a><div class="element clickable method public method_setConsole" data-toggle="collapse" data-target=".method_setConsole .collapse">
+<h2>Set console adapter to use when showing prompt.</h2>
+<pre>setConsole(\Zend\Console\Adapter\AdapterInterface $adapter) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::setConsole()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$adapter</h4>
+<code><a href="../classes/Zend.Console.Adapter.AdapterInterface.html">\Zend\Console\Adapter\AdapterInterface</a></code>
+</div>
+</div></div>
+</div>
+<a id="method_setEcho"></a><div class="element clickable method public method_setEcho" data-toggle="collapse" data-target=".method_setEcho .collapse">
+<h2>setEcho()
+        </h2>
+<pre>setEcho(boolean $echo) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$echo</h4>
+<code>boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setIgnoreCase"></a><div class="element clickable method public method_setIgnoreCase" data-toggle="collapse" data-target=".method_setIgnoreCase .collapse">
+<h2>setIgnoreCase()
+        </h2>
+<pre>setIgnoreCase(boolean $ignoreCase) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ignoreCase</h4>
+<code>boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_setPromptText"></a><div class="element clickable method public method_setPromptText" data-toggle="collapse" data-target=".method_setPromptText .collapse">
+<h2>setPromptText()
+        </h2>
+<pre>setPromptText(string $promptText) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$promptText</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_show"></a><div class="element clickable method public method_show" data-toggle="collapse" data-target=".method_show .collapse">
+<h2>Show the prompt to user and return a single char.</h2>
+<pre>show() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowEmpty"> </a><div class="element clickable property protected property_allowEmpty" data-toggle="collapse" data-target=".property_allowEmpty .collapse">
+<h2></h2>
+<pre>$allowEmpty : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_allowedChars"> </a><div class="element clickable property protected property_allowedChars" data-toggle="collapse" data-target=".property_allowedChars .collapse">
+<h2></h2>
+<pre>$allowedChars : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_console"> </a><div class="element clickable property protected property_console" data-toggle="collapse" data-target=".property_console .collapse">
+<h2></h2>
+<pre>$console : <a href="../classes/Zend.Console.Adapter.AdapterInterface.html">\Zend\Console\Adapter\AdapterInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::$$console</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_echo"> </a><div class="element clickable property protected property_echo" data-toggle="collapse" data-target=".property_echo .collapse">
+<h2></h2>
+<pre>$echo : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_ignoreCase"> </a><div class="element clickable property protected property_ignoreCase" data-toggle="collapse" data-target=".property_ignoreCase .collapse">
+<h2></h2>
+<pre>$ignoreCase : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_lastResponse"> </a><div class="element clickable property protected property_lastResponse" data-toggle="collapse" data-target=".property_lastResponse .collapse">
+<h2></h2>
+<pre>$lastResponse : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Console\Prompt\AbstractPrompt::$$lastResponse</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_promptText"> </a><div class="element clickable property protected property_promptText" data-toggle="collapse" data-target=".property_promptText .collapse">
+<h2></h2>
+<pre>$promptText : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:08:51+08:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,891 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Feed\PubSubHubbub\Subscriber</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor; accepts an array or Traversable instance to preset
+options for the Subscriber without calling all supported setter
+methods in turn."><span class="description">Constructor; accepts an array or Traversable instance to preset
+options for the Subscriber without calling all supported setter
+methods in turn.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addAuthentication" title="addAuthentication :: Add authentication credentials for a given URL"><span class="description">Add authentication credentials for a given URL</span><pre>addAuthentication()</pre></a></li>
+<li class="method public "><a href="#method_addAuthentications" title="addAuthentications :: Add authentication credentials for hub URLs"><span class="description">Add authentication credentials for hub URLs</span><pre>addAuthentications()</pre></a></li>
+<li class="method public "><a href="#method_addHubUrl" title="addHubUrl :: Add a Hub Server URL supported by Publisher"><span class="description">Add a Hub Server URL supported by Publisher</span><pre>addHubUrl()</pre></a></li>
+<li class="method public "><a href="#method_addHubUrls" title="addHubUrls :: Add an array of Hub Server URLs supported by Publisher"><span class="description">Add an array of Hub Server URLs supported by Publisher</span><pre>addHubUrls()</pre></a></li>
+<li class="method public "><a href="#method_getAsyncHubs" title="getAsyncHubs :: Return an array of Hub Server URLs who returned a response indicating
+operation in Asynchronous Verification Mode, i.e."><span class="description">Return an array of Hub Server URLs who returned a response indicating
+operation in Asynchronous Verification Mode, i.e.</span><pre>getAsyncHubs()</pre></a></li>
+<li class="method public "><a href="#method_getAuthentications" title="getAuthentications :: Get all hub URL authentication credentials"><span class="description">Get all hub URL authentication credentials</span><pre>getAuthentications()</pre></a></li>
+<li class="method public "><a href="#method_getCallbackUrl" title="getCallbackUrl :: Get the callback URL to be used by Hub Servers when communicating with
+this Subscriber"><span class="description">Get the callback URL to be used by Hub Servers when communicating with
+this Subscriber</span><pre>getCallbackUrl()</pre></a></li>
+<li class="method public "><a href="#method_getErrors" title="getErrors :: Return an array of errors met from any failures, including keys:
+'response' =&gt; the Zend\Http\Response object from the failure
+'hubUrl' =&gt; the URL of the Hub Server whose notification failed"><span class="description">Return an array of errors met from any failures, including keys:
+'response' =&gt; the Zend\Http\Response object from the failure
+'hubUrl' =&gt; the URL of the Hub Server whose notification failed</span><pre>getErrors()</pre></a></li>
+<li class="method public "><a href="#method_getHubUrls" title="getHubUrls :: Return an array of unique Hub Server URLs currently available"><span class="description">Return an array of unique Hub Server URLs currently available</span><pre>getHubUrls()</pre></a></li>
+<li class="method public "><a href="#method_getLeaseSeconds" title="getLeaseSeconds :: Get the number of lease seconds on subscriptions"><span class="description">Get the number of lease seconds on subscriptions</span><pre>getLeaseSeconds()</pre></a></li>
+<li class="method public "><a href="#method_getParameters" title="getParameters :: Return an array of optional parameters for (un)subscribe requests"><span class="description">Return an array of optional parameters for (un)subscribe requests</span><pre>getParameters()</pre></a></li>
+<li class="method public "><a href="#method_getPreferredVerificationMode" title="getPreferredVerificationMode :: Get preferred verification mode (sync or async)."><span class="description">Get preferred verification mode (sync or async).</span><pre>getPreferredVerificationMode()</pre></a></li>
+<li class="method public "><a href="#method_getStorage" title="getStorage :: Gets an instance of Zend\Feed\Pubsubhubbub\Storage\StoragePersistence used
+to background save any verification tokens associated with a subscription
+or other."><span class="description">Gets an instance of Zend\Feed\Pubsubhubbub\Storage\StoragePersistence used
+to background save any verification tokens associated with a subscription
+or other.</span><pre>getStorage()</pre></a></li>
+<li class="method public "><a href="#method_getTopicUrl" title="getTopicUrl :: Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate"><span class="description">Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate</span><pre>getTopicUrl()</pre></a></li>
+<li class="method public "><a href="#method_isSuccess" title="isSuccess :: Returns a boolean indicator of whether the notifications to Hub
+Servers were ALL successful."><span class="description">Returns a boolean indicator of whether the notifications to Hub
+Servers were ALL successful.</span><pre>isSuccess()</pre></a></li>
+<li class="method public "><a href="#method_removeHubUrl" title="removeHubUrl :: Remove a Hub Server URL"><span class="description">Remove a Hub Server URL</span><pre>removeHubUrl()</pre></a></li>
+<li class="method public "><a href="#method_removeParameter" title="removeParameter :: Remove an optional parameter for the (un)subscribe requests"><span class="description">Remove an optional parameter for the (un)subscribe requests</span><pre>removeParameter()</pre></a></li>
+<li class="method public "><a href="#method_setCallbackUrl" title="setCallbackUrl :: Set the callback URL to be used by Hub Servers when communicating with
+this Subscriber"><span class="description">Set the callback URL to be used by Hub Servers when communicating with
+this Subscriber</span><pre>setCallbackUrl()</pre></a></li>
+<li class="method public "><a href="#method_setLeaseSeconds" title="setLeaseSeconds :: Set the number of seconds for which any subscription will remain valid"><span class="description">Set the number of seconds for which any subscription will remain valid</span><pre>setLeaseSeconds()</pre></a></li>
+<li class="method public "><a href="#method_setOptions" title="setOptions :: Process any injected configuration options"><span class="description">Process any injected configuration options</span><pre>setOptions()</pre></a></li>
+<li class="method public "><a href="#method_setParameter" title="setParameter :: Add an optional parameter to the (un)subscribe requests"><span class="description">Add an optional parameter to the (un)subscribe requests</span><pre>setParameter()</pre></a></li>
+<li class="method public "><a href="#method_setParameters" title="setParameters :: Add an optional parameter to the (un)subscribe requests"><span class="description">Add an optional parameter to the (un)subscribe requests</span><pre>setParameters()</pre></a></li>
+<li class="method public "><a href="#method_setPreferredVerificationMode" title="setPreferredVerificationMode :: Set preferred verification mode (sync or async)."><span class="description">Set preferred verification mode (sync or async).</span><pre>setPreferredVerificationMode()</pre></a></li>
+<li class="method public "><a href="#method_setStorage" title="setStorage :: Sets an instance of Zend\Feed\Pubsubhubbub\Model\SubscriptionPersistence used to background
+save any verification tokens associated with a subscription or other."><span class="description">Sets an instance of Zend\Feed\Pubsubhubbub\Model\SubscriptionPersistence used to background
+save any verification tokens associated with a subscription or other.</span><pre>setStorage()</pre></a></li>
+<li class="method public "><a href="#method_setTestStaticToken" title="setTestStaticToken :: "><span class="description">setTestStaticToken()
+        </span><pre>setTestStaticToken()</pre></a></li>
+<li class="method public "><a href="#method_setTopicUrl" title="setTopicUrl :: Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate"><span class="description">Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate</span><pre>setTopicUrl()</pre></a></li>
+<li class="method public "><a href="#method_subscribeAll" title="subscribeAll :: Subscribe to one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)"><span class="description">Subscribe to one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)</span><pre>subscribeAll()</pre></a></li>
+<li class="method public "><a href="#method_unsubscribeAll" title="unsubscribeAll :: Unsubscribe from one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)"><span class="description">Unsubscribe from one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)</span><pre>unsubscribeAll()</pre></a></li>
+<li class="method public "><a href="#method_usePathParameter" title="usePathParameter :: Set flag indicating whether or not to use a path parameter"><span class="description">Set flag indicating whether or not to use a path parameter</span><pre>usePathParameter()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method__doRequest" title="_doRequest :: Executes an (un)subscribe request"><span class="description">Executes an (un)subscribe request</span><pre>_doRequest()</pre></a></li>
+<li class="method protected "><a href="#method__generateSubscriptionKey" title="_generateSubscriptionKey :: Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server."><span class="description">Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server.</span><pre>_generateSubscriptionKey()</pre></a></li>
+<li class="method protected "><a href="#method__generateVerifyToken" title="_generateVerifyToken :: Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server."><span class="description">Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server.</span><pre>_generateVerifyToken()</pre></a></li>
+<li class="method protected "><a href="#method__getHttpClient" title="_getHttpClient :: Get a basic prepared HTTP client for use"><span class="description">Get a basic prepared HTTP client for use</span><pre>_getHttpClient()</pre></a></li>
+<li class="method protected "><a href="#method__getRequestParameters" title="_getRequestParameters :: Return a list of standard protocol/optional parameters for addition to
+client's POST body that are specific to the current Hub Server URL"><span class="description">Return a list of standard protocol/optional parameters for addition to
+client's POST body that are specific to the current Hub Server URL</span><pre>_getRequestParameters()</pre></a></li>
+<li class="method protected "><a href="#method__toByteValueOrderedString" title="_toByteValueOrderedString :: Order outgoing parameters"><span class="description">Order outgoing parameters</span><pre>_toByteValueOrderedString()</pre></a></li>
+<li class="method protected "><a href="#method__urlEncode" title="_urlEncode :: URL Encode an array of parameters"><span class="description">URL Encode an array of parameters</span><pre>_urlEncode()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_asyncHubs" title="$asyncHubs :: An array of Hub Server URLs for Hubs operating at this time in
+asynchronous verification mode."><span class="description"></span><pre>$asyncHubs</pre></a></li>
+<li class="property protected "><a href="#property_authentications" title="$authentications :: An array of authentication credentials for HTTP Basic Authentication
+if required by specific Hubs."><span class="description"></span><pre>$authentications</pre></a></li>
+<li class="property protected "><a href="#property_callbackUrl" title="$callbackUrl :: The URL Hub Servers must use when communicating with this Subscriber"><span class="description"></span><pre>$callbackUrl</pre></a></li>
+<li class="property protected "><a href="#property_errors" title="$errors :: An array of any errors including keys for 'response', 'hubUrl'."><span class="description"></span><pre>$errors</pre></a></li>
+<li class="property protected "><a href="#property_hubUrls" title="$hubUrls :: An array of URLs for all Hub Servers to subscribe/unsubscribe."><span class="description"></span><pre>$hubUrls</pre></a></li>
+<li class="property protected "><a href="#property_leaseSeconds" title="$leaseSeconds :: The number of seconds for which the subscriber would like to have the
+subscription active."><span class="description"></span><pre>$leaseSeconds</pre></a></li>
+<li class="property protected "><a href="#property_parameters" title="$parameters :: An array of optional parameters to be included in any
+(un)subscribe requests."><span class="description"></span><pre>$parameters</pre></a></li>
+<li class="property protected "><a href="#property_preferredVerificationMode" title="$preferredVerificationMode :: The preferred verification mode (sync or async)."><span class="description"></span><pre>$preferredVerificationMode</pre></a></li>
+<li class="property protected "><a href="#property_storage" title="$storage :: An instance of Zend\Feed\Pubsubhubbub\Model\SubscriptionPersistence used to background
+save any verification tokens associated with a subscription or other."><span class="description"></span><pre>$storage</pre></a></li>
+<li class="property protected "><a href="#property_testStaticToken" title="$testStaticToken :: This is STRICTLY for testing purposes only."><span class="description"></span><pre>$testStaticToken</pre></a></li>
+<li class="property protected "><a href="#property_topicUrl" title="$topicUrl :: The URL of the topic (Rss or Atom feed) which is the subject of
+our current intent to subscribe to/unsubscribe from updates from
+the currently configured Hub Servers."><span class="description"></span><pre>$topicUrl</pre></a></li>
+<li class="property protected "><a href="#property_usePathParameter" title="$usePathParameter :: Tells the Subscriber to append any subscription identifier to the path
+of the base Callback URL."><span class="description"></span><pre>$usePathParameter</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Feed\PubSubHubbub\Subscriber"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Feed.html">Feed</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Feed.PubSubHubbub.html">PubSubHubbub</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">Subscriber</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Feed.Pubsubhubbub.html">Zend_Feed_Pubsubhubbub</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor; accepts an array or Traversable instance to preset
+options for the Subscriber without calling all supported setter
+methods in turn.</h2>
+<pre>__construct(array | \Traversable $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+</div></div>
+</div>
+<a id="method_addAuthentication"></a><div class="element clickable method public method_addAuthentication" data-toggle="collapse" data-target=".method_addAuthentication .collapse">
+<h2>Add authentication credentials for a given URL</h2>
+<pre>addAuthentication(string $url, array $authentication) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$authentication</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_addAuthentications"></a><div class="element clickable method public method_addAuthentications" data-toggle="collapse" data-target=".method_addAuthentications .collapse">
+<h2>Add authentication credentials for hub URLs</h2>
+<pre>addAuthentications(array $authentications) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$authentications</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_addHubUrl"></a><div class="element clickable method public method_addHubUrl" data-toggle="collapse" data-target=".method_addHubUrl .collapse">
+<h2>Add a Hub Server URL supported by Publisher</h2>
+<pre>addHubUrl(string $url) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_addHubUrls"></a><div class="element clickable method public method_addHubUrls" data-toggle="collapse" data-target=".method_addHubUrls .collapse">
+<h2>Add an array of Hub Server URLs supported by Publisher</h2>
+<pre>addHubUrls(array $urls) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$urls</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_getAsyncHubs"></a><div class="element clickable method public method_getAsyncHubs" data-toggle="collapse" data-target=".method_getAsyncHubs .collapse">
+<h2>Return an array of Hub Server URLs who returned a response indicating
+operation in Asynchronous Verification Mode, i.e.</h2>
+<pre>getAsyncHubs() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>they will not confirm
+any (un)subscription immediately but at a later time (Hubs may be
+doing this as a batch process when load balancing)</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getAuthentications"></a><div class="element clickable method public method_getAuthentications" data-toggle="collapse" data-target=".method_getAuthentications .collapse">
+<h2>Get all hub URL authentication credentials</h2>
+<pre>getAuthentications() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getCallbackUrl"></a><div class="element clickable method public method_getCallbackUrl" data-toggle="collapse" data-target=".method_getCallbackUrl .collapse">
+<h2>Get the callback URL to be used by Hub Servers when communicating with
+this Subscriber</h2>
+<pre>getCallbackUrl() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.RuntimeException.html">\Zend\Feed\PubSubHubbub\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getErrors"></a><div class="element clickable method public method_getErrors" data-toggle="collapse" data-target=".method_getErrors .collapse">
+<h2>Return an array of errors met from any failures, including keys:
+'response' =&gt; the Zend\Http\Response object from the failure
+'hubUrl' =&gt; the URL of the Hub Server whose notification failed</h2>
+<pre>getErrors() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getHubUrls"></a><div class="element clickable method public method_getHubUrls" data-toggle="collapse" data-target=".method_getHubUrls .collapse">
+<h2>Return an array of unique Hub Server URLs currently available</h2>
+<pre>getHubUrls() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getLeaseSeconds"></a><div class="element clickable method public method_getLeaseSeconds" data-toggle="collapse" data-target=".method_getLeaseSeconds .collapse">
+<h2>Get the number of lease seconds on subscriptions</h2>
+<pre>getLeaseSeconds() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getParameters"></a><div class="element clickable method public method_getParameters" data-toggle="collapse" data-target=".method_getParameters .collapse">
+<h2>Return an array of optional parameters for (un)subscribe requests</h2>
+<pre>getParameters() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getPreferredVerificationMode"></a><div class="element clickable method public method_getPreferredVerificationMode" data-toggle="collapse" data-target=".method_getPreferredVerificationMode .collapse">
+<h2>Get preferred verification mode (sync or async).</h2>
+<pre>getPreferredVerificationMode() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getStorage"></a><div class="element clickable method public method_getStorage" data-toggle="collapse" data-target=".method_getStorage .collapse">
+<h2>Gets an instance of Zend\Feed\Pubsubhubbub\Storage\StoragePersistence used
+to background save any verification tokens associated with a subscription
+or other.</h2>
+<pre>getStorage() : <a href="../classes/Zend.Feed.PubSubHubbub.Model.SubscriptionPersistenceInterface.html">\Zend\Feed\PubSubHubbub\Model\SubscriptionPersistenceInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.RuntimeException.html">\Zend\Feed\PubSubHubbub\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Model.SubscriptionPersistenceInterface.html">\Zend\Feed\PubSubHubbub\Model\SubscriptionPersistenceInterface</a></code></div>
+</div></div>
+</div>
+<a id="method_getTopicUrl"></a><div class="element clickable method public method_getTopicUrl" data-toggle="collapse" data-target=".method_getTopicUrl .collapse">
+<h2>Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate</h2>
+<pre>getTopicUrl() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.RuntimeException.html">\Zend\Feed\PubSubHubbub\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_isSuccess"></a><div class="element clickable method public method_isSuccess" data-toggle="collapse" data-target=".method_isSuccess .collapse">
+<h2>Returns a boolean indicator of whether the notifications to Hub
+Servers were ALL successful.</h2>
+<pre>isSuccess() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If even one failed, FALSE is returned.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_removeHubUrl"></a><div class="element clickable method public method_removeHubUrl" data-toggle="collapse" data-target=".method_removeHubUrl .collapse">
+<h2>Remove a Hub Server URL</h2>
+<pre>removeHubUrl(string $url) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_removeParameter"></a><div class="element clickable method public method_removeParameter" data-toggle="collapse" data-target=".method_removeParameter .collapse">
+<h2>Remove an optional parameter for the (un)subscribe requests</h2>
+<pre>removeParameter(string $name) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setCallbackUrl"></a><div class="element clickable method public method_setCallbackUrl" data-toggle="collapse" data-target=".method_setCallbackUrl .collapse">
+<h2>Set the callback URL to be used by Hub Servers when communicating with
+this Subscriber</h2>
+<pre>setCallbackUrl(string $url) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setLeaseSeconds"></a><div class="element clickable method public method_setLeaseSeconds" data-toggle="collapse" data-target=".method_setLeaseSeconds .collapse">
+<h2>Set the number of seconds for which any subscription will remain valid</h2>
+<pre>setLeaseSeconds(int $seconds) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$seconds</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+<h2>Process any injected configuration options</h2>
+<pre>setOptions(array | \Traversable $options) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setParameter"></a><div class="element clickable method public method_setParameter" data-toggle="collapse" data-target=".method_setParameter .collapse">
+<h2>Add an optional parameter to the (un)subscribe requests</h2>
+<pre>setParameter(string $name, string | null $value) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setParameters"></a><div class="element clickable method public method_setParameters" data-toggle="collapse" data-target=".method_setParameters .collapse">
+<h2>Add an optional parameter to the (un)subscribe requests</h2>
+<pre>setParameters(array $parameters) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setPreferredVerificationMode"></a><div class="element clickable method public method_setPreferredVerificationMode" data-toggle="collapse" data-target=".method_setPreferredVerificationMode .collapse">
+<h2>Set preferred verification mode (sync or async).</h2>
+<pre>setPreferredVerificationMode(string $mode) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>By default, this
+Subscriber prefers synchronous verification, but does support
+asynchronous if that's the Hub Server's utilised mode.</p>
+
+<p>Zend\Feed\Pubsubhubbub\Subscriber will always send both modes, whose
+order of occurrence in the parameter list determines this preference.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code><p>Should be 'sync' or 'async'</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setStorage"></a><div class="element clickable method public method_setStorage" data-toggle="collapse" data-target=".method_setStorage .collapse">
+<h2>Sets an instance of Zend\Feed\Pubsubhubbub\Model\SubscriptionPersistence used to background
+save any verification tokens associated with a subscription or other.</h2>
+<pre>setStorage(\Zend\Feed\PubSubHubbub\Model\SubscriptionPersistenceInterface $storage) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$storage</h4>
+<code><a href="../classes/Zend.Feed.PubSubHubbub.Model.SubscriptionPersistenceInterface.html">\Zend\Feed\PubSubHubbub\Model\SubscriptionPersistenceInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_setTestStaticToken"></a><div class="element clickable method public method_setTestStaticToken" data-toggle="collapse" data-target=".method_setTestStaticToken .collapse">
+<h2>setTestStaticToken()
+        </h2>
+<pre>setTestStaticToken($token) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$token</h4></div>
+</div></div>
+</div>
+<a id="method_setTopicUrl"></a><div class="element clickable method public method_setTopicUrl" data-toggle="collapse" data-target=".method_setTopicUrl .collapse">
+<h2>Set the topic URL (RSS or Atom feed) to which the intended (un)subscribe
+event will relate</h2>
+<pre>setTopicUrl(string $url) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method_subscribeAll"></a><div class="element clickable method public method_subscribeAll" data-toggle="collapse" data-target=".method_subscribeAll .collapse">
+<h2>Subscribe to one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)</h2>
+<pre>subscribeAll() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_unsubscribeAll"></a><div class="element clickable method public method_unsubscribeAll" data-toggle="collapse" data-target=".method_unsubscribeAll .collapse">
+<h2>Unsubscribe from one or more Hub Servers using the stored Hub URLs
+for the given Topic URL (RSS or Atom feed)</h2>
+<pre>unsubscribeAll() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_usePathParameter"></a><div class="element clickable method public method_usePathParameter" data-toggle="collapse" data-target=".method_usePathParameter .collapse">
+<h2>Set flag indicating whether or not to use a path parameter</h2>
+<pre>usePathParameter(bool $bool) : <a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bool</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Feed.PubSubHubbub.Subscriber.html">\Zend\Feed\PubSubHubbub\Subscriber</a></code></div>
+</div></div>
+</div>
+<a id="method__doRequest"></a><div class="element clickable method protected method__doRequest" data-toggle="collapse" data-target=".method__doRequest .collapse">
+<h2>Executes an (un)subscribe request</h2>
+<pre>_doRequest(string $mode) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.RuntimeException.html">\Zend\Feed\PubSubHubbub\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method__generateSubscriptionKey"></a><div class="element clickable method protected method__generateSubscriptionKey" data-toggle="collapse" data-target=".method__generateSubscriptionKey .collapse">
+<h2>Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server.</h2>
+<pre>_generateSubscriptionKey(array $params, string $hubUrl) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$hubUrl</h4>
+<code>string</code><p>The Hub Server URL for which this token will apply</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__generateVerifyToken"></a><div class="element clickable method protected method__generateVerifyToken" data-toggle="collapse" data-target=".method__generateVerifyToken .collapse">
+<h2>Simple helper to generate a verification token used in (un)subscribe
+requests to a Hub Server.</h2>
+<pre>_generateVerifyToken() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Follows no particular method, which means
+it might be improved/changed in future.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__getHttpClient"></a><div class="element clickable method protected method__getHttpClient" data-toggle="collapse" data-target=".method__getHttpClient .collapse">
+<h2>Get a basic prepared HTTP client for use</h2>
+<pre>_getHttpClient() : <a href="../classes/Zend.Http.Client.html">\Zend\Http\Client</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Http.Client.html">\Zend\Http\Client</a></code></div>
+</div></div>
+</div>
+<a id="method__getRequestParameters"></a><div class="element clickable method protected method__getRequestParameters" data-toggle="collapse" data-target=".method__getRequestParameters .collapse">
+<h2>Return a list of standard protocol/optional parameters for addition to
+client's POST body that are specific to the current Hub Server URL</h2>
+<pre>_getRequestParameters(string $hubUrl, string $mode) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$hubUrl</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Feed.PubSubHubbub.Exception.InvalidArgumentException.html">\Zend\Feed\PubSubHubbub\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__toByteValueOrderedString"></a><div class="element clickable method protected method__toByteValueOrderedString" data-toggle="collapse" data-target=".method__toByteValueOrderedString .collapse">
+<h2>Order outgoing parameters</h2>
+<pre>_toByteValueOrderedString(array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__urlEncode"></a><div class="element clickable method protected method__urlEncode" data-toggle="collapse" data-target=".method__urlEncode .collapse">
+<h2>URL Encode an array of parameters</h2>
+<pre>_urlEncode(array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_asyncHubs"> </a><div class="element clickable property protected property_asyncHubs" data-toggle="collapse" data-target=".property_asyncHubs .collapse">
+<h2></h2>
+<pre>$asyncHubs : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_authentications"> </a><div class="element clickable property protected property_authentications" data-toggle="collapse" data-target=".property_authentications .collapse">
+<h2></h2>
+<pre>$authentications : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>The array is indexed by Hub Endpoint URI
+and the value is a simple array of the username and password to apply.</p></div></div></div>
+</div>
+<a id="property_callbackUrl"> </a><div class="element clickable property protected property_callbackUrl" data-toggle="collapse" data-target=".property_callbackUrl .collapse">
+<h2></h2>
+<pre>$callbackUrl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_errors"> </a><div class="element clickable property protected property_errors" data-toggle="collapse" data-target=".property_errors .collapse">
+<h2></h2>
+<pre>$errors : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>The response is the actual Zend\Http\Response object.</p></div></div></div>
+</div>
+<a id="property_hubUrls"> </a><div class="element clickable property protected property_hubUrls" data-toggle="collapse" data-target=".property_hubUrls .collapse">
+<h2></h2>
+<pre>$hubUrls : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_leaseSeconds"> </a><div class="element clickable property protected property_leaseSeconds" data-toggle="collapse" data-target=".property_leaseSeconds .collapse">
+<h2></h2>
+<pre>$leaseSeconds : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Defaults to null, i.e. not sent, to setup a
+permanent subscription if possible.</p></div></div></div>
+</div>
+<a id="property_parameters"> </a><div class="element clickable property protected property_parameters" data-toggle="collapse" data-target=".property_parameters .collapse">
+<h2></h2>
+<pre>$parameters : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_preferredVerificationMode"> </a><div class="element clickable property protected property_preferredVerificationMode" data-toggle="collapse" data-target=".property_preferredVerificationMode .collapse">
+<h2></h2>
+<pre>$preferredVerificationMode : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>By default, this
+Subscriber prefers synchronous verification, but is considered
+desirable to support asynchronous verification if possible.</p>
+
+<p>Zend\Feed\Pubsubhubbub\Subscriber will always send both modes, whose
+order of occurrence in the parameter list determines this preference.</p></div></div></div>
+</div>
+<a id="property_storage"> </a><div class="element clickable property protected property_storage" data-toggle="collapse" data-target=".property_storage .collapse">
+<h2></h2>
+<pre>$storage : <a href="../classes/Zend.Feed.PubSubHubbub.Model.SubscriptionPersistenceInterface.html">\Zend\Feed\PubSubHubbub\Model\SubscriptionPersistenceInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_testStaticToken"> </a><div class="element clickable property protected property_testStaticToken" data-toggle="collapse" data-target=".property_testStaticToken .collapse">
+<h2></h2>
+<pre>$testStaticToken </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>..</p></div></div></div>
+</div>
+<a id="property_topicUrl"> </a><div class="element clickable property protected property_topicUrl" data-toggle="collapse" data-target=".property_topicUrl .collapse">
+<h2></h2>
+<pre>$topicUrl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_usePathParameter"> </a><div class="element clickable property protected property_usePathParameter" data-toggle="collapse" data-target=".property_usePathParameter .collapse">
+<h2></h2>
+<pre>$usePathParameter : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>E.g. an identifier "subkey1" would be added
+to the callback URL "http://www.example.com/callback" to create a subscription
+specific Callback URL of "http://www.example.com/callback/subkey1".</p>
+
+<p>This is required for all Hubs using the Pubsubhubbub 0.1 Specification.
+It should be manually intercepted and passed to the Callback class using
+Zend\Feed\Pubsubhubbub\Subscriber\Callback::setSubscriptionKey(). Will
+require a route in the form "callback/:subkey" to allow the parameter be
+retrieved from an action using the Zend\Controller\Action::\getParam()
+method.</p></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:09:43+08:00.<br></footer></div>
+</div>
+</body>
+</html>

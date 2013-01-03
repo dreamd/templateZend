@@ -1,0 +1,1688 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Dream\Twig\Environment</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_addExtension" title="addExtension :: Registers an extension."><span class="description">Registers an extension.</span><pre>addExtension()</pre></a></li>
+<li class="method public inherited"><a href="#method_addFilter" title="addFilter :: Registers a Filter."><span class="description">Registers a Filter.</span><pre>addFilter()</pre></a></li>
+<li class="method public inherited"><a href="#method_addFunction" title="addFunction :: Registers a Function."><span class="description">Registers a Function.</span><pre>addFunction()</pre></a></li>
+<li class="method public inherited"><a href="#method_addGlobal" title="addGlobal :: Registers a Global."><span class="description">Registers a Global.</span><pre>addGlobal()</pre></a></li>
+<li class="method public inherited"><a href="#method_addNodeVisitor" title="addNodeVisitor :: Registers a Node Visitor."><span class="description">Registers a Node Visitor.</span><pre>addNodeVisitor()</pre></a></li>
+<li class="method public inherited"><a href="#method_addTest" title="addTest :: Registers a Test."><span class="description">Registers a Test.</span><pre>addTest()</pre></a></li>
+<li class="method public inherited"><a href="#method_addTokenParser" title="addTokenParser :: Registers a Token Parser."><span class="description">Registers a Token Parser.</span><pre>addTokenParser()</pre></a></li>
+<li class="method public inherited"><a href="#method_clearCacheFiles" title="clearCacheFiles :: Clears the template cache files on the filesystem."><span class="description">Clears the template cache files on the filesystem.</span><pre>clearCacheFiles()</pre></a></li>
+<li class="method public inherited"><a href="#method_clearTemplateCache" title="clearTemplateCache :: Clears the internal template cache."><span class="description">Clears the internal template cache.</span><pre>clearTemplateCache()</pre></a></li>
+<li class="method public inherited"><a href="#method_compile" title="compile :: Compiles a Node."><span class="description">Compiles a Node.</span><pre>compile()</pre></a></li>
+<li class="method public inherited"><a href="#method_compileSource" title="compileSource :: Compiles a template source code."><span class="description">Compiles a template source code.</span><pre>compileSource()</pre></a></li>
+<li class="method public inherited"><a href="#method_computeAlternatives" title="computeAlternatives :: "><span class="description">computeAlternatives()
+        </span><pre>computeAlternatives()</pre></a></li>
+<li class="method public inherited"><a href="#method_disableAutoReload" title="disableAutoReload :: Disables the auto_reload option."><span class="description">Disables the auto_reload option.</span><pre>disableAutoReload()</pre></a></li>
+<li class="method public inherited"><a href="#method_disableDebug" title="disableDebug :: Disables debugging mode."><span class="description">Disables debugging mode.</span><pre>disableDebug()</pre></a></li>
+<li class="method public inherited"><a href="#method_disableStrictVariables" title="disableStrictVariables :: Disables the strict_variables option."><span class="description">Disables the strict_variables option.</span><pre>disableStrictVariables()</pre></a></li>
+<li class="method public inherited"><a href="#method_display" title="display :: Displays a template."><span class="description">Displays a template.</span><pre>display()</pre></a></li>
+<li class="method public inherited"><a href="#method_enableAutoReload" title="enableAutoReload :: Enables the auto_reload option."><span class="description">Enables the auto_reload option.</span><pre>enableAutoReload()</pre></a></li>
+<li class="method public inherited"><a href="#method_enableDebug" title="enableDebug :: Enables debugging mode."><span class="description">Enables debugging mode.</span><pre>enableDebug()</pre></a></li>
+<li class="method public inherited"><a href="#method_enableStrictVariables" title="enableStrictVariables :: Enables the strict_variables option."><span class="description">Enables the strict_variables option.</span><pre>enableStrictVariables()</pre></a></li>
+<li class="method public inherited"><a href="#method_getBaseTemplateClass" title="getBaseTemplateClass :: Gets the base template class for compiled templates."><span class="description">Gets the base template class for compiled templates.</span><pre>getBaseTemplateClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_getBinaryOperators" title="getBinaryOperators :: Gets the registered binary Operators."><span class="description">Gets the registered binary Operators.</span><pre>getBinaryOperators()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCache" title="getCache :: Gets the cache directory or false if cache is disabled."><span class="description">Gets the cache directory or false if cache is disabled.</span><pre>getCache()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCacheFilename" title="getCacheFilename :: Gets the cache filename for a given template."><span class="description">Gets the cache filename for a given template.</span><pre>getCacheFilename()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCharset" title="getCharset :: Gets the default template charset."><span class="description">Gets the default template charset.</span><pre>getCharset()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCompiler" title="getCompiler :: Gets the Compiler instance."><span class="description">Gets the Compiler instance.</span><pre>getCompiler()</pre></a></li>
+<li class="method public inherited"><a href="#method_getExtension" title="getExtension :: Gets an extension by name."><span class="description">Gets an extension by name.</span><pre>getExtension()</pre></a></li>
+<li class="method public inherited"><a href="#method_getExtensions" title="getExtensions :: Returns all registered extensions."><span class="description">Returns all registered extensions.</span><pre>getExtensions()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFilter" title="getFilter :: Get a filter by name."><span class="description">Get a filter by name.</span><pre>getFilter()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFilters" title="getFilters :: Gets the registered Filters."><span class="description">Gets the registered Filters.</span><pre>getFilters()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFunction" title="getFunction :: Get a function by name."><span class="description">Get a function by name.</span><pre>getFunction()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFunctions" title="getFunctions :: Gets registered functions."><span class="description">Gets registered functions.</span><pre>getFunctions()</pre></a></li>
+<li class="method public inherited"><a href="#method_getGlobals" title="getGlobals :: Gets the registered Globals."><span class="description">Gets the registered Globals.</span><pre>getGlobals()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLexer" title="getLexer :: Gets the Lexer instance."><span class="description">Gets the Lexer instance.</span><pre>getLexer()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLoader" title="getLoader :: Gets the Loader instance."><span class="description">Gets the Loader instance.</span><pre>getLoader()</pre></a></li>
+<li class="method public inherited"><a href="#method_getNodeVisitors" title="getNodeVisitors :: Gets the registered Node Visitors."><span class="description">Gets the registered Node Visitors.</span><pre>getNodeVisitors()</pre></a></li>
+<li class="method public inherited"><a href="#method_getParser" title="getParser :: Gets the Parser instance."><span class="description">Gets the Parser instance.</span><pre>getParser()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTags" title="getTags :: Gets registered tags."><span class="description">Gets registered tags.</span><pre>getTags()</pre></a></li>
+<li class="method public "><a href="#method_getTemplateClass" title="getTemplateClass :: Gets the template class associated with the given string."><span class="description">Gets the template class associated with the given string.</span><pre>getTemplateClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTemplateClassPrefix" title="getTemplateClassPrefix :: Gets the template class prefix."><span class="description">Gets the template class prefix.</span><pre>getTemplateClassPrefix()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTests" title="getTests :: Gets the registered Tests."><span class="description">Gets the registered Tests.</span><pre>getTests()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTokenParsers" title="getTokenParsers :: Gets the registered Token Parsers."><span class="description">Gets the registered Token Parsers.</span><pre>getTokenParsers()</pre></a></li>
+<li class="method public inherited"><a href="#method_getUnaryOperators" title="getUnaryOperators :: Gets the registered unary Operators."><span class="description">Gets the registered unary Operators.</span><pre>getUnaryOperators()</pre></a></li>
+<li class="method public inherited"><a href="#method_hasExtension" title="hasExtension :: Returns true if the given extension is registered."><span class="description">Returns true if the given extension is registered.</span><pre>hasExtension()</pre></a></li>
+<li class="method public inherited"><a href="#method_initRuntime" title="initRuntime :: Initializes the runtime environment."><span class="description">Initializes the runtime environment.</span><pre>initRuntime()</pre></a></li>
+<li class="method public inherited"><a href="#method_isAutoReload" title="isAutoReload :: Checks if the auto_reload option is enabled."><span class="description">Checks if the auto_reload option is enabled.</span><pre>isAutoReload()</pre></a></li>
+<li class="method public inherited"><a href="#method_isDebug" title="isDebug :: Checks if debug mode is enabled."><span class="description">Checks if debug mode is enabled.</span><pre>isDebug()</pre></a></li>
+<li class="method public inherited"><a href="#method_isStrictVariables" title="isStrictVariables :: Checks if the strict_variables option is enabled."><span class="description">Checks if the strict_variables option is enabled.</span><pre>isStrictVariables()</pre></a></li>
+<li class="method public inherited"><a href="#method_isTemplateFresh" title="isTemplateFresh :: Returns true if the template is still fresh."><span class="description">Returns true if the template is still fresh.</span><pre>isTemplateFresh()</pre></a></li>
+<li class="method public inherited"><a href="#method_loadTemplate" title="loadTemplate :: Loads a template by name."><span class="description">Loads a template by name.</span><pre>loadTemplate()</pre></a></li>
+<li class="method public inherited"><a href="#method_mergeGlobals" title="mergeGlobals :: Merges a context with the defined globals."><span class="description">Merges a context with the defined globals.</span><pre>mergeGlobals()</pre></a></li>
+<li class="method public inherited"><a href="#method_parse" title="parse :: Parses a token stream."><span class="description">Parses a token stream.</span><pre>parse()</pre></a></li>
+<li class="method public inherited"><a href="#method_registerUndefinedFilterCallback" title="registerUndefinedFilterCallback :: "><span class="description">registerUndefinedFilterCallback()
+        </span><pre>registerUndefinedFilterCallback()</pre></a></li>
+<li class="method public inherited"><a href="#method_registerUndefinedFunctionCallback" title="registerUndefinedFunctionCallback :: "><span class="description">registerUndefinedFunctionCallback()
+        </span><pre>registerUndefinedFunctionCallback()</pre></a></li>
+<li class="method public inherited"><a href="#method_removeExtension" title="removeExtension :: Removes an extension by name."><span class="description">Removes an extension by name.</span><pre>removeExtension()</pre></a></li>
+<li class="method public inherited"><a href="#method_render" title="render :: Renders a template."><span class="description">Renders a template.</span><pre>render()</pre></a></li>
+<li class="method public inherited"><a href="#method_resolveTemplate" title="resolveTemplate :: "><span class="description">resolveTemplate()
+        </span><pre>resolveTemplate()</pre></a></li>
+<li class="method public inherited"><a href="#method_setBaseTemplateClass" title="setBaseTemplateClass :: Sets the base template class for compiled templates."><span class="description">Sets the base template class for compiled templates.</span><pre>setBaseTemplateClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_setCache" title="setCache :: Sets the cache directory or false if cache is disabled."><span class="description">Sets the cache directory or false if cache is disabled.</span><pre>setCache()</pre></a></li>
+<li class="method public inherited"><a href="#method_setCharset" title="setCharset :: Sets the default template charset."><span class="description">Sets the default template charset.</span><pre>setCharset()</pre></a></li>
+<li class="method public inherited"><a href="#method_setCompiler" title="setCompiler :: Sets the Compiler instance."><span class="description">Sets the Compiler instance.</span><pre>setCompiler()</pre></a></li>
+<li class="method public inherited"><a href="#method_setExtensions" title="setExtensions :: Registers an array of extensions."><span class="description">Registers an array of extensions.</span><pre>setExtensions()</pre></a></li>
+<li class="method public inherited"><a href="#method_setLexer" title="setLexer :: Sets the Lexer instance."><span class="description">Sets the Lexer instance.</span><pre>setLexer()</pre></a></li>
+<li class="method public inherited"><a href="#method_setLoader" title="setLoader :: Sets the Loader instance."><span class="description">Sets the Loader instance.</span><pre>setLoader()</pre></a></li>
+<li class="method public inherited"><a href="#method_setParser" title="setParser :: Sets the Parser instance."><span class="description">Sets the Parser instance.</span><pre>setParser()</pre></a></li>
+<li class="method public inherited"><a href="#method_tokenize" title="tokenize :: Tokenizes a source code."><span class="description">Tokenizes a source code.</span><pre>tokenize()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_initOperators" title="initOperators :: "><span class="description">initOperators()
+        </span><pre>initOperators()</pre></a></li>
+<li class="method protected inherited"><a href="#method_writeCacheFile" title="writeCacheFile :: "><span class="description">writeCacheFile()
+        </span><pre>writeCacheFile()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_autoReload" title="$autoReload :: "><span class="description"></span><pre>$autoReload</pre></a></li>
+<li class="property protected inherited"><a href="#property_baseTemplateClass" title="$baseTemplateClass :: "><span class="description"></span><pre>$baseTemplateClass</pre></a></li>
+<li class="property protected inherited"><a href="#property_binaryOperators" title="$binaryOperators :: "><span class="description"></span><pre>$binaryOperators</pre></a></li>
+<li class="property protected inherited"><a href="#property_cache" title="$cache :: "><span class="description"></span><pre>$cache</pre></a></li>
+<li class="property protected inherited"><a href="#property_charset" title="$charset :: "><span class="description"></span><pre>$charset</pre></a></li>
+<li class="property protected inherited"><a href="#property_compiler" title="$compiler :: "><span class="description"></span><pre>$compiler</pre></a></li>
+<li class="property protected inherited"><a href="#property_debug" title="$debug :: "><span class="description"></span><pre>$debug</pre></a></li>
+<li class="property protected inherited"><a href="#property_extensions" title="$extensions :: "><span class="description"></span><pre>$extensions</pre></a></li>
+<li class="property protected inherited"><a href="#property_filterCallbacks" title="$filterCallbacks :: "><span class="description"></span><pre>$filterCallbacks</pre></a></li>
+<li class="property protected inherited"><a href="#property_filters" title="$filters :: "><span class="description"></span><pre>$filters</pre></a></li>
+<li class="property protected inherited"><a href="#property_functionCallbacks" title="$functionCallbacks :: "><span class="description"></span><pre>$functionCallbacks</pre></a></li>
+<li class="property protected inherited"><a href="#property_functions" title="$functions :: "><span class="description"></span><pre>$functions</pre></a></li>
+<li class="property protected inherited"><a href="#property_globals" title="$globals :: "><span class="description"></span><pre>$globals</pre></a></li>
+<li class="property protected inherited"><a href="#property_lexer" title="$lexer :: "><span class="description"></span><pre>$lexer</pre></a></li>
+<li class="property protected inherited"><a href="#property_loadedTemplates" title="$loadedTemplates :: "><span class="description"></span><pre>$loadedTemplates</pre></a></li>
+<li class="property protected inherited"><a href="#property_loader" title="$loader :: "><span class="description"></span><pre>$loader</pre></a></li>
+<li class="property protected inherited"><a href="#property_parser" title="$parser :: "><span class="description"></span><pre>$parser</pre></a></li>
+<li class="property protected inherited"><a href="#property_parsers" title="$parsers :: "><span class="description"></span><pre>$parsers</pre></a></li>
+<li class="property protected inherited"><a href="#property_runtimeInitialized" title="$runtimeInitialized :: "><span class="description"></span><pre>$runtimeInitialized</pre></a></li>
+<li class="property protected inherited"><a href="#property_staging" title="$staging :: "><span class="description"></span><pre>$staging</pre></a></li>
+<li class="property protected inherited"><a href="#property_strictVariables" title="$strictVariables :: "><span class="description"></span><pre>$strictVariables</pre></a></li>
+<li class="property protected inherited"><a href="#property_templateClassPrefix" title="$templateClassPrefix :: "><span class="description"></span><pre>$templateClassPrefix</pre></a></li>
+<li class="property protected inherited"><a href="#property_tests" title="$tests :: "><span class="description"></span><pre>$tests</pre></a></li>
+<li class="property protected inherited"><a href="#property_unaryOperators" title="$unaryOperators :: "><span class="description"></span><pre>$unaryOperators</pre></a></li>
+<li class="property protected inherited"><a href="#property_visitors" title="$visitors :: "><span class="description"></span><pre>$visitors</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  inherited"><a href="#constant_VERSION" title="VERSION :: "><span class="description">VERSION</span><pre>VERSION</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Dream\Twig\Environment"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Dream.html">Dream</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Dream.Twig.html">Twig</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Dream.Twig.Environment.html">Environment</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Stores the Twig configuration.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">twig</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:fabien@symfony.com">Fabien Potencier</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct(\Twig_LoaderInterface $loader, array $options) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Available options:</p>
+
+<ul>
+<li><p>debug: When set to true, it automatically set "auto_reload" to true as
+      well (default to false).</p></li>
+<li><p>charset: The charset used by the templates (default to utf-8).</p></li>
+<li><p>base_template_class: The base template class to use for generated
+                    templates (default to Twig_Template).</p></li>
+<li><p>cache: An absolute path where to store the compiled templates, or
+      false to disable compilation cache (default).</p></li>
+<li><p>auto_reload: Whether to reload the template is the original source changed.
+            If you don't provide the auto_reload option, it will be
+            determined automatically base on the debug value.</p></li>
+<li><p>strict_variables: Whether to ignore invalid variables in templates
+                 (default to false).</p></li>
+<li><p>autoescape: Whether to enable auto-escaping (default to html):
+             * false: disable auto-escaping
+             * true: equivalent to html
+             * html, js: set the autoescaping to one of the supported strategies
+             * PHP callback: a PHP callback that returns an escaping strategy based on the template "filename"</p></li>
+<li><p>optimizations: A flag that indicates which optimizations to apply
+              (default to -1 which means that all optimizations are enabled;
+              set it to 0 to disable).</p></li>
+</ul></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$loader</h4>
+<code><a href="../classes/Twig_LoaderInterface.html">\Twig_LoaderInterface</a></code><p>A Twig_LoaderInterface instance</p></div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>An array of options</p></div>
+</div></div>
+</div>
+<a id="method_addExtension"></a><div class="element clickable method public method_addExtension" data-toggle="collapse" data-target=".method_addExtension .collapse">
+<h2>Registers an extension.</h2>
+<pre>addExtension(\Twig_ExtensionInterface $extension) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addExtension()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$extension</h4>
+<code><a href="../classes/Twig_ExtensionInterface.html">\Twig_ExtensionInterface</a></code><p>A Twig_ExtensionInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_addFilter"></a><div class="element clickable method public method_addFilter" data-toggle="collapse" data-target=".method_addFilter .collapse">
+<h2>Registers a Filter.</h2>
+<pre>addFilter(string $name, \Twig_FilterInterface $filter) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addFilter()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The filter name</p></div>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code><a href="../classes/Twig_FilterInterface.html">\Twig_FilterInterface</a></code><p>A Twig_FilterInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_addFunction"></a><div class="element clickable method public method_addFunction" data-toggle="collapse" data-target=".method_addFunction .collapse">
+<h2>Registers a Function.</h2>
+<pre>addFunction(string $name, \Twig_FunctionInterface $function) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addFunction()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The function name</p></div>
+<div class="subelement argument">
+<h4>$function</h4>
+<code><a href="../classes/Twig_FunctionInterface.html">\Twig_FunctionInterface</a></code><p>A Twig_FunctionInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_addGlobal"></a><div class="element clickable method public method_addGlobal" data-toggle="collapse" data-target=".method_addGlobal .collapse">
+<h2>Registers a Global.</h2>
+<pre>addGlobal(string $name, mixed $value) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addGlobal()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The global name</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The global value</p></div>
+</div></div>
+</div>
+<a id="method_addNodeVisitor"></a><div class="element clickable method public method_addNodeVisitor" data-toggle="collapse" data-target=".method_addNodeVisitor .collapse">
+<h2>Registers a Node Visitor.</h2>
+<pre>addNodeVisitor(\Twig_NodeVisitorInterface $visitor) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addNodeVisitor()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$visitor</h4>
+<code><a href="../classes/Twig_NodeVisitorInterface.html">\Twig_NodeVisitorInterface</a></code><p>A Twig_NodeVisitorInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_addTest"></a><div class="element clickable method public method_addTest" data-toggle="collapse" data-target=".method_addTest .collapse">
+<h2>Registers a Test.</h2>
+<pre>addTest(string $name, \Twig_TestInterface $test) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addTest()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The test name</p></div>
+<div class="subelement argument">
+<h4>$test</h4>
+<code><a href="../classes/Twig_TestInterface.html">\Twig_TestInterface</a></code><p>A Twig_TestInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_addTokenParser"></a><div class="element clickable method public method_addTokenParser" data-toggle="collapse" data-target=".method_addTokenParser .collapse">
+<h2>Registers a Token Parser.</h2>
+<pre>addTokenParser(\Twig_TokenParserInterface $parser) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::addTokenParser()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parser</h4>
+<code><a href="../classes/Twig_TokenParserInterface.html">\Twig_TokenParserInterface</a></code><p>A Twig_TokenParserInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_clearCacheFiles"></a><div class="element clickable method public method_clearCacheFiles" data-toggle="collapse" data-target=".method_clearCacheFiles .collapse">
+<h2>Clears the template cache files on the filesystem.</h2>
+<pre>clearCacheFiles() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::clearCacheFiles()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_clearTemplateCache"></a><div class="element clickable method public method_clearTemplateCache" data-toggle="collapse" data-target=".method_clearTemplateCache .collapse">
+<h2>Clears the internal template cache.</h2>
+<pre>clearTemplateCache() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::clearTemplateCache()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_compile"></a><div class="element clickable method public method_compile" data-toggle="collapse" data-target=".method_compile .collapse">
+<h2>Compiles a Node.</h2>
+<pre>compile(\Twig_NodeInterface $node) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::compile()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$node</h4>
+<code><a href="../classes/Twig_NodeInterface.html">\Twig_NodeInterface</a></code><p>A Twig_NodeInterface instance</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The compiled PHP source code</div>
+</div></div>
+</div>
+<a id="method_compileSource"></a><div class="element clickable method public method_compileSource" data-toggle="collapse" data-target=".method_compileSource .collapse">
+<h2>Compiles a template source code.</h2>
+<pre>compileSource(string $source, string $name) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::compileSource()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$source</h4>
+<code>string</code><p>The template source code</p></div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The compiled PHP source code</div>
+</div></div>
+</div>
+<a id="method_computeAlternatives"></a><div class="element clickable method public method_computeAlternatives" data-toggle="collapse" data-target=".method_computeAlternatives .collapse">
+<h2>computeAlternatives()
+        </h2>
+<pre>computeAlternatives($name, $items) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::computeAlternatives()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$items</h4></div>
+</div></div>
+</div>
+<a id="method_disableAutoReload"></a><div class="element clickable method public method_disableAutoReload" data-toggle="collapse" data-target=".method_disableAutoReload .collapse">
+<h2>Disables the auto_reload option.</h2>
+<pre>disableAutoReload() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::disableAutoReload()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_disableDebug"></a><div class="element clickable method public method_disableDebug" data-toggle="collapse" data-target=".method_disableDebug .collapse">
+<h2>Disables debugging mode.</h2>
+<pre>disableDebug() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::disableDebug()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_disableStrictVariables"></a><div class="element clickable method public method_disableStrictVariables" data-toggle="collapse" data-target=".method_disableStrictVariables .collapse">
+<h2>Disables the strict_variables option.</h2>
+<pre>disableStrictVariables() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::disableStrictVariables()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_display"></a><div class="element clickable method public method_display" data-toggle="collapse" data-target=".method_display .collapse">
+<h2>Displays a template.</h2>
+<pre>display(string $name, array $context) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::display()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array of parameters to pass to the template</p></div>
+</div></div>
+</div>
+<a id="method_enableAutoReload"></a><div class="element clickable method public method_enableAutoReload" data-toggle="collapse" data-target=".method_enableAutoReload .collapse">
+<h2>Enables the auto_reload option.</h2>
+<pre>enableAutoReload() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::enableAutoReload()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_enableDebug"></a><div class="element clickable method public method_enableDebug" data-toggle="collapse" data-target=".method_enableDebug .collapse">
+<h2>Enables debugging mode.</h2>
+<pre>enableDebug() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::enableDebug()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_enableStrictVariables"></a><div class="element clickable method public method_enableStrictVariables" data-toggle="collapse" data-target=".method_enableStrictVariables .collapse">
+<h2>Enables the strict_variables option.</h2>
+<pre>enableStrictVariables() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::enableStrictVariables()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getBaseTemplateClass"></a><div class="element clickable method public method_getBaseTemplateClass" data-toggle="collapse" data-target=".method_getBaseTemplateClass .collapse">
+<h2>Gets the base template class for compiled templates.</h2>
+<pre>getBaseTemplateClass() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getBaseTemplateClass()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The base template class name</div>
+</div></div>
+</div>
+<a id="method_getBinaryOperators"></a><div class="element clickable method public method_getBinaryOperators" data-toggle="collapse" data-target=".method_getBinaryOperators .collapse">
+<h2>Gets the registered binary Operators.</h2>
+<pre>getBinaryOperators() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getBinaryOperators()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of binary operators</div>
+</div></div>
+</div>
+<a id="method_getCache"></a><div class="element clickable method public method_getCache" data-toggle="collapse" data-target=".method_getCache .collapse">
+<h2>Gets the cache directory or false if cache is disabled.</h2>
+<pre>getCache() : string | false</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getCache()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<a id="method_getCacheFilename"></a><div class="element clickable method public method_getCacheFilename" data-toggle="collapse" data-target=".method_getCacheFilename .collapse">
+<h2>Gets the cache filename for a given template.</h2>
+<pre>getCacheFilename(string $name) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getCacheFilename()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The cache file name</div>
+</div></div>
+</div>
+<a id="method_getCharset"></a><div class="element clickable method public method_getCharset" data-toggle="collapse" data-target=".method_getCharset .collapse">
+<h2>Gets the default template charset.</h2>
+<pre>getCharset() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getCharset()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The default charset</div>
+</div></div>
+</div>
+<a id="method_getCompiler"></a><div class="element clickable method public method_getCompiler" data-toggle="collapse" data-target=".method_getCompiler .collapse">
+<h2>Gets the Compiler instance.</h2>
+<pre>getCompiler() : <a href="../classes/Twig_CompilerInterface.html">\Twig_CompilerInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getCompiler()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_CompilerInterface.html">\Twig_CompilerInterface</a></code>A Twig_CompilerInterface instance</div>
+</div></div>
+</div>
+<a id="method_getExtension"></a><div class="element clickable method public method_getExtension" data-toggle="collapse" data-target=".method_getExtension .collapse">
+<h2>Gets an extension by name.</h2>
+<pre>getExtension(string $name) : <a href="../classes/Twig_ExtensionInterface.html">\Twig_ExtensionInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getExtension()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The extension name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_ExtensionInterface.html">\Twig_ExtensionInterface</a></code>A Twig_ExtensionInterface instance</div>
+</div></div>
+</div>
+<a id="method_getExtensions"></a><div class="element clickable method public method_getExtensions" data-toggle="collapse" data-target=".method_getExtensions .collapse">
+<h2>Returns all registered extensions.</h2>
+<pre>getExtensions() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getExtensions()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of extensions</div>
+</div></div>
+</div>
+<a id="method_getFilter"></a><div class="element clickable method public method_getFilter" data-toggle="collapse" data-target=".method_getFilter .collapse">
+<h2>Get a filter by name.</h2>
+<pre>getFilter(string $name) : <a href="../classes/Twig_Filter.html">\Twig_Filter</a> | false</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Subclasses may override this method and load filters differently;
+so no list of filters is available.</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getFilter()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The filter name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Filter.html">\Twig_Filter</a></code><code>false</code>A Twig_Filter instance or false if the filter does not exists</div>
+</div></div>
+</div>
+<a id="method_getFilters"></a><div class="element clickable method public method_getFilters" data-toggle="collapse" data-target=".method_getFilters .collapse">
+<h2>Gets the registered Filters.</h2>
+<pre>getFilters() : <a href="library.Twig.FilterInterface.html#%5CTwig_FilterInterface">\Twig_FilterInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Be warned that this method cannot return filters defined with registerUndefinedFunctionCallback.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\registerUndefinedFilterCallback</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getFilters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Twig.FilterInterface.html#%5CTwig_FilterInterface">\Twig_FilterInterface[]</a></code>An array of Twig_FilterInterface instances</div>
+</div></div>
+</div>
+<a id="method_getFunction"></a><div class="element clickable method public method_getFunction" data-toggle="collapse" data-target=".method_getFunction .collapse">
+<h2>Get a function by name.</h2>
+<pre>getFunction(string $name) : <a href="../classes/Twig_Function.html">\Twig_Function</a> | false</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Subclasses may override this method and load functions differently;
+so no list of functions is available.</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getFunction()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>function name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Function.html">\Twig_Function</a></code><code>false</code>A Twig_Function instance or false if the function does not exists</div>
+</div></div>
+</div>
+<a id="method_getFunctions"></a><div class="element clickable method public method_getFunctions" data-toggle="collapse" data-target=".method_getFunctions .collapse">
+<h2>Gets registered functions.</h2>
+<pre>getFunctions() : <a href="library.Twig.FunctionInterface.html#%5CTwig_FunctionInterface">\Twig_FunctionInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Be warned that this method cannot return functions defined with registerUndefinedFunctionCallback.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\registerUndefinedFunctionCallback</a></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getFunctions()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Twig.FunctionInterface.html#%5CTwig_FunctionInterface">\Twig_FunctionInterface[]</a></code>An array of Twig_FunctionInterface instances</div>
+</div></div>
+</div>
+<a id="method_getGlobals"></a><div class="element clickable method public method_getGlobals" data-toggle="collapse" data-target=".method_getGlobals .collapse">
+<h2>Gets the registered Globals.</h2>
+<pre>getGlobals() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getGlobals()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of globals</div>
+</div></div>
+</div>
+<a id="method_getLexer"></a><div class="element clickable method public method_getLexer" data-toggle="collapse" data-target=".method_getLexer .collapse">
+<h2>Gets the Lexer instance.</h2>
+<pre>getLexer() : <a href="../classes/Twig_LexerInterface.html">\Twig_LexerInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getLexer()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_LexerInterface.html">\Twig_LexerInterface</a></code>A Twig_LexerInterface instance</div>
+</div></div>
+</div>
+<a id="method_getLoader"></a><div class="element clickable method public method_getLoader" data-toggle="collapse" data-target=".method_getLoader .collapse">
+<h2>Gets the Loader instance.</h2>
+<pre>getLoader() : <a href="../classes/Twig_LoaderInterface.html">\Twig_LoaderInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getLoader()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_LoaderInterface.html">\Twig_LoaderInterface</a></code>A Twig_LoaderInterface instance</div>
+</div></div>
+</div>
+<a id="method_getNodeVisitors"></a><div class="element clickable method public method_getNodeVisitors" data-toggle="collapse" data-target=".method_getNodeVisitors .collapse">
+<h2>Gets the registered Node Visitors.</h2>
+<pre>getNodeVisitors() : <a href="library.Twig.NodeVisitorInterface.html#%5CTwig_NodeVisitorInterface">\Twig_NodeVisitorInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getNodeVisitors()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Twig.NodeVisitorInterface.html#%5CTwig_NodeVisitorInterface">\Twig_NodeVisitorInterface[]</a></code>An array of Twig_NodeVisitorInterface instances</div>
+</div></div>
+</div>
+<a id="method_getParser"></a><div class="element clickable method public method_getParser" data-toggle="collapse" data-target=".method_getParser .collapse">
+<h2>Gets the Parser instance.</h2>
+<pre>getParser() : <a href="../classes/Twig_ParserInterface.html">\Twig_ParserInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getParser()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_ParserInterface.html">\Twig_ParserInterface</a></code>A Twig_ParserInterface instance</div>
+</div></div>
+</div>
+<a id="method_getTags"></a><div class="element clickable method public method_getTags" data-toggle="collapse" data-target=".method_getTags .collapse">
+<h2>Gets registered tags.</h2>
+<pre>getTags() : <a href="library.Twig.TokenParserInterface.html#%5CTwig_TokenParserInterface">\Twig_TokenParserInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Be warned that this method cannot return tags defined by Twig_TokenParserBrokerInterface classes.</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getTags()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Twig.TokenParserInterface.html#%5CTwig_TokenParserInterface">\Twig_TokenParserInterface[]</a></code>An array of Twig_TokenParserInterface instances</div>
+</div></div>
+</div>
+<a id="method_getTemplateClass"></a><div class="element clickable method public method_getTemplateClass" data-toggle="collapse" data-target=".method_getTemplateClass .collapse">
+<h2>Gets the template class associated with the given string.</h2>
+<pre>getTemplateClass(string $name, integer $index) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The name for which to calculate the template class name</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>The index if it is an embedded template</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The template class name</div>
+</div></div>
+</div>
+<a id="method_getTemplateClassPrefix"></a><div class="element clickable method public method_getTemplateClassPrefix" data-toggle="collapse" data-target=".method_getTemplateClassPrefix .collapse">
+<h2>Gets the template class prefix.</h2>
+<pre>getTemplateClassPrefix() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getTemplateClassPrefix()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The template class prefix</div>
+</div></div>
+</div>
+<a id="method_getTests"></a><div class="element clickable method public method_getTests" data-toggle="collapse" data-target=".method_getTests .collapse">
+<h2>Gets the registered Tests.</h2>
+<pre>getTests() : <a href="library.Twig.TestInterface.html#%5CTwig_TestInterface">\Twig_TestInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getTests()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Twig.TestInterface.html#%5CTwig_TestInterface">\Twig_TestInterface[]</a></code>An array of Twig_TestInterface instances</div>
+</div></div>
+</div>
+<a id="method_getTokenParsers"></a><div class="element clickable method public method_getTokenParsers" data-toggle="collapse" data-target=".method_getTokenParsers .collapse">
+<h2>Gets the registered Token Parsers.</h2>
+<pre>getTokenParsers() : <a href="../classes/Twig_TokenParserBrokerInterface.html">\Twig_TokenParserBrokerInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getTokenParsers()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_TokenParserBrokerInterface.html">\Twig_TokenParserBrokerInterface</a></code>A broker containing token parsers</div>
+</div></div>
+</div>
+<a id="method_getUnaryOperators"></a><div class="element clickable method public method_getUnaryOperators" data-toggle="collapse" data-target=".method_getUnaryOperators .collapse">
+<h2>Gets the registered unary Operators.</h2>
+<pre>getUnaryOperators() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::getUnaryOperators()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of unary operators</div>
+</div></div>
+</div>
+<a id="method_hasExtension"></a><div class="element clickable method public method_hasExtension" data-toggle="collapse" data-target=".method_hasExtension .collapse">
+<h2>Returns true if the given extension is registered.</h2>
+<pre>hasExtension(string $name) : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::hasExtension()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The extension name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>Whether the extension is registered or not</div>
+</div></div>
+</div>
+<a id="method_initRuntime"></a><div class="element clickable method public method_initRuntime" data-toggle="collapse" data-target=".method_initRuntime .collapse">
+<h2>Initializes the runtime environment.</h2>
+<pre>initRuntime() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::initRuntime()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_isAutoReload"></a><div class="element clickable method public method_isAutoReload" data-toggle="collapse" data-target=".method_isAutoReload .collapse">
+<h2>Checks if the auto_reload option is enabled.</h2>
+<pre>isAutoReload() : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::isAutoReload()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true if auto_reload is enabled, false otherwise</div>
+</div></div>
+</div>
+<a id="method_isDebug"></a><div class="element clickable method public method_isDebug" data-toggle="collapse" data-target=".method_isDebug .collapse">
+<h2>Checks if debug mode is enabled.</h2>
+<pre>isDebug() : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::isDebug()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true if debug mode is enabled, false otherwise</div>
+</div></div>
+</div>
+<a id="method_isStrictVariables"></a><div class="element clickable method public method_isStrictVariables" data-toggle="collapse" data-target=".method_isStrictVariables .collapse">
+<h2>Checks if the strict_variables option is enabled.</h2>
+<pre>isStrictVariables() : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::isStrictVariables()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true if strict_variables is enabled, false otherwise</div>
+</div></div>
+</div>
+<a id="method_isTemplateFresh"></a><div class="element clickable method public method_isTemplateFresh" data-toggle="collapse" data-target=".method_isTemplateFresh .collapse">
+<h2>Returns true if the template is still fresh.</h2>
+<pre>isTemplateFresh(string $name, \timestamp $time) : Boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Besides checking the loader for freshness information,
+this method also checks if the enabled extensions have
+not changed.</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::isTemplateFresh()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<div class="subelement argument">
+<h4>$time</h4>
+<code>\timestamp</code><p>The last modification time of the cached template</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Boolean</code>true if the template is fresh, false otherwise</div>
+</div></div>
+</div>
+<a id="method_loadTemplate"></a><div class="element clickable method public method_loadTemplate" data-toggle="collapse" data-target=".method_loadTemplate .collapse">
+<h2>Loads a template by name.</h2>
+<pre>loadTemplate(string $name, integer $index) : <a href="../classes/Twig_TemplateInterface.html">\Twig_TemplateInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::loadTemplate()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>The index if it is an embedded template</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_TemplateInterface.html">\Twig_TemplateInterface</a></code>A template instance representing the given template name</div>
+</div></div>
+</div>
+<a id="method_mergeGlobals"></a><div class="element clickable method public method_mergeGlobals" data-toggle="collapse" data-target=".method_mergeGlobals .collapse">
+<h2>Merges a context with the defined globals.</h2>
+<pre>mergeGlobals(array $context) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::mergeGlobals()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array representing the context</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The context merged with the globals</div>
+</div></div>
+</div>
+<a id="method_parse"></a><div class="element clickable method public method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
+<h2>Parses a token stream.</h2>
+<pre>parse(\Twig_TokenStream $tokens) : <a href="../classes/Twig_Node_Module.html">\Twig_Node_Module</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::parse()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tokens</h4>
+<code><a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></code><p>A Twig_TokenStream instance</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_Node_Module.html">\Twig_Node_Module</a></code>A Node tree</div>
+</div></div>
+</div>
+<a id="method_registerUndefinedFilterCallback"></a><div class="element clickable method public method_registerUndefinedFilterCallback" data-toggle="collapse" data-target=".method_registerUndefinedFilterCallback .collapse">
+<h2>registerUndefinedFilterCallback()
+        </h2>
+<pre>registerUndefinedFilterCallback($callable) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::registerUndefinedFilterCallback()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$callable</h4></div>
+</div></div>
+</div>
+<a id="method_registerUndefinedFunctionCallback"></a><div class="element clickable method public method_registerUndefinedFunctionCallback" data-toggle="collapse" data-target=".method_registerUndefinedFunctionCallback .collapse">
+<h2>registerUndefinedFunctionCallback()
+        </h2>
+<pre>registerUndefinedFunctionCallback($callable) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::registerUndefinedFunctionCallback()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$callable</h4></div>
+</div></div>
+</div>
+<a id="method_removeExtension"></a><div class="element clickable method public method_removeExtension" data-toggle="collapse" data-target=".method_removeExtension .collapse">
+<h2>Removes an extension by name.</h2>
+<pre>removeExtension(string $name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::removeExtension()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The extension name</p></div>
+</div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Renders a template.</h2>
+<pre>render(string $name, array $context) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::render()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><p>An array of parameters to pass to the template</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The rendered template</div>
+</div></div>
+</div>
+<a id="method_resolveTemplate"></a><div class="element clickable method public method_resolveTemplate" data-toggle="collapse" data-target=".method_resolveTemplate .collapse">
+<h2>resolveTemplate()
+        </h2>
+<pre>resolveTemplate($names) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::resolveTemplate()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$names</h4></div>
+</div></div>
+</div>
+<a id="method_setBaseTemplateClass"></a><div class="element clickable method public method_setBaseTemplateClass" data-toggle="collapse" data-target=".method_setBaseTemplateClass .collapse">
+<h2>Sets the base template class for compiled templates.</h2>
+<pre>setBaseTemplateClass(string $class) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setBaseTemplateClass()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>The base template class name</p></div>
+</div></div>
+</div>
+<a id="method_setCache"></a><div class="element clickable method public method_setCache" data-toggle="collapse" data-target=".method_setCache .collapse">
+<h2>Sets the cache directory or false if cache is disabled.</h2>
+<pre>setCache(string | false $cache) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setCache()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$cache</h4>
+<code>string</code><code>false</code><p>The absolute path to the compiled templates,
+                           or false to disable cache</p></div>
+</div></div>
+</div>
+<a id="method_setCharset"></a><div class="element clickable method public method_setCharset" data-toggle="collapse" data-target=".method_setCharset .collapse">
+<h2>Sets the default template charset.</h2>
+<pre>setCharset(string $charset) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setCharset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$charset</h4>
+<code>string</code><p>The default charset</p></div>
+</div></div>
+</div>
+<a id="method_setCompiler"></a><div class="element clickable method public method_setCompiler" data-toggle="collapse" data-target=".method_setCompiler .collapse">
+<h2>Sets the Compiler instance.</h2>
+<pre>setCompiler(\Twig_CompilerInterface $compiler) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setCompiler()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$compiler</h4>
+<code><a href="../classes/Twig_CompilerInterface.html">\Twig_CompilerInterface</a></code><p>A Twig_CompilerInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_setExtensions"></a><div class="element clickable method public method_setExtensions" data-toggle="collapse" data-target=".method_setExtensions .collapse">
+<h2>Registers an array of extensions.</h2>
+<pre>setExtensions(array $extensions) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setExtensions()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$extensions</h4>
+<code>array</code><p>An array of extensions</p></div>
+</div></div>
+</div>
+<a id="method_setLexer"></a><div class="element clickable method public method_setLexer" data-toggle="collapse" data-target=".method_setLexer .collapse">
+<h2>Sets the Lexer instance.</h2>
+<pre>setLexer(\Twig_LexerInterface $lexer) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setLexer()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lexer</h4>
+<code><a href="../classes/Twig_LexerInterface.html">\Twig_LexerInterface</a></code><p>A Twig_LexerInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_setLoader"></a><div class="element clickable method public method_setLoader" data-toggle="collapse" data-target=".method_setLoader .collapse">
+<h2>Sets the Loader instance.</h2>
+<pre>setLoader(\Twig_LoaderInterface $loader) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setLoader()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$loader</h4>
+<code><a href="../classes/Twig_LoaderInterface.html">\Twig_LoaderInterface</a></code><p>A Twig_LoaderInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_setParser"></a><div class="element clickable method public method_setParser" data-toggle="collapse" data-target=".method_setParser .collapse">
+<h2>Sets the Parser instance.</h2>
+<pre>setParser(\Twig_ParserInterface $parser) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::setParser()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parser</h4>
+<code><a href="../classes/Twig_ParserInterface.html">\Twig_ParserInterface</a></code><p>A Twig_ParserInterface instance</p></div>
+</div></div>
+</div>
+<a id="method_tokenize"></a><div class="element clickable method public method_tokenize" data-toggle="collapse" data-target=".method_tokenize .collapse">
+<h2>Tokenizes a source code.</h2>
+<pre>tokenize(string $source, string $name) : <a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::tokenize()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$source</h4>
+<code>string</code><p>The template source code</p></div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The template name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Twig_TokenStream.html">\Twig_TokenStream</a></code>A Twig_TokenStream instance</div>
+</div></div>
+</div>
+<a id="method_initOperators"></a><div class="element clickable method protected method_initOperators" data-toggle="collapse" data-target=".method_initOperators .collapse">
+<h2>initOperators()
+        </h2>
+<pre>initOperators() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::initOperators()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_writeCacheFile"></a><div class="element clickable method protected method_writeCacheFile" data-toggle="collapse" data-target=".method_writeCacheFile .collapse">
+<h2>writeCacheFile()
+        </h2>
+<pre>writeCacheFile($file, $content) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::writeCacheFile()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$content</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_autoReload"> </a><div class="element clickable property protected property_autoReload" data-toggle="collapse" data-target=".property_autoReload .collapse">
+<h2></h2>
+<pre>$autoReload </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$autoReload</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_baseTemplateClass"> </a><div class="element clickable property protected property_baseTemplateClass" data-toggle="collapse" data-target=".property_baseTemplateClass .collapse">
+<h2></h2>
+<pre>$baseTemplateClass </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$baseTemplateClass</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_binaryOperators"> </a><div class="element clickable property protected property_binaryOperators" data-toggle="collapse" data-target=".property_binaryOperators .collapse">
+<h2></h2>
+<pre>$binaryOperators </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$binaryOperators</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_cache"> </a><div class="element clickable property protected property_cache" data-toggle="collapse" data-target=".property_cache .collapse">
+<h2></h2>
+<pre>$cache </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$cache</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_charset"> </a><div class="element clickable property protected property_charset" data-toggle="collapse" data-target=".property_charset .collapse">
+<h2></h2>
+<pre>$charset </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$charset</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_compiler"> </a><div class="element clickable property protected property_compiler" data-toggle="collapse" data-target=".property_compiler .collapse">
+<h2></h2>
+<pre>$compiler </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$compiler</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_debug"> </a><div class="element clickable property protected property_debug" data-toggle="collapse" data-target=".property_debug .collapse">
+<h2></h2>
+<pre>$debug </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$debug</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_extensions"> </a><div class="element clickable property protected property_extensions" data-toggle="collapse" data-target=".property_extensions .collapse">
+<h2></h2>
+<pre>$extensions </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$extensions</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_filterCallbacks"> </a><div class="element clickable property protected property_filterCallbacks" data-toggle="collapse" data-target=".property_filterCallbacks .collapse">
+<h2></h2>
+<pre>$filterCallbacks </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$filterCallbacks</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_filters"> </a><div class="element clickable property protected property_filters" data-toggle="collapse" data-target=".property_filters .collapse">
+<h2></h2>
+<pre>$filters </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$filters</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_functionCallbacks"> </a><div class="element clickable property protected property_functionCallbacks" data-toggle="collapse" data-target=".property_functionCallbacks .collapse">
+<h2></h2>
+<pre>$functionCallbacks </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$functionCallbacks</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_functions"> </a><div class="element clickable property protected property_functions" data-toggle="collapse" data-target=".property_functions .collapse">
+<h2></h2>
+<pre>$functions </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$functions</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_globals"> </a><div class="element clickable property protected property_globals" data-toggle="collapse" data-target=".property_globals .collapse">
+<h2></h2>
+<pre>$globals </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$globals</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_lexer"> </a><div class="element clickable property protected property_lexer" data-toggle="collapse" data-target=".property_lexer .collapse">
+<h2></h2>
+<pre>$lexer </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$lexer</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_loadedTemplates"> </a><div class="element clickable property protected property_loadedTemplates" data-toggle="collapse" data-target=".property_loadedTemplates .collapse">
+<h2></h2>
+<pre>$loadedTemplates </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$loadedTemplates</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_loader"> </a><div class="element clickable property protected property_loader" data-toggle="collapse" data-target=".property_loader .collapse">
+<h2></h2>
+<pre>$loader </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$loader</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_parser"> </a><div class="element clickable property protected property_parser" data-toggle="collapse" data-target=".property_parser .collapse">
+<h2></h2>
+<pre>$parser </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$parser</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_parsers"> </a><div class="element clickable property protected property_parsers" data-toggle="collapse" data-target=".property_parsers .collapse">
+<h2></h2>
+<pre>$parsers </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$parsers</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_runtimeInitialized"> </a><div class="element clickable property protected property_runtimeInitialized" data-toggle="collapse" data-target=".property_runtimeInitialized .collapse">
+<h2></h2>
+<pre>$runtimeInitialized </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$runtimeInitialized</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_staging"> </a><div class="element clickable property protected property_staging" data-toggle="collapse" data-target=".property_staging .collapse">
+<h2></h2>
+<pre>$staging </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$staging</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_strictVariables"> </a><div class="element clickable property protected property_strictVariables" data-toggle="collapse" data-target=".property_strictVariables .collapse">
+<h2></h2>
+<pre>$strictVariables </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$strictVariables</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_templateClassPrefix"> </a><div class="element clickable property protected property_templateClassPrefix" data-toggle="collapse" data-target=".property_templateClassPrefix .collapse">
+<h2></h2>
+<pre>$templateClassPrefix </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$templateClassPrefix</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_tests"> </a><div class="element clickable property protected property_tests" data-toggle="collapse" data-target=".property_tests .collapse">
+<h2></h2>
+<pre>$tests </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$tests</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_unaryOperators"> </a><div class="element clickable property protected property_unaryOperators" data-toggle="collapse" data-target=".property_unaryOperators .collapse">
+<h2></h2>
+<pre>$unaryOperators </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$unaryOperators</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_visitors"> </a><div class="element clickable property protected property_visitors" data-toggle="collapse" data-target=".property_visitors .collapse">
+<h2></h2>
+<pre>$visitors </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::$$visitors</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_VERSION"> </a><div class="element clickable constant  constant_VERSION" data-toggle="collapse" data-target=".constant_VERSION .collapse">
+<h2>VERSION</h2>
+<pre>VERSION </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Twig_Environment::VERSION</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:06:58+08:00.<br></footer></div>
+</div>
+</body>
+</html>

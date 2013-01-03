@@ -1,0 +1,845 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Barcode\Renderer\Pdf</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_checkParams" title="checkParams :: Checking of parameters after all settings"><span class="description">Checking of parameters after all settings</span><pre>checkParams()</pre></a></li>
+<li class="method public inherited"><a href="#method_draw" title="draw :: Draw the barcode in the rendering resource"><span class="description">Draw the barcode in the rendering resource</span><pre>draw()</pre></a></li>
+<li class="method public inherited"><a href="#method_getAutomaticRenderError" title="getAutomaticRenderError :: Retrieve the automatic rendering of exception"><span class="description">Retrieve the automatic rendering of exception</span><pre>getAutomaticRenderError()</pre></a></li>
+<li class="method public inherited"><a href="#method_getBarcode" title="getBarcode :: Retrieve the barcode object"><span class="description">Retrieve the barcode object</span><pre>getBarcode()</pre></a></li>
+<li class="method public inherited"><a href="#method_getHorizontalPosition" title="getHorizontalPosition :: Horizontal position of the barcode in the rendering resource"><span class="description">Horizontal position of the barcode in the rendering resource</span><pre>getHorizontalPosition()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLeftOffset" title="getLeftOffset :: Retrieve vertical adjustment"><span class="description">Retrieve vertical adjustment</span><pre>getLeftOffset()</pre></a></li>
+<li class="method public inherited"><a href="#method_getModuleSize" title="getModuleSize :: Set the size of a module"><span class="description">Set the size of a module</span><pre>getModuleSize()</pre></a></li>
+<li class="method public inherited"><a href="#method_getRendererNamespace" title="getRendererNamespace :: Retrieve renderer namespace"><span class="description">Retrieve renderer namespace</span><pre>getRendererNamespace()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTopOffset" title="getTopOffset :: Retrieve vertical adjustment"><span class="description">Retrieve vertical adjustment</span><pre>getTopOffset()</pre></a></li>
+<li class="method public inherited"><a href="#method_getType" title="getType :: Retrieve renderer type"><span class="description">Retrieve renderer type</span><pre>getType()</pre></a></li>
+<li class="method public inherited"><a href="#method_getVerticalPosition" title="getVerticalPosition :: Vertical position of the barcode in the rendering resource"><span class="description">Vertical position of the barcode in the rendering resource</span><pre>getVerticalPosition()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: Draw the barcode in the PDF, send headers and the PDF"><span class="description">Draw the barcode in the PDF, send headers and the PDF</span><pre>render()</pre></a></li>
+<li class="method public inherited"><a href="#method_setAutomaticRenderError" title="setAutomaticRenderError :: Activate/Deactivate the automatic rendering of exception"><span class="description">Activate/Deactivate the automatic rendering of exception</span><pre>setAutomaticRenderError()</pre></a></li>
+<li class="method public inherited"><a href="#method_setBarcode" title="setBarcode :: Set the barcode object"><span class="description">Set the barcode object</span><pre>setBarcode()</pre></a></li>
+<li class="method public inherited"><a href="#method_setHorizontalPosition" title="setHorizontalPosition :: Horizontal position of the barcode in the rendering resource"><span class="description">Horizontal position of the barcode in the rendering resource</span><pre>setHorizontalPosition()</pre></a></li>
+<li class="method public inherited"><a href="#method_setLeftOffset" title="setLeftOffset :: Manually adjust left position"><span class="description">Manually adjust left position</span><pre>setLeftOffset()</pre></a></li>
+<li class="method public inherited"><a href="#method_setModuleSize" title="setModuleSize :: Set the size of a module"><span class="description">Set the size of a module</span><pre>setModuleSize()</pre></a></li>
+<li class="method public inherited"><a href="#method_setOptions" title="setOptions :: Set renderer state from options array"><span class="description">Set renderer state from options array</span><pre>setOptions()</pre></a></li>
+<li class="method public inherited"><a href="#method_setRendererNamespace" title="setRendererNamespace :: Set renderer namespace for autoloading"><span class="description">Set renderer namespace for autoloading</span><pre>setRendererNamespace()</pre></a></li>
+<li class="method public "><a href="#method_setResource" title="setResource :: Set a PDF resource to draw the barcode inside"><span class="description">Set a PDF resource to draw the barcode inside</span><pre>setResource()</pre></a></li>
+<li class="method public inherited"><a href="#method_setTopOffset" title="setTopOffset :: Manually adjust top position"><span class="description">Manually adjust top position</span><pre>setTopOffset()</pre></a></li>
+<li class="method public inherited"><a href="#method_setVerticalPosition" title="setVerticalPosition :: Vertical position of the barcode in the rendering resource"><span class="description">Vertical position of the barcode in the rendering resource</span><pre>setVerticalPosition()</pre></a></li>
+<li class="method public "><a href="#method_widthForStringUsingFontSize" title="widthForStringUsingFontSize :: Calculate the width of a string:
+in case of using alignment parameter in drawText"><span class="description">Calculate the width of a string:
+in case of using alignment parameter in drawText</span><pre>widthForStringUsingFontSize()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_adjustPosition" title="adjustPosition :: Calculate the left and top offset of the barcode in the
+rendering support"><span class="description">Calculate the left and top offset of the barcode in the
+rendering support</span><pre>adjustPosition()</pre></a></li>
+<li class="method protected inherited"><a href="#method_checkBarcodeObject" title="checkBarcodeObject :: Check if a barcode object is correctly provided"><span class="description">Check if a barcode object is correctly provided</span><pre>checkBarcodeObject()</pre></a></li>
+<li class="method protected "><a href="#method_checkSpecificParams" title="checkSpecificParams :: Check renderer parameters"><span class="description">Check renderer parameters</span><pre>checkSpecificParams()</pre></a></li>
+<li class="method protected "><a href="#method_drawPolygon" title="drawPolygon :: Draw a polygon in the rendering resource"><span class="description">Draw a polygon in the rendering resource</span><pre>drawPolygon()</pre></a></li>
+<li class="method protected "><a href="#method_drawText" title="drawText :: Draw a polygon in the rendering resource"><span class="description">Draw a polygon in the rendering resource</span><pre>drawText()</pre></a></li>
+<li class="method protected "><a href="#method_initRenderer" title="initRenderer :: Initialize the PDF resource"><span class="description">Initialize the PDF resource</span><pre>initRenderer()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private inherited"><a href="#method_drawInstructionList" title="drawInstructionList :: Sub process to draw the barcode instructions
+Needed by the automatic error rendering"><span class="description">Sub process to draw the barcode instructions
+Needed by the automatic error rendering</span><pre>drawInstructionList()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_automaticRenderError" title="$automaticRenderError :: Activate/Deactivate the automatic rendering of exception"><span class="description"></span><pre>$automaticRenderError</pre></a></li>
+<li class="property protected inherited"><a href="#property_barcode" title="$barcode :: Barcode object"><span class="description"></span><pre>$barcode</pre></a></li>
+<li class="property protected inherited"><a href="#property_horizontalPosition" title="$horizontalPosition :: Horizontal position of the barcode in the rendering resource"><span class="description"></span><pre>$horizontalPosition</pre></a></li>
+<li class="property protected inherited"><a href="#property_leftOffset" title="$leftOffset :: Offset of the barcode from the left of the rendering resource"><span class="description"></span><pre>$leftOffset</pre></a></li>
+<li class="property protected "><a href="#property_moduleSize" title="$moduleSize :: Module size rendering"><span class="description"></span><pre>$moduleSize</pre></a></li>
+<li class="property protected "><a href="#property_page" title="$page :: Page number in PDF resource"><span class="description"></span><pre>$page</pre></a></li>
+<li class="property protected inherited"><a href="#property_rendererNamespace" title="$rendererNamespace :: Namespace of the renderer for autoloading"><span class="description"></span><pre>$rendererNamespace</pre></a></li>
+<li class="property protected "><a href="#property_resource" title="$resource :: PDF resource"><span class="description"></span><pre>$resource</pre></a></li>
+<li class="property protected inherited"><a href="#property_topOffset" title="$topOffset :: Offset of the barcode from the top of the rendering resource"><span class="description"></span><pre>$topOffset</pre></a></li>
+<li class="property protected inherited"><a href="#property_type" title="$type :: Renderer type"><span class="description"></span><pre>$type</pre></a></li>
+<li class="property protected inherited"><a href="#property_verticalPosition" title="$verticalPosition :: Vertical position of the barcode in the rendering resource"><span class="description"></span><pre>$verticalPosition</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Barcode\Renderer\Pdf"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Barcode.html">Barcode</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Barcode.Renderer.html">Renderer</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Barcode.Renderer.Pdf.html">Pdf</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Class for rendering the barcode in PDF resource</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Barcode.html">Zend_Barcode</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(array | \Traversable $options) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+</div></div>
+</div>
+<a id="method_checkParams"></a><div class="element clickable method public method_checkParams" data-toggle="collapse" data-target=".method_checkParams .collapse">
+<h2>Checking of parameters after all settings</h2>
+<pre>checkParams() : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::checkParams()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_draw"></a><div class="element clickable method public method_draw" data-toggle="collapse" data-target=".method_draw .collapse">
+<h2>Draw the barcode in the rendering resource</h2>
+<pre>draw() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::draw()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Exception.ExceptionInterface.html">\Zend\Barcode\Exception\ExceptionInterface</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getAutomaticRenderError"></a><div class="element clickable method public method_getAutomaticRenderError" data-toggle="collapse" data-target=".method_getAutomaticRenderError .collapse">
+<h2>Retrieve the automatic rendering of exception</h2>
+<pre>getAutomaticRenderError() : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getAutomaticRenderError()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_getBarcode"></a><div class="element clickable method public method_getBarcode" data-toggle="collapse" data-target=".method_getBarcode .collapse">
+<h2>Retrieve the barcode object</h2>
+<pre>getBarcode() : <a href="../classes/Zend.Barcode.Object.ObjectInterface.html">\Zend\Barcode\Object\ObjectInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getBarcode()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Object.ObjectInterface.html">\Zend\Barcode\Object\ObjectInterface</a></code></div>
+</div></div>
+</div>
+<a id="method_getHorizontalPosition"></a><div class="element clickable method public method_getHorizontalPosition" data-toggle="collapse" data-target=".method_getHorizontalPosition .collapse">
+<h2>Horizontal position of the barcode in the rendering resource</h2>
+<pre>getHorizontalPosition() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getHorizontalPosition()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getLeftOffset"></a><div class="element clickable method public method_getLeftOffset" data-toggle="collapse" data-target=".method_getLeftOffset .collapse">
+<h2>Retrieve vertical adjustment</h2>
+<pre>getLeftOffset() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getLeftOffset()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_getModuleSize"></a><div class="element clickable method public method_getModuleSize" data-toggle="collapse" data-target=".method_getModuleSize .collapse">
+<h2>Set the size of a module</h2>
+<pre>getModuleSize() : float</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getModuleSize()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>float</code></div>
+</div></div>
+</div>
+<a id="method_getRendererNamespace"></a><div class="element clickable method public method_getRendererNamespace" data-toggle="collapse" data-target=".method_getRendererNamespace .collapse">
+<h2>Retrieve renderer namespace</h2>
+<pre>getRendererNamespace() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getRendererNamespace()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getTopOffset"></a><div class="element clickable method public method_getTopOffset" data-toggle="collapse" data-target=".method_getTopOffset .collapse">
+<h2>Retrieve vertical adjustment</h2>
+<pre>getTopOffset() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getTopOffset()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_getType"></a><div class="element clickable method public method_getType" data-toggle="collapse" data-target=".method_getType .collapse">
+<h2>Retrieve renderer type</h2>
+<pre>getType() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getType()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getVerticalPosition"></a><div class="element clickable method public method_getVerticalPosition" data-toggle="collapse" data-target=".method_getVerticalPosition .collapse">
+<h2>Vertical position of the barcode in the rendering resource</h2>
+<pre>getVerticalPosition() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::getVerticalPosition()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Draw the barcode in the PDF, send headers and the PDF</h2>
+<pre>render() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_setAutomaticRenderError"></a><div class="element clickable method public method_setAutomaticRenderError" data-toggle="collapse" data-target=".method_setAutomaticRenderError .collapse">
+<h2>Activate/Deactivate the automatic rendering of exception</h2>
+<pre>setAutomaticRenderError(boolean $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setAutomaticRenderError()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>boolean</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setBarcode"></a><div class="element clickable method public method_setBarcode" data-toggle="collapse" data-target=".method_setBarcode .collapse">
+<h2>Set the barcode object</h2>
+<pre>setBarcode(\Zend\Barcode\Object\ObjectInterface $barcode) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setBarcode()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$barcode</h4>
+<code><a href="../classes/Zend.Barcode.Object.ObjectInterface.html">\Zend\Barcode\Object\ObjectInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setHorizontalPosition"></a><div class="element clickable method public method_setHorizontalPosition" data-toggle="collapse" data-target=".method_setHorizontalPosition .collapse">
+<h2>Horizontal position of the barcode in the rendering resource</h2>
+<pre>setHorizontalPosition(string $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setHorizontalPosition()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.UnexpectedValueException.html">\Zend\Barcode\Renderer\Exception\UnexpectedValueException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setLeftOffset"></a><div class="element clickable method public method_setLeftOffset" data-toggle="collapse" data-target=".method_setLeftOffset .collapse">
+<h2>Manually adjust left position</h2>
+<pre>setLeftOffset(integer $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setLeftOffset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.OutOfRangeException.html">\Zend\Barcode\Renderer\Exception\OutOfRangeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setModuleSize"></a><div class="element clickable method public method_setModuleSize" data-toggle="collapse" data-target=".method_setModuleSize .collapse">
+<h2>Set the size of a module</h2>
+<pre>setModuleSize(float $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setModuleSize()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>float</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.OutOfRangeException.html">\Zend\Barcode\Renderer\Exception\OutOfRangeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+<h2>Set renderer state from options array</h2>
+<pre>setOptions(array $options) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setOptions()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setRendererNamespace"></a><div class="element clickable method public method_setRendererNamespace" data-toggle="collapse" data-target=".method_setRendererNamespace .collapse">
+<h2>Set renderer namespace for autoloading</h2>
+<pre>setRendererNamespace(string $namespace) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setRendererNamespace()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$namespace</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setResource"></a><div class="element clickable method public method_setResource" data-toggle="collapse" data-target=".method_setResource .collapse">
+<h2>Set a PDF resource to draw the barcode inside</h2>
+<pre>setResource(\ZendPdf\PdfDocument $pdf, integer $page) : <a href="../classes/Zend.Barcode.Renderer.Pdf.html">\Zend\Barcode\Renderer\Pdf</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pdf</h4>
+<code>\ZendPdf\PdfDocument</code>
+</div>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.Pdf.html">\Zend\Barcode\Renderer\Pdf</a></code></div>
+</div></div>
+</div>
+<a id="method_setTopOffset"></a><div class="element clickable method public method_setTopOffset" data-toggle="collapse" data-target=".method_setTopOffset .collapse">
+<h2>Manually adjust top position</h2>
+<pre>setTopOffset(integer $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setTopOffset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.OutOfRangeException.html">\Zend\Barcode\Renderer\Exception\OutOfRangeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_setVerticalPosition"></a><div class="element clickable method public method_setVerticalPosition" data-toggle="collapse" data-target=".method_setVerticalPosition .collapse">
+<h2>Vertical position of the barcode in the rendering resource</h2>
+<pre>setVerticalPosition(string $value) : <a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::setVerticalPosition()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.UnexpectedValueException.html">\Zend\Barcode\Renderer\Exception\UnexpectedValueException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Barcode.Renderer.AbstractRenderer.html">\Zend\Barcode\Renderer\AbstractRenderer</a></code></div>
+</div></div>
+</div>
+<a id="method_widthForStringUsingFontSize"></a><div class="element clickable method public method_widthForStringUsingFontSize" data-toggle="collapse" data-target=".method_widthForStringUsingFontSize .collapse">
+<h2>Calculate the width of a string:
+in case of using alignment parameter in drawText</h2>
+<pre>widthForStringUsingFontSize(string $text, \ZendPdf\Font $font, float $fontSize) : float</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$font</h4>
+<code>\ZendPdf\Font</code>
+</div>
+<div class="subelement argument">
+<h4>$fontSize</h4>
+<code>float</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>float</code></div>
+</div></div>
+</div>
+<a id="method_adjustPosition"></a><div class="element clickable method protected method_adjustPosition" data-toggle="collapse" data-target=".method_adjustPosition .collapse">
+<h2>Calculate the left and top offset of the barcode in the
+rendering support</h2>
+<pre>adjustPosition(float $supportHeight, float $supportWidth) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::adjustPosition()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$supportHeight</h4>
+<code>float</code>
+</div>
+<div class="subelement argument">
+<h4>$supportWidth</h4>
+<code>float</code>
+</div>
+</div></div>
+</div>
+<a id="method_checkBarcodeObject"></a><div class="element clickable method protected method_checkBarcodeObject" data-toggle="collapse" data-target=".method_checkBarcodeObject .collapse">
+<h2>Check if a barcode object is correctly provided</h2>
+<pre>checkBarcodeObject() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::checkBarcodeObject()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Barcode.Renderer.Exception.RuntimeException.html">\Zend\Barcode\Renderer\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_checkSpecificParams"></a><div class="element clickable method protected method_checkSpecificParams" data-toggle="collapse" data-target=".method_checkSpecificParams .collapse">
+<h2>Check renderer parameters</h2>
+<pre>checkSpecificParams() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_drawPolygon"></a><div class="element clickable method protected method_drawPolygon" data-toggle="collapse" data-target=".method_drawPolygon .collapse">
+<h2>Draw a polygon in the rendering resource</h2>
+<pre>drawPolygon(array $points, integer $color, boolean $filled) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$points</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$color</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$filled</h4>
+<code>boolean</code>
+</div>
+</div></div>
+</div>
+<a id="method_drawText"></a><div class="element clickable method protected method_drawText" data-toggle="collapse" data-target=".method_drawText .collapse">
+<h2>Draw a polygon in the rendering resource</h2>
+<pre>drawText(string $text, float $size, array $position, string $font, integer $color, string $alignment, float $orientation) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>float</code>
+</div>
+<div class="subelement argument">
+<h4>$position</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$font</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$color</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$alignment</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$orientation</h4>
+<code>float</code>
+</div>
+</div></div>
+</div>
+<a id="method_initRenderer"></a><div class="element clickable method protected method_initRenderer" data-toggle="collapse" data-target=".method_initRenderer .collapse">
+<h2>Initialize the PDF resource</h2>
+<pre>initRenderer() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_drawInstructionList"></a><div class="element clickable method private method_drawInstructionList" data-toggle="collapse" data-target=".method_drawInstructionList .collapse">
+<h2>Sub process to draw the barcode instructions
+Needed by the automatic error rendering</h2>
+<pre>drawInstructionList() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::drawInstructionList()</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_automaticRenderError"> </a><div class="element clickable property protected property_automaticRenderError" data-toggle="collapse" data-target=".property_automaticRenderError .collapse">
+<h2></h2>
+<pre>$automaticRenderError : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$automaticRenderError</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_barcode"> </a><div class="element clickable property protected property_barcode" data-toggle="collapse" data-target=".property_barcode .collapse">
+<h2></h2>
+<pre>$barcode : <a href="../classes/Zend.Barcode.Object.ObjectInterface.html">\Zend\Barcode\Object\ObjectInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$barcode</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_horizontalPosition"> </a><div class="element clickable property protected property_horizontalPosition" data-toggle="collapse" data-target=".property_horizontalPosition .collapse">
+<h2></h2>
+<pre>$horizontalPosition : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$horizontalPosition</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_leftOffset"> </a><div class="element clickable property protected property_leftOffset" data-toggle="collapse" data-target=".property_leftOffset .collapse">
+<h2></h2>
+<pre>$leftOffset : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$leftOffset</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_moduleSize"> </a><div class="element clickable property protected property_moduleSize" data-toggle="collapse" data-target=".property_moduleSize .collapse">
+<h2></h2>
+<pre>$moduleSize : float</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_page"> </a><div class="element clickable property protected property_page" data-toggle="collapse" data-target=".property_page .collapse">
+<h2></h2>
+<pre>$page : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rendererNamespace"> </a><div class="element clickable property protected property_rendererNamespace" data-toggle="collapse" data-target=".property_rendererNamespace .collapse">
+<h2></h2>
+<pre>$rendererNamespace : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$rendererNamespace</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_resource"> </a><div class="element clickable property protected property_resource" data-toggle="collapse" data-target=".property_resource .collapse">
+<h2></h2>
+<pre>$resource : \ZendPdf\PdfDocument</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_topOffset"> </a><div class="element clickable property protected property_topOffset" data-toggle="collapse" data-target=".property_topOffset .collapse">
+<h2></h2>
+<pre>$topOffset : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$topOffset</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_type"> </a><div class="element clickable property protected property_type" data-toggle="collapse" data-target=".property_type .collapse">
+<h2></h2>
+<pre>$type : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_verticalPosition"> </a><div class="element clickable property protected property_verticalPosition" data-toggle="collapse" data-target=".property_verticalPosition .collapse">
+<h2></h2>
+<pre>$verticalPosition : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Barcode\Renderer\AbstractRenderer::$$verticalPosition</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:07:58+08:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Code\Generator\FileGenerator</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_fromArray" title="fromArray :: "><span class="description">fromArray()
+        </span><pre>fromArray()</pre></a></li>
+<li class="method public "><a href="#method_fromReflectedFileName" title="fromReflectedFileName :: fromReflectedFilePath() - use this if you intend on generating code generation objects based on the same file."><span class="description">fromReflectedFilePath() - use this if you intend on generating code generation objects based on the same file.</span><pre>fromReflectedFileName()</pre></a></li>
+<li class="method public "><a href="#method_fromReflection" title="fromReflection :: fromReflection()"><span class="description">fromReflection()</span><pre>fromReflection()</pre></a></li>
+<li class="method public "><a href="#method_generate" title="generate :: generate()"><span class="description">generate()</span><pre>generate()</pre></a></li>
+<li class="method public "><a href="#method_getBody" title="getBody :: getBody()"><span class="description">getBody()</span><pre>getBody()</pre></a></li>
+<li class="method public "><a href="#method_getClass" title="getClass :: getClass()"><span class="description">getClass()</span><pre>getClass()</pre></a></li>
+<li class="method public "><a href="#method_getClasses" title="getClasses :: getClasses()"><span class="description">getClasses()</span><pre>getClasses()</pre></a></li>
+<li class="method public "><a href="#method_getDocBlock" title="getDocBlock :: Get DocBlock"><span class="description">Get DocBlock</span><pre>getDocBlock()</pre></a></li>
+<li class="method public "><a href="#method_getFilename" title="getFilename :: getFilename()"><span class="description">getFilename()</span><pre>getFilename()</pre></a></li>
+<li class="method public inherited"><a href="#method_getIndentation" title="getIndentation :: getIndentation()"><span class="description">getIndentation()</span><pre>getIndentation()</pre></a></li>
+<li class="method public "><a href="#method_getNamespace" title="getNamespace :: getNamespace()"><span class="description">getNamespace()</span><pre>getNamespace()</pre></a></li>
+<li class="method public "><a href="#method_getRequiredFiles" title="getRequiredFiles :: getRequiredFiles()"><span class="description">getRequiredFiles()</span><pre>getRequiredFiles()</pre></a></li>
+<li class="method public inherited"><a href="#method_getSourceContent" title="getSourceContent :: getSourceContent()"><span class="description">getSourceContent()</span><pre>getSourceContent()</pre></a></li>
+<li class="method public "><a href="#method_getUses" title="getUses :: getUses()"><span class="description">getUses()</span><pre>getUses()</pre></a></li>
+<li class="method public "><a href="#method_isSourceDirty" title="isSourceDirty :: isSourceDirty()"><span class="description">isSourceDirty()</span><pre>isSourceDirty()</pre></a></li>
+<li class="method public "><a href="#method_setBody" title="setBody :: setBody()"><span class="description">setBody()</span><pre>setBody()</pre></a></li>
+<li class="method public "><a href="#method_setClass" title="setClass :: setClass()"><span class="description">setClass()</span><pre>setClass()</pre></a></li>
+<li class="method public "><a href="#method_setClasses" title="setClasses :: setClasses()"><span class="description">setClasses()</span><pre>setClasses()</pre></a></li>
+<li class="method public "><a href="#method_setDocBlock" title="setDocBlock :: setDocBlock() Set the DocBlock"><span class="description">setDocBlock() Set the DocBlock</span><pre>setDocBlock()</pre></a></li>
+<li class="method public "><a href="#method_setFilename" title="setFilename :: setFilename()"><span class="description">setFilename()</span><pre>setFilename()</pre></a></li>
+<li class="method public inherited"><a href="#method_setIndentation" title="setIndentation :: setIndentation()"><span class="description">setIndentation()</span><pre>setIndentation()</pre></a></li>
+<li class="method public "><a href="#method_setNamespace" title="setNamespace :: setNamespace()"><span class="description">setNamespace()</span><pre>setNamespace()</pre></a></li>
+<li class="method public inherited"><a href="#method_setOptions" title="setOptions :: setOptions()"><span class="description">setOptions()</span><pre>setOptions()</pre></a></li>
+<li class="method public "><a href="#method_setRequiredFiles" title="setRequiredFiles :: setRequiredFiles"><span class="description">setRequiredFiles</span><pre>setRequiredFiles()</pre></a></li>
+<li class="method public inherited"><a href="#method_setSourceContent" title="setSourceContent :: setSourceContent()"><span class="description">setSourceContent()</span><pre>setSourceContent()</pre></a></li>
+<li class="method public inherited"><a href="#method_setSourceDirty" title="setSourceDirty :: setSourceDirty()"><span class="description">setSourceDirty()</span><pre>setSourceDirty()</pre></a></li>
+<li class="method public "><a href="#method_setUse" title="setUse :: setUse()"><span class="description">setUse()</span><pre>setUse()</pre></a></li>
+<li class="method public "><a href="#method_setUses" title="setUses :: setUses()"><span class="description">setUses()</span><pre>setUses()</pre></a></li>
+<li class="method public "><a href="#method_write" title="write :: "><span class="description">write()
+        </span><pre>write()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_body" title="$body :: "><span class="description"></span><pre>$body</pre></a></li>
+<li class="property protected "><a href="#property_classes" title="$classes :: "><span class="description"></span><pre>$classes</pre></a></li>
+<li class="property protected "><a href="#property_docBlock" title="$docBlock :: "><span class="description"></span><pre>$docBlock</pre></a></li>
+<li class="property protected "><a href="#property_filename" title="$filename :: "><span class="description"></span><pre>$filename</pre></a></li>
+<li class="property protected inherited"><a href="#property_indentation" title="$indentation :: "><span class="description">4 spaces by default</span><pre>$indentation</pre></a></li>
+<li class="property protected inherited"><a href="#property_isSourceDirty" title="$isSourceDirty :: "><span class="description"></span><pre>$isSourceDirty</pre></a></li>
+<li class="property protected "><a href="#property_namespace" title="$namespace :: "><span class="description"></span><pre>$namespace</pre></a></li>
+<li class="property protected "><a href="#property_requiredFiles" title="$requiredFiles :: "><span class="description"></span><pre>$requiredFiles</pre></a></li>
+<li class="property protected inherited"><a href="#property_sourceContent" title="$sourceContent :: "><span class="description"></span><pre>$sourceContent</pre></a></li>
+<li class="property protected "><a href="#property_uses" title="$uses :: "><span class="description"></span><pre>$uses</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  inherited"><a href="#constant_LINE_FEED" title="LINE_FEED :: Line feed to use in place of EOL"><span class="description">Line feed to use in place of EOL</span><pre>LINE_FEED</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Code\Generator\FileGenerator"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.html">Code</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.Generator.html">Generator</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Code.Generator.FileGenerator.html">FileGenerator</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Code.Generator.html">Zend_Code_Generator</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(array | \Traversable $options) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Passes $options to <a href="setOptions()">setOptions()</a>.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+</div></div>
+</div>
+<a id="method_fromArray"></a><div class="element clickable method public method_fromArray" data-toggle="collapse" data-target=".method_fromArray .collapse">
+<h2>fromArray()
+        </h2>
+<pre>fromArray(array $values) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$values</h4></div>
+</div></div>
+</div>
+<a id="method_fromReflectedFileName"></a><div class="element clickable method public method_fromReflectedFileName" data-toggle="collapse" data-target=".method_fromReflectedFileName .collapse">
+<h2>fromReflectedFilePath() - use this if you intend on generating code generation objects based on the same file.</h2>
+<pre>fromReflectedFileName(string $filePath, bool $includeIfNotAlreadyIncluded) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This will keep previous changes to the file in tact during the same PHP process</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filePath</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$includeIfNotAlreadyIncluded</h4>
+<code>bool</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Generator.Exception.InvalidArgumentException.html">\Zend\Code\Generator\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_fromReflection"></a><div class="element clickable method public method_fromReflection" data-toggle="collapse" data-target=".method_fromReflection .collapse">
+<h2>fromReflection()</h2>
+<pre>fromReflection(\Zend\Code\Reflection\FileReflection $fileReflection) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fileReflection</h4>
+<code><a href="../classes/Zend.Code.Reflection.FileReflection.html">\Zend\Code\Reflection\FileReflection</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_generate"></a><div class="element clickable method public method_generate" data-toggle="collapse" data-target=".method_generate .collapse">
+<h2>generate()</h2>
+<pre>generate() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getBody"></a><div class="element clickable method public method_getBody" data-toggle="collapse" data-target=".method_getBody .collapse">
+<h2>getBody()</h2>
+<pre>getBody() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getClass"></a><div class="element clickable method public method_getClass" data-toggle="collapse" data-target=".method_getClass .collapse">
+<h2>getClass()</h2>
+<pre>getClass(string $name) : <a href="../classes/Zend.Code.Generator.ClassGenerator.html">\Zend\Code\Generator\ClassGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.ClassGenerator.html">\Zend\Code\Generator\ClassGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_getClasses"></a><div class="element clickable method public method_getClasses" data-toggle="collapse" data-target=".method_getClasses .collapse">
+<h2>getClasses()</h2>
+<pre>getClasses() : <a href="library.Zend.Code.Generator.ClassGenerator.html#%5CZend%5CCode%5CGenerator%5CClassGenerator">\Zend\Code\Generator\ClassGenerator[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="library.Zend.Code.Generator.ClassGenerator.html#%5CZend%5CCode%5CGenerator%5CClassGenerator">\Zend\Code\Generator\ClassGenerator[]</a></code>Array of ClassGenerators</div>
+</div></div>
+</div>
+<a id="method_getDocBlock"></a><div class="element clickable method public method_getDocBlock" data-toggle="collapse" data-target=".method_getDocBlock .collapse">
+<h2>Get DocBlock</h2>
+<pre>getDocBlock() : <a href="../classes/Zend.Code.Generator.DocBlockGenerator.html">\Zend\Code\Generator\DocBlockGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.DocBlockGenerator.html">\Zend\Code\Generator\DocBlockGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_getFilename"></a><div class="element clickable method public method_getFilename" data-toggle="collapse" data-target=".method_getFilename .collapse">
+<h2>getFilename()</h2>
+<pre>getFilename() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getIndentation"></a><div class="element clickable method public method_getIndentation" data-toggle="collapse" data-target=".method_getIndentation .collapse">
+<h2>getIndentation()</h2>
+<pre>getIndentation() : string | int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::getIndentation()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>int</code>
+</div>
+</div></div>
+</div>
+<a id="method_getNamespace"></a><div class="element clickable method public method_getNamespace" data-toggle="collapse" data-target=".method_getNamespace .collapse">
+<h2>getNamespace()</h2>
+<pre>getNamespace() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getRequiredFiles"></a><div class="element clickable method public method_getRequiredFiles" data-toggle="collapse" data-target=".method_getRequiredFiles .collapse">
+<h2>getRequiredFiles()</h2>
+<pre>getRequiredFiles() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getSourceContent"></a><div class="element clickable method public method_getSourceContent" data-toggle="collapse" data-target=".method_getSourceContent .collapse">
+<h2>getSourceContent()</h2>
+<pre>getSourceContent() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::getSourceContent()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getUses"></a><div class="element clickable method public method_getUses" data-toggle="collapse" data-target=".method_getUses .collapse">
+<h2>getUses()</h2>
+<pre>getUses(bool $withResolvedAs) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns an array with the first element the use statement, second is the as part.
+If $withResolvedAs is set to true, there will be a third element that is the
+"resolved" as statement, as the second part is not required in use statements</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$withResolvedAs</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_isSourceDirty"></a><div class="element clickable method public method_isSourceDirty" data-toggle="collapse" data-target=".method_isSourceDirty .collapse">
+<h2>isSourceDirty()</h2>
+<pre>isSourceDirty() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_setBody"></a><div class="element clickable method public method_setBody" data-toggle="collapse" data-target=".method_setBody .collapse">
+<h2>setBody()</h2>
+<pre>setBody(string $body) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$body</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setClass"></a><div class="element clickable method public method_setClass" data-toggle="collapse" data-target=".method_setClass .collapse">
+<h2>setClass()</h2>
+<pre>setClass(array | string | <a href="../classes/Zend.Code.Generator.ClassGenerator.html">\Zend\Code\Generator\ClassGenerator</a> $class) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>array</code><code>string</code><code><a href="../classes/Zend.Code.Generator.ClassGenerator.html">\Zend\Code\Generator\ClassGenerator</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Generator.Exception.InvalidArgumentException.html">\Zend\Code\Generator\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setClasses"></a><div class="element clickable method public method_setClasses" data-toggle="collapse" data-target=".method_setClasses .collapse">
+<h2>setClasses()</h2>
+<pre>setClasses(array $classes) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classes</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setDocBlock"></a><div class="element clickable method public method_setDocBlock" data-toggle="collapse" data-target=".method_setDocBlock .collapse">
+<h2>setDocBlock() Set the DocBlock</h2>
+<pre>setDocBlock(<a href="../classes/Zend.Code.Generator.DocBlockGenerator.html">\Zend\Code\Generator\DocBlockGenerator</a> | string $docBlock) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$docBlock</h4>
+<code><a href="../classes/Zend.Code.Generator.DocBlockGenerator.html">\Zend\Code\Generator\DocBlockGenerator</a></code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Generator.Exception.InvalidArgumentException.html">\Zend\Code\Generator\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setFilename"></a><div class="element clickable method public method_setFilename" data-toggle="collapse" data-target=".method_setFilename .collapse">
+<h2>setFilename()</h2>
+<pre>setFilename(string $filename) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setIndentation"></a><div class="element clickable method public method_setIndentation" data-toggle="collapse" data-target=".method_setIndentation .collapse">
+<h2>setIndentation()</h2>
+<pre>setIndentation(string | int $indentation) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setIndentation()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$indentation</h4>
+<code>string</code><code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setNamespace"></a><div class="element clickable method public method_setNamespace" data-toggle="collapse" data-target=".method_setNamespace .collapse">
+<h2>setNamespace()</h2>
+<pre>setNamespace($namespace) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$namespace</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+<h2>setOptions()</h2>
+<pre>setOptions(array | \Traversable $options) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setOptions()</td>
+</tr>
+<tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Generator.Exception.InvalidArgumentException.html">\Zend\Code\Generator\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setRequiredFiles"></a><div class="element clickable method public method_setRequiredFiles" data-toggle="collapse" data-target=".method_setRequiredFiles .collapse">
+<h2>setRequiredFiles</h2>
+<pre>setRequiredFiles(array $requiredFiles) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$requiredFiles</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setSourceContent"></a><div class="element clickable method public method_setSourceContent" data-toggle="collapse" data-target=".method_setSourceContent .collapse">
+<h2>setSourceContent()</h2>
+<pre>setSourceContent(string $sourceContent) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setSourceContent()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sourceContent</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setSourceDirty"></a><div class="element clickable method public method_setSourceDirty" data-toggle="collapse" data-target=".method_setSourceDirty .collapse">
+<h2>setSourceDirty()</h2>
+<pre>setSourceDirty(bool $isSourceDirty) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setSourceDirty()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$isSourceDirty</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setUse"></a><div class="element clickable method public method_setUse" data-toggle="collapse" data-target=".method_setUse .collapse">
+<h2>setUse()</h2>
+<pre>setUse(string $use, string $as) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$use</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$as</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_setUses"></a><div class="element clickable method public method_setUses" data-toggle="collapse" data-target=".method_setUses .collapse">
+<h2>setUses()</h2>
+<pre>setUses(array $uses) : <a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$uses</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.FileGenerator.html">\Zend\Code\Generator\FileGenerator</a></code></div>
+</div></div>
+</div>
+<a id="method_write"></a><div class="element clickable method public method_write" data-toggle="collapse" data-target=".method_write .collapse">
+<h2>write()
+        </h2>
+<pre>write() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_body"> </a><div class="element clickable property protected property_body" data-toggle="collapse" data-target=".property_body .collapse">
+<h2></h2>
+<pre>$body : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_classes"> </a><div class="element clickable property protected property_classes" data-toggle="collapse" data-target=".property_classes .collapse">
+<h2></h2>
+<pre>$classes : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_docBlock"> </a><div class="element clickable property protected property_docBlock" data-toggle="collapse" data-target=".property_docBlock .collapse">
+<h2></h2>
+<pre>$docBlock : <a href="../classes/Zend.Code.Generator.DocBlockGenerator.html">\Zend\Code\Generator\DocBlockGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_filename"> </a><div class="element clickable property protected property_filename" data-toggle="collapse" data-target=".property_filename .collapse">
+<h2></h2>
+<pre>$filename : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_indentation"> </a><div class="element clickable property protected property_indentation" data-toggle="collapse" data-target=".property_indentation .collapse">
+<h2>4 spaces by default</h2>
+<pre>$indentation : int | string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$indentation</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_isSourceDirty"> </a><div class="element clickable property protected property_isSourceDirty" data-toggle="collapse" data-target=".property_isSourceDirty .collapse">
+<h2></h2>
+<pre>$isSourceDirty : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$isSourceDirty</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_namespace"> </a><div class="element clickable property protected property_namespace" data-toggle="collapse" data-target=".property_namespace .collapse">
+<h2></h2>
+<pre>$namespace : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_requiredFiles"> </a><div class="element clickable property protected property_requiredFiles" data-toggle="collapse" data-target=".property_requiredFiles .collapse">
+<h2></h2>
+<pre>$requiredFiles : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sourceContent"> </a><div class="element clickable property protected property_sourceContent" data-toggle="collapse" data-target=".property_sourceContent .collapse">
+<h2></h2>
+<pre>$sourceContent : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$sourceContent</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_uses"> </a><div class="element clickable property protected property_uses" data-toggle="collapse" data-target=".property_uses .collapse">
+<h2></h2>
+<pre>$uses : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_LINE_FEED"> </a><div class="element clickable constant  constant_LINE_FEED" data-toggle="collapse" data-target=".constant_LINE_FEED .collapse">
+<h2>Line feed to use in place of EOL</h2>
+<pre>LINE_FEED </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::LINE_FEED</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:08:35+08:00.<br></footer></div>
+</div>
+</body>
+</html>

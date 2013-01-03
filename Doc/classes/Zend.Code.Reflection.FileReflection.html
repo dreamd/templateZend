@@ -1,0 +1,426 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Code\Reflection\FileReflection</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___toString" title="__toString :: Serialize to string"><span class="description">Serialize to string</span><pre>__toString()</pre></a></li>
+<li class="method public "><a href="#method_export" title="export :: Export"><span class="description">Export</span><pre>export()</pre></a></li>
+<li class="method public "><a href="#method_getClass" title="getClass :: Retrieve the reflection class of a given class found in this file"><span class="description">Retrieve the reflection class of a given class found in this file</span><pre>getClass()</pre></a></li>
+<li class="method public "><a href="#method_getClasses" title="getClasses :: Return the reflection classes of the classes found inside this file"><span class="description">Return the reflection classes of the classes found inside this file</span><pre>getClasses()</pre></a></li>
+<li class="method public "><a href="#method_getContents" title="getContents :: Return the full contents of file"><span class="description">Return the full contents of file</span><pre>getContents()</pre></a></li>
+<li class="method public "><a href="#method_getDocBlock" title="getDocBlock :: Return the DocBlock"><span class="description">Return the DocBlock</span><pre>getDocBlock()</pre></a></li>
+<li class="method public "><a href="#method_getDocComment" title="getDocComment :: Return the doc comment"><span class="description">Return the doc comment</span><pre>getDocComment()</pre></a></li>
+<li class="method public "><a href="#method_getEndLine" title="getEndLine :: Get the end line / number of lines"><span class="description">Get the end line / number of lines</span><pre>getEndLine()</pre></a></li>
+<li class="method public "><a href="#method_getFileName" title="getFileName :: Return the file name of the reflected file"><span class="description">Return the file name of the reflected file</span><pre>getFileName()</pre></a></li>
+<li class="method public "><a href="#method_getFunctions" title="getFunctions :: Return the reflection functions of the functions found inside this file"><span class="description">Return the reflection functions of the functions found inside this file</span><pre>getFunctions()</pre></a></li>
+<li class="method public "><a href="#method_getNamespace" title="getNamespace :: getNamespace()"><span class="description">getNamespace()</span><pre>getNamespace()</pre></a></li>
+<li class="method public "><a href="#method_getNamespaces" title="getNamespaces :: "><span class="description">getNamespaces()
+        </span><pre>getNamespaces()</pre></a></li>
+<li class="method public "><a href="#method_getStartLine" title="getStartLine :: Get the start line - Always 1, staying consistent with the Reflection API"><span class="description">Get the start line - Always 1, staying consistent with the Reflection API</span><pre>getStartLine()</pre></a></li>
+<li class="method public "><a href="#method_getUses" title="getUses :: getUses()"><span class="description">getUses()</span><pre>getUses()</pre></a></li>
+<li class="method public "><a href="#method_toString" title="toString :: "><span class="description">toString()
+        </span><pre>toString()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_checkFileDocBlock" title="checkFileDocBlock :: Validate / check a file level DocBlock"><span class="description">Validate / check a file level DocBlock</span><pre>checkFileDocBlock()</pre></a></li>
+<li class="method protected "><a href="#method_reflect" title='reflect :: This method does the work of "reflecting" the file'><span class="description">This method does the work of "reflecting" the file</span><pre>reflect()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_classes" title="$classes :: "><span class="description"></span><pre>$classes</pre></a></li>
+<li class="property protected "><a href="#property_contents" title="$contents :: "><span class="description"></span><pre>$contents</pre></a></li>
+<li class="property protected "><a href="#property_docComment" title="$docComment :: "><span class="description"></span><pre>$docComment</pre></a></li>
+<li class="property protected "><a href="#property_endLine" title="$endLine :: "><span class="description"></span><pre>$endLine</pre></a></li>
+<li class="property protected "><a href="#property_filePath" title="$filePath :: "><span class="description"></span><pre>$filePath</pre></a></li>
+<li class="property protected "><a href="#property_functions" title="$functions :: "><span class="description"></span><pre>$functions</pre></a></li>
+<li class="property protected "><a href="#property_namespaces" title="$namespaces :: "><span class="description"></span><pre>$namespaces</pre></a></li>
+<li class="property protected "><a href="#property_requiredFiles" title="$requiredFiles :: "><span class="description"></span><pre>$requiredFiles</pre></a></li>
+<li class="property protected "><a href="#property_startLine" title="$startLine :: "><span class="description"></span><pre>$startLine</pre></a></li>
+<li class="property protected "><a href="#property_uses" title="$uses :: "><span class="description"></span><pre>$uses</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Code\Reflection\FileReflection"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.html">Code</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.Reflection.html">Reflection</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Code.Reflection.FileReflection.html">FileReflection</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Reflection.html">Zend_Reflection</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string $filename) : <a href="../classes/Zend.Code.Reflection.FileReflection.html">\Zend\Code\Reflection\FileReflection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Reflection.Exception.RuntimeException.html">\Zend\Code\Reflection\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Reflection.FileReflection.html">\Zend\Code\Reflection\FileReflection</a></code></div>
+</div></div>
+</div>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>Serialize to string</h2>
+<pre>__toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Required by the Reflector interface</p></div>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>What should this serialization look like?</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_export"></a><div class="element clickable method public method_export" data-toggle="collapse" data-target=".method_export .collapse">
+<h2>Export</h2>
+<pre>export() : null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Required by the Reflector interface.</p></div>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>What should this do?</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="method_getClass"></a><div class="element clickable method public method_getClass" data-toggle="collapse" data-target=".method_getClass .collapse">
+<h2>Retrieve the reflection class of a given class found in this file</h2>
+<pre>getClass(null | string $name) : <a href="../classes/Zend.Code.Reflection.ClassReflection.html">\Zend\Code\Reflection\ClassReflection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>null</code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Reflection.Exception.InvalidArgumentException.html">\Zend\Code\Reflection\Exception\InvalidArgumentException</a></code></th>
+<td>for invalid class name or invalid reflection class</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Reflection.ClassReflection.html">\Zend\Code\Reflection\ClassReflection</a></code></div>
+</div></div>
+</div>
+<a id="method_getClasses"></a><div class="element clickable method public method_getClasses" data-toggle="collapse" data-target=".method_getClasses .collapse">
+<h2>Return the reflection classes of the classes found inside this file</h2>
+<pre>getClasses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of \Zend\Code\Reflection\ReflectionClass instances</div>
+</div></div>
+</div>
+<a id="method_getContents"></a><div class="element clickable method public method_getContents" data-toggle="collapse" data-target=".method_getContents .collapse">
+<h2>Return the full contents of file</h2>
+<pre>getContents() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getDocBlock"></a><div class="element clickable method public method_getDocBlock" data-toggle="collapse" data-target=".method_getDocBlock .collapse">
+<h2>Return the DocBlock</h2>
+<pre>getDocBlock() : <a href="../classes/Zend.Code.Reflection.DocBlockReflection.html">\Zend\Code\Reflection\DocBlockReflection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Reflection.DocBlockReflection.html">\Zend\Code\Reflection\DocBlockReflection</a></code></div>
+</div></div>
+</div>
+<a id="method_getDocComment"></a><div class="element clickable method public method_getDocComment" data-toggle="collapse" data-target=".method_getDocComment .collapse">
+<h2>Return the doc comment</h2>
+<pre>getDocComment() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getEndLine"></a><div class="element clickable method public method_getEndLine" data-toggle="collapse" data-target=".method_getEndLine .collapse">
+<h2>Get the end line / number of lines</h2>
+<pre>getEndLine() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getFileName"></a><div class="element clickable method public method_getFileName" data-toggle="collapse" data-target=".method_getFileName .collapse">
+<h2>Return the file name of the reflected file</h2>
+<pre>getFileName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getFunctions"></a><div class="element clickable method public method_getFunctions" data-toggle="collapse" data-target=".method_getFunctions .collapse">
+<h2>Return the reflection functions of the functions found inside this file</h2>
+<pre>getFunctions() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of Zend_Reflection_Functions</div>
+</div></div>
+</div>
+<a id="method_getNamespace"></a><div class="element clickable method public method_getNamespace" data-toggle="collapse" data-target=".method_getNamespace .collapse">
+<h2>getNamespace()</h2>
+<pre>getNamespace() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getNamespaces"></a><div class="element clickable method public method_getNamespaces" data-toggle="collapse" data-target=".method_getNamespaces .collapse">
+<h2>getNamespaces()
+        </h2>
+<pre>getNamespaces() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getStartLine"></a><div class="element clickable method public method_getStartLine" data-toggle="collapse" data-target=".method_getStartLine .collapse">
+<h2>Get the start line - Always 1, staying consistent with the Reflection API</h2>
+<pre>getStartLine() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getUses"></a><div class="element clickable method public method_getUses" data-toggle="collapse" data-target=".method_getUses .collapse">
+<h2>getUses()</h2>
+<pre>getUses() : string[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string[]</code></div>
+</div></div>
+</div>
+<a id="method_toString"></a><div class="element clickable method public method_toString" data-toggle="collapse" data-target=".method_toString .collapse">
+<h2>toString()
+        </h2>
+<pre>toString() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_checkFileDocBlock"></a><div class="element clickable method protected method_checkFileDocBlock" data-toggle="collapse" data-target=".method_checkFileDocBlock .collapse">
+<h2>Validate / check a file level DocBlock</h2>
+<pre>checkFileDocBlock(array $tokens) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tokens</h4>
+<code>array</code><p>Array of tokenizer tokens</p></div>
+</div></div>
+</div>
+<a id="method_reflect"></a><div class="element clickable method protected method_reflect" data-toggle="collapse" data-target=".method_reflect .collapse">
+<h2>This method does the work of "reflecting" the file</h2>
+<pre>reflect() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Uses Zend\Code\Scanner\FileScanner to gather file information</p></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_classes"> </a><div class="element clickable property protected property_classes" data-toggle="collapse" data-target=".property_classes .collapse">
+<h2></h2>
+<pre>$classes : \Zend\Code\Reflection\ReflectionClass[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_contents"> </a><div class="element clickable property protected property_contents" data-toggle="collapse" data-target=".property_contents .collapse">
+<h2></h2>
+<pre>$contents : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_docComment"> </a><div class="element clickable property protected property_docComment" data-toggle="collapse" data-target=".property_docComment .collapse">
+<h2></h2>
+<pre>$docComment : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_endLine"> </a><div class="element clickable property protected property_endLine" data-toggle="collapse" data-target=".property_endLine .collapse">
+<h2></h2>
+<pre>$endLine : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_filePath"> </a><div class="element clickable property protected property_filePath" data-toggle="collapse" data-target=".property_filePath .collapse">
+<h2></h2>
+<pre>$filePath : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_functions"> </a><div class="element clickable property protected property_functions" data-toggle="collapse" data-target=".property_functions .collapse">
+<h2></h2>
+<pre>$functions : <a href="library.Zend.Code.Reflection.FunctionReflection.html#%5CZend%5CCode%5CReflection%5CFunctionReflection">\Zend\Code\Reflection\FunctionReflection[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_namespaces"> </a><div class="element clickable property protected property_namespaces" data-toggle="collapse" data-target=".property_namespaces .collapse">
+<h2></h2>
+<pre>$namespaces : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_requiredFiles"> </a><div class="element clickable property protected property_requiredFiles" data-toggle="collapse" data-target=".property_requiredFiles .collapse">
+<h2></h2>
+<pre>$requiredFiles : string[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_startLine"> </a><div class="element clickable property protected property_startLine" data-toggle="collapse" data-target=".property_startLine .collapse">
+<h2></h2>
+<pre>$startLine : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_uses"> </a><div class="element clickable property protected property_uses" data-toggle="collapse" data-target=".property_uses .collapse">
+<h2></h2>
+<pre>$uses : string[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:08:39+08:00.<br></footer></div>
+</div>
+</body>
+</html>

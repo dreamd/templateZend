@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Code\Scanner\DerivedClassScanner</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___toString" title="__toString :: "><span class="description">__toString()
+        </span><pre>__toString()</pre></a></li>
+<li class="method public inherited"><a href="#method_export" title="export :: Export"><span class="description">Export</span><pre>export()</pre></a></li>
+<li class="method public inherited"><a href="#method_getAnnotations" title="getAnnotations :: Get annotations"><span class="description">Get annotations</span><pre>getAnnotations()</pre></a></li>
+<li class="method public "><a href="#method_getConstants" title="getConstants :: Get constants"><span class="description">Get constants</span><pre>getConstants()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDocBlock" title="getDocBlock :: Get doc block"><span class="description">Get doc block</span><pre>getDocBlock()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDocComment" title="getDocComment :: Get doc comment"><span class="description">Get doc comment</span><pre>getDocComment()</pre></a></li>
+<li class="method public "><a href="#method_getInterfaces" title="getInterfaces :: Get interfaces"><span class="description">Get interfaces</span><pre>getInterfaces()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLineEnd" title="getLineEnd :: Get line end"><span class="description">Get line end</span><pre>getLineEnd()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLineStart" title="getLineStart :: Get line start"><span class="description">Get line start</span><pre>getLineStart()</pre></a></li>
+<li class="method public "><a href="#method_getMethod" title="getMethod :: Get method"><span class="description">Get method</span><pre>getMethod()</pre></a></li>
+<li class="method public "><a href="#method_getMethodNames" title="getMethodNames :: Get method names"><span class="description">Get method names</span><pre>getMethodNames()</pre></a></li>
+<li class="method public "><a href="#method_getMethods" title="getMethods :: Get methods"><span class="description">Get methods</span><pre>getMethods()</pre></a></li>
+<li class="method public "><a href="#method_getName" title="getName :: Get name"><span class="description">Get name</span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#method_getParentClass" title="getParentClass :: Get parent class"><span class="description">Get parent class</span><pre>getParentClass()</pre></a></li>
+<li class="method public "><a href="#method_getParentClasses" title="getParentClasses :: Get parent classes"><span class="description">Get parent classes</span><pre>getParentClasses()</pre></a></li>
+<li class="method public "><a href="#method_getProperties" title="getProperties :: Get properties"><span class="description">Get properties</span><pre>getProperties()</pre></a></li>
+<li class="method public inherited"><a href="#method_getPropertyNames" title="getPropertyNames :: Get property names"><span class="description">Get property names</span><pre>getPropertyNames()</pre></a></li>
+<li class="method public "><a href="#method_getShortName" title="getShortName :: Get short name"><span class="description">Get short name</span><pre>getShortName()</pre></a></li>
+<li class="method public "><a href="#method_hasMethod" title="hasMethod :: Check for method"><span class="description">Check for method</span><pre>hasMethod()</pre></a></li>
+<li class="method public "><a href="#method_hasParentClass" title="hasParentClass :: Check for parent class"><span class="description">Check for parent class</span><pre>hasParentClass()</pre></a></li>
+<li class="method public "><a href="#method_isAbstract" title="isAbstract :: Check if is abstract"><span class="description">Check if is abstract</span><pre>isAbstract()</pre></a></li>
+<li class="method public "><a href="#method_isFinal" title="isFinal :: Check if final"><span class="description">Check if final</span><pre>isFinal()</pre></a></li>
+<li class="method public "><a href="#method_isInstantiable" title="isInstantiable :: Check if instantiable"><span class="description">Check if instantiable</span><pre>isInstantiable()</pre></a></li>
+<li class="method public "><a href="#method_isInterface" title="isInterface :: Check if is interface"><span class="description">Check if is interface</span><pre>isInterface()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected inherited"><a href="#method_scan" title="scan :: Scan"><span class="description">Scan</span><pre>scan()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_classScanner" title="$classScanner :: "><span class="description"></span><pre>$classScanner</pre></a></li>
+<li class="property protected "><a href="#property_directoryScanner" title="$directoryScanner :: "><span class="description"></span><pre>$directoryScanner</pre></a></li>
+<li class="property protected inherited"><a href="#property_docComment" title="$docComment :: "><span class="description"></span><pre>$docComment</pre></a></li>
+<li class="property protected inherited"><a href="#property_infos" title="$infos :: "><span class="description"></span><pre>$infos</pre></a></li>
+<li class="property protected "><a href="#property_interfaceClassScanners" title="$interfaceClassScanners :: "><span class="description"></span><pre>$interfaceClassScanners</pre></a></li>
+<li class="property protected inherited"><a href="#property_interfaces" title="$interfaces :: "><span class="description"></span><pre>$interfaces</pre></a></li>
+<li class="property protected inherited"><a href="#property_isAbstract" title="$isAbstract :: "><span class="description"></span><pre>$isAbstract</pre></a></li>
+<li class="property protected inherited"><a href="#property_isFinal" title="$isFinal :: "><span class="description"></span><pre>$isFinal</pre></a></li>
+<li class="property protected inherited"><a href="#property_isInterface" title="$isInterface :: "><span class="description"></span><pre>$isInterface</pre></a></li>
+<li class="property protected inherited"><a href="#property_isScanned" title="$isScanned :: "><span class="description"></span><pre>$isScanned</pre></a></li>
+<li class="property protected inherited"><a href="#property_lineEnd" title="$lineEnd :: "><span class="description"></span><pre>$lineEnd</pre></a></li>
+<li class="property protected inherited"><a href="#property_lineStart" title="$lineStart :: "><span class="description"></span><pre>$lineStart</pre></a></li>
+<li class="property protected inherited"><a href="#property_name" title="$name :: "><span class="description"></span><pre>$name</pre></a></li>
+<li class="property protected inherited"><a href="#property_nameInformation" title="$nameInformation :: "><span class="description"></span><pre>$nameInformation</pre></a></li>
+<li class="property protected inherited"><a href="#property_parentClass" title="$parentClass :: "><span class="description"></span><pre>$parentClass</pre></a></li>
+<li class="property protected "><a href="#property_parentClassScanners" title="$parentClassScanners :: "><span class="description"></span><pre>$parentClassScanners</pre></a></li>
+<li class="property protected inherited"><a href="#property_shortInterfaces" title="$shortInterfaces :: "><span class="description"></span><pre>$shortInterfaces</pre></a></li>
+<li class="property protected inherited"><a href="#property_shortName" title="$shortName :: "><span class="description"></span><pre>$shortName</pre></a></li>
+<li class="property protected inherited"><a href="#property_shortParentClass" title="$shortParentClass :: "><span class="description"></span><pre>$shortParentClass</pre></a></li>
+<li class="property protected inherited"><a href="#property_tokens" title="$tokens :: "><span class="description"></span><pre>$tokens</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Code\Scanner\DerivedClassScanner"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.html">Code</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Code.Scanner.html">Scanner</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Code.Scanner.DerivedClassScanner.html">DerivedClassScanner</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(\Zend\Code\Scanner\ClassScanner $classScanner, \Zend\Code\Scanner\DirectoryScanner $directoryScanner) : <a href="../classes/Zend.Code.Scanner.ClassScanner.html">\Zend\Code\Scanner\ClassScanner</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classScanner</h4>
+<code><a href="../classes/Zend.Code.Scanner.ClassScanner.html">\Zend\Code\Scanner\ClassScanner</a></code>
+</div>
+<div class="subelement argument">
+<h4>$directoryScanner</h4>
+<code><a href="../classes/Zend.Code.Scanner.DirectoryScanner.html">\Zend\Code\Scanner\DirectoryScanner</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Scanner.ClassScanner.html">\Zend\Code\Scanner\ClassScanner</a></code></div>
+</div></div>
+</div>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>__toString()
+        </h2>
+<pre>__toString() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::__toString()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_export"></a><div class="element clickable method public method_export" data-toggle="collapse" data-target=".method_export .collapse">
+<h2>Export</h2>
+<pre>export() </pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::export()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getAnnotations"></a><div class="element clickable method public method_getAnnotations" data-toggle="collapse" data-target=".method_getAnnotations .collapse">
+<h2>Get annotations</h2>
+<pre>getAnnotations() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getAnnotations()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getConstants"></a><div class="element clickable method public method_getConstants" data-toggle="collapse" data-target=".method_getConstants .collapse">
+<h2>Get constants</h2>
+<pre>getConstants() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getDocBlock"></a><div class="element clickable method public method_getDocBlock" data-toggle="collapse" data-target=".method_getDocBlock .collapse">
+<h2>Get doc block</h2>
+<pre>getDocBlock() : false | <a href="../classes/Zend.Code.Scanner.DocBlockScanner.html">\Zend\Code\Scanner\DocBlockScanner</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getDocBlock()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>false</code><code><a href="../classes/Zend.Code.Scanner.DocBlockScanner.html">\Zend\Code\Scanner\DocBlockScanner</a></code>
+</div>
+</div></div>
+</div>
+<a id="method_getDocComment"></a><div class="element clickable method public method_getDocComment" data-toggle="collapse" data-target=".method_getDocComment .collapse">
+<h2>Get doc comment</h2>
+<pre>getDocComment() : null | string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getDocComment()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getInterfaces"></a><div class="element clickable method public method_getInterfaces" data-toggle="collapse" data-target=".method_getInterfaces .collapse">
+<h2>Get interfaces</h2>
+<pre>getInterfaces(bool $returnClassScanners) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$returnClassScanners</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getLineEnd"></a><div class="element clickable method public method_getLineEnd" data-toggle="collapse" data-target=".method_getLineEnd .collapse">
+<h2>Get line end</h2>
+<pre>getLineEnd() : int | null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getLineEnd()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_getLineStart"></a><div class="element clickable method public method_getLineStart" data-toggle="collapse" data-target=".method_getLineStart .collapse">
+<h2>Get line start</h2>
+<pre>getLineStart() : int | null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getLineStart()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_getMethod"></a><div class="element clickable method public method_getMethod" data-toggle="collapse" data-target=".method_getMethod .collapse">
+<h2>Get method</h2>
+<pre>getMethod(int | string $methodNameOrInfoIndex) : <a href="../classes/Zend.Code.Scanner.MethodScanner.html">\Zend\Code\Scanner\MethodScanner</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$methodNameOrInfoIndex</h4>
+<code>int</code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Exception.InvalidArgumentException.html">\Zend\Code\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Scanner.MethodScanner.html">\Zend\Code\Scanner\MethodScanner</a></code></div>
+</div></div>
+</div>
+<a id="method_getMethodNames"></a><div class="element clickable method public method_getMethodNames" data-toggle="collapse" data-target=".method_getMethodNames .collapse">
+<h2>Get method names</h2>
+<pre>getMethodNames() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getMethods"></a><div class="element clickable method public method_getMethods" data-toggle="collapse" data-target=".method_getMethods .collapse">
+<h2>Get methods</h2>
+<pre>getMethods() : <a href="library.Zend.Code.Scanner.MethodScanner.html#%5CZend%5CCode%5CScanner%5CMethodScanner">\Zend\Code\Scanner\MethodScanner[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="library.Zend.Code.Scanner.MethodScanner.html#%5CZend%5CCode%5CScanner%5CMethodScanner">\Zend\Code\Scanner\MethodScanner[]</a></code></div>
+</div></div>
+</div>
+<a id="method_getName"></a><div class="element clickable method public method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
+<h2>Get name</h2>
+<pre>getName() : null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getParentClass"></a><div class="element clickable method public method_getParentClass" data-toggle="collapse" data-target=".method_getParentClass .collapse">
+<h2>Get parent class</h2>
+<pre>getParentClass() : null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_getParentClasses"></a><div class="element clickable method public method_getParentClasses" data-toggle="collapse" data-target=".method_getParentClasses .collapse">
+<h2>Get parent classes</h2>
+<pre>getParentClasses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getProperties"></a><div class="element clickable method public method_getProperties" data-toggle="collapse" data-target=".method_getProperties .collapse">
+<h2>Get properties</h2>
+<pre>getProperties(bool $returnScannerProperty) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$returnScannerProperty</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getPropertyNames"></a><div class="element clickable method public method_getPropertyNames" data-toggle="collapse" data-target=".method_getPropertyNames .collapse">
+<h2>Get property names</h2>
+<pre>getPropertyNames() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::getPropertyNames()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getShortName"></a><div class="element clickable method public method_getShortName" data-toggle="collapse" data-target=".method_getShortName .collapse">
+<h2>Get short name</h2>
+<pre>getShortName() : null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_hasMethod"></a><div class="element clickable method public method_hasMethod" data-toggle="collapse" data-target=".method_hasMethod .collapse">
+<h2>Check for method</h2>
+<pre>hasMethod(string $name) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_hasParentClass"></a><div class="element clickable method public method_hasParentClass" data-toggle="collapse" data-target=".method_hasParentClass .collapse">
+<h2>Check for parent class</h2>
+<pre>hasParentClass() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_isAbstract"></a><div class="element clickable method public method_isAbstract" data-toggle="collapse" data-target=".method_isAbstract .collapse">
+<h2>Check if is abstract</h2>
+<pre>isAbstract() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_isFinal"></a><div class="element clickable method public method_isFinal" data-toggle="collapse" data-target=".method_isFinal .collapse">
+<h2>Check if final</h2>
+<pre>isFinal() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_isInstantiable"></a><div class="element clickable method public method_isInstantiable" data-toggle="collapse" data-target=".method_isInstantiable .collapse">
+<h2>Check if instantiable</h2>
+<pre>isInstantiable() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_isInterface"></a><div class="element clickable method public method_isInterface" data-toggle="collapse" data-target=".method_isInterface .collapse">
+<h2>Check if is interface</h2>
+<pre>isInterface() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_scan"></a><div class="element clickable method protected method_scan" data-toggle="collapse" data-target=".method_scan .collapse">
+<h2>Scan</h2>
+<pre>scan() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::scan()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Exception.RuntimeException.html">\Zend\Code\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_classScanner"> </a><div class="element clickable property protected property_classScanner" data-toggle="collapse" data-target=".property_classScanner .collapse">
+<h2></h2>
+<pre>$classScanner : <a href="../classes/Zend.Code.Scanner.ClassScanner.html">\Zend\Code\Scanner\ClassScanner</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_directoryScanner"> </a><div class="element clickable property protected property_directoryScanner" data-toggle="collapse" data-target=".property_directoryScanner .collapse">
+<h2></h2>
+<pre>$directoryScanner : <a href="../classes/Zend.Code.Scanner.DirectoryScanner.html">\Zend\Code\Scanner\DirectoryScanner</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_docComment"> </a><div class="element clickable property protected property_docComment" data-toggle="collapse" data-target=".property_docComment .collapse">
+<h2></h2>
+<pre>$docComment : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$docComment</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_infos"> </a><div class="element clickable property protected property_infos" data-toggle="collapse" data-target=".property_infos .collapse">
+<h2></h2>
+<pre>$infos : array[]</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$infos</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_interfaceClassScanners"> </a><div class="element clickable property protected property_interfaceClassScanners" data-toggle="collapse" data-target=".property_interfaceClassScanners .collapse">
+<h2></h2>
+<pre>$interfaceClassScanners : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_interfaces"> </a><div class="element clickable property protected property_interfaces" data-toggle="collapse" data-target=".property_interfaces .collapse">
+<h2></h2>
+<pre>$interfaces : string[]</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$interfaces</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_isAbstract"> </a><div class="element clickable property protected property_isAbstract" data-toggle="collapse" data-target=".property_isAbstract .collapse">
+<h2></h2>
+<pre>$isAbstract : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$isAbstract</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_isFinal"> </a><div class="element clickable property protected property_isFinal" data-toggle="collapse" data-target=".property_isFinal .collapse">
+<h2></h2>
+<pre>$isFinal : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$isFinal</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_isInterface"> </a><div class="element clickable property protected property_isInterface" data-toggle="collapse" data-target=".property_isInterface .collapse">
+<h2></h2>
+<pre>$isInterface : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$isInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_isScanned"> </a><div class="element clickable property protected property_isScanned" data-toggle="collapse" data-target=".property_isScanned .collapse">
+<h2></h2>
+<pre>$isScanned : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$isScanned</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_lineEnd"> </a><div class="element clickable property protected property_lineEnd" data-toggle="collapse" data-target=".property_lineEnd .collapse">
+<h2></h2>
+<pre>$lineEnd : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$lineEnd</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_lineStart"> </a><div class="element clickable property protected property_lineStart" data-toggle="collapse" data-target=".property_lineStart .collapse">
+<h2></h2>
+<pre>$lineStart : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$lineStart</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_name"> </a><div class="element clickable property protected property_name" data-toggle="collapse" data-target=".property_name .collapse">
+<h2></h2>
+<pre>$name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_nameInformation"> </a><div class="element clickable property protected property_nameInformation" data-toggle="collapse" data-target=".property_nameInformation .collapse">
+<h2></h2>
+<pre>$nameInformation : <a href="../classes/Zend.Code.NameInformation.html">\Zend\Code\NameInformation</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$nameInformation</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_parentClass"> </a><div class="element clickable property protected property_parentClass" data-toggle="collapse" data-target=".property_parentClass .collapse">
+<h2></h2>
+<pre>$parentClass : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$parentClass</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_parentClassScanners"> </a><div class="element clickable property protected property_parentClassScanners" data-toggle="collapse" data-target=".property_parentClassScanners .collapse">
+<h2></h2>
+<pre>$parentClassScanners : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_shortInterfaces"> </a><div class="element clickable property protected property_shortInterfaces" data-toggle="collapse" data-target=".property_shortInterfaces .collapse">
+<h2></h2>
+<pre>$shortInterfaces : string[]</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$shortInterfaces</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_shortName"> </a><div class="element clickable property protected property_shortName" data-toggle="collapse" data-target=".property_shortName .collapse">
+<h2></h2>
+<pre>$shortName : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$shortName</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_shortParentClass"> </a><div class="element clickable property protected property_shortParentClass" data-toggle="collapse" data-target=".property_shortParentClass .collapse">
+<h2></h2>
+<pre>$shortParentClass : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$shortParentClass</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_tokens"> </a><div class="element clickable property protected property_tokens" data-toggle="collapse" data-target=".property_tokens .collapse">
+<h2></h2>
+<pre>$tokens : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Scanner\ClassScanner::$$tokens</td>
+</tr></table>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:08:41+08:00.<br></footer></div>
+</div>
+</body>
+</html>

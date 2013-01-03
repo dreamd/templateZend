@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\I18n\Translator\Translator</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_addRemoteTranslations" title="addRemoteTranslations :: Add remote translations."><span class="description">Add remote translations.</span><pre>addRemoteTranslations()</pre></a></li>
+<li class="method public "><a href="#method_addTranslationFile" title="addTranslationFile :: Add a translation file."><span class="description">Add a translation file.</span><pre>addTranslationFile()</pre></a></li>
+<li class="method public "><a href="#method_addTranslationFilePattern" title="addTranslationFilePattern :: Add multiple translations with a file pattern."><span class="description">Add multiple translations with a file pattern.</span><pre>addTranslationFilePattern()</pre></a></li>
+<li class="method public "><a href="#method_factory" title="factory :: Instantiate a translator"><span class="description">Instantiate a translator</span><pre>factory()</pre></a></li>
+<li class="method public "><a href="#method_getCache" title="getCache :: Returns the set cache"><span class="description">Returns the set cache</span><pre>getCache()</pre></a></li>
+<li class="method public "><a href="#method_getFallbackLocale" title="getFallbackLocale :: Get the fallback locale."><span class="description">Get the fallback locale.</span><pre>getFallbackLocale()</pre></a></li>
+<li class="method public "><a href="#method_getLocale" title="getLocale :: Get the default locale."><span class="description">Get the default locale.</span><pre>getLocale()</pre></a></li>
+<li class="method public "><a href="#method_getPluginManager" title="getPluginManager :: Retrieve the plugin manager for translation loaders."><span class="description">Retrieve the plugin manager for translation loaders.</span><pre>getPluginManager()</pre></a></li>
+<li class="method public "><a href="#method_setCache" title="setCache :: Sets a cache"><span class="description">Sets a cache</span><pre>setCache()</pre></a></li>
+<li class="method public "><a href="#method_setFallbackLocale" title="setFallbackLocale :: Set the fallback locale."><span class="description">Set the fallback locale.</span><pre>setFallbackLocale()</pre></a></li>
+<li class="method public "><a href="#method_setLocale" title="setLocale :: Set the default locale."><span class="description">Set the default locale.</span><pre>setLocale()</pre></a></li>
+<li class="method public "><a href="#method_setPluginManager" title="setPluginManager :: Set the plugin manager for translation loaders"><span class="description">Set the plugin manager for translation loaders</span><pre>setPluginManager()</pre></a></li>
+<li class="method public "><a href="#method_translate" title="translate :: Translate a message."><span class="description">Translate a message.</span><pre>translate()</pre></a></li>
+<li class="method public "><a href="#method_translatePlural" title="translatePlural :: Translate a plural message."><span class="description">Translate a plural message.</span><pre>translatePlural()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_getTranslatedMessage" title="getTranslatedMessage :: Get a translated message."><span class="description">Get a translated message.</span><pre>getTranslatedMessage()</pre></a></li>
+<li class="method protected "><a href="#method_loadMessages" title="loadMessages :: Load messages for a given language and domain."><span class="description">Load messages for a given language and domain.</span><pre>loadMessages()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_cache" title="$cache :: Translation cache."><span class="description"></span><pre>$cache</pre></a></li>
+<li class="property protected "><a href="#property_fallbackLocale" title="$fallbackLocale :: Locale to use as fallback if there is no translation."><span class="description"></span><pre>$fallbackLocale</pre></a></li>
+<li class="property protected "><a href="#property_files" title="$files :: Files used for loading messages."><span class="description"></span><pre>$files</pre></a></li>
+<li class="property protected "><a href="#property_locale" title="$locale :: Default locale."><span class="description"></span><pre>$locale</pre></a></li>
+<li class="property protected "><a href="#property_messages" title="$messages :: Messages loaded by the translator."><span class="description"></span><pre>$messages</pre></a></li>
+<li class="property protected "><a href="#property_patterns" title="$patterns :: Patterns used for loading messages."><span class="description"></span><pre>$patterns</pre></a></li>
+<li class="property protected "><a href="#property_pluginManager" title="$pluginManager :: Plugin manager for translation loaders."><span class="description"></span><pre>$pluginManager</pre></a></li>
+<li class="property protected "><a href="#property_remote" title="$remote :: Remote locations for loading messages."><span class="description"></span><pre>$remote</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\I18n\Translator\Translator"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.I18n.html">I18n</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.I18n.Translator.html">Translator</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.I18n.Translator.Translator.html">Translator</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Translator.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.I18n.Translator.html">Zend_I18n</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Translator</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_addRemoteTranslations"></a><div class="element clickable method public method_addRemoteTranslations" data-toggle="collapse" data-target=".method_addRemoteTranslations .collapse">
+<h2>Add remote translations.</h2>
+<pre>addRemoteTranslations(string $type, string $textDomain) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_addTranslationFile"></a><div class="element clickable method public method_addTranslationFile" data-toggle="collapse" data-target=".method_addTranslationFile .collapse">
+<h2>Add a translation file.</h2>
+<pre>addTranslationFile(string $type, string $filename, string $textDomain, string $locale) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_addTranslationFilePattern"></a><div class="element clickable method public method_addTranslationFilePattern" data-toggle="collapse" data-target=".method_addTranslationFilePattern .collapse">
+<h2>Add multiple translations with a file pattern.</h2>
+<pre>addTranslationFilePattern(string $type, string $baseDir, string $pattern, string $textDomain) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$baseDir</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$pattern</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_factory"></a><div class="element clickable method public method_factory" data-toggle="collapse" data-target=".method_factory .collapse">
+<h2>Instantiate a translator</h2>
+<pre>factory(array | \Traversable $options) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><code>\Traversable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.I18n.Exception.InvalidArgumentException.html">\Zend\I18n\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_getCache"></a><div class="element clickable method public method_getCache" data-toggle="collapse" data-target=".method_getCache .collapse">
+<h2>Returns the set cache</h2>
+<pre>getCache() : <a href="../classes/Zend.Cache.Storage.StorageInterface.html">\Zend\Cache\Storage\StorageInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.StorageInterface.html">\Zend\Cache\Storage\StorageInterface</a></code>The set cache</div>
+</div></div>
+</div>
+<a id="method_getFallbackLocale"></a><div class="element clickable method public method_getFallbackLocale" data-toggle="collapse" data-target=".method_getFallbackLocale .collapse">
+<h2>Get the fallback locale.</h2>
+<pre>getFallbackLocale() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getLocale"></a><div class="element clickable method public method_getLocale" data-toggle="collapse" data-target=".method_getLocale .collapse">
+<h2>Get the default locale.</h2>
+<pre>getLocale() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getPluginManager"></a><div class="element clickable method public method_getPluginManager" data-toggle="collapse" data-target=".method_getPluginManager .collapse">
+<h2>Retrieve the plugin manager for translation loaders.</h2>
+<pre>getPluginManager() : <a href="../classes/Zend.I18n.Translator.LoaderPluginManager.html">\Zend\I18n\Translator\LoaderPluginManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Lazy loads an instance if none currently set.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.LoaderPluginManager.html">\Zend\I18n\Translator\LoaderPluginManager</a></code></div>
+</div></div>
+</div>
+<a id="method_setCache"></a><div class="element clickable method public method_setCache" data-toggle="collapse" data-target=".method_setCache .collapse">
+<h2>Sets a cache</h2>
+<pre>setCache(\Zend\Cache\Storage\StorageInterface $cache) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$cache</h4>
+<code><a href="../classes/Zend.Cache.Storage.StorageInterface.html">\Zend\Cache\Storage\StorageInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_setFallbackLocale"></a><div class="element clickable method public method_setFallbackLocale" data-toggle="collapse" data-target=".method_setFallbackLocale .collapse">
+<h2>Set the fallback locale.</h2>
+<pre>setFallbackLocale(string $locale) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_setLocale"></a><div class="element clickable method public method_setLocale" data-toggle="collapse" data-target=".method_setLocale .collapse">
+<h2>Set the default locale.</h2>
+<pre>setLocale(string $locale) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_setPluginManager"></a><div class="element clickable method public method_setPluginManager" data-toggle="collapse" data-target=".method_setPluginManager .collapse">
+<h2>Set the plugin manager for translation loaders</h2>
+<pre>setPluginManager(\Zend\I18n\Translator\LoaderPluginManager $pluginManager) : <a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pluginManager</h4>
+<code><a href="../classes/Zend.I18n.Translator.LoaderPluginManager.html">\Zend\I18n\Translator\LoaderPluginManager</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.I18n.Translator.Translator.html">\Zend\I18n\Translator\Translator</a></code></div>
+</div></div>
+</div>
+<a id="method_translate"></a><div class="element clickable method public method_translate" data-toggle="collapse" data-target=".method_translate .collapse">
+<h2>Translate a message.</h2>
+<pre>translate(string $message, string $textDomain, string $locale) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_translatePlural"></a><div class="element clickable method public method_translatePlural" data-toggle="collapse" data-target=".method_translatePlural .collapse">
+<h2>Translate a plural message.</h2>
+<pre>translatePlural(string $singular, string $plural, int $number, string $textDomain, string | null $locale) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$singular</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$plural</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$number</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.I18n.Exception.OutOfBoundsException.html">\Zend\I18n\Exception\OutOfBoundsException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getTranslatedMessage"></a><div class="element clickable method protected method_getTranslatedMessage" data-toggle="collapse" data-target=".method_getTranslatedMessage .collapse">
+<h2>Get a translated message.</h2>
+<pre>getTranslatedMessage(string $message, string $locale, string $textDomain) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_loadMessages"></a><div class="element clickable method protected method_loadMessages" data-toggle="collapse" data-target=".method_loadMessages .collapse">
+<h2>Load messages for a given language and domain.</h2>
+<pre>loadMessages(string $textDomain, string $locale) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$textDomain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.I18n.Exception.RuntimeException.html">\Zend\I18n\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_cache"> </a><div class="element clickable property protected property_cache" data-toggle="collapse" data-target=".property_cache .collapse">
+<h2></h2>
+<pre>$cache : <a href="../classes/Zend.Cache.Storage.StorageInterface.html">\Zend\Cache\Storage\StorageInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_fallbackLocale"> </a><div class="element clickable property protected property_fallbackLocale" data-toggle="collapse" data-target=".property_fallbackLocale .collapse">
+<h2></h2>
+<pre>$fallbackLocale : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_files"> </a><div class="element clickable property protected property_files" data-toggle="collapse" data-target=".property_files .collapse">
+<h2></h2>
+<pre>$files : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_locale"> </a><div class="element clickable property protected property_locale" data-toggle="collapse" data-target=".property_locale .collapse">
+<h2></h2>
+<pre>$locale : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_messages"> </a><div class="element clickable property protected property_messages" data-toggle="collapse" data-target=".property_messages .collapse">
+<h2></h2>
+<pre>$messages : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_patterns"> </a><div class="element clickable property protected property_patterns" data-toggle="collapse" data-target=".property_patterns .collapse">
+<h2></h2>
+<pre>$patterns : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_pluginManager"> </a><div class="element clickable property protected property_pluginManager" data-toggle="collapse" data-target=".property_pluginManager .collapse">
+<h2></h2>
+<pre>$pluginManager : <a href="../classes/Zend.I18n.Translator.LoaderPluginManager.html">\Zend\I18n\Translator\LoaderPluginManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_remote"> </a><div class="element clickable property protected property_remote" data-toggle="collapse" data-target=".property_remote .collapse">
+<h2></h2>
+<pre>$remote : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:11:34+08:00.<br></footer></div>
+</div>
+</body>
+</html>

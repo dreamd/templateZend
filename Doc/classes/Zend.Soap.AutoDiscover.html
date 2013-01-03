@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Soap\AutoDiscover</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addFunction" title="addFunction :: Add a Single or Multiple Functions to the WSDL"><span class="description">Add a Single or Multiple Functions to the WSDL</span><pre>addFunction()</pre></a></li>
+<li class="method public "><a href="#method_dump" title="dump :: Proxy to WSDL dump function"><span class="description">Proxy to WSDL dump function</span><pre>dump()</pre></a></li>
+<li class="method public "><a href="#method_generate" title="generate :: Generate the WSDL file from the configured input."><span class="description">Generate the WSDL file from the configured input.</span><pre>generate()</pre></a></li>
+<li class="method public "><a href="#method_getClassMap" title="getClassMap :: Get the class map of php to wsdl qname types."><span class="description">Get the class map of php to wsdl qname types.</span><pre>getClassMap()</pre></a></li>
+<li class="method public "><a href="#method_getDiscoveryStrategy" title="getDiscoveryStrategy :: "><span class="description">getDiscoveryStrategy()
+        </span><pre>getDiscoveryStrategy()</pre></a></li>
+<li class="method public "><a href="#method_getServiceName" title="getServiceName :: Get service name"><span class="description">Get service name</span><pre>getServiceName()</pre></a></li>
+<li class="method public "><a href="#method_getUri" title="getUri :: Return the current Uri that the SOAP WSDL Service will be located at."><span class="description">Return the current Uri that the SOAP WSDL Service will be located at.</span><pre>getUri()</pre></a></li>
+<li class="method public "><a href="#method_getWsdlClass" title="getWsdlClass :: Return the name of the WSDL handling class."><span class="description">Return the name of the WSDL handling class.</span><pre>getWsdlClass()</pre></a></li>
+<li class="method public "><a href="#method_setBindingStyle" title="setBindingStyle :: Set Binding soap:binding style."><span class="description">Set Binding soap:binding style.</span><pre>setBindingStyle()</pre></a></li>
+<li class="method public "><a href="#method_setClass" title="setClass :: Set the Class the SOAP server will use"><span class="description">Set the Class the SOAP server will use</span><pre>setClass()</pre></a></li>
+<li class="method public "><a href="#method_setClassMap" title="setClassMap :: Set the class map of php to wsdl qname types."><span class="description">Set the class map of php to wsdl qname types.</span><pre>setClassMap()</pre></a></li>
+<li class="method public "><a href="#method_setComplexTypeStrategy" title="setComplexTypeStrategy :: Set the strategy that handles functions and classes that are added AFTER this call."><span class="description">Set the strategy that handles functions and classes that are added AFTER this call.</span><pre>setComplexTypeStrategy()</pre></a></li>
+<li class="method public "><a href="#method_setDiscoveryStrategy" title="setDiscoveryStrategy :: Set the discovery strategy for method type and other information."><span class="description">Set the discovery strategy for method type and other information.</span><pre>setDiscoveryStrategy()</pre></a></li>
+<li class="method public "><a href="#method_setOperationBodyStyle" title="setOperationBodyStyle :: Set options for all the binding operations soap:body elements."><span class="description">Set options for all the binding operations soap:body elements.</span><pre>setOperationBodyStyle()</pre></a></li>
+<li class="method public "><a href="#method_setServiceName" title="setServiceName :: Set service name"><span class="description">Set service name</span><pre>setServiceName()</pre></a></li>
+<li class="method public "><a href="#method_setUri" title="setUri :: Set the location at which the WSDL file will be availabe."><span class="description">Set the location at which the WSDL file will be availabe.</span><pre>setUri()</pre></a></li>
+<li class="method public "><a href="#method_setWsdlClass" title="setWsdlClass :: Set the name of the WSDL handling class."><span class="description">Set the name of the WSDL handling class.</span><pre>setWsdlClass()</pre></a></li>
+<li class="method public "><a href="#method_toXml" title="toXml :: Proxy to WSDL toXml() function"><span class="description">Proxy to WSDL toXml() function</span><pre>toXml()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method__addFunctionToWsdl" title="_addFunctionToWsdl :: Add a function to the WSDL document."><span class="description">Add a function to the WSDL document.</span><pre>_addFunctionToWsdl()</pre></a></li>
+<li class="method protected "><a href="#method__generateClass" title="_generateClass :: Generate the WSDL for a service class."><span class="description">Generate the WSDL for a service class.</span><pre>_generateClass()</pre></a></li>
+<li class="method protected "><a href="#method__generateFunctions" title="_generateFunctions :: Generate the WSDL for a set of functions."><span class="description">Generate the WSDL for a set of functions.</span><pre>_generateFunctions()</pre></a></li>
+<li class="method protected "><a href="#method__generateWsdl" title="_generateWsdl :: Generate the WSDL for a set of reflection method instances."><span class="description">Generate the WSDL for a set of reflection method instances.</span><pre>_generateWsdl()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_bindingStyle" title="$bindingStyle :: soap:operation style"><span class="description"></span><pre>$bindingStyle</pre></a></li>
+<li class="property protected "><a href="#property_class" title="$class :: Service class name"><span class="description"></span><pre>$class</pre></a></li>
+<li class="property protected "><a href="#property_classMap" title="$classMap :: Class Map of PHP to WSDL types."><span class="description"></span><pre>$classMap</pre></a></li>
+<li class="property protected "><a href="#property_discoveryStrategy" title="$discoveryStrategy :: Discovery strategy for types and other method details."><span class="description"></span><pre>$discoveryStrategy</pre></a></li>
+<li class="property protected "><a href="#property_functions" title="$functions :: Service function names"><span class="description"></span><pre>$functions</pre></a></li>
+<li class="property protected "><a href="#property_operationBodyStyle" title="$operationBodyStyle :: soap:body operation style options"><span class="description"></span><pre>$operationBodyStyle</pre></a></li>
+<li class="property protected "><a href="#property_reflection" title="$reflection :: "><span class="description"></span><pre>$reflection</pre></a></li>
+<li class="property protected "><a href="#property_serviceName" title="$serviceName :: "><span class="description"></span><pre>$serviceName</pre></a></li>
+<li class="property protected "><a href="#property_strategy" title="$strategy :: "><span class="description"></span><pre>$strategy</pre></a></li>
+<li class="property protected "><a href="#property_uri" title="$uri :: Url where the WSDL file will be available at."><span class="description"></span><pre>$uri</pre></a></li>
+<li class="property protected "><a href="#property_wsdlClass" title="$wsdlClass :: Name of the class to handle the WSDL creation."><span class="description"></span><pre>$wsdlClass</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Soap\AutoDiscover"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Soap.html">Soap</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Soap.AutoDiscover.html">AutoDiscover</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">\Zend\Soap\AutoDiscover</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Soap.AutoDiscover.html">Zend_Soap</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>AutoDiscover</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(\Zend\Soap\Wsdl\ComplexTypeStrategy\ComplexTypeStrategyInterface $strategy, string | <a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a> $endpointUri, string $wsdlClass, array $classMap) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code><a href="../classes/Zend.Soap.Wsdl.ComplexTypeStrategy.ComplexTypeStrategyInterface.html">\Zend\Soap\Wsdl\ComplexTypeStrategy\ComplexTypeStrategyInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$endpointUri</h4>
+<code>string</code><code><a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a></code>
+</div>
+<div class="subelement argument">
+<h4>$wsdlClass</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$classMap</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a id="method_addFunction"></a><div class="element clickable method public method_addFunction" data-toggle="collapse" data-target=".method_addFunction .collapse">
+<h2>Add a Single or Multiple Functions to the WSDL</h2>
+<pre>addFunction(string $function) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$function</h4>
+<code>string</code><p>Function Name</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_dump"></a><div class="element clickable method public method_dump" data-toggle="collapse" data-target=".method_dump .collapse">
+<h2>Proxy to WSDL dump function</h2>
+<pre>dump(string $filename) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.RuntimeException.html">\Zend\Soap\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_generate"></a><div class="element clickable method public method_generate" data-toggle="collapse" data-target=".method_generate .collapse">
+<h2>Generate the WSDL file from the configured input.</h2>
+<pre>generate() : <a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.RuntimeException.html">\Zend\Soap\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></code></div>
+</div></div>
+</div>
+<a id="method_getClassMap"></a><div class="element clickable method public method_getClassMap" data-toggle="collapse" data-target=".method_getClassMap .collapse">
+<h2>Get the class map of php to wsdl qname types.</h2>
+<pre>getClassMap() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getDiscoveryStrategy"></a><div class="element clickable method public method_getDiscoveryStrategy" data-toggle="collapse" data-target=".method_getDiscoveryStrategy .collapse">
+<h2>getDiscoveryStrategy()
+        </h2>
+<pre>getDiscoveryStrategy() : <a href="../classes/Zend.Soap.AutoDiscover.DiscoveryStrategy.DiscoveryStrategyInterface.html">\Zend\Soap\AutoDiscover\DiscoveryStrategy\DiscoveryStrategyInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.DiscoveryStrategy.DiscoveryStrategyInterface.html">\Zend\Soap\AutoDiscover\DiscoveryStrategy\DiscoveryStrategyInterface</a></code></div>
+</div></div>
+</div>
+<a id="method_getServiceName"></a><div class="element clickable method public method_getServiceName" data-toggle="collapse" data-target=".method_getServiceName .collapse">
+<h2>Get service name</h2>
+<pre>getServiceName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.RuntimeException.html">\Zend\Soap\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getUri"></a><div class="element clickable method public method_getUri" data-toggle="collapse" data-target=".method_getUri .collapse">
+<h2>Return the current Uri that the SOAP WSDL Service will be located at.</h2>
+<pre>getUri() : <a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.RuntimeException.html">\Zend\Soap\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a></code></div>
+</div></div>
+</div>
+<a id="method_getWsdlClass"></a><div class="element clickable method public method_getWsdlClass" data-toggle="collapse" data-target=".method_getWsdlClass .collapse">
+<h2>Return the name of the WSDL handling class.</h2>
+<pre>getWsdlClass() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_setBindingStyle"></a><div class="element clickable method public method_setBindingStyle" data-toggle="collapse" data-target=".method_setBindingStyle .collapse">
+<h2>Set Binding soap:binding style.</h2>
+<pre>setBindingStyle(array $bindingStyle) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>By default 'style' is 'rpc' and 'transport' is 'http://schemas.xmlsoap.org/soap/http'.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bindingStyle</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setClass"></a><div class="element clickable method public method_setClass" data-toggle="collapse" data-target=".method_setClass .collapse">
+<h2>Set the Class the SOAP server will use</h2>
+<pre>setClass(string $class) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>Class Name</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setClassMap"></a><div class="element clickable method public method_setClassMap" data-toggle="collapse" data-target=".method_setClassMap .collapse">
+<h2>Set the class map of php to wsdl qname types.</h2>
+<pre>setClassMap($classMap) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$classMap</h4></div>
+</div></div>
+</div>
+<a id="method_setComplexTypeStrategy"></a><div class="element clickable method public method_setComplexTypeStrategy" data-toggle="collapse" data-target=".method_setComplexTypeStrategy .collapse">
+<h2>Set the strategy that handles functions and classes that are added AFTER this call.</h2>
+<pre>setComplexTypeStrategy(\Zend\Soap\Wsdl\ComplexTypeStrategy\ComplexTypeStrategyInterface $strategy) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$strategy</h4>
+<code><a href="../classes/Zend.Soap.Wsdl.ComplexTypeStrategy.ComplexTypeStrategyInterface.html">\Zend\Soap\Wsdl\ComplexTypeStrategy\ComplexTypeStrategyInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setDiscoveryStrategy"></a><div class="element clickable method public method_setDiscoveryStrategy" data-toggle="collapse" data-target=".method_setDiscoveryStrategy .collapse">
+<h2>Set the discovery strategy for method type and other information.</h2>
+<pre>setDiscoveryStrategy(\Zend\Soap\AutoDiscover\DiscoveryStrategy\DiscoveryStrategyInterface $discoveryStrategy) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$discoveryStrategy</h4>
+<code><a href="../classes/Zend.Soap.AutoDiscover.DiscoveryStrategy.DiscoveryStrategyInterface.html">\Zend\Soap\AutoDiscover\DiscoveryStrategy\DiscoveryStrategyInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setOperationBodyStyle"></a><div class="element clickable method public method_setOperationBodyStyle" data-toggle="collapse" data-target=".method_setOperationBodyStyle .collapse">
+<h2>Set options for all the binding operations soap:body elements.</h2>
+<pre>setOperationBodyStyle(array $operationStyle) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>By default the options are set to 'use' => 'encoded' and
+'encodingStyle' => "http://schemas.xmlsoap.org/soap/encoding/".</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$operationStyle</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.InvalidArgumentException.html">\Zend\Soap\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setServiceName"></a><div class="element clickable method public method_setServiceName" data-toggle="collapse" data-target=".method_setServiceName .collapse">
+<h2>Set service name</h2>
+<pre>setServiceName(string $serviceName) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$serviceName</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setUri"></a><div class="element clickable method public method_setUri" data-toggle="collapse" data-target=".method_setUri .collapse">
+<h2>Set the location at which the WSDL file will be availabe.</h2>
+<pre>setUri(<a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a> | string $uri) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$uri</h4>
+<code><a href="../classes/Zend.Uri.Uri.html">\Zend\Uri\Uri</a></code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.InvalidArgumentException.html">\Zend\Soap\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_setWsdlClass"></a><div class="element clickable method public method_setWsdlClass" data-toggle="collapse" data-target=".method_setWsdlClass .collapse">
+<h2>Set the name of the WSDL handling class.</h2>
+<pre>setWsdlClass(string $wsdlClass) : <a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$wsdlClass</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.InvalidArgumentException.html">\Zend\Soap\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.AutoDiscover.html">\Zend\Soap\AutoDiscover</a></code></div>
+</div></div>
+</div>
+<a id="method_toXml"></a><div class="element clickable method public method_toXml" data-toggle="collapse" data-target=".method_toXml .collapse">
+<h2>Proxy to WSDL toXml() function</h2>
+<pre>toXml() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.RuntimeException.html">\Zend\Soap\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__addFunctionToWsdl"></a><div class="element clickable method protected method__addFunctionToWsdl" data-toggle="collapse" data-target=".method__addFunctionToWsdl .collapse">
+<h2>Add a function to the WSDL document.</h2>
+<pre>_addFunctionToWsdl($function, $wsdl, $port, $binding) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$function</h4><p>\Zend\Server\Reflection\AbstractFunction function to add</p>
+</div>
+<div class="subelement argument">
+<h4>$wsdl</h4><p>\Zend\Soap\Wsdl WSDL document</p>
+</div>
+<div class="subelement argument">
+<h4>$port</h4><p>object wsdl:portType</p></div>
+<div class="subelement argument">
+<h4>$binding</h4><p>object wsdl:binding</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Soap.Exception.InvalidArgumentException.html">\Zend\Soap\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method__generateClass"></a><div class="element clickable method protected method__generateClass" data-toggle="collapse" data-target=".method__generateClass .collapse">
+<h2>Generate the WSDL for a service class.</h2>
+<pre>_generateClass() : <a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></code></div>
+</div></div>
+</div>
+<a id="method__generateFunctions"></a><div class="element clickable method protected method__generateFunctions" data-toggle="collapse" data-target=".method__generateFunctions .collapse">
+<h2>Generate the WSDL for a set of functions.</h2>
+<pre>_generateFunctions() : <a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></code></div>
+</div></div>
+</div>
+<a id="method__generateWsdl"></a><div class="element clickable method protected method__generateWsdl" data-toggle="collapse" data-target=".method__generateWsdl .collapse">
+<h2>Generate the WSDL for a set of reflection method instances.</h2>
+<pre>_generateWsdl(array $reflectionMethods) : <a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$reflectionMethods</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Soap.Wsdl.html">\Zend\Soap\Wsdl</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_bindingStyle"> </a><div class="element clickable property protected property_bindingStyle" data-toggle="collapse" data-target=".property_bindingStyle .collapse">
+<h2></h2>
+<pre>$bindingStyle : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_class"> </a><div class="element clickable property protected property_class" data-toggle="collapse" data-target=".property_class .collapse">
+<h2></h2>
+<pre>$class : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_classMap"> </a><div class="element clickable property protected property_classMap" data-toggle="collapse" data-target=".property_classMap .collapse">
+<h2></h2>
+<pre>$classMap : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_discoveryStrategy"> </a><div class="element clickable property protected property_discoveryStrategy" data-toggle="collapse" data-target=".property_discoveryStrategy .collapse">
+<h2></h2>
+<pre>$discoveryStrategy : <a href="../classes/Zend.Soap.AutoDiscover.DiscoveryStrategy.DiscoveryStrategyInterface.html">\Zend\Soap\AutoDiscover\DiscoveryStrategy\DiscoveryStrategyInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_functions"> </a><div class="element clickable property protected property_functions" data-toggle="collapse" data-target=".property_functions .collapse">
+<h2></h2>
+<pre>$functions : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_operationBodyStyle"> </a><div class="element clickable property protected property_operationBodyStyle" data-toggle="collapse" data-target=".property_operationBodyStyle .collapse">
+<h2></h2>
+<pre>$operationBodyStyle : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_reflection"> </a><div class="element clickable property protected property_reflection" data-toggle="collapse" data-target=".property_reflection .collapse">
+<h2></h2>
+<pre>$reflection : <a href="../classes/Zend.Server.Reflection.html">\Zend\Server\Reflection</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_serviceName"> </a><div class="element clickable property protected property_serviceName" data-toggle="collapse" data-target=".property_serviceName .collapse">
+<h2></h2>
+<pre>$serviceName : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_strategy"> </a><div class="element clickable property protected property_strategy" data-toggle="collapse" data-target=".property_strategy .collapse">
+<h2></h2>
+<pre>$strategy : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_uri"> </a><div class="element clickable property protected property_uri" data-toggle="collapse" data-target=".property_uri .collapse">
+<h2></h2>
+<pre>$uri : \Zend\Soap\WSDL</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_wsdlClass"> </a><div class="element clickable property protected property_wsdlClass" data-toggle="collapse" data-target=".property_wsdlClass .collapse">
+<h2></h2>
+<pre>$wsdlClass : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:13:35+08:00.<br></footer></div>
+</div>
+</body>
+</html>

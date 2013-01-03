@@ -1,0 +1,1054 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Db\TableGateway\Feature\RowGatewayFeature</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___clone" title="__clone :: __clone"><span class="description">__clone</span><pre>__clone()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___get" title="__get :: __get"><span class="description">__get</span><pre>__get()</pre></a></li>
+<li class="method public inherited"><a href="#method___set" title="__set :: "><span class="description">__set()
+        </span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#method_delete" title="delete :: Delete"><span class="description">Delete</span><pre>delete()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteWith" title="deleteWith :: "><span class="description">deleteWith()
+        </span><pre>deleteWith()</pre></a></li>
+<li class="method public inherited"><a href="#method_getAdapter" title="getAdapter :: Get adapter"><span class="description">Get adapter</span><pre>getAdapter()</pre></a></li>
+<li class="method public inherited"><a href="#method_getColumns" title="getColumns :: "><span class="description">getColumns()
+        </span><pre>getColumns()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFeatureSet" title="getFeatureSet :: "><span class="description">getFeatureSet()
+        </span><pre>getFeatureSet()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLastInsertValue" title="getLastInsertValue :: Get last insert value"><span class="description">Get last insert value</span><pre>getLastInsertValue()</pre></a></li>
+<li class="method public inherited"><a href="#method_getMagicMethodSpecifications" title="getMagicMethodSpecifications :: "><span class="description">getMagicMethodSpecifications()
+        </span><pre>getMagicMethodSpecifications()</pre></a></li>
+<li class="method public inherited"><a href="#method_getName" title="getName :: "><span class="description">getName()
+        </span><pre>getName()</pre></a></li>
+<li class="method public inherited"><a href="#method_getResultSetPrototype" title="getResultSetPrototype :: Get select result prototype"><span class="description">Get select result prototype</span><pre>getResultSetPrototype()</pre></a></li>
+<li class="method public inherited"><a href="#method_getSql" title="getSql :: "><span class="description">getSql()
+        </span><pre>getSql()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTable" title="getTable :: Get table name"><span class="description">Get table name</span><pre>getTable()</pre></a></li>
+<li class="method public inherited"><a href="#method_initialize" title="initialize :: Initialize"><span class="description">Initialize</span><pre>initialize()</pre></a></li>
+<li class="method public inherited"><a href="#method_insert" title="insert :: Insert"><span class="description">Insert</span><pre>insert()</pre></a></li>
+<li class="method public inherited"><a href="#method_insertWith" title="insertWith :: "><span class="description">insertWith()
+        </span><pre>insertWith()</pre></a></li>
+<li class="method public inherited"><a href="#method_isInitialized" title="isInitialized :: "><span class="description">isInitialized()
+        </span><pre>isInitialized()</pre></a></li>
+<li class="method public "><a href="#method_postInitialize" title="postInitialize :: "><span class="description">postInitialize()
+        </span><pre>postInitialize()</pre></a></li>
+<li class="method public inherited"><a href="#method_select" title="select :: Select"><span class="description">Select</span><pre>select()</pre></a></li>
+<li class="method public inherited"><a href="#method_selectWith" title="selectWith :: "><span class="description">selectWith()
+        </span><pre>selectWith()</pre></a></li>
+<li class="method public inherited"><a href="#method_setTableGateway" title="setTableGateway :: "><span class="description">setTableGateway()
+        </span><pre>setTableGateway()</pre></a></li>
+<li class="method public inherited"><a href="#method_update" title="update :: Update"><span class="description">Update</span><pre>update()</pre></a></li>
+<li class="method public inherited"><a href="#method_updateWith" title="updateWith :: "><span class="description">updateWith()
+        </span><pre>updateWith()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_executeDelete" title="executeDelete :: "><span class="description">executeDelete()
+        </span><pre>executeDelete()</pre></a></li>
+<li class="method protected inherited"><a href="#method_executeInsert" title="executeInsert :: "><span class="description">executeInsert()
+        </span><pre>executeInsert()</pre></a></li>
+<li class="method protected inherited"><a href="#method_executeSelect" title="executeSelect :: "><span class="description">executeSelect()
+        </span><pre>executeSelect()</pre></a></li>
+<li class="method protected inherited"><a href="#method_executeUpdate" title="executeUpdate :: "><span class="description">executeUpdate()
+        </span><pre>executeUpdate()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_adapter" title="$adapter :: "><span class="description"></span><pre>$adapter</pre></a></li>
+<li class="property protected inherited"><a href="#property_columns" title="$columns :: "><span class="description"></span><pre>$columns</pre></a></li>
+<li class="property protected "><a href="#property_constructorArguments" title="$constructorArguments :: "><span class="description"></span><pre>$constructorArguments</pre></a></li>
+<li class="property protected inherited"><a href="#property_featureSet" title="$featureSet :: "><span class="description"></span><pre>$featureSet</pre></a></li>
+<li class="property protected inherited"><a href="#property_isInitialized" title="$isInitialized :: "><span class="description"></span><pre>$isInitialized</pre></a></li>
+<li class="property protected inherited"><a href="#property_lastInsertValue" title="$lastInsertValue :: "><span class="description"></span><pre>$lastInsertValue</pre></a></li>
+<li class="property protected inherited"><a href="#property_resultSetPrototype" title="$resultSetPrototype :: "><span class="description"></span><pre>$resultSetPrototype</pre></a></li>
+<li class="property protected inherited"><a href="#property_sharedData" title="$sharedData :: "><span class="description"></span><pre>$sharedData</pre></a></li>
+<li class="property protected inherited"><a href="#property_sql" title="$sql :: "><span class="description"></span><pre>$sql</pre></a></li>
+<li class="property protected inherited"><a href="#property_table" title="$table :: "><span class="description"></span><pre>$table</pre></a></li>
+<li class="property protected inherited"><a href="#property_tableGateway" title="$tableGateway :: "><span class="description"></span><pre>$tableGateway</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Db\TableGateway\Feature\RowGatewayFeature"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Db.html">Db</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Db.TableGateway.html">TableGateway</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Db.TableGateway.Feature.html">Feature</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Db.TableGateway.Feature.RowGatewayFeature.html">RowGatewayFeature</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Zend_Db</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($method, $arguments) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::__call()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::__call()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<div class="subelement argument"><h4>$arguments</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.InvalidArgumentException.html">\Zend\Db\TableGateway\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method___clone"></a><div class="element clickable method public method___clone" data-toggle="collapse" data-target=".method___clone .collapse">
+<h2>__clone</h2>
+<pre>__clone() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::__clone()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::__clone()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method___get"></a><div class="element clickable method public method___get" data-toggle="collapse" data-target=".method___get .collapse">
+<h2>__get</h2>
+<pre>__get(string $property) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::__get()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::__get()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.InvalidArgumentException.html">\Zend\Db\TableGateway\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method___set"></a><div class="element clickable method public method___set" data-toggle="collapse" data-target=".method___set .collapse">
+<h2>__set()
+        </h2>
+<pre>__set(string $property, mixed $value) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::__set()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::__set()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.InvalidArgumentException.html">\Zend\Db\TableGateway\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
+<h2>Delete</h2>
+<pre>delete(<a href="../classes/Zend.Db.Sql.Where.html">\Zend\Db\Sql\Where</a> | <a href="http://php.net/manual/en/class.closure.php">\Closure</a> | string | array $where) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::delete()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::delete()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$where</h4>
+<code><a href="../classes/Zend.Db.Sql.Where.html">\Zend\Db\Sql\Where</a></code><code><a href="http://php.net/manual/en/class.closure.php">\Closure</a></code><code>string</code><code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_deleteWith"></a><div class="element clickable method public method_deleteWith" data-toggle="collapse" data-target=".method_deleteWith .collapse">
+<h2>deleteWith()
+        </h2>
+<pre>deleteWith(\Zend\Db\Sql\Delete $delete) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::deleteWith()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::deleteWith()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$delete</h4>
+<code><a href="../classes/Zend.Db.Sql.Delete.html">\Zend\Db\Sql\Delete</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getAdapter"></a><div class="element clickable method public method_getAdapter" data-toggle="collapse" data-target=".method_getAdapter .collapse">
+<h2>Get adapter</h2>
+<pre>getAdapter() : <a href="../classes/Zend.Db.Adapter.Adapter.html">\Zend\Db\Adapter\Adapter</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getAdapter()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getAdapter()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Adapter.Adapter.html">\Zend\Db\Adapter\Adapter</a></code></div>
+</div></div>
+</div>
+<a id="method_getColumns"></a><div class="element clickable method public method_getColumns" data-toggle="collapse" data-target=".method_getColumns .collapse">
+<h2>getColumns()
+        </h2>
+<pre>getColumns() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getColumns()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getColumns()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getFeatureSet"></a><div class="element clickable method public method_getFeatureSet" data-toggle="collapse" data-target=".method_getFeatureSet .collapse">
+<h2>getFeatureSet()
+        </h2>
+<pre>getFeatureSet() : <a href="../classes/Zend.Db.TableGateway.Feature.FeatureSet.html">\Zend\Db\TableGateway\Feature\FeatureSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getFeatureSet()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getFeatureSet()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.TableGateway.Feature.FeatureSet.html">\Zend\Db\TableGateway\Feature\FeatureSet</a></code></div>
+</div></div>
+</div>
+<a id="method_getLastInsertValue"></a><div class="element clickable method public method_getLastInsertValue" data-toggle="collapse" data-target=".method_getLastInsertValue .collapse">
+<h2>Get last insert value</h2>
+<pre>getLastInsertValue() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getLastInsertValue()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getLastInsertValue()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_getMagicMethodSpecifications"></a><div class="element clickable method public method_getMagicMethodSpecifications" data-toggle="collapse" data-target=".method_getMagicMethodSpecifications .collapse">
+<h2>getMagicMethodSpecifications()
+        </h2>
+<pre>getMagicMethodSpecifications() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getMagicMethodSpecifications()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getName"></a><div class="element clickable method public method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
+<h2>getName()
+        </h2>
+<pre>getName() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getName()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getResultSetPrototype"></a><div class="element clickable method public method_getResultSetPrototype" data-toggle="collapse" data-target=".method_getResultSetPrototype .collapse">
+<h2>Get select result prototype</h2>
+<pre>getResultSetPrototype() : <a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getResultSetPrototype()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getResultSetPrototype()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></code></div>
+</div></div>
+</div>
+<a id="method_getSql"></a><div class="element clickable method public method_getSql" data-toggle="collapse" data-target=".method_getSql .collapse">
+<h2>getSql()
+        </h2>
+<pre>getSql() : <a href="../classes/Zend.Db.Sql.Sql.html">\Zend\Db\Sql\Sql</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getSql()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getSql()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Sql.Sql.html">\Zend\Db\Sql\Sql</a></code></div>
+</div></div>
+</div>
+<a id="method_getTable"></a><div class="element clickable method public method_getTable" data-toggle="collapse" data-target=".method_getTable .collapse">
+<h2>Get table name</h2>
+<pre>getTable() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::getTable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::getTable()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_initialize"></a><div class="element clickable method public method_initialize" data-toggle="collapse" data-target=".method_initialize .collapse">
+<h2>Initialize</h2>
+<pre>initialize() : null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::initialize()</td>
+</tr></table>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.RuntimeException.html">\Zend\Db\TableGateway\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="method_insert"></a><div class="element clickable method public method_insert" data-toggle="collapse" data-target=".method_insert .collapse">
+<h2>Insert</h2>
+<pre>insert(array $set) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::insert()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::insert()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$set</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_insertWith"></a><div class="element clickable method public method_insertWith" data-toggle="collapse" data-target=".method_insertWith .collapse">
+<h2>insertWith()
+        </h2>
+<pre>insertWith(\Zend\Db\Sql\Insert $insert) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::insertWith()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::insertWith()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$insert</h4>
+<code><a href="../classes/Zend.Db.Sql.Insert.html">\Zend\Db\Sql\Insert</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_isInitialized"></a><div class="element clickable method public method_isInitialized" data-toggle="collapse" data-target=".method_isInitialized .collapse">
+<h2>isInitialized()
+        </h2>
+<pre>isInitialized() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::isInitialized()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::isInitialized()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_postInitialize"></a><div class="element clickable method public method_postInitialize" data-toggle="collapse" data-target=".method_postInitialize .collapse">
+<h2>postInitialize()
+        </h2>
+<pre>postInitialize() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_select"></a><div class="element clickable method public method_select" data-toggle="collapse" data-target=".method_select .collapse">
+<h2>Select</h2>
+<pre>select(<a href="../classes/Zend.Db.Sql.Where.html">\Zend\Db\Sql\Where</a> | <a href="http://php.net/manual/en/class.closure.php">\Closure</a> | string | array $where) : <a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::select()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::select()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$where</h4>
+<code><a href="../classes/Zend.Db.Sql.Where.html">\Zend\Db\Sql\Where</a></code><code><a href="http://php.net/manual/en/class.closure.php">\Closure</a></code><code>string</code><code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></code></div>
+</div></div>
+</div>
+<a id="method_selectWith"></a><div class="element clickable method public method_selectWith" data-toggle="collapse" data-target=".method_selectWith .collapse">
+<h2>selectWith()
+        </h2>
+<pre>selectWith(\Zend\Db\Sql\Select $select) : null | <a href="../classes/Zend.Db.ResultSet.ResultSetInterface.html">\Zend\Db\ResultSet\ResultSetInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::selectWith()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::selectWith()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$select</h4>
+<code><a href="../classes/Zend.Db.Sql.Select.html">\Zend\Db\Sql\Select</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code><a href="../classes/Zend.Db.ResultSet.ResultSetInterface.html">\Zend\Db\ResultSet\ResultSetInterface</a></code>
+</div>
+</div></div>
+</div>
+<a id="method_setTableGateway"></a><div class="element clickable method public method_setTableGateway" data-toggle="collapse" data-target=".method_setTableGateway .collapse">
+<h2>setTableGateway()
+        </h2>
+<pre>setTableGateway(\Zend\Db\TableGateway\AbstractTableGateway $tableGateway) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::setTableGateway()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$tableGateway</h4></div>
+</div></div>
+</div>
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
+<h2>Update</h2>
+<pre>update(array $set, string | array | \Zend\Db\TableGateway\closure $where) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::update()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::update()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$set</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$where</h4>
+<code>string</code><code>array</code><code>\Zend\Db\TableGateway\closure</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_updateWith"></a><div class="element clickable method public method_updateWith" data-toggle="collapse" data-target=".method_updateWith .collapse">
+<h2>updateWith()
+        </h2>
+<pre>updateWith(\Zend\Db\Sql\Update $update) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::updateWith()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::updateWith()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$update</h4>
+<code><a href="../classes/Zend.Db.Sql.Update.html">\Zend\Db\Sql\Update</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_executeDelete"></a><div class="element clickable method protected method_executeDelete" data-toggle="collapse" data-target=".method_executeDelete .collapse">
+<h2>executeDelete()
+        </h2>
+<pre>executeDelete(\Zend\Db\Sql\Delete $delete) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::executeDelete()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::executeDelete()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$delete</h4>
+<code><a href="../classes/Zend.Db.Sql.Delete.html">\Zend\Db\Sql\Delete</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.RuntimeException.html">\Zend\Db\TableGateway\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_executeInsert"></a><div class="element clickable method protected method_executeInsert" data-toggle="collapse" data-target=".method_executeInsert .collapse">
+<h2>executeInsert()
+        </h2>
+<pre>executeInsert(\Zend\Db\Sql\Insert $insert) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::executeInsert()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::executeInsert()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$insert</h4>
+<code><a href="../classes/Zend.Db.Sql.Insert.html">\Zend\Db\Sql\Insert</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.RuntimeException.html">\Zend\Db\TableGateway\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_executeSelect"></a><div class="element clickable method protected method_executeSelect" data-toggle="collapse" data-target=".method_executeSelect .collapse">
+<h2>executeSelect()
+        </h2>
+<pre>executeSelect(\Zend\Db\Sql\Select $select) : <a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::executeSelect()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::executeSelect()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$select</h4>
+<code><a href="../classes/Zend.Db.Sql.Select.html">\Zend\Db\Sql\Select</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.ResultSet.ResultSet.html">\Zend\Db\ResultSet\ResultSet</a></code></div>
+</div></div>
+</div>
+<a id="method_executeUpdate"></a><div class="element clickable method protected method_executeUpdate" data-toggle="collapse" data-target=".method_executeUpdate .collapse">
+<h2>executeUpdate()
+        </h2>
+<pre>executeUpdate(\Zend\Db\Sql\Update $update) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::executeUpdate()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::executeUpdate()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$update</h4>
+<code><a href="../classes/Zend.Db.Sql.Update.html">\Zend\Db\Sql\Update</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Db.TableGateway.Exception.RuntimeException.html">\Zend\Db\TableGateway\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_adapter"> </a><div class="element clickable property protected property_adapter" data-toggle="collapse" data-target=".property_adapter .collapse">
+<h2></h2>
+<pre>$adapter : <a href="../classes/Zend.Db.Adapter.Adapter.html">\Zend\Db\Adapter\Adapter</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$adapter</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$adapter</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_columns"> </a><div class="element clickable property protected property_columns" data-toggle="collapse" data-target=".property_columns .collapse">
+<h2></h2>
+<pre>$columns : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$columns</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$columns</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_constructorArguments"> </a><div class="element clickable property protected property_constructorArguments" data-toggle="collapse" data-target=".property_constructorArguments .collapse">
+<h2></h2>
+<pre>$constructorArguments : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_featureSet"> </a><div class="element clickable property protected property_featureSet" data-toggle="collapse" data-target=".property_featureSet .collapse">
+<h2></h2>
+<pre>$featureSet : <a href="../classes/Zend.Db.TableGateway.Feature.FeatureSet.html">\Zend\Db\TableGateway\Feature\FeatureSet</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$featureSet</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$featureSet</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_isInitialized"> </a><div class="element clickable property protected property_isInitialized" data-toggle="collapse" data-target=".property_isInitialized .collapse">
+<h2></h2>
+<pre>$isInitialized : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$isInitialized</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$isInitialized</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_lastInsertValue"> </a><div class="element clickable property protected property_lastInsertValue" data-toggle="collapse" data-target=".property_lastInsertValue .collapse">
+<h2></h2>
+<pre>$lastInsertValue : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$lastInsertValue</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$lastInsertValue</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_resultSetPrototype"> </a><div class="element clickable property protected property_resultSetPrototype" data-toggle="collapse" data-target=".property_resultSetPrototype .collapse">
+<h2></h2>
+<pre>$resultSetPrototype : <a href="../classes/Zend.Db.ResultSet.ResultSetInterface.html">\Zend\Db\ResultSet\ResultSetInterface</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$resultSetPrototype</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$resultSetPrototype</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_sharedData"> </a><div class="element clickable property protected property_sharedData" data-toggle="collapse" data-target=".property_sharedData .collapse">
+<h2></h2>
+<pre>$sharedData </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$sharedData</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_sql"> </a><div class="element clickable property protected property_sql" data-toggle="collapse" data-target=".property_sql .collapse">
+<h2></h2>
+<pre>$sql : <a href="../classes/Zend.Db.Sql.Sql.html">\Zend\Db\Sql\Sql</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$sql</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$sql</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_table"> </a><div class="element clickable property protected property_table" data-toggle="collapse" data-target=".property_table .collapse">
+<h2></h2>
+<pre>$table : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\AbstractTableGateway::$$table</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$table</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_tableGateway"> </a><div class="element clickable property protected property_tableGateway" data-toggle="collapse" data-target=".property_tableGateway .collapse">
+<h2></h2>
+<pre>$tableGateway : <a href="../classes/Zend.Db.TableGateway.AbstractTableGateway.html">\Zend\Db\TableGateway\AbstractTableGateway</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\TableGateway\Feature\AbstractFeature::$$tableGateway</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:09:28+08:00.<br></footer></div>
+</div>
+</body>
+</html>

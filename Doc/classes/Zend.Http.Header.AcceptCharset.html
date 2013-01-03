@@ -1,0 +1,568 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Http\Header\AcceptCharset</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_addCharset" title="addCharset :: Add a charset, with the given priority"><span class="description">Add a charset, with the given priority</span><pre>addCharset()</pre></a></li>
+<li class="method public inherited"><a href="#method_fromString" title="fromString :: Factory method: parse Accept header string"><span class="description">Factory method: parse Accept header string</span><pre>fromString()</pre></a></li>
+<li class="method public "><a href="#method_getFieldName" title="getFieldName :: Get field name"><span class="description">Get field name</span><pre>getFieldName()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFieldValue" title="getFieldValue :: Get field value"><span class="description">Get field value</span><pre>getFieldValue()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFieldValuePartsFromHeaderLine" title="getFieldValuePartsFromHeaderLine :: Parse the Field Value Parts represented by a header line"><span class="description">Parse the Field Value Parts represented by a header line</span><pre>getFieldValuePartsFromHeaderLine()</pre></a></li>
+<li class="method public inherited"><a href="#method_getPrioritized" title="getPrioritized :: "><span class="description">getPrioritized()
+        </span><pre>getPrioritized()</pre></a></li>
+<li class="method public "><a href="#method_hasCharset" title="hasCharset :: Does the header have the requested charset?"><span class="description">Does the header have the requested charset?</span><pre>hasCharset()</pre></a></li>
+<li class="method public inherited"><a href="#method_match" title="match :: Match a media string against this header"><span class="description">Match a media string against this header</span><pre>match()</pre></a></li>
+<li class="method public inherited"><a href="#method_parseHeaderLine" title="parseHeaderLine :: "><span class="description">parseHeaderLine()
+        </span><pre>parseHeaderLine()</pre></a></li>
+<li class="method public "><a href="#method_toString" title="toString :: Cast to string"><span class="description">Cast to string</span><pre>toString()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_addFieldValuePartToQueue" title="addFieldValuePartToQueue :: Add a key/value combination to the internal queue"><span class="description">Add a key/value combination to the internal queue</span><pre>addFieldValuePartToQueue()</pre></a></li>
+<li class="method protected inherited"><a href="#method_addType" title="addType :: Add a type, with the given priority"><span class="description">Add a type, with the given priority</span><pre>addType()</pre></a></li>
+<li class="method protected inherited"><a href="#method_assembleAcceptParam" title="assembleAcceptParam :: Assemble and escape the field value parameters based on RFC 2616 section 2.1"><span class="description">Assemble and escape the field value parameters based on RFC 2616 section 2.1</span><pre>assembleAcceptParam()</pre></a></li>
+<li class="method protected inherited"><a href="#method_getParametersFromFieldValuePart" title="getParametersFromFieldValuePart :: Parse the keys contained in the header line"><span class="description">Parse the keys contained in the header line</span><pre>getParametersFromFieldValuePart()</pre></a></li>
+<li class="method protected inherited"><a href="#method_hasType" title="hasType :: Does the header have the requested type?"><span class="description">Does the header have the requested type?</span><pre>hasType()</pre></a></li>
+<li class="method protected inherited"><a href="#method_matchAcceptParams" title="matchAcceptParams :: Return a match where all parameters in argument #1 match those in argument #2"><span class="description">Return a match where all parameters in argument #1 match those in argument #2</span><pre>matchAcceptParams()</pre></a></li>
+<li class="method protected "><a href="#method_parseFieldValuePart" title="parseFieldValuePart :: Parse the keys contained in the header line"><span class="description">Parse the keys contained in the header line</span><pre>parseFieldValuePart()</pre></a></li>
+<li class="method protected inherited"><a href="#method_sortFieldValueParts" title="sortFieldValueParts :: Sort the internal Field Value Parts"><span class="description">Sort the internal Field Value Parts</span><pre>sortFieldValueParts()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_fieldValueParts" title="$fieldValueParts :: "><span class="description"></span><pre>$fieldValueParts</pre></a></li>
+<li class="property protected "><a href="#property_regexAddType" title="$regexAddType :: "><span class="description"></span><pre>$regexAddType</pre></a></li>
+<li class="property protected inherited"><a href="#property_sorted" title="$sorted :: Determines if since last mutation the stack was sorted"><span class="description"></span><pre>$sorted</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Http\Header\AcceptCharset"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Http.html">Http</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Http.Header.html">Header</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Http.Header.AcceptCharset.html">AcceptCharset</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Accept Charset Header</p>
+<div class="details">
+<div class="long_description"><p>Naming conventions:</p>
+
+<p>Accept: audio/mp3; q=0.2; version=0.5, audio/basic+mp3
+  |------------------------------------------------------|  header line
+  |------|                                                  field name
+         |-----------------------------------------------|  field value
+         |-------------------------------|                  field value part
+         |------|                                           type
+                 |--|                                       subtype
+                 |--|                                       format
+                                               |----|       subtype
+                                                     |---|  format
+                     |-------------------|                  parameter set
+                             |-----------|                  parameter
+                             |-----|                        parameter key
+                                     |--|                   parameter value
+                       |---|                                priority</p></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Http.Header.html">Zend\Http\Header</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\Zend\Http\Header\http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.2</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Dolf Schimmel - Freeaqingme</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_addCharset"></a><div class="element clickable method public method_addCharset" data-toggle="collapse" data-target=".method_addCharset .collapse">
+<h2>Add a charset, with the given priority</h2>
+<pre>addCharset(string $type, int | float $priority) : <a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><code>float</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></code></div>
+</div></div>
+</div>
+<a id="method_fromString"></a><div class="element clickable method public method_fromString" data-toggle="collapse" data-target=".method_fromString .collapse">
+<h2>Factory method: parse Accept header string</h2>
+<pre>fromString(string $headerLine) : <a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::fromString()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headerLine</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></code></div>
+</div></div>
+</div>
+<a id="method_getFieldName"></a><div class="element clickable method public method_getFieldName" data-toggle="collapse" data-target=".method_getFieldName .collapse">
+<h2>Get field name</h2>
+<pre>getFieldName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getFieldValue"></a><div class="element clickable method public method_getFieldValue" data-toggle="collapse" data-target=".method_getFieldValue .collapse">
+<h2>Get field value</h2>
+<pre>getFieldValue(array | null $values) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::getFieldValue()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$values</h4>
+<code>array</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getFieldValuePartsFromHeaderLine"></a><div class="element clickable method public method_getFieldValuePartsFromHeaderLine" data-toggle="collapse" data-target=".method_getFieldValuePartsFromHeaderLine .collapse">
+<h2>Parse the Field Value Parts represented by a header line</h2>
+<pre>getFieldValuePartsFromHeaderLine(string $headerLine) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::getFieldValuePartsFromHeaderLine()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headerLine</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td>If header is invalid</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getPrioritized"></a><div class="element clickable method public method_getPrioritized" data-toggle="collapse" data-target=".method_getPrioritized .collapse">
+<h2>getPrioritized()
+        </h2>
+<pre>getPrioritized() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::getPrioritized()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>with all the keys, values and parameters this header represents:</div>
+</div></div>
+</div>
+<a id="method_hasCharset"></a><div class="element clickable method public method_hasCharset" data-toggle="collapse" data-target=".method_hasCharset .collapse">
+<h2>Does the header have the requested charset?</h2>
+<pre>hasCharset(string $type) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_match"></a><div class="element clickable method public method_match" data-toggle="collapse" data-target=".method_match .collapse">
+<h2>Match a media string against this header</h2>
+<pre>match(array | string $matchAgainst) : \Zend\Http\Header\AcceptFieldValuePart | boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::match()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$matchAgainst</h4>
+<code>array</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Zend\Http\Header\AcceptFieldValuePart</code><code>boolean</code>The matched value or false</div>
+</div></div>
+</div>
+<a id="method_parseHeaderLine"></a><div class="element clickable method public method_parseHeaderLine" data-toggle="collapse" data-target=".method_parseHeaderLine .collapse">
+<h2>parseHeaderLine()
+        </h2>
+<pre>parseHeaderLine(string $headerLine) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::parseHeaderLine()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headerLine</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_toString"></a><div class="element clickable method public method_toString" data-toggle="collapse" data-target=".method_toString .collapse">
+<h2>Cast to string</h2>
+<pre>toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_addFieldValuePartToQueue"></a><div class="element clickable method protected method_addFieldValuePartToQueue" data-toggle="collapse" data-target=".method_addFieldValuePartToQueue .collapse">
+<h2>Add a key/value combination to the internal queue</h2>
+<pre>addFieldValuePartToQueue(<a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $value) : \Zend\Http\Header\number</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::addFieldValuePartToQueue()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\number</code></div>
+</div></div>
+</div>
+<a id="method_addType"></a><div class="element clickable method protected method_addType" data-toggle="collapse" data-target=".method_addType .collapse">
+<h2>Add a type, with the given priority</h2>
+<pre>addType(string $type, int | float $priority, array $params) : <a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::addType()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><code>float</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>(optional) $params</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Http.Header.Accept.html">\Zend\Http\Header\Accept</a></code></div>
+</div></div>
+</div>
+<a id="method_assembleAcceptParam"></a><div class="element clickable method protected method_assembleAcceptParam" data-toggle="collapse" data-target=".method_assembleAcceptParam .collapse">
+<h2>Assemble and escape the field value parameters based on RFC 2616 section 2.1</h2>
+<pre>assembleAcceptParam(string $value, string $key) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::assembleAcceptParam()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getParametersFromFieldValuePart"></a><div class="element clickable method protected method_getParametersFromFieldValuePart" data-toggle="collapse" data-target=".method_getParametersFromFieldValuePart .collapse">
+<h2>Parse the keys contained in the header line</h2>
+<pre>getParametersFromFieldValuePart(string $fieldValuePart) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::getParametersFromFieldValuePart()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fieldValuePart</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_hasType"></a><div class="element clickable method protected method_hasType" data-toggle="collapse" data-target=".method_hasType .collapse">
+<h2>Does the header have the requested type?</h2>
+<pre>hasType(array | string $matchAgainst) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::hasType()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$matchAgainst</h4>
+<code>array</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_matchAcceptParams"></a><div class="element clickable method protected method_matchAcceptParams" data-toggle="collapse" data-target=".method_matchAcceptParams .collapse">
+<h2>Return a match where all parameters in argument #1 match those in argument #2</h2>
+<pre>matchAcceptParams(array $match1, array $match2) : boolean | array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::matchAcceptParams()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$match1</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$match2</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code><code>array</code>
+</div>
+</div></div>
+</div>
+<a id="method_parseFieldValuePart"></a><div class="element clickable method protected method_parseFieldValuePart" data-toggle="collapse" data-target=".method_parseFieldValuePart .collapse">
+<h2>Parse the keys contained in the header line</h2>
+<pre>parseFieldValuePart(string $fieldValuePart) : <a href="../classes/Zend.Http.Header.Accept.FieldValuePart.CharsetFieldValuePart.html">\Zend\Http\Header\Accept\FieldValuePart\CharsetFieldValuePart</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="library.Zend.Http.Header.AbstractAccept.html#%5CZend%5CHttp%5CHeader%5CAbstractAccept::parseFieldValuePart()">\Zend\Http\Header\AbstractAccept::parseFieldValuePart()</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fieldValuePart</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Http.Header.Accept.FieldValuePart.CharsetFieldValuePart.html">\Zend\Http\Header\Accept\FieldValuePart\CharsetFieldValuePart</a></code></div>
+</div></div>
+</div>
+<a id="method_sortFieldValueParts"></a><div class="element clickable method protected method_sortFieldValueParts" data-toggle="collapse" data-target=".method_sortFieldValueParts .collapse">
+<h2>Sort the internal Field Value Parts</h2>
+<pre>sortFieldValueParts() : \Zend\Http\Header\number</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>See</th>
+<td>rfc2616 sect 14.1
+Media ranges can be overridden by more specific media ranges or
+specific media types. If more than one media range applies to a given
+type, the most specific reference has precedence. For example,
+Accept: text/*, text/html, text/html;level=1, * /*
+have the following precedence:
+1) text/html;level=1
+2) text/html
+3) text/*
+4) * /*</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::sortFieldValueParts()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\number</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_fieldValueParts"> </a><div class="element clickable property protected property_fieldValueParts" data-toggle="collapse" data-target=".property_fieldValueParts .collapse">
+<h2></h2>
+<pre>$fieldValueParts : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::$$fieldValueParts</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_regexAddType"> </a><div class="element clickable property protected property_regexAddType" data-toggle="collapse" data-target=".property_regexAddType .collapse">
+<h2></h2>
+<pre>$regexAddType </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sorted"> </a><div class="element clickable property protected property_sorted" data-toggle="collapse" data-target=".property_sorted .collapse">
+<h2></h2>
+<pre>$sorted : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Http\Header\AbstractAccept::$$sorted</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:11:17+08:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Zend\Json\Server\Smd</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___toString" title="__toString :: Cast to string (JSON)"><span class="description">Cast to string (JSON)</span><pre>__toString()</pre></a></li>
+<li class="method public "><a href="#method_addService" title="addService :: Add Service"><span class="description">Add Service</span><pre>addService()</pre></a></li>
+<li class="method public "><a href="#method_addServices" title="addServices :: Add many services"><span class="description">Add many services</span><pre>addServices()</pre></a></li>
+<li class="method public "><a href="#method_getContentType" title="getContentType :: Retrieve content type"><span class="description">Retrieve content type</span><pre>getContentType()</pre></a></li>
+<li class="method public "><a href="#method_getDescription" title="getDescription :: Get service description"><span class="description">Get service description</span><pre>getDescription()</pre></a></li>
+<li class="method public "><a href="#method_getEnvelope" title="getEnvelope :: Retrieve envelope"><span class="description">Retrieve envelope</span><pre>getEnvelope()</pre></a></li>
+<li class="method public "><a href="#method_getId" title="getId :: Get service id"><span class="description">Get service id</span><pre>getId()</pre></a></li>
+<li class="method public "><a href="#method_getService" title="getService :: Get service object"><span class="description">Get service object</span><pre>getService()</pre></a></li>
+<li class="method public "><a href="#method_getServices" title="getServices :: Return services"><span class="description">Return services</span><pre>getServices()</pre></a></li>
+<li class="method public "><a href="#method_getTarget" title="getTarget :: Retrieve service target"><span class="description">Retrieve service target</span><pre>getTarget()</pre></a></li>
+<li class="method public "><a href="#method_getTransport" title="getTransport :: Get transport"><span class="description">Get transport</span><pre>getTransport()</pre></a></li>
+<li class="method public "><a href="#method_isDojoCompatible" title="isDojoCompatible :: Is this a Dojo compatible SMD?"><span class="description">Is this a Dojo compatible SMD?</span><pre>isDojoCompatible()</pre></a></li>
+<li class="method public "><a href="#method_removeService" title="removeService :: Remove service"><span class="description">Remove service</span><pre>removeService()</pre></a></li>
+<li class="method public "><a href="#method_setContentType" title="setContentType :: Set content type"><span class="description">Set content type</span><pre>setContentType()</pre></a></li>
+<li class="method public "><a href="#method_setDescription" title="setDescription :: Set service description"><span class="description">Set service description</span><pre>setDescription()</pre></a></li>
+<li class="method public "><a href="#method_setDojoCompatible" title="setDojoCompatible :: Indicate whether or not to generate Dojo-compatible SMD"><span class="description">Indicate whether or not to generate Dojo-compatible SMD</span><pre>setDojoCompatible()</pre></a></li>
+<li class="method public "><a href="#method_setEnvelope" title="setEnvelope :: Set envelope"><span class="description">Set envelope</span><pre>setEnvelope()</pre></a></li>
+<li class="method public "><a href="#method_setId" title="setId :: Set service ID"><span class="description">Set service ID</span><pre>setId()</pre></a></li>
+<li class="method public "><a href="#method_setOptions" title="setOptions :: Set object state via options"><span class="description">Set object state via options</span><pre>setOptions()</pre></a></li>
+<li class="method public "><a href="#method_setServices" title="setServices :: Overwrite existing services with new ones"><span class="description">Overwrite existing services with new ones</span><pre>setServices()</pre></a></li>
+<li class="method public "><a href="#method_setTarget" title="setTarget :: Set service target"><span class="description">Set service target</span><pre>setTarget()</pre></a></li>
+<li class="method public "><a href="#method_setTransport" title="setTransport :: Set transport"><span class="description">Set transport</span><pre>setTransport()</pre></a></li>
+<li class="method public "><a href="#method_toArray" title="toArray :: Cast to array"><span class="description">Cast to array</span><pre>toArray()</pre></a></li>
+<li class="method public "><a href="#method_toDojoArray" title="toDojoArray :: Export to DOJO-compatible SMD array"><span class="description">Export to DOJO-compatible SMD array</span><pre>toDojoArray()</pre></a></li>
+<li class="method public "><a href="#method_toJson" title="toJson :: Cast to JSON"><span class="description">Cast to JSON</span><pre>toJson()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_contentType" title="$contentType :: Content type"><span class="description"></span><pre>$contentType</pre></a></li>
+<li class="property protected "><a href="#property_contentTypeRegex" title="$contentTypeRegex :: Content type regex"><span class="description"></span><pre>$contentTypeRegex</pre></a></li>
+<li class="property protected "><a href="#property_description" title="$description :: Service description"><span class="description"></span><pre>$description</pre></a></li>
+<li class="property protected "><a href="#property_dojoCompatible" title="$dojoCompatible :: Generate Dojo-compatible SMD"><span class="description"></span><pre>$dojoCompatible</pre></a></li>
+<li class="property protected "><a href="#property_envelope" title="$envelope :: Current envelope"><span class="description"></span><pre>$envelope</pre></a></li>
+<li class="property protected "><a href="#property_envelopeTypes" title="$envelopeTypes :: Allowed envelope types"><span class="description"></span><pre>$envelopeTypes</pre></a></li>
+<li class="property protected "><a href="#property_id" title="$id :: Service id"><span class="description"></span><pre>$id</pre></a></li>
+<li class="property protected "><a href="#property_services" title="$services :: Services offered"><span class="description"></span><pre>$services</pre></a></li>
+<li class="property protected "><a href="#property_target" title="$target :: Service target"><span class="description"></span><pre>$target</pre></a></li>
+<li class="property protected "><a href="#property_transport" title="$transport :: Global transport"><span class="description"></span><pre>$transport</pre></a></li>
+<li class="property protected "><a href="#property_transportTypes" title="$transportTypes :: Allowed transport types"><span class="description"></span><pre>$transportTypes</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_ENV_JSONRPC_1" title="ENV_JSONRPC_1 :: "><span class="description">ENV_JSONRPC_1</span><pre>ENV_JSONRPC_1</pre></a></li>
+<li class="constant  "><a href="#constant_ENV_JSONRPC_2" title="ENV_JSONRPC_2 :: "><span class="description">ENV_JSONRPC_2</span><pre>ENV_JSONRPC_2</pre></a></li>
+<li class="constant  "><a href="#constant_SMD_VERSION" title="SMD_VERSION :: "><span class="description">SMD_VERSION</span><pre>SMD_VERSION</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Zend\Json\Server\Smd"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Json.html">Json</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Zend.Json.Server.html">Server</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Json.Server.Smd.html">Smd</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>category</th>
+<td>Zend</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Zend.Json.Server.html">Zend_Json</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Server</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+<h2>Cast to string (JSON)</h2>
+<pre>__toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_addService"></a><div class="element clickable method public method_addService" data-toggle="collapse" data-target=".method_addService .collapse">
+<h2>Add Service</h2>
+<pre>addService(<a href="../classes/Zend.Json.Server.Smd.Service.html">\Zend\Json\Server\Smd\Service</a> | array $service) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$service</h4>
+<code><a href="../classes/Zend.Json.Server.Smd.Service.html">\Zend\Json\Server\Smd\Service</a></code><code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/Zend.Json.Server.Exception.RuntimeException.html">\Zend\Json\Server\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code><a href="../classes/Zend.Json.Server.Exception.InvalidArgumentException.html">\Zend\Json\Server\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_addServices"></a><div class="element clickable method public method_addServices" data-toggle="collapse" data-target=".method_addServices .collapse">
+<h2>Add many services</h2>
+<pre>addServices(array $services) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$services</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_getContentType"></a><div class="element clickable method public method_getContentType" data-toggle="collapse" data-target=".method_getContentType .collapse">
+<h2>Retrieve content type</h2>
+<pre>getContentType() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getDescription"></a><div class="element clickable method public method_getDescription" data-toggle="collapse" data-target=".method_getDescription .collapse">
+<h2>Get service description</h2>
+<pre>getDescription() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getEnvelope"></a><div class="element clickable method public method_getEnvelope" data-toggle="collapse" data-target=".method_getEnvelope .collapse">
+<h2>Retrieve envelope</h2>
+<pre>getEnvelope() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getId"></a><div class="element clickable method public method_getId" data-toggle="collapse" data-target=".method_getId .collapse">
+<h2>Get service id</h2>
+<pre>getId() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getService"></a><div class="element clickable method public method_getService" data-toggle="collapse" data-target=".method_getService .collapse">
+<h2>Get service object</h2>
+<pre>getService(string $name) : boolean | <a href="../classes/Zend.Json.Server.Smd.Service.html">\Zend\Json\Server\Smd\Service</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code><code><a href="../classes/Zend.Json.Server.Smd.Service.html">\Zend\Json\Server\Smd\Service</a></code>
+</div>
+</div></div>
+</div>
+<a id="method_getServices"></a><div class="element clickable method public method_getServices" data-toggle="collapse" data-target=".method_getServices .collapse">
+<h2>Return services</h2>
+<pre>getServices() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getTarget"></a><div class="element clickable method public method_getTarget" data-toggle="collapse" data-target=".method_getTarget .collapse">
+<h2>Retrieve service target</h2>
+<pre>getTarget() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getTransport"></a><div class="element clickable method public method_getTransport" data-toggle="collapse" data-target=".method_getTransport .collapse">
+<h2>Get transport</h2>
+<pre>getTransport() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_isDojoCompatible"></a><div class="element clickable method public method_isDojoCompatible" data-toggle="collapse" data-target=".method_isDojoCompatible .collapse">
+<h2>Is this a Dojo compatible SMD?</h2>
+<pre>isDojoCompatible() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_removeService"></a><div class="element clickable method public method_removeService" data-toggle="collapse" data-target=".method_removeService .collapse">
+<h2>Remove service</h2>
+<pre>removeService(string $name) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_setContentType"></a><div class="element clickable method public method_setContentType" data-toggle="collapse" data-target=".method_setContentType .collapse">
+<h2>Set content type</h2>
+<pre>setContentType(string $type) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Json.Server.Exception.InvalidArgumentException.html">\Zend\Json\Server\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setDescription"></a><div class="element clickable method public method_setDescription" data-toggle="collapse" data-target=".method_setDescription .collapse">
+<h2>Set service description</h2>
+<pre>setDescription(string $description) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$description</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setDojoCompatible"></a><div class="element clickable method public method_setDojoCompatible" data-toggle="collapse" data-target=".method_setDojoCompatible .collapse">
+<h2>Indicate whether or not to generate Dojo-compatible SMD</h2>
+<pre>setDojoCompatible(bool $flag) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$flag</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setEnvelope"></a><div class="element clickable method public method_setEnvelope" data-toggle="collapse" data-target=".method_setEnvelope .collapse">
+<h2>Set envelope</h2>
+<pre>setEnvelope(string $envelopeType) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$envelopeType</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Json.Server.Exception.InvalidArgumentException.html">\Zend\Json\Server\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setId"></a><div class="element clickable method public method_setId" data-toggle="collapse" data-target=".method_setId .collapse">
+<h2>Set service ID</h2>
+<pre>setId(string $id) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setOptions"></a><div class="element clickable method public method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+<h2>Set object state via options</h2>
+<pre>setOptions(array $options) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setServices"></a><div class="element clickable method public method_setServices" data-toggle="collapse" data-target=".method_setServices .collapse">
+<h2>Overwrite existing services with new ones</h2>
+<pre>setServices(array $services) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$services</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setTarget"></a><div class="element clickable method public method_setTarget" data-toggle="collapse" data-target=".method_setTarget .collapse">
+<h2>Set service target</h2>
+<pre>setTarget(string $target) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$target</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_setTransport"></a><div class="element clickable method public method_setTransport" data-toggle="collapse" data-target=".method_setTransport .collapse">
+<h2>Set transport</h2>
+<pre>setTransport(string $transport) : <a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$transport</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Json.Server.Exception.InvalidArgumentException.html">\Zend\Json\Server\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Json.Server.Smd.html">\Zend\Json\Server\Smd</a></code></div>
+</div></div>
+</div>
+<a id="method_toArray"></a><div class="element clickable method public method_toArray" data-toggle="collapse" data-target=".method_toArray .collapse">
+<h2>Cast to array</h2>
+<pre>toArray() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_toDojoArray"></a><div class="element clickable method public method_toDojoArray" data-toggle="collapse" data-target=".method_toDojoArray .collapse">
+<h2>Export to DOJO-compatible SMD array</h2>
+<pre>toDojoArray() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_toJson"></a><div class="element clickable method public method_toJson" data-toggle="collapse" data-target=".method_toJson .collapse">
+<h2>Cast to JSON</h2>
+<pre>toJson() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_contentType"> </a><div class="element clickable property protected property_contentType" data-toggle="collapse" data-target=".property_contentType .collapse">
+<h2></h2>
+<pre>$contentType : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_contentTypeRegex"> </a><div class="element clickable property protected property_contentTypeRegex" data-toggle="collapse" data-target=".property_contentTypeRegex .collapse">
+<h2></h2>
+<pre>$contentTypeRegex : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_description"> </a><div class="element clickable property protected property_description" data-toggle="collapse" data-target=".property_description .collapse">
+<h2></h2>
+<pre>$description : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_dojoCompatible"> </a><div class="element clickable property protected property_dojoCompatible" data-toggle="collapse" data-target=".property_dojoCompatible .collapse">
+<h2></h2>
+<pre>$dojoCompatible : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_envelope"> </a><div class="element clickable property protected property_envelope" data-toggle="collapse" data-target=".property_envelope .collapse">
+<h2></h2>
+<pre>$envelope : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_envelopeTypes"> </a><div class="element clickable property protected property_envelopeTypes" data-toggle="collapse" data-target=".property_envelopeTypes .collapse">
+<h2></h2>
+<pre>$envelopeTypes : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property protected property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2></h2>
+<pre>$id : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_services"> </a><div class="element clickable property protected property_services" data-toggle="collapse" data-target=".property_services .collapse">
+<h2></h2>
+<pre>$services : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_target"> </a><div class="element clickable property protected property_target" data-toggle="collapse" data-target=".property_target .collapse">
+<h2></h2>
+<pre>$target : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_transport"> </a><div class="element clickable property protected property_transport" data-toggle="collapse" data-target=".property_transport .collapse">
+<h2></h2>
+<pre>$transport : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_transportTypes"> </a><div class="element clickable property protected property_transportTypes" data-toggle="collapse" data-target=".property_transportTypes .collapse">
+<h2></h2>
+<pre>$transportTypes : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_ENV_JSONRPC_1"> </a><div class="element clickable constant  constant_ENV_JSONRPC_1" data-toggle="collapse" data-target=".constant_ENV_JSONRPC_1 .collapse">
+<h2>ENV_JSONRPC_1</h2>
+<pre>ENV_JSONRPC_1 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ENV_JSONRPC_2"> </a><div class="element clickable constant  constant_ENV_JSONRPC_2" data-toggle="collapse" data-target=".constant_ENV_JSONRPC_2 .collapse">
+<h2>ENV_JSONRPC_2</h2>
+<pre>ENV_JSONRPC_2 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SMD_VERSION"> </a><div class="element clickable constant  constant_SMD_VERSION" data-toggle="collapse" data-target=".constant_SMD_VERSION .collapse">
+<h2>SMD_VERSION</h2>
+<pre>SMD_VERSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:11:46+08:00.<br></footer></div>
+</div>
+</body>
+</html>

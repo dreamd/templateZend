@@ -1,0 +1,804 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » twig</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Application.html"><i class="icon-th"></i> Application</a></li>
+<li><a href="../namespaces/Dream.html"><i class="icon-th"></i> Dream</a></li>
+<li><a href="../namespaces/Share.html"><i class="icon-th"></i> Share</a></li>
+<li><a href="../namespaces/ShareResources.html"><i class="icon-th"></i> ShareResources</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/phpbrowscap.html"><i class="icon-th"></i> phpbrowscap</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Browscap.html"><i class="icon-folder-open"></i> Browscap</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Paginator.html"><i class="icon-folder-open"></i> Paginator</a></li>
+<li><a href="../packages/Reader.html"><i class="icon-folder-open"></i> Reader</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+<li><a href="../packages/twig.html"><i class="icon-folder-open"></i> twig</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">4372</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">139</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/twig.html" title="twig"><i class="icon-folder-open"></i>twig</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#Twig_CompilerInterface" title="Interface implemented by compiler classes.">Twig_CompilerInterface</a></li>
+<li><a href="#Twig_ExistsLoaderInterface" title="Adds an exists() method for loaders.">Twig_ExistsLoaderInterface</a></li>
+<li><a href="#Twig_ExtensionInterface" title="Interface implemented by extension classes.">Twig_ExtensionInterface</a></li>
+<li><a href="#Twig_FilterInterface" title="Represents a template filter.">Twig_FilterInterface</a></li>
+<li><a href="#Twig_FunctionInterface" title="Represents a template function.">Twig_FunctionInterface</a></li>
+<li><a href="#Twig_LexerInterface" title="Interface implemented by lexer classes.">Twig_LexerInterface</a></li>
+<li><a href="#Twig_LoaderInterface" title="Interface all loaders must implement.">Twig_LoaderInterface</a></li>
+<li><a href="#Twig_NodeInterface" title="Represents a node in the AST.">Twig_NodeInterface</a></li>
+<li><a href="#Twig_NodeOutputInterface" title="Represents a displayable node in the AST.">Twig_NodeOutputInterface</a></li>
+<li><a href="#Twig_NodeVisitorInterface" title="Twig_NodeVisitorInterface is the interface the all node visitor classes must implement.">Twig_NodeVisitorInterface</a></li>
+<li><a href="#Twig_ParserInterface" title="Interface implemented by parser classes.">Twig_ParserInterface</a></li>
+<li><a href="#Twig_Sandbox_SecurityPolicyInterface" title="Interfaces that all security policy classes must implements.">Twig_Sandbox_SecurityPolicyInterface</a></li>
+<li><a href="#Twig_TemplateInterface" title="Interface implemented by all compiled templates.">Twig_TemplateInterface</a></li>
+<li><a href="#Twig_TestInterface" title="Represents a template test.">Twig_TestInterface</a></li>
+<li><a href="#Twig_TokenParserBrokerInterface" title="Interface implemented by token parser brokers.">Twig_TokenParserBrokerInterface</a></li>
+<li><a href="#Twig_TokenParserInterface" title="Interface implemented by token parsers.">Twig_TokenParserInterface</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#Twig_Autoloader" title="Autoloads Twig classes.">Twig_Autoloader</a></li>
+<li><a href="#Twig_Compiler" title="Compiles a node to PHP code.">Twig_Compiler</a></li>
+<li><a href="#Twig_Environment" title="Stores the Twig configuration.">Twig_Environment</a></li>
+<li><a href="#Twig_Error_Loader" title="Exception thrown when an error occurs during template loading.">Twig_Error_Loader</a></li>
+<li><a href="#Twig_Error_Runtime" title="Exception thrown when an error occurs at runtime.">Twig_Error_Runtime</a></li>
+<li><a href="#Twig_Error_Syntax" title="Exception thrown when a syntax error occurs during lexing or parsing of a template.">Twig_Error_Syntax</a></li>
+<li><a href="#Twig_Error" title="Twig base exception.">Twig_Error</a></li>
+<li><a href="#Twig_ExpressionParser" title="Parses expressions.">Twig_ExpressionParser</a></li>
+<li><a href="#Twig_Filter_Function" title="Represents a function template filter.">Twig_Filter_Function</a></li>
+<li><a href="#Twig_Filter_Method" title="Represents a method template filter.">Twig_Filter_Method</a></li>
+<li><a href="#Twig_Filter_Node" title="Represents a template filter as a node.">Twig_Filter_Node</a></li>
+<li><a href="#Twig_Filter" title="Represents a template filter.">Twig_Filter</a></li>
+<li><a href="#Twig_Function_Function" title="Represents a function template function.">Twig_Function_Function</a></li>
+<li><a href="#Twig_Function_Method" title="Represents a method template function.">Twig_Function_Method</a></li>
+<li><a href="#Twig_Function_Node" title="Represents a template function as a node.">Twig_Function_Node</a></li>
+<li><a href="#Twig_Function" title="Represents a template function.">Twig_Function</a></li>
+<li><a href="#Twig_Lexer" title="Lexes a template string.">Twig_Lexer</a></li>
+<li><a href="#Twig_Loader_Array" title="Loads a template from an array.">Twig_Loader_Array</a></li>
+<li><a href="#Twig_Loader_Chain" title="Loads templates from other loaders.">Twig_Loader_Chain</a></li>
+<li><a href="#Twig_Loader_Filesystem" title="Loads template from the filesystem.">Twig_Loader_Filesystem</a></li>
+<li><a href="#Twig_Loader_String" title="Loads a template from a string.">Twig_Loader_String</a></li>
+<li><a href="#Twig_Markup" title="Marks a content as safe.">Twig_Markup</a></li>
+<li><a href="#Twig_Node_AutoEscape" title="Represents an autoescape node.">Twig_Node_AutoEscape</a></li>
+<li><a href="#Twig_Node_Block" title="Represents a block node.">Twig_Node_Block</a></li>
+<li><a href="#Twig_Node_BlockReference" title="Represents a block call node.">Twig_Node_BlockReference</a></li>
+<li><a href="#Twig_Node_Body" title="Represents a body node.">Twig_Node_Body</a></li>
+<li><a href="#Twig_Node_Do" title="Represents a do node.">Twig_Node_Do</a></li>
+<li><a href="#Twig_Node_Embed" title="Represents an embed node.">Twig_Node_Embed</a></li>
+<li><a href="#Twig_Node_Expression_BlockReference" title="Represents a block call node.">Twig_Node_Expression_BlockReference</a></li>
+<li><a href="#Twig_Node_Expression_ExtensionReference" title="Represents an extension call node.">Twig_Node_Expression_ExtensionReference</a></li>
+<li><a href="#Twig_Node_Expression_Filter_Default" title="Returns the value or the default value when it is undefined or empty.">Twig_Node_Expression_Filter_Default</a></li>
+<li><a href="#Twig_Node_Expression_Parent" title="Represents a parent node.">Twig_Node_Expression_Parent</a></li>
+<li><a href="#Twig_Node_Expression_Test_Constant" title="Checks if a variable is the exact same value as a constant.">Twig_Node_Expression_Test_Constant</a></li>
+<li><a href="#Twig_Node_Expression_Test_Defined" title="Checks if a variable is defined in the current context.">Twig_Node_Expression_Test_Defined</a></li>
+<li><a href="#Twig_Node_Expression_Test_Divisibleby" title="Checks if a variable is divisible by a number.">Twig_Node_Expression_Test_Divisibleby</a></li>
+<li><a href="#Twig_Node_Expression_Test_Even" title="Checks if a number is even.">Twig_Node_Expression_Test_Even</a></li>
+<li><a href="#Twig_Node_Expression_Test_Null" title="Checks that a variable is null.">Twig_Node_Expression_Test_Null</a></li>
+<li><a href="#Twig_Node_Expression_Test_Odd" title="Checks if a number is odd.">Twig_Node_Expression_Test_Odd</a></li>
+<li><a href="#Twig_Node_Expression_Test_Sameas" title="Checks if a variable is the same as another one (=== in PHP).">Twig_Node_Expression_Test_Sameas</a></li>
+<li><a href="#Twig_Node_Expression" title="Abstract class for all nodes that represents an expression.">Twig_Node_Expression</a></li>
+<li><a href="#Twig_Node_Flush" title="Represents a flush node.">Twig_Node_Flush</a></li>
+<li><a href="#Twig_Node_For" title="Represents a for node.">Twig_Node_For</a></li>
+<li><a href="#Twig_Node_ForLoop" title="Internal node used by the for node.">Twig_Node_ForLoop</a></li>
+<li><a href="#Twig_Node_If" title="Represents an if node.">Twig_Node_If</a></li>
+<li><a href="#Twig_Node_Import" title="Represents an import node.">Twig_Node_Import</a></li>
+<li><a href="#Twig_Node_Include" title="Represents an include node.">Twig_Node_Include</a></li>
+<li><a href="#Twig_Node_Macro" title="Represents a macro node.">Twig_Node_Macro</a></li>
+<li><a href="#Twig_Node_Module" title="Represents a module node.">Twig_Node_Module</a></li>
+<li><a href="#Twig_Node_Print" title="Represents a node that outputs an expression.">Twig_Node_Print</a></li>
+<li><a href="#Twig_Node_Sandbox" title="Represents a sandbox node.">Twig_Node_Sandbox</a></li>
+<li><a href="#Twig_Node_SandboxedModule" title="Represents a module node.">Twig_Node_SandboxedModule</a></li>
+<li><a href="#Twig_Node_SandboxedPrint" title="Twig_Node_SandboxedPrint adds a check for the __toString() method
+when the variable is an object and the sandbox is activated.">Twig_Node_SandboxedPrint</a></li>
+<li><a href="#Twig_Node_Set" title="Represents a set node.">Twig_Node_Set</a></li>
+<li><a href="#Twig_Node_Spaceless" title="Represents a spaceless node.">Twig_Node_Spaceless</a></li>
+<li><a href="#Twig_Node_Text" title="Represents a text node.">Twig_Node_Text</a></li>
+<li><a href="#Twig_Node" title="Represents a node in the AST.">Twig_Node</a></li>
+<li><a href="#Twig_NodeTraverser" title="Twig_NodeTraverser is a node traverser.">Twig_NodeTraverser</a></li>
+<li><a href="#Twig_NodeVisitor_Escaper" title="Twig_NodeVisitor_Escaper implements output escaping.">Twig_NodeVisitor_Escaper</a></li>
+<li><a href="#Twig_NodeVisitor_Optimizer" title="Twig_NodeVisitor_Optimizer tries to optimizes the AST.">Twig_NodeVisitor_Optimizer</a></li>
+<li><a href="#Twig_NodeVisitor_Sandbox" title="Twig_NodeVisitor_Sandbox implements sandboxing.">Twig_NodeVisitor_Sandbox</a></li>
+<li><a href="#Twig_Parser" title="Default parser implementation.">Twig_Parser</a></li>
+<li><a href="#Twig_Sandbox_SecurityError" title="Exception thrown when a security error occurs at runtime.">Twig_Sandbox_SecurityError</a></li>
+<li><a href="#Twig_Sandbox_SecurityPolicy" title="Represents a security policy which need to be enforced when sandbox mode is enabled.">Twig_Sandbox_SecurityPolicy</a></li>
+<li><a href="#Twig_Template" title="Default base class for compiled templates.">Twig_Template</a></li>
+<li><a href="#Twig_Test_Function" title="Represents a function template test.">Twig_Test_Function</a></li>
+<li><a href="#Twig_Test_IntegrationTestCase" title="Integration test helper">Twig_Test_IntegrationTestCase</a></li>
+<li><a href="#Twig_Test_Method" title="Represents a method template test.">Twig_Test_Method</a></li>
+<li><a href="#Twig_Test_Node" title="Represents a template test as a Node.">Twig_Test_Node</a></li>
+<li><a href="#Twig_Token" title="Represents a Token.">Twig_Token</a></li>
+<li><a href="#Twig_TokenParser" title="Base class for all token parsers.">Twig_TokenParser</a></li>
+<li><a href="#Twig_TokenParserBroker" title="Default implementation of a token parser broker.">Twig_TokenParserBroker</a></li>
+<li><a href="#Twig_TokenStream" title="Represents a token stream.">Twig_TokenStream</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/twig.html">twig</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Twig_CompilerInterface" class="element ajax clickable interface">
+<h1>Twig_CompilerInterface<a href="../classes/Twig_CompilerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by compiler classes.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_CompilerInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_ExistsLoaderInterface" class="element ajax clickable interface">
+<h1>Twig_ExistsLoaderInterface<a href="../classes/Twig_ExistsLoaderInterface.html">¶</a>
+</h1>
+<p class="short_description">Adds an exists() method for loaders.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_ExistsLoaderInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_ExtensionInterface" class="element ajax clickable interface">
+<h1>Twig_ExtensionInterface<a href="../classes/Twig_ExtensionInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by extension classes.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_ExtensionInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_FilterInterface" class="element ajax clickable interface">
+<h1>Twig_FilterInterface<a href="../classes/Twig_FilterInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents a template filter.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_FilterInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_FunctionInterface" class="element ajax clickable interface">
+<h1>Twig_FunctionInterface<a href="../classes/Twig_FunctionInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents a template function.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_FunctionInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_LexerInterface" class="element ajax clickable interface">
+<h1>Twig_LexerInterface<a href="../classes/Twig_LexerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by lexer classes.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_LexerInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_LoaderInterface" class="element ajax clickable interface">
+<h1>Twig_LoaderInterface<a href="../classes/Twig_LoaderInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface all loaders must implement.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_LoaderInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeInterface" class="element ajax clickable interface">
+<h1>Twig_NodeInterface<a href="../classes/Twig_NodeInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents a node in the AST.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeOutputInterface" class="element ajax clickable interface">
+<h1>Twig_NodeOutputInterface<a href="../classes/Twig_NodeOutputInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents a displayable node in the AST.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeOutputInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeVisitorInterface" class="element ajax clickable interface">
+<h1>Twig_NodeVisitorInterface<a href="../classes/Twig_NodeVisitorInterface.html">¶</a>
+</h1>
+<p class="short_description">Twig_NodeVisitorInterface is the interface the all node visitor classes must implement.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeVisitorInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_ParserInterface" class="element ajax clickable interface">
+<h1>Twig_ParserInterface<a href="../classes/Twig_ParserInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by parser classes.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_ParserInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_Sandbox_SecurityPolicyInterface" class="element ajax clickable interface">
+<h1>Twig_Sandbox_SecurityPolicyInterface<a href="../classes/Twig_Sandbox_SecurityPolicyInterface.html">¶</a>
+</h1>
+<p class="short_description">Interfaces that all security policy classes must implements.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Sandbox_SecurityPolicyInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_TemplateInterface" class="element ajax clickable interface">
+<h1>Twig_TemplateInterface<a href="../classes/Twig_TemplateInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by all compiled templates.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TemplateInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_TestInterface" class="element ajax clickable interface">
+<h1>Twig_TestInterface<a href="../classes/Twig_TestInterface.html">¶</a>
+</h1>
+<p class="short_description">Represents a template test.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TestInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_TokenParserBrokerInterface" class="element ajax clickable interface">
+<h1>Twig_TokenParserBrokerInterface<a href="../classes/Twig_TokenParserBrokerInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by token parser brokers.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TokenParserBrokerInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_TokenParserInterface" class="element ajax clickable interface">
+<h1>Twig_TokenParserInterface<a href="../classes/Twig_TokenParserInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface implemented by token parsers.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TokenParserInterface.html" class="more">« More »</a>
+</div>
+<div id="Twig_Autoloader" class="element ajax clickable class">
+<h1>Twig_Autoloader<a href="../classes/Twig_Autoloader.html">¶</a>
+</h1>
+<p class="short_description">Autoloads Twig classes.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Autoloader.html" class="more">« More »</a>
+</div>
+<div id="Twig_Compiler" class="element ajax clickable class">
+<h1>Twig_Compiler<a href="../classes/Twig_Compiler.html">¶</a>
+</h1>
+<p class="short_description">Compiles a node to PHP code.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Compiler.html" class="more">« More »</a>
+</div>
+<div id="Twig_Environment" class="element ajax clickable class">
+<h1>Twig_Environment<a href="../classes/Twig_Environment.html">¶</a>
+</h1>
+<p class="short_description">Stores the Twig configuration.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Environment.html" class="more">« More »</a>
+</div>
+<div id="Twig_Error" class="element ajax clickable class">
+<h1>Twig_Error<a href="../classes/Twig_Error.html">¶</a>
+</h1>
+<p class="short_description">Twig base exception.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Error.html" class="more">« More »</a>
+</div>
+<div id="Twig_Error_Loader" class="element ajax clickable class">
+<h1>Twig_Error_Loader<a href="../classes/Twig_Error_Loader.html">¶</a>
+</h1>
+<p class="short_description">Exception thrown when an error occurs during template loading.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Error_Loader.html" class="more">« More »</a>
+</div>
+<div id="Twig_Error_Runtime" class="element ajax clickable class">
+<h1>Twig_Error_Runtime<a href="../classes/Twig_Error_Runtime.html">¶</a>
+</h1>
+<p class="short_description">Exception thrown when an error occurs at runtime.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Error_Runtime.html" class="more">« More »</a>
+</div>
+<div id="Twig_Error_Syntax" class="element ajax clickable class">
+<h1>Twig_Error_Syntax<a href="../classes/Twig_Error_Syntax.html">¶</a>
+</h1>
+<p class="short_description">Exception thrown when a syntax error occurs during lexing or parsing of a template.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Error_Syntax.html" class="more">« More »</a>
+</div>
+<div id="Twig_ExpressionParser" class="element ajax clickable class">
+<h1>Twig_ExpressionParser<a href="../classes/Twig_ExpressionParser.html">¶</a>
+</h1>
+<p class="short_description">Parses expressions.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_ExpressionParser.html" class="more">« More »</a>
+</div>
+<div id="Twig_Filter" class="element ajax clickable class">
+<h1>Twig_Filter<a href="../classes/Twig_Filter.html">¶</a>
+</h1>
+<p class="short_description">Represents a template filter.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Filter.html" class="more">« More »</a>
+</div>
+<div id="Twig_Filter_Function" class="element ajax clickable class">
+<h1>Twig_Filter_Function<a href="../classes/Twig_Filter_Function.html">¶</a>
+</h1>
+<p class="short_description">Represents a function template filter.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Filter_Function.html" class="more">« More »</a>
+</div>
+<div id="Twig_Filter_Method" class="element ajax clickable class">
+<h1>Twig_Filter_Method<a href="../classes/Twig_Filter_Method.html">¶</a>
+</h1>
+<p class="short_description">Represents a method template filter.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Filter_Method.html" class="more">« More »</a>
+</div>
+<div id="Twig_Filter_Node" class="element ajax clickable class">
+<h1>Twig_Filter_Node<a href="../classes/Twig_Filter_Node.html">¶</a>
+</h1>
+<p class="short_description">Represents a template filter as a node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Filter_Node.html" class="more">« More »</a>
+</div>
+<div id="Twig_Function" class="element ajax clickable class">
+<h1>Twig_Function<a href="../classes/Twig_Function.html">¶</a>
+</h1>
+<p class="short_description">Represents a template function.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Function.html" class="more">« More »</a>
+</div>
+<div id="Twig_Function_Function" class="element ajax clickable class">
+<h1>Twig_Function_Function<a href="../classes/Twig_Function_Function.html">¶</a>
+</h1>
+<p class="short_description">Represents a function template function.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Function_Function.html" class="more">« More »</a>
+</div>
+<div id="Twig_Function_Method" class="element ajax clickable class">
+<h1>Twig_Function_Method<a href="../classes/Twig_Function_Method.html">¶</a>
+</h1>
+<p class="short_description">Represents a method template function.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Function_Method.html" class="more">« More »</a>
+</div>
+<div id="Twig_Function_Node" class="element ajax clickable class">
+<h1>Twig_Function_Node<a href="../classes/Twig_Function_Node.html">¶</a>
+</h1>
+<p class="short_description">Represents a template function as a node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Function_Node.html" class="more">« More »</a>
+</div>
+<div id="Twig_Lexer" class="element ajax clickable class">
+<h1>Twig_Lexer<a href="../classes/Twig_Lexer.html">¶</a>
+</h1>
+<p class="short_description">Lexes a template string.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Lexer.html" class="more">« More »</a>
+</div>
+<div id="Twig_Loader_Array" class="element ajax clickable class">
+<h1>Twig_Loader_Array<a href="../classes/Twig_Loader_Array.html">¶</a>
+</h1>
+<p class="short_description">Loads a template from an array.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Loader_Array.html" class="more">« More »</a>
+</div>
+<div id="Twig_Loader_Chain" class="element ajax clickable class">
+<h1>Twig_Loader_Chain<a href="../classes/Twig_Loader_Chain.html">¶</a>
+</h1>
+<p class="short_description">Loads templates from other loaders.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Loader_Chain.html" class="more">« More »</a>
+</div>
+<div id="Twig_Loader_Filesystem" class="element ajax clickable class">
+<h1>Twig_Loader_Filesystem<a href="../classes/Twig_Loader_Filesystem.html">¶</a>
+</h1>
+<p class="short_description">Loads template from the filesystem.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Loader_Filesystem.html" class="more">« More »</a>
+</div>
+<div id="Twig_Loader_String" class="element ajax clickable class">
+<h1>Twig_Loader_String<a href="../classes/Twig_Loader_String.html">¶</a>
+</h1>
+<p class="short_description">Loads a template from a string.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Loader_String.html" class="more">« More »</a>
+</div>
+<div id="Twig_Markup" class="element ajax clickable class">
+<h1>Twig_Markup<a href="../classes/Twig_Markup.html">¶</a>
+</h1>
+<p class="short_description">Marks a content as safe.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Markup.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node" class="element ajax clickable class">
+<h1>Twig_Node<a href="../classes/Twig_Node.html">¶</a>
+</h1>
+<p class="short_description">Represents a node in the AST.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeTraverser" class="element ajax clickable class">
+<h1>Twig_NodeTraverser<a href="../classes/Twig_NodeTraverser.html">¶</a>
+</h1>
+<p class="short_description">Twig_NodeTraverser is a node traverser.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeTraverser.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeVisitor_Escaper" class="element ajax clickable class">
+<h1>Twig_NodeVisitor_Escaper<a href="../classes/Twig_NodeVisitor_Escaper.html">¶</a>
+</h1>
+<p class="short_description">Twig_NodeVisitor_Escaper implements output escaping.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeVisitor_Escaper.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeVisitor_Optimizer" class="element ajax clickable class">
+<h1>Twig_NodeVisitor_Optimizer<a href="../classes/Twig_NodeVisitor_Optimizer.html">¶</a>
+</h1>
+<p class="short_description">Twig_NodeVisitor_Optimizer tries to optimizes the AST.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeVisitor_Optimizer.html" class="more">« More »</a>
+</div>
+<div id="Twig_NodeVisitor_Sandbox" class="element ajax clickable class">
+<h1>Twig_NodeVisitor_Sandbox<a href="../classes/Twig_NodeVisitor_Sandbox.html">¶</a>
+</h1>
+<p class="short_description">Twig_NodeVisitor_Sandbox implements sandboxing.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_NodeVisitor_Sandbox.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_AutoEscape" class="element ajax clickable class">
+<h1>Twig_Node_AutoEscape<a href="../classes/Twig_Node_AutoEscape.html">¶</a>
+</h1>
+<p class="short_description">Represents an autoescape node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_AutoEscape.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Block" class="element ajax clickable class">
+<h1>Twig_Node_Block<a href="../classes/Twig_Node_Block.html">¶</a>
+</h1>
+<p class="short_description">Represents a block node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Block.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_BlockReference" class="element ajax clickable class">
+<h1>Twig_Node_BlockReference<a href="../classes/Twig_Node_BlockReference.html">¶</a>
+</h1>
+<p class="short_description">Represents a block call node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_BlockReference.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Body" class="element ajax clickable class">
+<h1>Twig_Node_Body<a href="../classes/Twig_Node_Body.html">¶</a>
+</h1>
+<p class="short_description">Represents a body node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Body.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Do" class="element ajax clickable class">
+<h1>Twig_Node_Do<a href="../classes/Twig_Node_Do.html">¶</a>
+</h1>
+<p class="short_description">Represents a do node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Do.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Embed" class="element ajax clickable class">
+<h1>Twig_Node_Embed<a href="../classes/Twig_Node_Embed.html">¶</a>
+</h1>
+<p class="short_description">Represents an embed node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Embed.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression" class="element ajax clickable class">
+<h1>Twig_Node_Expression<a href="../classes/Twig_Node_Expression.html">¶</a>
+</h1>
+<p class="short_description">Abstract class for all nodes that represents an expression.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_BlockReference" class="element ajax clickable class">
+<h1>Twig_Node_Expression_BlockReference<a href="../classes/Twig_Node_Expression_BlockReference.html">¶</a>
+</h1>
+<p class="short_description">Represents a block call node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_BlockReference.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_ExtensionReference" class="element ajax clickable class">
+<h1>Twig_Node_Expression_ExtensionReference<a href="../classes/Twig_Node_Expression_ExtensionReference.html">¶</a>
+</h1>
+<p class="short_description">Represents an extension call node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_ExtensionReference.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Filter_Default" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Filter_Default<a href="../classes/Twig_Node_Expression_Filter_Default.html">¶</a>
+</h1>
+<p class="short_description">Returns the value or the default value when it is undefined or empty.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Filter_Default.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Parent" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Parent<a href="../classes/Twig_Node_Expression_Parent.html">¶</a>
+</h1>
+<p class="short_description">Represents a parent node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Parent.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Constant" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Constant<a href="../classes/Twig_Node_Expression_Test_Constant.html">¶</a>
+</h1>
+<p class="short_description">Checks if a variable is the exact same value as a constant.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Constant.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Defined" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Defined<a href="../classes/Twig_Node_Expression_Test_Defined.html">¶</a>
+</h1>
+<p class="short_description">Checks if a variable is defined in the current context.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Defined.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Divisibleby" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Divisibleby<a href="../classes/Twig_Node_Expression_Test_Divisibleby.html">¶</a>
+</h1>
+<p class="short_description">Checks if a variable is divisible by a number.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Divisibleby.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Even" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Even<a href="../classes/Twig_Node_Expression_Test_Even.html">¶</a>
+</h1>
+<p class="short_description">Checks if a number is even.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Even.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Null" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Null<a href="../classes/Twig_Node_Expression_Test_Null.html">¶</a>
+</h1>
+<p class="short_description">Checks that a variable is null.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Null.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Odd" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Odd<a href="../classes/Twig_Node_Expression_Test_Odd.html">¶</a>
+</h1>
+<p class="short_description">Checks if a number is odd.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Odd.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Expression_Test_Sameas" class="element ajax clickable class">
+<h1>Twig_Node_Expression_Test_Sameas<a href="../classes/Twig_Node_Expression_Test_Sameas.html">¶</a>
+</h1>
+<p class="short_description">Checks if a variable is the same as another one (=== in PHP).</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Expression_Test_Sameas.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Flush" class="element ajax clickable class">
+<h1>Twig_Node_Flush<a href="../classes/Twig_Node_Flush.html">¶</a>
+</h1>
+<p class="short_description">Represents a flush node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Flush.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_For" class="element ajax clickable class">
+<h1>Twig_Node_For<a href="../classes/Twig_Node_For.html">¶</a>
+</h1>
+<p class="short_description">Represents a for node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_For.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_ForLoop" class="element ajax clickable class">
+<h1>Twig_Node_ForLoop<a href="../classes/Twig_Node_ForLoop.html">¶</a>
+</h1>
+<p class="short_description">Internal node used by the for node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_ForLoop.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_If" class="element ajax clickable class">
+<h1>Twig_Node_If<a href="../classes/Twig_Node_If.html">¶</a>
+</h1>
+<p class="short_description">Represents an if node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_If.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Import" class="element ajax clickable class">
+<h1>Twig_Node_Import<a href="../classes/Twig_Node_Import.html">¶</a>
+</h1>
+<p class="short_description">Represents an import node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Import.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Include" class="element ajax clickable class">
+<h1>Twig_Node_Include<a href="../classes/Twig_Node_Include.html">¶</a>
+</h1>
+<p class="short_description">Represents an include node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Include.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Macro" class="element ajax clickable class">
+<h1>Twig_Node_Macro<a href="../classes/Twig_Node_Macro.html">¶</a>
+</h1>
+<p class="short_description">Represents a macro node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Macro.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Module" class="element ajax clickable class">
+<h1>Twig_Node_Module<a href="../classes/Twig_Node_Module.html">¶</a>
+</h1>
+<p class="short_description">Represents a module node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Module.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Print" class="element ajax clickable class">
+<h1>Twig_Node_Print<a href="../classes/Twig_Node_Print.html">¶</a>
+</h1>
+<p class="short_description">Represents a node that outputs an expression.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Print.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Sandbox" class="element ajax clickable class">
+<h1>Twig_Node_Sandbox<a href="../classes/Twig_Node_Sandbox.html">¶</a>
+</h1>
+<p class="short_description">Represents a sandbox node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Sandbox.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_SandboxedModule" class="element ajax clickable class">
+<h1>Twig_Node_SandboxedModule<a href="../classes/Twig_Node_SandboxedModule.html">¶</a>
+</h1>
+<p class="short_description">Represents a module node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_SandboxedModule.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_SandboxedPrint" class="element ajax clickable class">
+<h1>Twig_Node_SandboxedPrint<a href="../classes/Twig_Node_SandboxedPrint.html">¶</a>
+</h1>
+<p class="short_description">Twig_Node_SandboxedPrint adds a check for the __toString() method
+when the variable is an object and the sandbox is activated.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_SandboxedPrint.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Set" class="element ajax clickable class">
+<h1>Twig_Node_Set<a href="../classes/Twig_Node_Set.html">¶</a>
+</h1>
+<p class="short_description">Represents a set node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Set.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Spaceless" class="element ajax clickable class">
+<h1>Twig_Node_Spaceless<a href="../classes/Twig_Node_Spaceless.html">¶</a>
+</h1>
+<p class="short_description">Represents a spaceless node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Spaceless.html" class="more">« More »</a>
+</div>
+<div id="Twig_Node_Text" class="element ajax clickable class">
+<h1>Twig_Node_Text<a href="../classes/Twig_Node_Text.html">¶</a>
+</h1>
+<p class="short_description">Represents a text node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Node_Text.html" class="more">« More »</a>
+</div>
+<div id="Twig_Parser" class="element ajax clickable class">
+<h1>Twig_Parser<a href="../classes/Twig_Parser.html">¶</a>
+</h1>
+<p class="short_description">Default parser implementation.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Parser.html" class="more">« More »</a>
+</div>
+<div id="Twig_Sandbox_SecurityError" class="element ajax clickable class">
+<h1>Twig_Sandbox_SecurityError<a href="../classes/Twig_Sandbox_SecurityError.html">¶</a>
+</h1>
+<p class="short_description">Exception thrown when a security error occurs at runtime.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Sandbox_SecurityError.html" class="more">« More »</a>
+</div>
+<div id="Twig_Sandbox_SecurityPolicy" class="element ajax clickable class">
+<h1>Twig_Sandbox_SecurityPolicy<a href="../classes/Twig_Sandbox_SecurityPolicy.html">¶</a>
+</h1>
+<p class="short_description">Represents a security policy which need to be enforced when sandbox mode is enabled.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Sandbox_SecurityPolicy.html" class="more">« More »</a>
+</div>
+<div id="Twig_Template" class="element ajax clickable class">
+<h1>Twig_Template<a href="../classes/Twig_Template.html">¶</a>
+</h1>
+<p class="short_description">Default base class for compiled templates.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Template.html" class="more">« More »</a>
+</div>
+<div id="Twig_Test_Function" class="element ajax clickable class">
+<h1>Twig_Test_Function<a href="../classes/Twig_Test_Function.html">¶</a>
+</h1>
+<p class="short_description">Represents a function template test.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Test_Function.html" class="more">« More »</a>
+</div>
+<div id="Twig_Test_IntegrationTestCase" class="element ajax clickable class">
+<h1>Twig_Test_IntegrationTestCase<a href="../classes/Twig_Test_IntegrationTestCase.html">¶</a>
+</h1>
+<p class="short_description">Integration test helper</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Test_IntegrationTestCase.html" class="more">« More »</a>
+</div>
+<div id="Twig_Test_Method" class="element ajax clickable class">
+<h1>Twig_Test_Method<a href="../classes/Twig_Test_Method.html">¶</a>
+</h1>
+<p class="short_description">Represents a method template test.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Test_Method.html" class="more">« More »</a>
+</div>
+<div id="Twig_Test_Node" class="element ajax clickable class">
+<h1>Twig_Test_Node<a href="../classes/Twig_Test_Node.html">¶</a>
+</h1>
+<p class="short_description">Represents a template test as a Node.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Test_Node.html" class="more">« More »</a>
+</div>
+<div id="Twig_Token" class="element ajax clickable class">
+<h1>Twig_Token<a href="../classes/Twig_Token.html">¶</a>
+</h1>
+<p class="short_description">Represents a Token.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_Token.html" class="more">« More »</a>
+</div>
+<div id="Twig_TokenParser" class="element ajax clickable class">
+<h1>Twig_TokenParser<a href="../classes/Twig_TokenParser.html">¶</a>
+</h1>
+<p class="short_description">Base class for all token parsers.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TokenParser.html" class="more">« More »</a>
+</div>
+<div id="Twig_TokenParserBroker" class="element ajax clickable class">
+<h1>Twig_TokenParserBroker<a href="../classes/Twig_TokenParserBroker.html">¶</a>
+</h1>
+<p class="short_description">Default implementation of a token parser broker.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TokenParserBroker.html" class="more">« More »</a>
+</div>
+<div id="Twig_TokenStream" class="element ajax clickable class">
+<h1>Twig_TokenStream<a href="../classes/Twig_TokenStream.html">¶</a>
+</h1>
+<p class="short_description">Represents a token stream.</p>
+<div class="details collapse"></div>
+<a href="../classes/Twig_TokenStream.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-03T22:06:57+08:00.<br></footer></div>
+</div>
+</body>
+</html>
