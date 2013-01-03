@@ -3,45 +3,59 @@
 namespace Dream\Zend\Mvc\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
-use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Zend\View\Model\ViewModel;
+use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Dream\Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Dream\Zend\Mvc\View\ViewStorage;
 use Zend\Mvc\Exception\DomainException;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
-	protected $view = NULL;
-	public function __construct() {
-		$this->view = new ViewStorage();
-	}
-    public function indexAction() {
-        return new ViewModel();
-    }
-	public function dispatchLayout() {
-		
-	}
+		protected $view = NULL;
+		protected $viewModel = NULL;
+		public function __construct() {
+				$this->view = new ViewStorage();
+				$this->viewModel = new ViewModel();
+		}
+		public function setFormat($format = NULL) {
+				if (is_string($format) === false) {
+						return;
+				}
+				$this->viewModel->setFormat($format);
+		}
+		public function useTwig() {
+				return $this->viewModel->useTwig;
+		}
+		public function currentFormat() {
+				return $this->viewModel->currentFormat();
+		}
+		public function indexAction() {
+				return new ViewModel();
+		 }
+		public function dispatchLayout() {
+			
+		}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
             throw new DomainException('Missing route matches; unsure how to retrieve action');
         }
         $method = static::getMethodFromAction($routeMatch->getParam('action', 'not-found'));
-		$this->dispatchLayout();
+				$this->dispatchLayout();
         if (method_exists($this, $method) === true) {
            $actionResponse = $this->$method();
         }
-		$actionResponse = $this->view->values();
-		if (is_array($actionResponse) === true) {
-			if (ArrayUtils::hasStringKeys($actionResponse, true)) {
-				$actionResponse = new ViewModel($actionResponse);
-			} else {
-				$actionResponse = new ViewModel();
-			}
-        } else if (is_string($actionResponse) === true) {
-            $actionResponse = new ViewModel(array($actionResponse => $actionResponse));
-		} else if ($actionResponse === NULL) {
-            $actionResponse = new ViewModel();
-		}
-		$actionResponse->setTerminal(true);
-        $e->setResult($actionResponse);
+				$actionResponse = $this->view->values();
+				if (is_array($actionResponse) === true) {
+						if (ArrayUtils::hasStringKeys($actionResponse, true)) {
+								$actionResponse = $this->viewModel->setVariables($actionResponse);
+						} else {
+								$actionResponse = $this->viewModel;
+						}
+    		} else if (is_string($actionResponse) === true) {
+            $actionResponse = $this->viewModel->setVariables(array($actionResponse => $actionResponse));
+				} else if ($actionResponse === NULL) {
+            $actionResponse = $this->viewModel;
+				}
+				$actionResponse->setTerminal(true);
+				$e->setResult($actionResponse);
         return $actionResponse;
     }
 

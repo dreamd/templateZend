@@ -17,7 +17,6 @@ class ViewManager extends ZendViewManager {
         $this->renderer->setHelperPluginManager($this->getHelpermanager());
         $this->renderer->setResolver($this->getResolver());
 
-
         $model       = $this->getViewModel();
         $modelHelper = $this->renderer->plugin('view_model');
         $modelHelper->setRoot($model);
