@@ -37,7 +37,9 @@ class PhpRenderer extends ZendPhpRenderer {
 				return $jade->render($render);
 			}
 			case 'HAML' : {
-					return $render;
+				$fammel = new Fammel\Haml\Fammel();
+				$fammel->parse($render);
+				return $fammel->render();
 			}
 			default : {
 					return $render;

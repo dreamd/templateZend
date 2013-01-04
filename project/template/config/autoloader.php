@@ -7,6 +7,7 @@ return array(
 			'Twig'				=> 'library/Twig',
 			'phpbrowscap'	=> 'library/PhpBrowscap',
 			'Everzet'			=> 'library/Everzet',
+			'Fammel'			=> 'library/Fammel',
 		),
 	)
 );
