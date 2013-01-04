@@ -7,7 +7,7 @@ use Dream\Twig\Loader\ZendRendererLoader, Dream\Twig\Environment;
 use Dream\Everzet\Jade\Jade, Everzet\Jade\Parser, Everzet\Jade\Lexer\Lexer;
 use Everzet\Jade\Dumper\PHPDumper, Everzet\Jade\Visitor\AutotagsVisitor, Everzet\Jade\Filter\JavaScriptFilter;
 use Everzet\Jade\Filter\CDATAFilter, Everzet\Jade\Filter\PHPFilter, Everzet\Jade\Filter\CSSFilter;
-use Dream\Zend\View\Model\ViewModel;
+use Dream\Zend\View\Model\ViewModel, Fammel\Haml\Fammel;
 
 class PhpRenderer extends ZendPhpRenderer {
 	public function render($nameOrModel = NULL, $values = NULL) {
@@ -37,7 +37,7 @@ class PhpRenderer extends ZendPhpRenderer {
 				return $jade->render($render);
 			}
 			case 'HAML' : {
-				$fammel = new Fammel\Haml\Fammel();
+				$fammel = new Fammel();
 				$fammel->parse($render);
 				return $fammel->render();
 			}
