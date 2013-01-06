@@ -22,15 +22,15 @@ class ServiceListenerFactory extends ZendServiceListenerFactory {
             'Request'									=> 'Zend\Mvc\Service\RequestFactory',//will change
             'Response'								=> 'Zend\Mvc\Service\ResponseFactory',
             'Router'									=> 'Zend\Mvc\Service\RouterFactory',
-            'ViewHelperManager'				=> 'Dream\Zend\Mvc\Service\ViewHelperManagerFactory',//changing
+            'ViewHelperManager'				=> 'Dream\Zend\Mvc\Service\ViewHelperManagerFactory',
             'ViewFeedRenderer'				=> 'Zend\Mvc\Service\ViewFeedRendererFactory',
             'ViewFeedStrategy'				=> 'Zend\Mvc\Service\ViewFeedStrategyFactory',
             'ViewJsonRenderer'				=> 'Zend\Mvc\Service\ViewJsonRendererFactory',
             'ViewJsonStrategy'				=> 'Zend\Mvc\Service\ViewJsonStrategyFactory',
-            'ViewManager'						=> 'Dream\Zend\Mvc\Service\ViewManagerFactory',//changing
-            'ViewResolver'							=> 'Dream\Zend\Mvc\Service\ViewResolverFactory',//changing
+            'ViewManager'						=> 'Dream\Zend\Mvc\Service\ViewManagerFactory',
+            'ViewResolver'							=> 'Zend\Mvc\Service\ViewResolverFactory',
             'ViewTemplateMapResolver'	=> 'Zend\Mvc\Service\ViewTemplateMapResolverFactory',
-            'ViewTemplatePathStack'		=> 'Zend\Mvc\Service\ViewTemplatePathStackFactory',//will change
+            'ViewTemplatePathStack'		=> 'Dream\Zend\Mvc\Service\ViewTemplatePathStackFactory',
         ),
         'aliases' => array(
             'Configuration'													=> 'Config',

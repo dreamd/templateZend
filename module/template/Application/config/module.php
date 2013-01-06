@@ -80,8 +80,6 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => getcwd().'/views/'.__PROJECT__.'/Layout/Layout.phtml',
-            'application/index/index' => getcwd().'/views/'.__PROJECT__.'/Application/Index/Index.phtml',
-			'application/index/test' => getcwd().'/views/'.__PROJECT__.'/Application/Index/Test.phtml',
             'error/404'               => getcwd().'/views/'.__PROJECT__.'/Error/404.phtml',
             'error/index'             => getcwd().'/views/'.__PROJECT__.'/Error/Index.phtml',
         ),

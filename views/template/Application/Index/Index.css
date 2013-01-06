@@ -15,7 +15,7 @@ html(leng='en')
     script(type='text/javascript', src='<?php echo $this->basePath().'/js/bootstrap.min.js'; ?>')
     script(type='text/javascript', src='<?php echo $this->basePath().'/jquery.min.js'; ?>')
   body
-    span {% include 'SHARE/base.html' %} 
+    span {% include 'SHARE/Base' %} 
     span it is {{ a.a }} 
     span <?php echo 'it is '.$this->a['a']; ?> 
 		span <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0'); ?> 

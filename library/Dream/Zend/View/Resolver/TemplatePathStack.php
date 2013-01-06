@@ -7,20 +7,14 @@ use Zend\View\Renderer\RendererInterface as Renderer;
 use SplFileInfo;
 
 class TemplatePathStack extends ZendTemplatePathStack {
-	protected $defaultSuffix = array('phtml', 'css', 'js', 'less');
-    public function setDefaultSuffix($defaultSuffix) {
-        $this->defaultSuffix[] = (string)ltrim($defaultSuffix, '.');
-        return $this;
-    }
+	protected $defaultSuffix = array('html', 'haml', 'jade', 'phtml', 'css', 'less', 'lass', 'js', 'coffee');
     public function resolve($name, Renderer $renderer = NULL) {
         $this->lastLookupFailure = false;
-		
         if ($this->isLfiProtectionOn() && preg_match('#\.\.[\\\/]#', $name)) {
             throw new Exception\DomainException(
                 'Requested scripts may not include parent directory traversal ("../", "..\\" notation)'
             );
         }
-
         if (!count($this->paths)) {
             $this->lastLookupFailure = static::FAILURE_NO_PATHS;
             return false;
@@ -29,15 +23,12 @@ class TemplatePathStack extends ZendTemplatePathStack {
         // Ensure we have the expected file extension
         $defaultSuffixs = $this->getDefaultSuffix();
         foreach ($this->paths as $path) {
-			$name = str_replace(' ', DIRECTORY_SEPARATOR, ucwords(str_replace('/', ' ', $name)));
+			$name = str_replace(' ', '/', ucwords(str_replace('/', ' ', $name)));
 			for ($i = 0; $i < count($defaultSuffixs); $i++) {
 				if (realpath($path . $name.'.'.$defaultSuffixs[$i]) !== false) {
 					$name = $name.'.'.$defaultSuffixs[$i];
 					break;	
 				}
-			}
-			if (pathinfo($name, PATHINFO_EXTENSION) === '') {;
-				$name .= '.' . $defaultSuffixs[0];
 			}
             $file = new SplFileInfo($path . $name);
             if ($file->isReadable()) {
@@ -56,7 +47,6 @@ class TemplatePathStack extends ZendTemplatePathStack {
                 return $filePath;
             }
         }
-
         $this->lastLookupFailure = static::FAILURE_NOT_FOUND;
         return false;
     }

@@ -298,7 +298,7 @@ class TemplatePathStack implements ResolverInterface
             $this->lastLookupFailure = static::FAILURE_NO_PATHS;
             return false;
         }
-
+		
         // Ensure we have the expected file extension
         $defaultSuffix = $this->getDefaultSuffix();
         if (pathinfo($name, PATHINFO_EXTENSION) != $defaultSuffix) {;
