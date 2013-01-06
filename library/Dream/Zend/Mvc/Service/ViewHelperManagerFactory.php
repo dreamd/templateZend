@@ -7,7 +7,7 @@ use Zend\Mvc\Service\ViewHelperManagerFactory as ZendViewHelperManagerFactory;
 class ViewHelperManagerFactory extends ZendViewHelperManagerFactory {
     protected $defaultHelperMapClasses = array(
         'Zend\Form\View\HelperConfig',
-        'Zend\I18n\View\HelperConfig',//will change
+        'Dream\Zend\I18n\View\HelperConfig',
         'Zend\Navigation\View\HelperConfig'
     );
 }
