@@ -6,8 +6,6 @@ use Twig_LoaderInterface, Dream\Zend\View\Renderer\PhpRenderer ;
 
 class ZendRendererLoader implements Twig_LoaderInterface {
 	private $files = array(), $renderer = NULL, $templatePath = false;
-	const shareKeyword = 'SHARE';
-	const sharePath = 'ShareResources';
 	const currentPath = '.';
 	const prevPath = '..';
 	const rootPath = '~';
@@ -46,15 +44,8 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 	private function fixPath($path) {
 		$paths = array_filter(explode(self::folderPrefix, $path));
 		for ($i = 0; $i < max(array_keys($paths)); $i++) {
-			if (isset($paths[$i]) === true && $paths[$i] === self::shareKeyword) {
-				$paths[$i] = self::sharePath;
-				for ($j = $i - 1; $j >= 0; $j--) {
-					if (isset($paths[$j]) === true) {
-						unset($paths[$j]);
-					}
-				}
-			} else if (isset($paths[$i]) === true && $paths[$i] === self::rootPath) {
-				$paths[$i] = __PROJECT__;
+			if (isset($paths[$i]) === true && $paths[$i] === self::rootPath) {
+				unset($paths[$i]);
 				for ($j = $i - 1; $j >= 0; $j--) {
 					if (isset($paths[$j]) === true) {
 						unset($paths[$j]);
@@ -72,9 +63,15 @@ class ZendRendererLoader implements Twig_LoaderInterface {
 				}
 			}
 		}
+		$realPaths = array();
+		for ($i = 0; $i <= max(array_keys($paths)); $i++) {
+			if (isset($paths[$i]) === true) {
+				$realPaths[] = $paths[$i];
+			}
+		}
 		return implode(self::folderPrefix, array_map(function($value) {
 			return ucfirst($value);
-		}, $paths));
+		}, $realPaths));
 	}
     public function getCacheKey($name = NULL) {
 		if ($name !== NULL && array_key_exists($name, $this->files) === true) {

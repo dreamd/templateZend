@@ -79,13 +79,13 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => getcwd().'/views/'.__PROJECT__.'/Layout/Layout.phtml',
-            'error/404'               => getcwd().'/views/'.__PROJECT__.'/Error/404.phtml',
-            'error/index'             => getcwd().'/views/'.__PROJECT__.'/Error/Index.phtml',
+            'layout/layout'           => getcwd().'/resources/'.__PROJECT__.'/views/Layout/Layout.phtml',
+            'error/404'               => getcwd().'/resources/'.__PROJECT__.'/views/Error/404.phtml',
+            'error/index'             => getcwd().'/resources/'.__PROJECT__.'/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-            getcwd().'/views',
-			getcwd().'/views/'.__PROJECT__
+            getcwd().'/resources/ShareResources/views',
+			getcwd().'/resources/'.__PROJECT__.'/views',
         ),
     ),
 );

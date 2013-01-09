@@ -81,15 +81,15 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => getcwd().'/views/ShareResources/Layout/Layout.phtml',
-            'share/index/index' => getcwd().'/views/ShareResources/Share/Index/Index.phtml',
-			'share/index/test' => getcwd().'/views/ShareResources/Share/Index/Test.phtml',
-            'error/404'               => getcwd().'/views/ShareResources/Error/404.phtml',
-            'error/index'             => getcwd().'/views/ShareResources/Error/Index.phtml',
+            'layout/layout'           => getcwd().'/resources/ShareResources/views/Layout/Layout.phtml',
+            'share/index/index' => getcwd().'/resources/ShareResources/views/Share/Index/Index.phtml',
+			'share/index/test' => getcwd().'/resources/ShareResources/views/Share/Index/Test.phtml',
+            'error/404'               => getcwd().'/resources/ShareResources/views/Error/404.phtml',
+            'error/index'             => getcwd().'/resources/ShareResources/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-            getcwd().'/views',
-			getcwd().'/views/'.__PROJECT__
+            getcwd().'/resources/ShareResources/views',
+			getcwd().'/resources/'.__PROJECT__.'/views',
         ),
     ),
 );
