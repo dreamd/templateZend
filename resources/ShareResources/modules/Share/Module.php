@@ -1,6 +1,6 @@
 <?php
 
-namespace Application;
+namespace Share;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -20,8 +20,8 @@ class Module {
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    __NAMESPACE__ => realpath(getcwd().'/resources/'.__PROJECT__.'/'.__NAMESPACE__),
-					'ShareResources' => realpath(getcwd().'/resources/ShareResources'),
+                    __NAMESPACE__ => realpath(getcwd().'/resources/ShareResources/sources/'.__NAMESPACE__),
+					'ShareResources' => realpath(getcwd().'/resources/ShareResources/sources'),
                 ),
             ),
         );

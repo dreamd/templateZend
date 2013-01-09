@@ -6,11 +6,11 @@ return array(
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
-            'config/autoload/{,*.}{global,local}.php',
+            getcwd().'/resources/'.__PROJECT__.'/config/autoload/{,*.}{global,local}.php',
         ),
         'module_paths' => array(
-            getcwd().'/module/'.__PROJECT__,
-			getcwd().'/module/ShareResources',
+            getcwd().'/resources/'.__PROJECT__.'/modules',
+			getcwd().'/resources/ShareResources/modules',
         ),
     ),
 	'service_manager' => array(
