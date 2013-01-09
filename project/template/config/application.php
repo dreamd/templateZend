@@ -13,9 +13,17 @@ return array(
 			getcwd().'/module/ShareResources',
         ),
     ),
-	"service_manager" => array(
-		"factories" => array(
+	'service_manager' => array(
+		'factories' => array(
 			'ServiceListener' => 'Dream\Zend\Mvc\Service\ServiceListenerFactory'
+		),
+	),
+	'databases' => array(
+		'local' => array(
+ 		   'driver' => 'Mysqli',
+    		'database' => 'zend_db_example',
+			'username' => 'developer',
+			'password' => 'developer-password',
 		),
 	)
 );

@@ -5,33 +5,53 @@ namespace Dream\Zend\Mvc\Controller;
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
 use Zend\Mvc\Exception, Zend\Mvc\MvcEvent, Dream\Zend\View\Model\ViewModel;
 use Zend\Stdlib\ArrayUtils, Dream\Zend\Mvc\View\ViewStorage;
-use Zend\Mvc\Exception\DomainException;
+use Zend\Mvc\Exception\DomainException, Zend\Db\Adapter\Adapter;
 
 abstract class AbstractActionController extends ZendAbstractActionController {
-		protected $view = NULL;
-		protected $viewModel = NULL;
-		public function __construct() {
-				$this->view = new ViewStorage();
-				$this->viewModel = new ViewModel();
+	protected $view = NULL;
+	protected $dataBases = array();
+	protected $viewModel = NULL;
+	public function __construct() {
+			$this->view = new ViewStorage();
+			$this->viewModel = new ViewModel();
+	}
+	public function db($name = NULL) {
+		return $this->getDbAdapter($name);	
+	}
+	private function getDbAdapter($name = NULL) {
+		if (is_string($name) === true) {
+			return NULL;
 		}
-		public function setFormat($format = NULL) {
-				if (is_string($format) === false) {
-						return;
-				}
-				$this->viewModel->setFormat($format);
+		if (isset($this->dataBases[$name]) === false) {
+			return $this->createDbAdapter($name);
 		}
-		public function useTwig() {
-				return $this->viewModel->useTwig;
+		return $this->dataBases[$name];
+	}
+	private function createDbAdapter($name = NULL) {
+		$applicationConfig = $this->getServiceLocator()->get('ApplicationConfig');
+		if (is_string($name) === false || isset($applicationConfig['databases'][$name]) === false) {
+			return NULL;
 		}
-		public function currentFormat() {
-				return $this->viewModel->currentFormat();
-		}
-		public function indexAction() {
-				return new ViewModel();
-		 }
-		public function dispatchLayout() {
-			
-		}
+		$this->dataBases[$name] = new Adapter($applicationConfig['databases'][$name]);
+	}
+	protected function setFormat($format = NULL) {
+			if (is_string($format) === false) {
+					return;
+			}
+			$this->viewModel->setFormat($format);
+	}
+	protected function useTwig() {
+			return $this->viewModel->useTwig;
+	}
+	protected function currentFormat() {
+			return $this->viewModel->currentFormat();
+	}
+	public function indexAction() {
+			return new ViewModel();
+	 }
+	public function dispatchLayout() {
+		
+	}
     public function onDispatch(MvcEvent $e) {
         $routeMatch = $e->getRouteMatch();
         if (!$routeMatch) {
