@@ -8,6 +8,6 @@ if (!class_exists('Zend\Loader\AutoloaderFactory') || defined('__PROJECT__') ===
 } else {
 	include_once("library/Twig/Autoloader.php");
 	Twig_Autoloader::register();
-	$autoloaderSetting = require getcwd().'/project/'.__PROJECT__.'/config/autoloader.php';
+	$autoloaderSetting = require getcwd().'/resources/'.__PROJECT__.'/config/autoloader.php';
 	Zend\Loader\AutoloaderFactory::factory($autoloaderSetting);	
 }

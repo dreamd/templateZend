@@ -3,8 +3,8 @@ defined('__PROJECT__') === true || define('__PROJECT__', basename(dirname(__DIR_
 chdir(dirname(dirname(dirname(__DIR__))));
 require 'initAutoloader.php';
 
-$applicationConfig = require 'project/'.__PROJECT__.'/config/application.php';
-$databaseConfig = require 'project/'.__PROJECT__.'/config/database.php';
+$applicationConfig = require 'resources/'.__PROJECT__.'/config/application.php';
+$databaseConfig = require 'resources/'.__PROJECT__.'/config/database.php';
 
 if (isset($applicationConfig['module_listener_options']) === true) {
 	foreach ($applicationConfig['module_listener_options']['config_glob_paths'] as $name => $value) {
