@@ -8,26 +8,24 @@ if (file_exists($autoLoaderPath) === false) {
 }
 require $autoLoaderPath;
 
-$paths = (object)array(
-	'resources'					=> 'resources/',
-	'local'							=> 'Local/',
-);
+$localPath = 'local/';
 
 $loadConfigs = array(
-	'applicationConfig'		=> __PROJECT__.'/config/application.php',
-	'databaseConfig'		=> __PROJECT__.'/config/database.php',
+	'applicationConfig'		=> 'resources/'.__PROJECT__.'/config/application.php',
+	'databaseConfig'		=> 'resources/'.__PROJECT__.'/config/database.php',
 );
 
 $applicationConfig = array();
 $databaseConfig = array();
 
 foreach ($loadConfigs as $name => $value) {
-	if (file_exists(($path = $paths->resources.$paths->local.$value)) === true) {
+	if (file_exists(($path = $localPath.$value)) === true) {
 		$$name = require $path;
 		continue;
 	}
-	
-	$$name = require $paths->resources.$value;
+	if (file_exists($value) === true) {
+		$$name = require $value;
+	}
 }
 
 if (empty($applicationConfig) === true) {

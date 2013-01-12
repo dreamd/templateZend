@@ -1,6 +1,9 @@
 <?php
 $zendLoaderFactory = 'library/Dream/Zend/Loader/AutoloaderFactory.php';
-if (file_exists($zendLoaderFactory) === true) {
+$localPath = 'Local/';
+if (file_exists(($path = $localPath.$zendLoaderFactory)) === true) {
+	include $path;
+} else if (file_exists($zendLoaderFactory) === true) {
 	include $zendLoaderFactory;
 }
 if (!class_exists('Dream\Zend\Loader\AutoloaderFactory') || defined('__PROJECT__') === false) {
@@ -9,15 +12,14 @@ if (!class_exists('Dream\Zend\Loader\AutoloaderFactory') || defined('__PROJECT__
 	include_once("library/Twig/Autoloader.php");
 	Twig_Autoloader::register();
 	$autoloaderSetting = array();
-	$autoloaderSettingPath = __PROJECT__.'/config/autoloader.php';
-	$paths = (object)array(
-		'resources' => getcwd().'/resources/',
-		'local' => 'Local/',
-	);
-	if (file_exists(($path = $paths->resources.$paths->local.$autoloaderSettingPath)) === true) {
+	$autoloaderSettingPath = 'resources/'.__PROJECT__.'/config/autoloader.php';
+	
+	if (file_exists(($path = $localPath.$autoloaderSettingPath)) === true) {
 		$autoloaderSetting = require $path;
 	} else {
-		$autoloaderSetting = require $paths->resources.$autoloaderSettingPath;	
+		if (file_exists($autoloaderSettingPath) === true) {
+			$autoloaderSetting = require $autoloaderSettingPath;
+		}
 	}
 	if (empty($autoloaderSetting) === true) {
 		throw new RuntimException('Have not autoloader setting');	
