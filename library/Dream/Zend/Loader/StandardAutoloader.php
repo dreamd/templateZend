@@ -30,7 +30,6 @@ class StandardAutoloader extends ZendStandardAutoloader {
             }
             return false;
         }
-
         // Namespace and/or prefix autoloading
         foreach ($this->$type as $leader => $path) {
             if (0 === strpos($class, $leader)) {

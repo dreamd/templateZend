@@ -1,6 +1,6 @@
 <?php
 return array(
-	'Zend\Loader\StandardAutoloader' => array(
+	'Dream\Zend\Loader\StandardAutoloader' => array(
 		'autoregister_zf' => true,
 		'namespaces' => array(
 			'Dream' 			=> 'library/Dream',

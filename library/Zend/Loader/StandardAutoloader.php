@@ -296,6 +296,7 @@ class StandardAutoloader implements SplAutoloader
 
         // Namespace and/or prefix autoloading
         foreach ($this->$type as $leader => $path) {
+			var_dump($class);
             if (0 === strpos($class, $leader)) {
                 // Trim off leader (namespace or prefix)
                 $trimmedClass = substr($class, strlen($leader));
