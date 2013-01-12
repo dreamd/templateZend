@@ -4,7 +4,7 @@ chdir(dirname(dirname(dirname(__DIR__))));
 
 $autoLoaderPath = 'initAutoloader.php';
 if (file_exists($autoLoaderPath) === false) {
-	throw new Exception('Have not auto loader.');
+	throw new RuntimeException('Have not auto loader.');
 }
 require $autoLoaderPath;
 
@@ -31,7 +31,7 @@ foreach ($loadConfigs as $name => $value) {
 }
 
 if (empty($applicationConfig) === true) {
-	throw new Exception('Have not project setting.');
+	throw new RuntimeException('Have not project setting.');
 }
 
 if (isset($applicationConfig['databases']) === true && isset($databaseConfig['databases']) === true) {
