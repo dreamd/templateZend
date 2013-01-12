@@ -470,7 +470,6 @@ class PhpRenderer implements Renderer, TreeRendererInterface
         }
 
         $this->setVars(array_pop($this->__varsCache));
-
         return $this->getFilterChain()->filter($this->__content); // filter output
     }
 

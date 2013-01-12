@@ -6,7 +6,11 @@
  * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-
+$translatorDir = getcwd().'/resources/'.__PROJECT__.'/modules/'.$nowModule.'/language';
+$localPath = 'local/';
+if (file_exists($file = $localPath.$translatorDir) === true) {
+	$translatorDir = $file;
+}
 return array(
     'router' => array(
         'routes' => array(
@@ -62,7 +66,7 @@ return array(
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',
-                'base_dir' => __DIR__ . '/../language',
+                'base_dir' => $translatorDir,
                 'pattern'  => '%s.mo',
             ),
         ),
@@ -84,8 +88,10 @@ return array(
             'error/index'             => getcwd().'/resources/'.__PROJECT__.'/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-            getcwd().'/resources/ShareResources/views',
 			getcwd().'/resources/'.__PROJECT__.'/views',
+			getcwd().'/resources/ShareResources/views',
+			getcwd().'/local/resources/'.__PROJECT__.'/views',
+            getcwd().'/local/resources/ShareResources/views',
         ),
     ),
 );

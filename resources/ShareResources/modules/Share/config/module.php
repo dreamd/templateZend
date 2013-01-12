@@ -88,8 +88,6 @@ return array(
             'error/index'             => getcwd().'/resources/ShareResources/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-            getcwd().'/resources/ShareResources/views',
-			getcwd().'/resources/'.__PROJECT__.'/views',
         ),
     ),
 );

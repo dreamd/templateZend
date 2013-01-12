@@ -13,15 +13,24 @@ class Module {
         $moduleRouteListener->attach($eventManager);
     }
     public function getConfig() {
-        return include __DIR__ . '/config/module.php';
+		$moduleConfig = '/resources/'.__PROJECT__.'/modules/'.__NAMESPACE__.'/config/module.php';
+		$localPath = 'local/';
+		if (file_exists($path = $localPath.$moduleConfig) === true) {
+			$nowModule = __NAMESPACE__;
+			return include $path;
+		} else if (file_exists(getcwd().$moduleConfig) === true) {
+			$nowModule = __NAMESPACE__;
+			return include getcwd().$moduleConfig;
+		}
+        return array();
     }
 
     public function getAutoloaderConfig() {
         return array(
             'Dream\Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    __NAMESPACE__ => realpath(getcwd().'/resources/'.__PROJECT__.'/sources/'.__NAMESPACE__),
-					'ShareResources' => realpath(getcwd().'/resources/ShareResources/sources'),
+                    __NAMESPACE__ => 'resources/'.__PROJECT__.'/sources/'.__NAMESPACE__,
+					'ShareResources' => 'resources/ShareResources/sources',
                 ),
             ),
         );
