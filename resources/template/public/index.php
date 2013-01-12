@@ -22,8 +22,8 @@ $applicationConfig = array();
 $databaseConfig = array();
 
 foreach ($loadConfigs as $name => $value) {
-	if (file_exists($paths->resources.$paths->local.$value) === true) {
-		$$name = require $paths->resources.$paths->local.$value;
+	if (file_exists(($path = $paths->resources.$paths->local.$value)) === true) {
+		$$name = require $path;
 		continue;
 	}
 	
