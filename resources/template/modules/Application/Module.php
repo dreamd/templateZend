@@ -15,14 +15,23 @@ class Module {
     public function getConfig() {
 		$moduleConfig = '/resources/'.__PROJECT__.'/modules/'.__NAMESPACE__.'/config/module.php';
 		$localPath = 'local/';
+		$config = array();
 		if (file_exists($path = $localPath.$moduleConfig) === true) {
 			$nowModule = __NAMESPACE__;
-			return include $path;
+			$config = include $path;
 		} else if (file_exists(getcwd().$moduleConfig) === true) {
 			$nowModule = __NAMESPACE__;
-			return include getcwd().$moduleConfig;
+			$config = include getcwd().$moduleConfig;
 		}
-        return array();
+		if (isset($config['view_manager']) === false) {
+			$config['view_manager'] = array();
+			if (isset($config['view_manager']['template_path_stack']) === false) {
+				$config['view_manager']['template_path_stack'] = array();
+			}
+		}
+		$config['view_manager']['template_path_stack'][] = getcwd().'/resources/'.__PROJECT__.'/views';
+		$config['view_manager']['template_path_stack'][] = getcwd().'/local/resources/'.__PROJECT__.'/views';
+        return $config;
     }
 
     public function getAutoloaderConfig() {

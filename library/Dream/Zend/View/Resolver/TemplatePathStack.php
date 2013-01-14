@@ -8,7 +8,19 @@ use SplFileInfo;
 
 class TemplatePathStack extends ZendTemplatePathStack {
 	protected $defaultSuffix = array('html', 'haml', 'jade', 'phtml', 'css', 'less', 'lass', 'js', 'coffee');
+	public function addPathBefore($path = NULL) {
+        if (!is_string($path)) {
+            throw new Exception\InvalidArgumentException(sprintf(
+                'Invalid path provided; must be a string, received %s',
+                gettype($path)
+            ));
+        }
+		$this->paths->unshift(static::normalizePath($path));	
+        return $this;
+	}
     public function resolve($name, Renderer $renderer = NULL) {
+		$this->addPathBefore(getcwd().'/local/resources/ShareResources/views');
+		$this->addPathBefore(getcwd().'/resources/ShareResources/views');
         $this->lastLookupFailure = false;
         if ($this->isLfiProtectionOn() && preg_match('#\.\.[\\\/]#', $name)) {
             throw new Exception\DomainException(

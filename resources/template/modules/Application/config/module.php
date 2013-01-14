@@ -77,8 +77,7 @@ return array(
         ),
     ),
     'view_manager' => array(
-        'display_not_found_reason' => true,
-        'display_exceptions'       => true,
+        'display_not_found_reason' => false,
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
@@ -88,10 +87,6 @@ return array(
             'error/index'             => getcwd().'/resources/'.__PROJECT__.'/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
-			getcwd().'/resources/'.__PROJECT__.'/views',
-			getcwd().'/resources/ShareResources/views',
-			getcwd().'/local/resources/'.__PROJECT__.'/views',
-            getcwd().'/local/resources/ShareResources/views',
         ),
     ),
 );

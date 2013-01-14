@@ -285,7 +285,7 @@ class TemplatePathStack implements ResolverInterface
      * @throws Exception\DomainException
      */
     public function resolve($name, Renderer $renderer = null)
-    {
+    {		
         $this->lastLookupFailure = false;
 
         if ($this->isLfiProtectionOn() && preg_match('#\.\.[\\\/]#', $name)) {
