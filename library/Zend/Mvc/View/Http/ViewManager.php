@@ -115,6 +115,7 @@ class ViewManager implements ListenerAggregateInterface
     {
         $application  = $event->getApplication();
         $services     = $application->getServiceManager();
+
         $config       = $services->get('Config');
         $events       = $application->getEventManager();
         $sharedEvents = $events->getSharedManager();

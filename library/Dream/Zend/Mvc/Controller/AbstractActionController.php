@@ -62,13 +62,13 @@ abstract class AbstractActionController extends ZendAbstractActionController {
         if (method_exists($this, $method) === true) {
            $actionResponse = $this->$method();
         }
-				$actionResponse = $this->view->values();
-				if (is_array($actionResponse) === true) {
-						if (ArrayUtils::hasStringKeys($actionResponse, true)) {
-								$actionResponse = $this->viewModel->setVariables($actionResponse);
-						} else {
-								$actionResponse = $this->viewModel;
-						}
+		$actionResponse = $this->view->values();
+		if (is_array($actionResponse) === true) {
+				if (ArrayUtils::hasStringKeys($actionResponse, true)) {
+						$actionResponse = $this->viewModel->setVariables($actionResponse);
+				} else {
+						$actionResponse = $this->viewModel;
+				}
     		} else if (is_string($actionResponse) === true) {
             $actionResponse = $this->viewModel->setVariables(array($actionResponse => $actionResponse));
 				} else if ($actionResponse === NULL) {

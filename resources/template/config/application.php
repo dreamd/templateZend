@@ -4,6 +4,8 @@ return array(
         'Application',
 		'Share'
     ),
+	'mode' => 'PRODUCTION',
+	//DEVELOPMENT or PRODUCTION
     'module_listener_options' => array(
         'config_glob_paths'    => array(
 			'Local/resources/'.__PROJECT__.'/config/autoload/{,*.}{global,local}.php',

@@ -2,6 +2,12 @@
 defined('__PROJECT__') === true || define('__PROJECT__', basename(dirname(__DIR__)));
 chdir(dirname(dirname(dirname(__DIR__))));
 
+date_default_timezone_set('Asia/Hong_Kong');
+ini_set('log_errors', true);
+ini_set('error_log', getcwd().'/'.__PROJECT__.'_'.date('YmdHis').'_errorlog.log');
+set_time_limit(0);
+ignore_user_abort(true);
+
 $autoLoaderPath = 'initAutoloader.php';
 if (file_exists($autoLoaderPath) === false) {
 	throw new RuntimeException('Have not auto loader.');
@@ -36,5 +42,16 @@ if (isset($applicationConfig['databases']) === true && isset($databaseConfig['da
 	foreach ($applicationConfig['databases'] as $name => $value) {
 		$applicationConfig['databases'][$name] = array_merge($value, $databaseConfig['databases'][$name]);
 	}
+}
+if (isset($applicationConfig['mode']) === true && is_string($applicationConfig['mode']) === true && strtoupper($applicationConfig['mode']) === 'PRODUCTION') {
+	error_reporting(0);
+	ini_set('display_errors', false);
+	//register_shutdown_function(function() {
+		//echo 'Error';
+	//});
+} else {
+	error_reporting(-1);
+	ini_set('display_errors', true);
+	ini_set('display_startup_errors', true);
 }
 Zend\Mvc\Application::init($applicationConfig)->run();
