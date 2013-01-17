@@ -43,15 +43,4 @@ if (isset($applicationConfig['databases']) === true && isset($databaseConfig['da
 		$applicationConfig['databases'][$name] = array_merge($value, $databaseConfig['databases'][$name]);
 	}
 }
-if (isset($applicationConfig['mode']) === true && is_string($applicationConfig['mode']) === true && strtoupper($applicationConfig['mode']) === 'PRODUCTION') {
-	error_reporting(0);
-	ini_set('display_errors', false);
-	//register_shutdown_function(function() {
-		//echo 'Error';
-	//});
-} else {
-	error_reporting(-1);
-	ini_set('display_errors', true);
-	ini_set('display_startup_errors', true);
-}
-Zend\Mvc\Application::init($applicationConfig)->run();
+Dream\Application\Application::init($applicationConfig);
