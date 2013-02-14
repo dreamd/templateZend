@@ -9,7 +9,7 @@ class Application implements Singleton, Service {
 	protected $project = NULL, $mode = NULL, $config = array();
 	public function __construct() {
 		$trace = debug_backtrace();
-		$this->setConfig(func_get_args())->setProject($trace[1])->setMode()->setTimeZone()->setLog();
+		$this->setConfig(func_get_args())->setProject((object)$trace[1])->setMode()->setTimeZone()->setLog();
 	}
 	public function setTimeZone() {
 		if (isset($this->config['time_zone']) === false || is_string($this->config['time_zone']) === false) {

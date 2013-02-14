@@ -4,19 +4,19 @@ return array(
         'Application',
 		'Share'
     ),
-	'mode' => 'PRODUCTION',
+	'mode' => 'DEVELOPMENT',
 	//DEVELOPMENT or PRODUCTION
 	'time_zone' => 'Asia/Hong_Kong',
 	'error_log' => true,
     'module_listener_options' => array(
         'config_glob_paths'    => array(
-			'Local/resources/'.__PROJECT__.'/config/autoload/{,*.}{global,local}.php',
-            'resources/'.__PROJECT__.'/config/autoload/{,*.}{global,local}.php',
+			'Local/resources/'.$project.'/config/autoload/{,*.}{global,local}.php',
+            'resources/'.$project.'/config/autoload/{,*.}{global,local}.php',
         ),
         'module_paths' => array(
-            'Local/resources/'.__PROJECT__.'/modules',
+            'Local/resources/'.$project.'/modules',
 			'Local/resources/ShareResources/modules',
-            'resources/'.__PROJECT__.'/modules',
+            'resources/'.$project.'/modules',
 			'resources/ShareResources/modules',
         ),
     ),

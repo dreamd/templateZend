@@ -6,7 +6,8 @@
  * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-$translatorDir = getcwd().'/resources/'.__PROJECT__.'/modules/'.$nowModule.'/language';
+$application = Dream\Application\Application::getApplication();
+$translatorDir = getcwd().'/resources/'.$application->getProject().'/modules/'.$nowModule.'/language';
 $localPath = 'local/';
 if (file_exists($file = $localPath.$translatorDir) === true) {
 	$translatorDir = $file;
@@ -83,9 +84,9 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => getcwd().'/resources/'.__PROJECT__.'/views/Layout/Layout.phtml',
-            'error/404'               => getcwd().'/resources/'.__PROJECT__.'/views/Error/404.phtml',
-            'error/index'             => getcwd().'/resources/'.__PROJECT__.'/views/Error/Index.phtml',
+            'layout/layout'           => getcwd().'/resources/'.$application->getProject().'/views/Layout/Layout.phtml',
+            'error/404'               => getcwd().'/resources/'.$application->getProject().'/views/Error/404.phtml',
+            'error/index'             => getcwd().'/resources/'.$application->getProject().'/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(
 

@@ -2,8 +2,7 @@
 
 namespace Share;
 
-use Zend\Mvc\ModuleRouteListener;
-use Zend\Mvc\MvcEvent;
+use Zend\Mvc\ModuleRouteListener, Zend\Mvc\MvcEvent, Dream\Application\Application;
 
 class Module {
     public function onBootstrap(MvcEvent $e) {
@@ -13,7 +12,8 @@ class Module {
         $moduleRouteListener->attach($eventManager);
     }
     public function getConfig() {
-		$moduleConfig = '/resources/'.__PROJECT__.'/modules/'.__NAMESPACE__.'/config/module.php';
+		$application = Application::getApplication();
+		$moduleConfig = '/resources/'.$application->getProject().'/modules/'.__NAMESPACE__.'/config/module.php';
 		$localPath = 'local/';
 		$config = array();
 		if (file_exists($path = $localPath.$moduleConfig) === true) {
@@ -29,8 +29,8 @@ class Module {
 				$config['view_manager']['template_path_stack'] = array();
 			}
 		}
-		$config['view_manager']['template_path_stack'][] = getcwd().'/resources/'.__PROJECT__.'/views';
-		$config['view_manager']['template_path_stack'][] = getcwd().'/local/resources/'.__PROJECT__.'/views';
+		$config['view_manager']['template_path_stack'][] = getcwd().'/resources/'.$application->getProject().'/views';
+		$config['view_manager']['template_path_stack'][] = getcwd().'/local/resources/'.$application->getProject().'/views';
         return $config;
     }
 

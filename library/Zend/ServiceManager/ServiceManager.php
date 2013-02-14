@@ -448,7 +448,6 @@ class ServiceManager implements ServiceLocatorInterface
                     $name
                 ));
             }
-
             throw new Exception\ServiceNotFoundException(sprintf(
                 '%s was unable to fetch or create an instance for %s',
                 __METHOD__,
