@@ -85,6 +85,7 @@ return array(
             'share/index/index' => getcwd().'/resources/ShareResources/views/Share/Index/Index.phtml',
 			'share/index/test' => getcwd().'/resources/ShareResources/views/Share/Index/Test.phtml',
             'error/404'               => getcwd().'/resources/ShareResources/views/Error/404.phtml',
+			'error/notfound'               => getcwd().'/resources/ShareResources/views/Error/NotFound.phtml',
             'error/index'             => getcwd().'/resources/ShareResources/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(

@@ -58,7 +58,7 @@ abstract class AbstractActionController extends ZendAbstractActionController {
             throw new DomainException('Missing route matches; unsure how to retrieve action');
         }
         $method = static::getMethodFromAction($routeMatch->getParam('action', 'not-found'));
-				$this->dispatchLayout();
+		$this->dispatchLayout();
         if (method_exists($this, $method) === true) {
            $actionResponse = $this->$method();
         }

@@ -26,6 +26,9 @@ class PhpRenderer extends ZendPhpRenderer {
         return $this;
     }
 	public function render($nameOrModel = NULL, $values = NULL) {
+		if (($file = $this->resolver($nameOrModel->getTemplate())) === false) {
+			$nameOrModel->setTemplate('error/notfound');
+		}
 		if ($nameOrModel instanceof ViewModel === false) {
 			return parent::render($nameOrModel, $values);
 		}
@@ -57,7 +60,7 @@ class PhpRenderer extends ZendPhpRenderer {
 				return $fammel->render();
 			}
 			default : {
-					return $render;
+				return $render;
 			}
 		}
 	}

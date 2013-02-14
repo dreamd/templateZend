@@ -199,7 +199,6 @@ class View implements EventManagerAwareInterface
         // Reset the model, in case it has changed, and set the renderer
         $event->setModel($model);
         $event->setRenderer($renderer);
-
         $rendered = $renderer->render($model);
 
         // If this is a child model, return the rendered content; do not
