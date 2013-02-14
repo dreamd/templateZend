@@ -6,6 +6,8 @@ return array(
     ),
 	'mode' => 'PRODUCTION',
 	//DEVELOPMENT or PRODUCTION
+	'time_zone' => 'Asia/Hong_Kong',
+	'error_log' => true,
     'module_listener_options' => array(
         'config_glob_paths'    => array(
 			'Local/resources/'.__PROJECT__.'/config/autoload/{,*.}{global,local}.php',

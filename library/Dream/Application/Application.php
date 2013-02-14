@@ -6,28 +6,55 @@ use \stdClass, Dream\Application\ModeManager;
 use Dream\Application\Interfaces\Singleton, Dream\Application\Interfaces\Service;
 
 class Application implements Singleton, Service {
-	protected $project = NULL, $mode = NULL;
-	const productModeKey = 'PRODUCTION', developmentModeKey = 'DEVELOPMENT';
+	protected $project = NULL, $mode = NULL, $config = array();
 	public function __construct() {
 		$trace = debug_backtrace();
-		$this->setProject($trace[1])->setMode(func_get_args());
+		$this->setConfig(func_get_args())->setProject($trace[1])->setMode()->setTimeZone()->setLog();
+	}
+	public function setTimeZone() {
+		if (isset($this->config['time_zone']) === false || is_string($this->config['time_zone']) === false) {
+			return $this;
+		}
+		date_default_timezone_set($this->config['time_zone']);
+		return $this;
+	}
+	public function setLog() {
+		if (isset($this->config['error_log']) === false || is_bool($this->config['error_log']) === false) {
+			return $this;
+		}
+		if ($this->config['error_log'] === true) {
+			ini_set('log_errors', true);
+			ini_set('error_log', getcwd().'/'.$this->project.'_'.date('YmdHis').'_errorlog.log');
+			set_time_limit(0);
+			ignore_user_abort(true);
+		}
+		return $this;
+	}
+	public function setConfig() {
+		$config = func_get_args();
+		while (isset($config[0]) === true) {
+			$config = $config[0];
+		}
+		$this->config = $config;
+		return $this;
+	}
+	public function getConfig() {
+		return $this->config;	
 	}
 	public function setMode() {
-		if (func_num_args() === 0) {
-			return;
+		if (isset($this->config['mode']) === false || is_string($this->config['mode']) === false) {
+			return $this;
 		}
-		$applicationConfig = func_get_arg(0);
-		if (isset($applicationConfig['mode']) === false || is_string($applicationConfig['mode']) === false) {
-			return;
-		}
-		switch (strtoupper($applicationConfig['mode'])) {
-			case self::productModeKey : {
-				$this->mode = self::productModeKey;
-				ModeManager::productMode();
-			}
-			case self::developmentModeKey : {
-				$this->mode = self::developmentModeKey;
+		switch (strtoupper($this->config['mode'])) {
+			case ModeManager::developmentModeKey : {
+				$this->mode = ModeManager::developmentModeKey;
 				ModeManager::developmentMode();
+				break;
+			}
+			default : {
+				$this->mode = ModeManager::productModeKey;
+				ModeManager::productMode();
+				break;
 			}
 		}
 		return $this;
@@ -37,7 +64,7 @@ class Application implements Singleton, Service {
 	}
 	public function setProject() {
 		if (func_num_args() === 0) {
-			return;	
+			return $this;	
 		}
 		if (isset(func_get_arg(0)->file) === true) {
 			$this->project = basename(dirname(dirname(func_get_arg(0)->file)));
