@@ -3,9 +3,8 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
- * @package   Zend_View
  */
 
 namespace Zend\View\Resolver;
@@ -18,10 +17,6 @@ use Zend\View\Renderer\RendererInterface as Renderer;
 
 /**
  * Resolves view scripts based on a stack of paths
- *
- * @category   Zend
- * @package    Zend_View
- * @subpackage Resolver
  */
 class TemplatePathStack implements ResolverInterface
 {
@@ -285,7 +280,7 @@ class TemplatePathStack implements ResolverInterface
      * @throws Exception\DomainException
      */
     public function resolve($name, Renderer $renderer = null)
-    {		
+    {
         $this->lastLookupFailure = false;
 
         if ($this->isLfiProtectionOn() && preg_match('#\.\.[\\\/]#', $name)) {
@@ -298,7 +293,7 @@ class TemplatePathStack implements ResolverInterface
             $this->lastLookupFailure = static::FAILURE_NO_PATHS;
             return false;
         }
-		
+
         // Ensure we have the expected file extension
         $defaultSuffix = $this->getDefaultSuffix();
         if (pathinfo($name, PATHINFO_EXTENSION) != $defaultSuffix) {;

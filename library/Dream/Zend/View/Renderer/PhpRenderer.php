@@ -28,6 +28,7 @@ class PhpRenderer extends ZendPhpRenderer {
 	public function render($nameOrModel = NULL, $values = NULL) {
 		if (($file = $this->resolver($nameOrModel->getTemplate())) === false) {
 			$nameOrModel->setTemplate('error/notfound');
+			return parent::render($nameOrModel, $values);
 		}
 		if ($nameOrModel instanceof ViewModel === false) {
 			return parent::render($nameOrModel, $values);
@@ -51,7 +52,7 @@ class PhpRenderer extends ZendPhpRenderer {
 				$dumper->registerFilter('style', new CSSFilter());
 				
 				$parser = new Parser(new Lexer());
-				$jade   = new Jade($parser, $dumper);    
+				$jade   = new Jade($parser, $dumper);   
 				return $jade->render($render);
 			}
 			case 'HAML' : {

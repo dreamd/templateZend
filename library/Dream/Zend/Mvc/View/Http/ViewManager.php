@@ -34,10 +34,9 @@ class ViewManager extends ZendViewManager {
 			$this->config['display_exceptions'] = false;
 		}
 	}
-    public function onBootstrap($event) {
+	public function onBootstrap($event) {
         $application  = $event->getApplication();
         $services     = $application->getServiceManager();
-
         $config       = $services->get('Config');
         $events       = $application->getEventManager();
         $sharedEvents = $events->getSharedManager();
@@ -47,16 +46,15 @@ class ViewManager extends ZendViewManager {
                         : array();
         $this->services = $services;
         $this->event    = $event;
-		
+
 		$this->setMode();
-		
+	
         $routeNotFoundStrategy   = $this->getRouteNotFoundStrategy();
         $exceptionStrategy       = $this->getExceptionStrategy();
         $mvcRenderingStrategy    = $this->getMvcRenderingStrategy();
         $createViewModelListener = new CreateViewModelListener();
         $injectTemplateListener  = new InjectTemplateListener();
         $injectViewModelListener = new InjectViewModelListener();
-        $sendResponseListener    = new SendResponseListener();
 
         $this->registerMvcRenderingStrategies($events);
         $this->registerViewStrategies();
@@ -64,8 +62,8 @@ class ViewManager extends ZendViewManager {
         $events->attach($routeNotFoundStrategy);
         $events->attach($exceptionStrategy);
         $events->attach(MvcEvent::EVENT_DISPATCH_ERROR, array($injectViewModelListener, 'injectViewModel'), -100);
+        $events->attach(MvcEvent::EVENT_RENDER_ERROR, array($injectViewModelListener, 'injectViewModel'), -100);
         $events->attach($mvcRenderingStrategy);
-        $events->attach($sendResponseListener);
 
         $sharedEvents->attach('Zend\Stdlib\DispatchableInterface', MvcEvent::EVENT_DISPATCH, array($createViewModelListener, 'createViewModelFromArray'), -80);
         $sharedEvents->attach('Zend\Stdlib\DispatchableInterface', MvcEvent::EVENT_DISPATCH, array($routeNotFoundStrategy, 'prepareNotFoundViewModel'), -90);

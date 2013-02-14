@@ -3,9 +3,8 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
- * @package   Zend_View
  */
 
 namespace Zend\View\Renderer;
@@ -28,9 +27,6 @@ use Zend\View\Variables;
  * Note: all private variables in this class are prefixed with "__". This is to
  * mark them as part of the internal implementation, and thus prevent conflict
  * with variables injected into the renderer.
- *
- * @category   Zend
- * @package    Zend_View
  */
 class PhpRenderer implements Renderer, TreeRendererInterface
 {
@@ -454,6 +450,7 @@ class PhpRenderer implements Renderer, TreeRendererInterface
         }
         extract($__vars);
         unset($__vars); // remove $__vars from local scope
+
         while ($this->__template = array_pop($this->__templates)) {
             $this->__file = $this->resolver($this->__template);
             if (!$this->__file) {
@@ -463,12 +460,18 @@ class PhpRenderer implements Renderer, TreeRendererInterface
                     $this->__template
                 ));
             }
-            ob_start();
-            include $this->__file;
-            $this->__content = ob_get_clean();
+            try {
+                ob_start();
+                include $this->__file;
+                $this->__content = ob_get_clean();
+            } catch (\Exception $ex) {
+                ob_end_clean();
+                throw $ex;
+            }
         }
 
         $this->setVars(array_pop($this->__varsCache));
+
         return $this->getFilterChain()->filter($this->__content); // filter output
     }
 
@@ -520,5 +523,4 @@ class PhpRenderer implements Renderer, TreeRendererInterface
     {
         $this->__vars = clone $this->vars();
     }
-
 }
