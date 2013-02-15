@@ -15,7 +15,7 @@ class TemplatePathStack extends ZendTemplatePathStack {
                 gettype($path)
             ));
         }
-		$this->paths->unshift(static::normalizePath($path));	
+		$this->paths->push(static::normalizePath($path));	
         return $this;
 	}
     public function resolve($name, Renderer $renderer = NULL) {

@@ -6,6 +6,7 @@
  * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
+
 return array(
     'router' => array(
         'routes' => array(
@@ -25,12 +26,12 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'share' => array(
+            'browser' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/share',
+                    'route'    => '/browser',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Share\Controller',
+                        '__NAMESPACE__' => 'Browser\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -70,7 +71,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Share\Controller\Index' => 'Share\Controller\IndexController'
+            'Browser\Controller\Index' => 'Browser\Controller\IndexController'
         ),
     ),
     'view_manager' => array(
@@ -82,7 +83,6 @@ return array(
         'template_map' => array(
             'layout/layout'           => getcwd().'/resources/ShareResources/views/Layout/Layout.phtml',
             'error/404'               => getcwd().'/resources/ShareResources/views/Error/404.phtml',
-			'error/notfound'               => getcwd().'/resources/ShareResources/views/Error/NotFound.phtml',
             'error/index'             => getcwd().'/resources/ShareResources/views/Error/Index.phtml',
         ),
         'template_path_stack' => array(

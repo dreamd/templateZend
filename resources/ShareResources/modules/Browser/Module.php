@@ -1,6 +1,6 @@
 <?php
 
-namespace Share;
+namespace Browser;
 
 use Zend\Mvc\ModuleRouteListener, Zend\Mvc\MvcEvent, Dream\Application\Application;
 

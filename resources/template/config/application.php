@@ -2,7 +2,8 @@
 return array(
     'modules' => array(
         'Application',
-		'Share'
+		'Share',
+		'Browser',
     ),
 	'mode' => 'DEVELOPMENT',
 	//DEVELOPMENT or PRODUCTION
