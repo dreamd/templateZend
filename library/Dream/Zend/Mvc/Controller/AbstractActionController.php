@@ -19,7 +19,7 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 		return $this->getDbAdapter($name);	
 	}
 	private function getDbAdapter($name = NULL) {
-		if (is_string($name) === true) {
+		if (is_string($name) === false) {
 			return NULL;
 		}
 		if (isset($this->dataBases[$name]) === false) {
@@ -33,6 +33,7 @@ abstract class AbstractActionController extends ZendAbstractActionController {
 			return NULL;
 		}
 		$this->dataBases[$name] = new Adapter($applicationConfig['databases'][$name]);
+		return $this->dataBases[$name];
 	}
 	protected function setFormat($format = NULL) {
 			if (is_string($format) === false) {
