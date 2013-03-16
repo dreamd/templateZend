@@ -21,7 +21,7 @@ if (!class_exists('Dream\Zend\Loader\AutoloaderFactory')) {
 		}
 	}
 	if (empty($autoloaderSetting) === true) {
-		throw new RuntimException('Have not autoloader setting');	
+		throw new RuntimeException('Have not autoloader setting');	
 	}
 	Dream\Zend\Loader\AutoloaderFactory::factory($autoloaderSetting);	
 }
