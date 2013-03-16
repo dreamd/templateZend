@@ -33,6 +33,7 @@ class PhpRenderer extends ZendPhpRenderer {
 		if ($nameOrModel instanceof ViewModel === false) {
 			return parent::render($nameOrModel, $values);
 		}
+		$nameOrModel->this = $this;
 		if ($nameOrModel->useTwig() === true) { 
 			$loader = new ZendRendererLoader($this);
 			$loader->setTemplatePath($nameOrModel->getTemplate());
